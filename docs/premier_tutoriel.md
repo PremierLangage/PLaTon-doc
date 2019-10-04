@@ -8,4 +8,4 @@ Cliquez dessus vous arriver sur https://pl.u-pem.fr/filebrowser
 
 Prenez un moment pour lire les informations sur PL Editor. 
 
-[Premier exemple](https://github.com/PremierLangage/premierlangage-doc/blob/master/docs/premier_exemple.md)
+[Premier exemple](premier_exemple.md)
