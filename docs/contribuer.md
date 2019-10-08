@@ -1,0 +1,3 @@
+# Comment contribuer à Premier Langage ?
+
+Ouais, ouais, on va vous le dire comment faire...
