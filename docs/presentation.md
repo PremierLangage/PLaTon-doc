@@ -95,9 +95,11 @@ facilitera leur élaboration.
 
 ## Entrer dans Premier Langage
 
-Si la philosophie et les technologies de Premier Langage vous plaisent, n'hésitez pas à nous rejoindre ! Pour
-apprendre à utiliser premier langage, la prochaine étape consiste à voir comment fabriquer un exercice 
-minimal en consultant le premier tutoriel.
+Si la philosophie et les technologies de Premier Langage vous
+plaisent, [n'hésitez pas à nous rejoindre](contribuer.md) ! Pour
+apprendre à utiliser premier langage, la prochaine étape consiste à
+voir comment fabriquer un exercice minimal en consultant le premier
+tutoriel.
 
 
 
