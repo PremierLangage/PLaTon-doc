@@ -11,8 +11,7 @@ nav:
 - Documentations techniques spécifiques: 'documentations_techniques.md'
 - Index des clés et Lexique: 'lexique.md'
 
-theme:
-    name: 'readthedocs'
+theme: mkdocs
 
 markdown_extensions:
   - footnotes
