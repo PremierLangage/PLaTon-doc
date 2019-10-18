@@ -50,7 +50,7 @@ On récupère la valeur entrée par l'élève dans le composant `input` grâce �
 
 En fonction du résultat de ce test, on renvoie une note égale à 0 ou 100. Si l'opération de conversion de la réponse de l'élève en un nombre entier échoue, on renvoie un avertissement.
 
-``` python
+```
 evaluator ==
 try:
     if int(input.value)==a+b:
