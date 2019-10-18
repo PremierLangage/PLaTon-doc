@@ -16,3 +16,4 @@ theme: readthedocs
 markdown_extensions:
   - footnotes
   - admonition
+  - codehilite
