@@ -65,3 +65,6 @@ except:
     grade=(-1,"Votre réponse n'est pas un nombre entier.")
 ==
 ~~~
+
+!!! warning
+This is a warning for you.
