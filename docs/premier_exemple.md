@@ -11,9 +11,9 @@ On commence par inclure la librairie `sandboxio` (bientôt plus nécessaire ?) e
 ~~~
 
 On définit ensuite le titre de l'exercice avec la clé `title`.
-~~~
+```
 title = Somme d'entiers
-~~~
+```
 
 La clé `before` permet de définir un script Python qui est exécuté au lancement de l'exercice. C'est avec ce script qu'on génère aléatoirement les deux nombres à additionner.
 
@@ -50,7 +50,7 @@ On récupère la valeur entrée par l'élève dans le composant `input` grâce �
 
 En fonction du résultat de ce test, on renvoie une note égale à 0 ou 100. Si l'opération de conversion de la réponse de l'élève en un nombre entier échoue, on renvoie un avertissement.
 
-~~~
+``` python
 evaluator ==
 try:
     if int(input.value)==a+b:
@@ -60,8 +60,8 @@ try:
 except:
     grade=(-1,"Votre réponse n'est pas un nombre entier.")
 ==
-~~~
+```
 
 !!! warning
-    Toutes les variables créées dans le script `before` ne sont pas disponibles dans le script `evaluator`. Seuls les variables         de type `dict`, `list`, `tuple`, `string`, `int`, `float`, ainsi que les objets `True`, `False` et `None` sont transférés du script `before` au script `evaluator`. Ces limitations sont dues au protocole de transfert des variables qui utilisent un format JSON.
+    Toutes les variables créées dans le script `before` ne sont pas disponibles dans le script `evaluator`. Seules les variables         de type `dict`, `list`, `tuple`, `string`, `int`, `float`, ainsi que les objets `True`, `False` et `None` sont transférés du script `before` au script `evaluator`. Ces limitations sont dues au protocole de transfert des variables qui utilise un format JSON.
 
