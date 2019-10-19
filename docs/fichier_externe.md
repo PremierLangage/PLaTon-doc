@@ -37,7 +37,7 @@ with open('data.csv',newline='') as file:
 row=rd.choice(rows)
 p=rd.choice(['1S','2S','3S','1P','2P','3P'])
 
-lst_txt_prs={'1S':'1ère personne du singulier',
+dic_prs={'1S':'1ère personne du singulier',
          '2S':'2e personne du singulier',
          '3S':'3e personne du singulier',
          '1P':'1ère personne du pluriel',
@@ -46,7 +46,8 @@ lst_txt_prs={'1S':'1ère personne du singulier',
 
 verbe_inf=row['infinitif']
 verbe_conj=row[p]
-txt_prs=lst_txt_prs[p]
+txt_prs=dic_prs[p]
+
 
 ==
 ~~~
