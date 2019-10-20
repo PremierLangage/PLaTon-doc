@@ -80,12 +80,15 @@ Premier Langage espère pouvoir héberger toutes ressources issues de n'importe 
 Premier Langage souhaite monter en fonctionnalité de suivi et pilotage pédagogique, des choses qui sont lourdes à
 développer mais qui peuvent profiter à tout enseignant quel que soit la matière enseignée :
 
-* Identification automatique des élèves en difficulté ou en retard.   **Tableaux de Bord[^2]**.
+* Identification automatique des élèves en difficulté ou en retard. **Tableaux de Bord[^2]**.
 * Statistiques sur les ressources pédagogiques proposées.  **Module de Stats**.
 * Retour et conseil auto-généré pour permettre aux élèves d'appréhender la quantité et qualité de leurs 
   travaux par rapport à leur camarade, par rapport à ce qui est attendu.  **Recommandation**.
 * Identification des lacunes de manière personnalisé. **Analyse Didactique** 
 * Recommandation de ressources identifiées comme pédagogiquement performantes suivant les profils.  **Recommandation**.
+* Construction de parcours de formation et adpatation, auto-construction de sa formation, **AAV, Design & Compose** 
+* Un outil en mode **Saas** accessible de partout permettant  **partage** et **sécurité**.
+* Une unique plateforme pour la création de **Cercles/communautés/équipes** pédagogiques et didactiques.
 
 Aujoud'hui, dans de nombreuses formations, les enseignants ne sont pas assez nombreux pour pratiquer des 
 suivis individualisés réguliers. Les retours à la fois automatisées et performants sont extrêment 
