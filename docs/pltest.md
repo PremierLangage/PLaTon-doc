@@ -59,8 +59,8 @@ Si vous souhaiter utiliser un "before" vous devez ajouter:
 
 Vous pouvez aussi ajouter un "after" qui est exécuté après les pltests.
 
-  after==
-  if grade[0]==100:
-      grade[1]=" Vraiment Bravo" 
-  ==
+      after==
+      if grade[0]==100:
+          grade[1]=" Vraiment Bravo" 
+      ==
 
