@@ -9,7 +9,7 @@ TODO
 
 ## Fonctionnalité générales
 
-* TODO : Réaliser votre premier QCM
+* [Réaliser votre premier QCM](tuto/qcm.md)
 * TODO : Faire un exercice aléatoire
 * TODO : Du drag'n'drop (cliqué glisser) dans un exercice
 * TODO : Mettre en place un sérious game : histoire dont vous êtes le héro
