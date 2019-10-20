@@ -32,7 +32,7 @@ d'autres sont plus spécifiques.
 
 * [Le template java](template_java.md)
 * [Le grader java](grader_java.md)
-* TODO : Exercice de programmation en Python avec doctests
+* [Le grader doctest python](pltest.md) Exercice de programmation en Python avec doctests
 * TODO : Template stdsandboxC pour les exercices de programmation en C
 * ...
 
