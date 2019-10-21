@@ -18,7 +18,8 @@ Vous pouvez changer le texte de l'énoncé dans la balise **text**.
 
 Voici deux balises spécifiques aux qcm **nb** et **nbtrue**
 
-      # Nombre de proposition au total par défaut toutes les valeurs de **good** et **bad**
+      # Nombre d'affirmation proposées 
+      # par défaut toutes les valeurs de **good** et **bad**
       nb=4
       # Nombre minimal de lignes "vraies" (qu'il faut cocher pour faire une bonne réponse) 
       nbtrues=2
@@ -49,10 +50,13 @@ Le separator par défaut est le pipe | il permet d'ajouter un feed back si la r�
 
       ==
 
-      before==
+Exemple de changement de valeurs dans le before 
 
+      before==
       bad+=" Très mauvaise affirmation"
       good += "\n celle ci est bonne par contre "
       ==
+
+Enfin l'indicateur suivant permet d'afficher ou non la solution.
 
       feedback=show
