@@ -4,9 +4,9 @@ Pourquoi ? Comment ? Et dans quels objectifs !
 
 ## Un nouvel environnement pédagogique
 
-Premier Langage est une plate forme d'exercices en ligne en développement. Premier Langage utilise 
+Premier Langage est une plateforme d'exercices en ligne en développement. Il utilise 
 des technologies modernes pour permettre la mise en œuvre d'enseignements assistés par 
-ordinateur. Nous avons prévus toute sorte de situations d'apprentissage : avec ou sans encadrement,
+ordinateur. Nous avons prévus toutes sortes de situations d'apprentissage : avec ou sans encadrement,
 à l'école ou à la maison, sur un ordinateur, un téléphone ou encore une tablette. Premier langage
 se veut aussi une plateforme ouverte où la collaboration et le partage facilite le travail des 
 enseignants et leur permet de faire monter la qualité des ressources pédagogiques.
@@ -14,13 +14,13 @@ enseignants et leur permet de faire monter la qualité des ressources pédagogiq
 
 ## Constat et naissance de Premier Langage
 
-Premier Langage est né en 2017 à l'université de Marne la Vallée. C'est une volonté de Dominique 
-Revuz, maître de conférence en informatique à l'U.P.E.M. Constatant qu'une trop large parti du temps
-de l'enseignant dans les premières années à l'université consiste à marteler les mêmes discours et
-mêmes remarques pour les mêmes erreurs durant les travaux dirigés et travaux pratiques, il se demande
-alors par quels moyens pourrait-on automatiser cet encadrement à la fois important, utile mais 
+Premier Langage est né en 2017 à l'université de Marne la Vallée à l'initiative de Dominique 
+Revuz, maître de conférence en informatique à l'U.P.E.M. Partant du Constat qu'une trop large partie du temps
+de l'enseignant, dans les premières années à l'université, consiste à répeter les
+mêmes remarques pour les mêmes erreurs durant les travaux dirigés et travaux pratiques. Il se demande
+alors comment automatiser cet encadrement à la fois important, utile mais 
 terriblement prévisible. En tant qu'informaticien, il est naturel de scripter et d'automatiser les 
-choses simples pour se concentrer sur les choses évoluées. En rajoutant à cela, une très lourde augmentation des étudiants inscrits dans les filières informatiques de L'U.P.E.M., il fallait concevoir
+choses simples pour se concentrer sur les choses "évoluées". Il constitue également à l'augmentation contante des étudiants inscrits dans les filières informatiques de L'U.P.E.M., il fallait concevoir
 un outil adapté.
 
 
@@ -31,13 +31,12 @@ A notre connaissance, nous n'avons pas constaté l’existence d'une plateforme 
 tenir la charge de connexion en pouvant exécuter du code potentiellement dangereux fournis par les
 apprenants. Il existe déjà quelques plateformes mais elles présentent toutes des défauts
 et les adapter est soit techniquement impossible, soit ont un coût de 
-développement similaire à repartir à zéro tout en gardant les handicaps des choix achitectureaux. Après quelques prototypes et expériences, des choix de technologies profond sont apparus comme naturels :
+développement similaire à repartir à zéro tout en gardant les handicaps des choix achitecturaux. Après quelques prototypes et expériences, des choix technologiques profonds sont apparus comme naturels :
 
-* Python : le langage de programmation généraliste devenant référence dans l'enseignement (et pas 
-  que dans les filières informatiques).  
+* Python : le langage de programmation généraliste devenant référence dans l'enseignement (et uniquement dans les filières informatiques).  
 * Django : pour la plateforme web. Rapide, simple, s'articulant avec Python et pouvant facilement tenir 
   la charge.  
-* Docker : pour le déploiement, les machines virtuelles, la sécurité .  
+* Docker : pour le déploiement, les machines virtuelles et la sécurité.  
 * L.T.I. : Learning Tools Interoperability, pour le coté intégration et interopérabilité[^1] avec les outils
   existants des enseignants.  
 
@@ -53,7 +52,7 @@ Une plateforme raisonnable et pérenne doit rester sous le contrôle des enseign
 En plus d'un outil praticable, PL souhaite économiser du temps de travail pour les enseignants éditeurs
 de ressources. L'objectif est donc de mettre en place des outils et pratiques favorisant les 
 corrections, les améliorations et la réutilisation de manière générale. Toutes les sources d'informations
-pédagogiques sont bonnes, c'est les rendre interopérables[^1] qui est difficile. PL incite au partage des
+pédagogiques sont bonnes, c'est l'interopérabilité[^1] qui est difficile. PL incite au partage des
 ressources pédagogiques et à leur structuration en termes de réutilisabilité. Ainsi, un énoncé spécifique
 pourra utiliser un moteur générique pour dessiner une courbe et un programme de correction automatique
 provenant d'une autre technologie. Pourvu que la courbe soit belle, l'enseignant en mathématique
