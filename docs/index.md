@@ -1,6 +1,6 @@
-# Documentation de Premier Langage coté profs !
+# Documentation de Premier Langage côté profs !
 
-Bienvenu sur la documentation de Premier Langage coté enseignant. Merci de ne pas oublier que
+Bienvenue sur la documentation de Premier Langage côté enseignant. Merci de ne pas oublier que
 Premier Langage est toujours en développement. Toute aide et suggestion sur la documentation 
 est bienvenue.
 
