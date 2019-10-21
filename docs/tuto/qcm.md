@@ -12,10 +12,12 @@ Un titre (**title**) comme dans tout les exercices
 
       title= Exemple de QCM
 
-Vous pouvez changer ce texte ici ou dans la balise **before**.
+Vous pouvez changer le texte de l'énoncé dans la balise **text**.
+
       text= Cochez les affirmations correctes.
 
 Voici deux balises spécifiques aux qcm **nb** et **nbtrue**
+
       # Nombre de proposition au total par défaut toutes les valeurs de **good** et **bad**
       nb=4
       # Nombre minimal de lignes "vraies" (qu'il faut cocher pour faire une bonne réponse) 
