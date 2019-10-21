@@ -52,7 +52,7 @@ Une plateforme raisonnable et pérenne doit rester sous le contrôle des enseign
 En plus d'un outil praticable, PL souhaite économiser du temps de travail pour les enseignants éditeurs
 de ressources. L'objectif est donc de mettre en place des outils et pratiques favorisant les 
 corrections, les améliorations et la réutilisation de manière générale. Toutes les sources d'informations
-pédagogiques sont bonnes, c'est l'interopérabilité[^1] qui est difficile. PL incite au partage des
+pédagogiques sont bonnes, c'est l'interopérabilité[^1] qui est difficile. Premier Langage incite au partage des
 ressources pédagogiques et à leur structuration en termes de réutilisabilité. Ainsi, un énoncé spécifique
 pourra utiliser un moteur générique pour dessiner une courbe et un programme de correction automatique
 provenant d'une autre technologie. Pourvu que la courbe soit belle, l'enseignant en mathématique
@@ -73,7 +73,7 @@ toujours une stratégie pour remplir cet objectif d'ouverture et de partage dans
 
 Sur le long terme, Premier Langage espère proposer un cadre robuste pour le déploiement de vos situations
 pédagogiques. Premier Langage ne souhaite pas se spécialiser vers l'informatique ou les mathématiques. Le 
-travail technique étant compliqué et couteux, si la montée en charge et la sécurité sont toutes deux garanties, 
+travail technique étant compliqué et coûteux. Si la montée en charge et la sécurité sont toutes deux garanties, 
 Premier Langage espère pouvoir héberger toutes ressources issues de n'importe quel domaine. 
 
 Premier Langage souhaite monter en fonctionnalité de suivi et pilotage pédagogique, des choses qui sont lourdes à
