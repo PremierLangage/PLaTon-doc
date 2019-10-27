@@ -10,6 +10,7 @@ TODO
 ## Fonctionnalité générales
 
 * [Réaliser votre premier QCM](tuto/qcm.md)
+* [Produire un exercice accessible en mode annonyme](lienano.md)
 * TODO : Faire un exercice aléatoire
 * TODO : Du drag'n'drop (cliqué glisser) dans un exercice
 * TODO : Mettre en place un sérious game : histoire dont vous êtes le héro
