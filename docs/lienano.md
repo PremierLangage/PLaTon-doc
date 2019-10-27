@@ -8,7 +8,7 @@ Une nouvelle fenetre s'ouvre avec une preview de l'exercice, remarquer en haut a
 ce lien vous fait parvenir à une version sauvegardée en base, vous pouvez fournir ce nouveau lien 
 a vos interlocuteurs qui pourrons le visiter qu'ils soit connectés ou non à la plateforme.
 
-![docs/Screenshot_2019-10-27 UPEM - PL.png](docs/Screenshot_2019-10-27 UPEM - PL.png)
+![Image du lien à suivre](lienpartageable.png)
 
 Ceci est une innovation qui permet de partager avec le plus grand nombre des exercices de PL.
 
