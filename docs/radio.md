@@ -1,8 +1,10 @@
-# Question à choix multiples (radio)
+# Question à choix multiples (avec une seule bonne réponse)
+
+Basé sur le composant `radio`.
 
 ## Exemple 1 : Plus petit nombre
 
-[Tester l'exercice](https://pl.u-pem.fr/filebrowser/option?name=test_pl&path=Yggdrasil/demo/radio1.pl)
+[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/6898/)
 
 On commence par créer un composant `RadioGroup`.
 
@@ -10,12 +12,12 @@ On commence par créer un composant `RadioGroup`.
 radio =: RadioGroup
 ~~~
 
-On tire une liste 4 nombres au hasard entre 0 et 49. Avec la méthode `loadContent`, on charge cette liste de choix dans le composant. On détermine le plus petit de ces 4 nombres et on indique qu'il s'agit de la solution en utilisant la méthode `setSolByContent`.
+On tire une liste de 5 nombres au hasard entre 0 et 49. Avec la méthode `loadContent`, on charge cette liste de choix dans le composant. On détermine le plus petit de ces 5 nombres et on indique qu'il s'agit de la solution en utilisant la méthode `setSolByContent`.
 
 ~~~
 before ==
 import random as rd
-numbers=rd.sample(list(range(50)),4)
+numbers=rd.sample(list(range(50)),5)
 radio.loadContent([str(item) for item in numbers])
 sol = min(numbers)
 radio.setSolByContent(str(sol))
@@ -32,6 +34,8 @@ form ==
 ==
 ~~~
 
+La réponse de l'élève est évaluée grâce à la méthode `eval` du composant. Celle-ci renvoie `(100,"")` si la réponse de l'élève est correcte et `(0,"")` sinon. Par ailleurs, cette méthode modifie l'apparence du champ de réponse : la solution est colorée en vert et l'éventuelle mauvaise réponse de l'élève est colorée en rouge. Enfin, le composant est désactivé en mettant à `True` la valeur de l'attribut `disabled` : l'élève ne peut plus l'item sélectionné.
+
 ~~~
 evaluator ==
 grade = radio.eval()
@@ -41,15 +45,16 @@ radio.disabled=True
 
 ## Template `radio.pl`
 
+Pour alléger l'écriture d'exercices à choix multiples, on peut utiliser le templace `radio.pl`.
+
 ~~~
 extends = basic.pl
 
-@ /utils/radiogroup.py [customradiogroup.py]
-
 radio =: RadioGroup
-radio.decorator = CustomRadioGroup
 
-form = {{ radio|component }}
+form ==
+{{ radio|component }}
+==
 
 evaluator ==
 grade = radio.eval()
@@ -58,6 +63,8 @@ radio.disabled=True
 ~~~
 
 ## Exemple 2 : Capitale d'un pays
+
+[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/6899/)
 
 ~~~
 @ country_data.csv [data.csv]
