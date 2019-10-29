@@ -14,7 +14,7 @@ Prenez un moment pour lire les informations sur PL Editor.
 * [Héritage et templates](heritage.md)
 * [Mise en forme de l'énoncé](forme_enonce.md)
 * [Champs de réponse usuels]()
-  * [Questions à choix multiples (Radio)](radio.md)
-  * [Questions à choix multiples (Checkbox)](checkbox.md)
-  * [Appariement (MatchList)]()
+    * [Questions à choix multiples (Radio)](radio.md)
+    * [Questions à choix multiples (Checkbox)](checkbox.md)
+    * [Appariement (MatchList)]()
 
