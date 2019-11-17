@@ -18,12 +18,12 @@ TODO
 ## Fonctionnalité pour les mathématiques
 
 * Outils de base
-  * [Bibliothèque SymPy](sympy.md)
-  * [Composant MathInput](composant_mathinput.md)
-  * Module Utilsmath
-* [Un exemple d'exercice](premier_exemple_math.md)
-* TODO : Inclue du latex dans vos exercices
-* TODO : Inclure le graphe d'une fonction dans un exercice
+    * [Bibliothèque SymPy](sympy.md)
+    * [Composant MathInput](composant_mathinput.md)
+    * [Composant JSXGraph](composant_jsxgraph.md)
+    * Module Utilsmath
+* Exemples
+    * [Un exemple d'exercice](premier_exemple_math.md)
 
 ## Fonctionnalité pour l'informatique
 
