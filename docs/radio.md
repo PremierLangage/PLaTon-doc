@@ -1,6 +1,25 @@
 # Question à choix multiples (avec une seule bonne réponse)
 
-Basé sur le composant `radio`.
+Le composant `RadioGroup` permet de créer un champ de réponse à choix multiples (avec une seule bonne réponse).
+
+La création du composant et son insertion dans la clé `form` se fait comme n'importe quel autre composant.
+
+~~~
+radio =: RadioGroup
+
+form ==
+{{ radio | component }}
+==
+~~~
+
+La définition du contenu et l'évaluation de ce champ de réponse se fait facilement grâce à des méthodes spécifiques.
+  * Dans le script `before` :
+    * Les différents choix possibles sont définis en fournissant une liste de chaînes de caractères à la méthode `loadContent`.
+    * La bonne réponse est fixée grâce de la méthode `setSolByContent` (en donnant la valeur de la bonne réponse) ou à la méthode `setSolByIndex` (en donnant son indice).
+    * Enfin, la liste des choix est mélangée, si nécessaire, en utilisant la méthode`shuffle`.
+  * Dans le script `evaluator`, l'évaluation de la réponse de l'élève se fait avec la méthode `eval`.
+  
+Le template `radio.pl` permet d'alléger l'écriture d'exercices utilisant un champ de réponse à choix multiples en prédéfinissant certains éléments.
 
 ## Exemple 1 : Plus petit nombre
 
@@ -30,7 +49,7 @@ Sélectionner le plus petit nombre.
 ==
 
 form ==
-{{ radio|component }}
+{{ radio | component }}
 ==
 ~~~
 
