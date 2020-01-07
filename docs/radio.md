@@ -1,4 +1,4 @@
-# Question à choix multiples (avec une seule bonne réponse)
+# Question à choix multiples (avec une seul choix sélectionnable)
 
 Le composant `RadioGroup` permet de créer un champ de réponse à choix multiples (avec une seule bonne réponse).
 
@@ -12,14 +12,13 @@ form ==
 ==
 ~~~
 
-La définition du contenu et l'évaluation de ce champ de réponse se fait facilement grâce à des méthodes spécifiques.
-  * Dans le script `before` :
-    * Les différents choix possibles sont définis en fournissant une liste de chaînes de caractères à la méthode `loadContent`.
-    * La bonne réponse est fixée grâce de la méthode `setSolByContent` (en donnant la valeur de la bonne réponse) ou à la méthode `setSolByIndex` (en donnant son indice).
-    * Enfin, la liste des choix est mélangée, si nécessaire, en utilisant la méthode`shuffle`.
-  * Dans le script `evaluator`, l'évaluation de la réponse de l'élève se fait avec la méthode `eval`.
+La définition du contenu et l'évaluation de ce champ de réponse se fait facilement grâce à des méthodes spécifiques :
+    * `loadContent`, qui permet de définir la liste des choix possibles ;
+    * `setSolByContent` et `setSolByIndex`, qui permettent de définir la bonne réponse (en donnant sa valeur ou en donnant son indice) ;
+    * `shuffle`, qui mélange la liste des choix ;
+    * `eval`, qui évalue la réponse de l'élève.
   
-Le template `radio.pl` permet d'alléger l'écriture d'exercices utilisant un champ de réponse à choix multiples en prédéfinissant certains éléments.
+Le template `radio.pl` permet d'alléger l'écriture d'exercices utilisant un champ de réponse à choix multiples en pré-définissant certains éléments.
 
 ## Exemple 1 : Plus petit nombre
 
