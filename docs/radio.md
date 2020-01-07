@@ -2,9 +2,7 @@
 
 ## Composant `RadioGroup`
 
-Le composant `RadioGroup` permet de créer un champ de réponse à choix multiples (avec un seul choix sélectionnable).
-
-La création du composant et son insertion dans la clé `form` se fait comme n'importe quel autre composant.
+Le composant `RadioGroup` permet de créer un champ de réponse à choix multiples avec un seul choix sélectionnable. La création du composant et son insertion dans la clé `form` se fait comme n'importe quel autre composant.
 
 ~~~
 radio =: RadioGroup
@@ -14,13 +12,15 @@ form ==
 ==
 ~~~
 
-La définition du contenu et l'évaluation de ce champ de réponse se fait facilement grâce à des méthodes spécifiques.
-  * La méthode `loadContent` permet de définir la liste des choix possibles.
-  * Les méthodes `setSolByContent` et `setSolByIndex` permettent de définir la bonne réponse (en donnant sa valeur ou en donnant son indice).
-  * `shuffle`. Cette méthode mélange la liste des choix.
-  * `eval`. Cette méthode nécessite d'avoir défini au préalable la bonne répons. Elle renvoie `(100,"")` si la réponse de l'élève est correcte et `(0,"")` sinon. Par ailleurs, cette méthode modifie l'apparence du champ de réponse : la solution est colorée en vert et l'éventuelle mauvaise réponse de l'élève est colorée en rouge. qui évalue la réponse de l'élève.
+La méthode `loadContent` permet de définir la liste des choix possibles.
+
+Les méthodes `setSolByContent` et `setSolByIndex` permettent de définir la bonne réponse (en donnant sa valeur ou en donnant son indice).
+
+Au besoin, pour mélanger les choix, on peut utiliser la méthode `shuffle`.
+
+La méthode `eval` évalue la réponse de l'élève. Elle nécessite d'avoir défini au préalable la bonne réponse. Elle renvoie `(100,"")` si la réponse de l'élève est correcte et `(0,"")` sinon. Par ailleurs, cette méthode modifie l'apparence du champ de réponse : la solution est colorée en vert et l'éventuelle mauvaise réponse de l'élève est colorée en rouge. qui évalue la réponse de l'élève.
   
-  Le composant est désactivé en mettant à `True` la valeur de l'attribut `disabled` : l'élève ne peut plus l'item sélectionné.
+ En mettant à `True` la valeur de l'attribut `disabled`, on désactive le champ de réponse : l'élève ne peut alors plus changer le choix sélectionné.
   
 ## Template `radio.pl`
 
@@ -44,12 +44,6 @@ radio.disabled=True
 ## Exemple 1 : Plus petit nombre
 
 [Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/6898/)
-
-On commence par créer un composant `RadioGroup`.
-
-~~~
-radio =: RadioGroup
-~~~
 
 On tire une liste de 5 nombres au hasard entre 0 et 49. Avec la méthode `loadContent`, on charge cette liste de choix dans le composant. On détermine le plus petit de ces 5 nombres et on indique qu'il s'agit de la solution en utilisant la méthode `setSolByContent`.
 
