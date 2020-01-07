@@ -1,6 +1,18 @@
-# Question à choix multiples (avec plusieurs bonnes réponses)
+# Question à choix multiples (plusieurs choix sélectionnables)
 
-Basé sur le composant `CheckboxGroup`.
+## Composant `CheckboxGroup`
+
+Le choix du barème se fait par l'attribut `grading`. Trois barèmes sont proposés
+
+!!! info
+    `AllOrNothing`
+    `CorrectAnswers`
+    `RightMinusWrong`
+    
+    
+## Template checkbox.pl
+
+
 
 ## Exemple 1 : Multiples de 3
 
