@@ -8,7 +8,7 @@ Cliquez dessus vous arriver sur https://pl.u-pem.fr/filebrowser
 
 Prenez un moment pour lire les informations sur PL Editor. 
 
-* Fonctionnement général
+* [Introduction](intro_tutoriel.md)
 * [Premier exemple](premier_exemple.md)
 * [Utiliser un fichier de données](fichier_externe.md)
 * [Héritage et templates](heritage.md)
