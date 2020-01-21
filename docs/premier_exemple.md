@@ -2,10 +2,9 @@
 
 [Tester l'exercice](https://pl.u-pem.fr/filebrowser/option?name=test_pl&path=Yggdrasil/demo/add_int.pl)
 
-On commence par inclure la librairie `sandboxio` (bientôt plus nécessaire ?) et par choisir le `builder` et le `grader`.
+On commence par choisir le `builder` et le `grader` en utilisant la syntaxe d'inclusion des fichiers. On choisit ici le builder `before` et le grader `evaluator`
 
 ~~~
-@ /utils/sandboxio.py
 @ /builder/before.py [builder.py]
 @ /grader/evaluator.py [grader.py]
 ~~~
