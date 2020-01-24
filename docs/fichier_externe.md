@@ -1,4 +1,8 @@
-# Utiliser un fichier de données
+# Fichiers externes
+
+Il est possible d'importer des fichiers externes (fichiers de données, bibliothèque de fonctions Python, etc.) dans l'environnement d'un exercice. 
+
+## Fichier de données
 
 Pour beaucoup d'exercices, les données utilisées dans l'énoncé seront stockées dans un fichier externe. Voyons donc comment lire un fichier externe depuis un exercice PL, à travers l'exemple d'un exercice de conjugaison.
 
