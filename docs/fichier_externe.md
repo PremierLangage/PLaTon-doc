@@ -1,14 +1,18 @@
 # Fichiers externes
 
-Il est possible d'importer des fichiers externes (fichiers de données, bibliothèque de fonctions Python, etc.) dans l'environnement d'un exercice. 
+Il est possible d'importer des fichiers externes (en format texte) dans l'environnement d'un exercice. Ces fichier peuvent ensuite être utilisées dans les scripts `before` et `evaluator`.
 
-## Fichier de données
+L'inclusion se fait avec l'opérateur `@`.
 
-Pour beaucoup d'exercices, les données utilisées dans l'énoncé seront stockées dans un fichier externe. Voyons donc comment lire un fichier externe depuis un exercice PL, à travers l'exemple d'un exercice de conjugaison.
+~~~
+@ chemin/vers/mon/fichier.txt [alias]
+~~~
 
-Tester l'exercice : [Conjugaisons au présent]()
+## Exemple : Fichier de données CSV
 
-Les conjugaisons au présent d'un certain nombre de verbes sont stockées dans un fichier `conj_pres.csv` dans le répertoire `\home\demo\`. Le contenu de ce fichier est affiché ci-dessous.
+Le format CSV (Comma-Separated Values) est un format texte représentant des données tabulaires sous un forme de valeurs séparées par des virgules. Chaque ligne du texte correspond à une ligne du tableau et les virgules correspondent aux séparations entre les colonnes. Les virgules peuvent parfois être remplacées par d'autres séparateurs (points-virgules, espaces, etc.)
+
+Voilà par exemple un fichier CSV contenant les conjugaisons au présent de quelques verbes.
 
 ~~~
 infinitif,1S,2S,3S,1P,2P,3P
@@ -18,10 +22,7 @@ finir,finis,finis,finit,finissons,finissez,finissent
 prendre,prends,prends,prend,prenons,prenez,prennent
 ~~~
 
-!!! note
-    Le format CSV (Comma-Separated Values) est un format texte représentant des données tabulaires sous un forme de valeurs séparées par des virgules. Chaque ligne du texte correspond à une ligne du tableau et les virgules correspondent aux séparations entre les colonnes. Les virgules peuvent parfois être remplacées par d'autres séparateurs (points-virgules, espaces, etc.)
-
-Pour utiliser un fichier externe dans un exercice, il faut d'abord l'inclure grâce à l'opérateur `@`.
+Tester l'exercice : [Conjugaisons au présent]()
 
 ~~~
 @ conj_data.csv [data.csv]
@@ -76,3 +77,6 @@ else:
     grade=(0,"")
 ==
 ~~~
+
+## Exemple : Module Python
+
