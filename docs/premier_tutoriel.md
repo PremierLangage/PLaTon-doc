@@ -1,6 +1,4 @@
-# Création d'exercices
-
-## Premier tutoriel
+# Premier tutoriel
 
 * [Introduction](intro_tutoriel.md)
 * [Premier exemple](premier_exemple.md)
@@ -16,3 +14,8 @@
     * [Etiquettes à placer](dragdrop.md)
     * [Texte à sélectionner](textselect.md)
    
+# Exercices de mathématiques
+
+# Exercices de programmation
+
+# Image, son et vidéo
