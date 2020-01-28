@@ -10,9 +10,9 @@ L'inclusion se fait avec l'opérateur `@`.
 
 ## Exemple : Fichier de données CSV
 
-Le format CSV (Comma-Separated Values) est un format texte représentant des données tabulaires sous un forme de valeurs séparées par des virgules. Chaque ligne du texte correspond à une ligne du tableau et les virgules correspondent aux séparations entre les colonnes. Les virgules peuvent parfois être remplacées par d'autres séparateurs (points-virgules, espaces, etc.)
+Le [format CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) (Comma-Separated Values) est un format texte représentant des données tabulaires sous forme de valeurs séparées par des virgules. Chaque ligne du texte correspond à une ligne du tableau et les virgules correspondent aux séparations entre les colonnes. Les virgules peuvent être remplacées par d'autres séparateurs (points-virgules, espaces, etc.) La création d'un fichier CSV se fait avec un tableur ou directement dans un éditeur de texte.
 
-Voilà par exemple un fichier CSV contenant les conjugaisons au présent de quelques verbes.
+Voilà un exemple de fichier CSV contenant les conjugaisons au présent de quelques verbes.
 
 ~~~
 infinitif,1S,2S,3S,1P,2P,3P
@@ -22,52 +22,43 @@ finir,finis,finis,finit,finissons,finissez,finissent
 prendre,prends,prends,prend,prenons,prenez,prennent
 ~~~
 
+Voyons comment créer un exercice de conjugaison à l'aide de ce fichier de données.
+
 Tester l'exercice : [Conjugaisons au présent]()
 
 ~~~
-@ conj_data.csv [data.csv]
-~~~
+extends = /template/basicinput.pl
 
-L'ouverture du fichier se fait avec la commande Python usuelle `open`. Le nom du fichier à spécifier est le nom de l'alias donné au moment de l'inclusion avec l'opérateur `@`. Pour lire le contenu du fichier, on utilise la commande `DictReader` du module `csv`.
+@ conj_data.csv
 
-~~~
+title = Conjugaison
+
 before ==
-
 import random as rd
 import csv
 
-with open('data.csv',newline='') as file:
+with open('conj_data.csv',newline='') as file:
     rows=list(csv.DictReader(file,delimiter=','))
 
 row=rd.choice(rows)
 p=rd.choice(['1S','2S','3S','1P','2P','3P'])
 
-dic_prs={'1S':'1ère personne du singulier',
-         '2S':'2e personne du singulier',
-         '3S':'3e personne du singulier',
-         '1P':'1ère personne du pluriel',
-         '2P':'2e personne du pluriel',
-         '3P':'3e personne du pluriel'}
+dic_pronom={'1S':'je','2S':'tu','3S':'il','1P':'nous','2P':'vous','3P':'ils'}
 
 verbe_inf=row['infinitif']
 verbe_conj=row[p]
-txt_prs=dic_prs[p]
-
-
+pronom=dic_pronom[p]
 ==
-~~~
 
-Le reste du code de l'exercice ne présente pas de difficultés.
-
-~~~
 text ==
-Conjuguer le verbe {{verbe_inf}} à la {{txt_prs}} du présent.
+Conjuguer le verbe **{{verbe_inf}}** au présent avec le pronom indiqué.
 ==
-
-input =: Input
 
 form ==
-{{input|component}}
+<div class="d-flex align-items-center">
+  <div class="align-self-center">{{pronom}} &nbsp; </div>
+  <div class="flex-grow-1">{{input|component}}</div>
+</div>
 ==
 
 evaluator ==
@@ -77,6 +68,11 @@ else:
     grade=(0,"")
 ==
 ~~~
+
+L'ouverture du fichier se fait avec la commande Python usuelle `open`. Le nom du fichier à spécifier est le nom de l'alias donné au moment de l'inclusion avec l'opérateur `@`. Pour lire le contenu du fichier, on utilise la commande `DictReader` du module `csv`.
+
+Le reste du code de l'exercice ne présente pas de difficultés.
+
 
 ## Exemple : Module Python
 
