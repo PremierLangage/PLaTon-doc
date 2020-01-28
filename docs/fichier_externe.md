@@ -12,57 +12,73 @@ L'inclusion se fait avec l'opérateur `@`.
 
 Le [format CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) (Comma-Separated Values) est un format texte représentant des données tabulaires sous forme de valeurs séparées par des virgules. Chaque ligne du texte correspond à une ligne du tableau et les virgules correspondent aux séparations entre les colonnes. Les virgules peuvent être remplacées par d'autres séparateurs (points-virgules, espaces, etc.) La création d'un fichier CSV se fait avec un tableur ou directement dans un éditeur de texte.
 
-Voilà un exemple de fichier CSV contenant les conjugaisons au présent de quelques verbes.
+Voilà un exemple de fichier CSV contenant une liste de pays européens et leur capitale.
 
 ~~~
-infinitif,1S,2S,3S,1P,2P,3P
-chanter,chante,chantes,chante,chantons,chantez,chantent
-manger,mange,manges,mange,mangeons,mangez,mangent
-finir,finis,finis,finit,finissons,finissez,finissent
-prendre,prends,prends,prend,prenons,prenez,prennent
+country,article,capital
+Allemagne,l,Berlin
+Autriche,l,Vienne
+Belgique,la,Bruxelles
+Danemark,le,Copenhague
+Espagne,l,Madrid
+Finlande,la,Helsinki
+France,la,Paris
+Grèce,la,Athènes
+Hongrie,la,Budapest
+Irlande,l,Dublin
+Italie,l,Rome
+Norvège,la,Oslo
+Pays-Bas,les,Amsterdam
+Pologne,la,Varsovie
+Portugal,le,Lisbonne
+Roumanie,la,Bucarest
+Royaume-Uni,le,Londres
+Slovaquie,la,Bratislava
+Suède,la,Stockholm
+Suisse,la,Berne
 ~~~
 
-Voyons comment créer un exercice de conjugaison à l'aide de ce fichier de données.
+Voyons comment créer un exercice sur les capitales à l'aide de ce fichier de données.
 
 Tester l'exercice : [Conjugaisons au présent]()
 
 ~~~
-extends = /template/basicinput.pl
+@ /utils/sandboxio.py
+@ /builder/before2.py [builder.py]
+@ /grader/evaluator2.py [grader.py]
 
-@ conj_data.csv
+@ country_data2.csv [data.csv]
 
-title = Conjugaison
+title = Capitales d'Europe
 
 before ==
 import random as rd
 import csv
 
-with open('conj_data.csv',newline='') as file:
+with open('data.csv',newline='') as file:
     rows=list(csv.DictReader(file,delimiter=','))
 
-row=rd.choice(rows)
-p=rd.choice(['1S','2S','3S','1P','2P','3P'])
+item=rd.choice(rows)
+country=item['country']
+article=item['article']
+capital=item['capital']
 
-dic_pronom={'1S':'je','2S':'tu','3S':'il','1P':'nous','2P':'vous','3P':'ils'}
-
-verbe_inf=row['infinitif']
-verbe_conj=row[p]
-pronom=dic_pronom[p]
+partitif={"le":"du ","la":"de la ","les":"des ","l":"de l'"}
+ofcountry = partitif[article] + country
 ==
 
 text ==
-Conjuguer le verbe **{{verbe_inf}}** au présent avec le pronom indiqué.
+Quelle est la capitale {{ofcountry}} ?
 ==
 
+input =: Input
+
 form ==
-<div class="d-flex align-items-center">
-  <div class="align-self-center">{{pronom}} &nbsp; </div>
-  <div class="flex-grow-1">{{input|component}}</div>
-</div>
+{{ input | component }}
 ==
 
 evaluator ==
-if input.value==verbe_conj:
+if input.value==capital:
     grade=(100,"")
 else:
     grade=(0,"")
