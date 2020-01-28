@@ -1,8 +1,10 @@
-# Héritage
+# Héritage : templates et exercices à paramètres
 
-La syntaxe des exercices PL permet d'hériter des clés d'un autre fichier. Cet héritage permet l'utilisation de **templates**.
+La commande `extends` permet d'importer les clés d'un autre fichier `.pl`. 
 
-## Premier exemple
+## Templates
+
+Dans l'exercice d'addition précédent, on 
 
 On remarque que les deux premiers exemples d'exercices partagent un certain nombre de clés (choix du builder et du grader, champ de réponse). On imagine d'ailleurs que beaucoup d'autres exercices utiliseront cet ensemble de clés. Pour minimiser la duplication de codes, on peut donc placer ces clés dans un template `basicinput.pl`.
 
@@ -49,7 +51,7 @@ except:
 !!!note
 Un certain nombres de templates de base sont déjà disponibles dans le répertoire `lib/template/`.
 
-## Deuxième exemple
+## Exercices à paramètres
 
 ~~~
 extends = /template/basicinput.pl
