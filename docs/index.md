@@ -9,7 +9,7 @@ est bienvenue.
 [La présentation](presentation.md) suivante vous décrira un rapide historique de Premier Langage.
 
 
-## Premier tutoriel
+## Création d'exercicess
 
 Voici le [premier tutoriel](premier_tutoriel.md) pour l'enseignant voulant produire et partager 
 des ressources pédagogiques.
