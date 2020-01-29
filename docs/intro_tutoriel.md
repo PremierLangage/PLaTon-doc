@@ -1,6 +1,6 @@
 # Introduction
 
-Un exercice est défini en choisissant un **builder** et un **grader**, puis en affectant des valeurs à un ensemble de **clés**. En pratique, ces choix et ces affectations sont écrits dans un fichier texte, d'extension `.pl`, selon une syntaxe dédiée.
+On crée un exercice en choisissant un **builder** et un **grader**, puis en affectant des valeurs à un ensemble de **clés**. En pratique, ces choix et ces affectations sont écrits dans un fichier texte, d'extension `.pl`, selon une syntaxe dédiée.
 
 Lorsque l'exercice est lancé sur la plateforme, le **builder** construit la page web de l'exercice (énoncé, champs de réponse) à partir des valeurs contenues dans les **clés**. Une fois que l'élève a validé sa réponse, le **grader** évalue cette réponse et modifie la page web de l'exercice (retour sur la réponse).
 
