@@ -31,14 +31,15 @@ b=rd.randint(10,20)
 
 ## Titre, énoncé, champ de réponse
 
-La page web de l'exercice a trois sections : le titre, l'énoncé, le champ de réponse.
+La page web de l'exercice contient trois blocs lors de son premier affichage : le titre, l'énoncé, la zone de réponse. Le contenu de ces trois blocs est à définir dans les clés `title`, `text` et `form`.
 
+La clé `title` doit recevoir une chaîne de caractère.
 
-On définit ensuite le titre de l'exercice avec la clé `title`.
 ~~~
-title = Somme d'entiers
+title = "Addition"
 ~~~
 
+La clé `text` doit recevoir une chaîne de caractère. Cet
 On définit l'énoncé de l'exercice avec la clé `text`. Les variables qui ont été créés par le script `before` sont disponibles et peuvent être incluses en utilisant des doubles accolades.
 
 ~~~
