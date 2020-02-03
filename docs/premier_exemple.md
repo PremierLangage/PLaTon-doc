@@ -1,18 +1,19 @@
-# Premier exemple
+# Un premier exemple d'exercice
 
-[Tester l'exercice](https://pl.u-pem.fr/filebrowser/option?name=test_pl&path=Yggdrasil/demo/add_int.pl)
+Le premier exemple que nous allons examiner est un exercice très simple d'addition. On demande de calculer la somme de deux entiers tirés aléatoirement (entre 10 et 20). La réponse doit être rentrée dans un champ de réponse numérique libre.
 
-On commence par choisir le `builder` et le `grader` en utilisant la syntaxe d'inclusion des fichiers. On choisit ici le builder `before` et le grader `evaluator`
+[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/10859/)
+
+## Choix du builder et du grader
+
+En pratique, les *builder* et les *grader* sont des scripts Python stockés sur la plateforme. Pour choisir un *builder* et un *grader* particuliers dans un exercice, il faut inclure ces scripts dans l'environnement de l'exercice en les renommant `builder.py` et `grader.py`.
 
 ~~~
 @ /builder/before.py [builder.py]
 @ /grader/evaluator.py [grader.py]
 ~~~
 
-On définit ensuite le titre de l'exercice avec la clé `title`.
-```
-title = Somme d'entiers
-```
+## Génération aléatoire des données
 
 La clé `before` permet de définir un script Python qui est exécuté au lancement de l'exercice. C'est avec ce script qu'on génère aléatoirement les deux nombres à additionner.
 
@@ -23,6 +24,13 @@ a=rd.randint(10,20)
 b=rd.randint(10,20)
 ==
 ~~~
+
+## Titre, énoncé, champ de réponse
+
+On définit ensuite le titre de l'exercice avec la clé `title`.
+```
+title = Somme d'entiers
+```
 
 On définit l'énoncé de l'exercice avec la clé `text`. Les variables qui ont été créés par le script `before` sont disponibles et peuvent être incluses en utilisant des doubles accolades.
 
@@ -36,11 +44,15 @@ La création du champ de réponse se fait grâce à un composant prédéfini. On
 
 ~~~
 input =: Input
+input.type = "numeric"
 
 form ==
 {{ input | component }}
 ==
 ~~~
+
+## Evaluation de la réponse et retour sur la réponse
+
 
 La clé `evaluator` permet de définir un script Python qui est exécuté après la validation de l'exercice par l'élève. Ce script doit définir une variable `grade` qui contient la note de l'exercice et un feedback. La note doit être comprise entre 0 et 100 ou, pour déclencher un message d'avertissement, être égale à -1. 
 
@@ -64,3 +76,4 @@ except:
 !!! warning
     Toutes les variables créées dans le script `before` ne sont pas disponibles dans le script `evaluator`. Seules les variables         de type `dict`, `list`, `tuple`, `string`, `int`, `float`, ainsi que les objets `True`, `False` et `None` sont transférés du script `before` au script `evaluator`. Ces limitations sont dues au protocole de transfert des variables qui utilise un format JSON.
 
+## Fichier source complet de l'exercice
