@@ -17,7 +17,9 @@ Dans cet exercice, nous allons utiliser le *builder* `before` et le *builder* `e
 
 ## Génération aléatoire des données
 
-La clé `before` permet de définir un script Python qui est exécuté au lancement de l'exercice. C'est avec ce script qu'on génère aléatoirement les deux nombres à additionner.
+Avec le *builder* `before`, on peut définir un script Python qui sera exécuté au lancement de l'exercice et génerera aléatoirement les données de l'exercice. Ce script doit être affecté à la clé `before`. Comme il s'agit d'un texte à plusieurs lignes, l'affectation se fait avec l'opérateur `==`.
+
+Dans notre exercice d'addition, le script de génération des données est très simple. Il consiste à générer aléatoirement deux entiers. On utilise pour cela le module `random` (qui fait partie de la bibliothèque standard de Python).
 
 ~~~
 before ==
@@ -29,10 +31,13 @@ b=rd.randint(10,20)
 
 ## Titre, énoncé, champ de réponse
 
+La page web de l'exercice a trois sections : le titre, l'énoncé, le champ de réponse.
+
+
 On définit ensuite le titre de l'exercice avec la clé `title`.
-```
+~~~
 title = Somme d'entiers
-```
+~~~
 
 On définit l'énoncé de l'exercice avec la clé `text`. Les variables qui ont été créés par le script `before` sont disponibles et peuvent être incluses en utilisant des doubles accolades.
 
@@ -42,8 +47,9 @@ Calculer {{a}} + {{b}}.
 ==
 ~~~
 
+~~~
 input =: Input
-input.type = "numeric"
+input.type = number
 
 form ==
 {{ input | component }}
