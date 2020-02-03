@@ -6,7 +6,9 @@ Le premier exemple que nous allons examiner est un exercice très simple d'addit
 
 ## Choix du builder et du grader
 
-En pratique, les *builder* et les *grader* sont des scripts Python stockés sur la plateforme. Pour choisir un *builder* et un *grader* particuliers dans un exercice, il faut inclure ces scripts dans l'environnement de l'exercice en les renommant `builder.py` et `grader.py`.
+En pratique, les *builders* et les *graders* sont des scripts Python stockés sur la plateforme. Pour choisir un *builder* et un *grader* particuliers dans un exercice, il faut inclure ces scripts dans l'environnement de l'exercice en les renommant `builder.py` et `grader.py`. Dans le langage propre aux exercices, l'inclusion de fichiers externes se fait grâce à l'opérateur `@`.
+
+Dans cet exercice, nous allons utiliser le *builder* `before` et le *builder* `evaluator` qui sont, on le rappelle, le *builder* et le *grader* génériques.
 
 ~~~
 @ /builder/before.py [builder.py]
@@ -40,9 +42,6 @@ Calculer {{a}} + {{b}}.
 ==
 ~~~
 
-La création du champ de réponse se fait grâce à un composant prédéfini. On crée un composant `Input` qu'on appelle `input`. On insère ensuite ce composant dans la clé `form` qui est destinée à recevoir le ou les champs de réponse de l'exercice. L'insertion d'un composant se fait entre doubles accolades avec le filtre `component`. 
-
-~~~
 input =: Input
 input.type = "numeric"
 
