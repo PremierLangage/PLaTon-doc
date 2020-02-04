@@ -6,7 +6,7 @@ Le premier exemple que nous allons examiner est un exercice très simple d'addit
 
 ## Choix du builder et du grader
 
-En pratique, les *builders* et les *graders* sont des scripts Python stockés sur la plateforme. Pour choisir un *builder* et un *grader* particuliers dans un exercice, il faut inclure ces scripts dans l'environnement de l'exercice en les renommant `builder.py` et `grader.py`. Dans le langage propre aux exercices, l'inclusion de fichiers externes se fait grâce à l'opérateur `@`.
+En pratique, les *builders* et les *graders* sont des scripts Python stockés sur la plateforme. Pour choisir un *builder* et un *grader* particuliers dans un exercice, il faut inclure ces scripts dans l'environnement de l'exercice en les renommant `builder.py` et `grader.py`.
 
 Dans cet exercice, nous allons utiliser le *builder* `before` et le *builder* `evaluator` qui sont, on le rappelle, le *builder* et le *grader* génériques.
 
@@ -17,9 +17,9 @@ Dans cet exercice, nous allons utiliser le *builder* `before` et le *builder* `e
 
 ## Génération aléatoire des données
 
-Avec le *builder* `before`, on peut définir un script Python qui sera exécuté au lancement de l'exercice et génerera aléatoirement les données de l'exercice. Ce script doit être affecté à la clé `before`. Comme il s'agit d'un texte à plusieurs lignes, l'affectation se fait avec l'opérateur `==`.
+Avec le *builder* `before`, on peut définir un script Python qui sera exécuté au lancement de l'exercice afin de produire les données de l'exercice. Ce script doit être affecté à la clé `before`.
 
-Dans notre exercice d'addition, le script de génération des données est très simple. Il consiste à générer aléatoirement deux entiers. On utilise pour cela le module `random` (qui fait partie de la bibliothèque standard de Python).
+Dans notre exercice d'addition, le script de génération des données est très simple. Il consiste à tirer aléatoirement deux entiers. On utilise pour cela le module `random` (qui fait partie de la bibliothèque standard de Python).
 
 ~~~
 before ==
@@ -33,13 +33,13 @@ b=rd.randint(10,20)
 
 La page web de l'exercice contient trois blocs lors de son premier affichage : le titre, l'énoncé, la zone de réponse. Le contenu de ces trois blocs est à définir dans les clés `title`, `text` et `form`.
 
-La clé `title` doit recevoir une chaîne de caractère.
+La clé `title` doit recevoir une chaîne de caractères.
 
 ~~~
 title = "Addition"
 ~~~
 
-La clé `text` doit recevoir une chaîne de caractère. Cet
+La clé `text` doit recevoir un *template* de chaîne de caractère. Cet
 On définit l'énoncé de l'exercice avec la clé `text`. Les variables qui ont été créés par le script `before` sont disponibles et peuvent être incluses en utilisant des doubles accolades.
 
 ~~~
@@ -69,13 +69,10 @@ En fonction du résultat de ce test, on renvoie une note égale à 0 ou 100. Si 
 
 ```
 evaluator ==
-try:
-    if int(input.value)==a+b:
-        grade=(100,"")
-    else:
-        grade=(0,"")
-except:
-    grade=(-1,"Votre réponse n'est pas un nombre entier.")
+if input.value==a+b:
+    grade=(100,"")
+else:
+    grade=(0,f"La réponse est {a+b}.")
 ==
 ```
 
