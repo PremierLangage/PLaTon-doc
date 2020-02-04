@@ -1,9 +1,9 @@
 # Syntaxe PL
 
 Il y a trois types d'opérations possibles dans la syntaxe PL :
-  * affecter une valeur à une clé ;
-  * inclure un fichier externe dans l'environnement de l'exercice ;
-  * hériter du contenu d'un fichier PL.
+    * affecter une valeur à une clé ;
+    * inclure un fichier externe dans l'environnement de l'exercice ;
+    * hériter du contenu d'un fichier PL.
 
 L'ordre n'a pas d'importance (?).
 
@@ -38,8 +38,7 @@ Souvent, la valeur à affecter à une clé est une chaîne multilignes avec des 
 
 ```
 key ==
-Voici un énoncé d'exercice
-qui peut prendre plusieurs lignes.
+
 ==
 ```
 
