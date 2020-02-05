@@ -39,14 +39,15 @@ La clé `title` doit recevoir une chaîne de caractères.
 title = "Addition"
 ~~~
 
-La clé `text` doit recevoir un *template* de chaîne de caractère. Cet
-On définit l'énoncé de l'exercice avec la clé `text`. Les variables qui ont été créés par le script `before` sont disponibles et peuvent être incluses en utilisant des doubles accolades.
+La clé `text` doit recevoir une chaîne de caractères ou un *template* de chaîne de caractères. L'utilisation d'un *template* permet de créer facilement un énoncé dynamique. La moteur de template utilisé est Jinja2. L'insertion d'une valeur se fait en tre doubles accolades `{{...}}`.
 
 ~~~
 text ==
 Calculer {{a}} + {{b}}.
 ==
 ~~~
+
+Comme la clé `text`, la clé `form` doit recevoir une chaîne de caractères ou un *template* de chaîne de caractères. L'insertion d'un composant se fait entre doubles accolades avec un filtre spécifique `{{ ... | component}}`.
 
 ~~~
 input =: Input
@@ -59,13 +60,9 @@ form ==
 
 ## Evaluation de la réponse et retour sur la réponse
 
-
-La clé `evaluator` permet de définir un script Python qui est exécuté après la validation de l'exercice par l'élève. Ce script doit définir une variable `grade` qui contient la note de l'exercice et un feedback. La note doit être comprise entre 0 et 100 ou, pour déclencher un message d'avertissement, être égale à -1. 
+Avec le *builder* `evaluator`, il faut définir un script Python qui sera exécuté après la validation de l'exercice par l'élève afin d'évaluer sa réponse. Ce script doit être affecté à la clé `evaluator`. Il doit définir une variable `grade` qui contient la note de l'exercice et un feedback. La note doit être comprise entre 0 et 100 ou, pour déclencher un message d'avertissement, être égale à -1. 
 
 On récupère la valeur entrée par l'élève dans le composant `input` grâce à la commande `input.value`. Puisqu'il s'agit d'une chaîne de caractères, on commence par la convertir en un nombre entier, puis on teste ensuite si ce nombre entier est égal à la somme des deux entiers de l'énoncé (). 
-  
-
-En fonction du résultat de ce test, on renvoie une note égale à 0 ou 100. Si l'opération de conversion de la réponse de l'élève en un nombre entier échoue, on renvoie un avertissement.
 
 ```
 evaluator ==
