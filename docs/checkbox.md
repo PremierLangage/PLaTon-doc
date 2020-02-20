@@ -1,9 +1,9 @@
 # Question à choix multiples (plusieurs choix sélectionnables)
 
 Le composant `CheckboxGroup` permet de créer un champ de réponse à choix multiples avec plusieurs choix sélectionnables. Il possède les méthodes suivantes :
-  - `loaditems`
-  - `loadrw`
-  - `eval`
+    - `loaditems`
+    - `loadrw`
+    - `eval`
  
     
 ## Exemple 1 : Multiples de 3
@@ -17,7 +17,6 @@ On commence par créer un composant `CheckboxGroup`.
 ~~~
 checkbox =: CheckboxGroup
 ~~~
-
 
 ~~~
 before ==
