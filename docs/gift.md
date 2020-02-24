@@ -2,10 +2,12 @@
 
 Le format GIFT permet d'utiliser un éditeur de texte pour écrire des questions à choix multiple :
     - `vrai ou faux`
-    - `réponse courte`
+    - `réponse courte
+    - `choix multiple`
     - `mot manquant`
-    - `réponse numérique`
     - `Appariement`
+    - `réponse numérique`
+  
     
 ##  Titre, énoncé, champ de réponse
 
@@ -15,14 +17,14 @@ Le `titre` doit etre écrit entre "::"
 ::Titre::
 ~~~
 
-l'énoncé est le texte qui est écris après le titre.
+L'énoncé est le texte qui est écris après le titre.
 ~~~
-::Titre::Énoncé à ecrire ici.
+::Titre::Énoncé à écrire ici.
 ~~~
 
-Les réponses doivent commencer par "{" et finir par "{"
+Les réponses doivent commencer par "{" et finir par "}"
 ~~~
-::Titre::Énoncé à ecrire ici.{Réponses possibles à ecrire ici}
+::Titre::Énoncé à écrire ici.{Réponses possibles à écrire ici}
 ~~~
 
 ##  Les types de questions :
@@ -30,21 +32,21 @@ Les réponses doivent commencer par "{" et finir par "{"
 ### Vrai ou faux
 
 La réponse indique si une proposition est vraie ou fausse.
-possibilité d'ecrire  pour vrai : {TRUE}  {FALSE}  ou  {T} ou {F}. 
+possibilité d'ecrire : {TRUE}  {FALSE}  ou  {T} ou {F}. 
 ~~~
-::Querstion 1 :: le soleil se lève à l'est.{T}
+::Question 1 :: le soleil se lève à l'est.{T}
 
-::Querstion 2 ::le soleil se lève à l'ouest .{FALSE}
+::Question 2 ::le soleil se lève à l'ouest .{FALSE}
 ~~~
 
 
 ### Réponse courte
-Format qui permet de définir plusieurs bonnes réponses pour une une questions donnée
+Format qui permet de définir plusieurs bonnes réponses pour une questions donnée
 ~~~
 Deux plus deux égalent {=quatre =4 =IV}
 ~~~
 
-###Choix multiple
+### Choix multiple
 Pour les questions à choix multiple, les mauvaises réponses sont précédées d'un tilde (~) et les bonnes réponses sont précédées d'un symbole d'égalité (=). 
 ~~~
 Qui repose dans la Grant's tomb ? {=Grant ~Personne ~Napoléon ~Churchill ~Mère Teresa}
