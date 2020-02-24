@@ -1,4 +1,4 @@
-# Exercice au format giff
+# Exercice au format gift
 
 Le format GIFT permet d'utiliser un éditeur de texte pour écrire des questions à choix multiple :
     - `vrai ou faux`
