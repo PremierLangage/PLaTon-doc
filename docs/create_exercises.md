@@ -16,6 +16,7 @@
 * [Liste à ordonner](sortlist.md)
 * [Etiquettes à placer](dragdrop.md)
 * [Texte à sélectionner](textselect.md)
+* [Format gift](gift.md)
 
 # Exercices de mathématiques
 
