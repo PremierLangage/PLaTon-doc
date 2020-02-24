@@ -100,6 +100,29 @@ Les questions à réponse numérique ayant plusieurs réponses numériques
 }
 
 ~~~
+## Feed-back
+
+### Rétroaction 
+Une rétroaction peut être incluse pour chaque réponse en plaçant un dièse à la suite de la réponse (#) suivi de la rétroaction. 
+~~~
+Quelle est la réponse à cette question à choix multiple ? {
+~Mauvaise réponse#Rétroaction pour cette mauvaise réponse
+~Autre mauvaise réponse#Rétroaction pour cette autre mauvaise réponse
+=Bonne réponse#Très bien !
+}
+~~~
+
+### Feed-back général
+
+Le feed-back général peut être inclus pour chaque question en plaçant 4 dièses à la suite avant la parenthèse finale. 
+~~~
+::Question 1::Quelle est la réponse à cette question à choix multiple ? {
+~Mauvaise réponse
+~Autre mauvaise réponse
+=Bonne réponse
+####Feed-back général pour toute réponse donnée à cette question.
+}
+~~~
 
 
 
