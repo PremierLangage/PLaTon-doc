@@ -2,7 +2,7 @@
 
 Le format GIFT permet d'utiliser un éditeur de texte pour écrire des questions à choix multiple :
     - `vrai ou faux`
-    - `réponse courte
+    - `réponse courte`
     - `choix multiple`
     - `mot manquant`
     - `Appariement`
