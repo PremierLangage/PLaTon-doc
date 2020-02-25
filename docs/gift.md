@@ -22,12 +22,12 @@ L'énoncé est le texte qui est écris après le titre.
 ::Titre::Énoncé à écrire ici.
 ~~~
 
-Les réponses doivent commencer par "{" et finir par "}"
+Les réponses doivent étre écrites entre  "{" et  "}"
 ~~~
 ::Titre::Énoncé à écrire ici.{Réponses possibles à écrire ici}
 ~~~
 
-##  Les types de questions :
+##  Les types de réponses :
 
 ### Vrai ou faux
 
@@ -35,7 +35,6 @@ La réponse indique si une proposition est vraie ou fausse.
 possibilité d'ecrire : {TRUE}  {FALSE}  ou  {T} ou {F}. 
 ~~~
 ::Question 1 :: le soleil se lève à l'est.{T}
-
 ::Question 2 ::le soleil se lève à l'ouest .{FALSE}
 ~~~
 
