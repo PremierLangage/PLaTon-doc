@@ -97,7 +97,6 @@ Les questions à réponse numérique ayant plusieurs réponses numériques
 =1822:0
 =%50%1822:2
 }
-
 ~~~
 ## Feed-back
 
