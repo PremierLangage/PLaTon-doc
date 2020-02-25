@@ -34,29 +34,25 @@ Les réponses doivent étre écrites entre  "{" et  "}"
 La réponse indique si une proposition est vraie ou fausse.
 possibilité d'ecrire : {TRUE}  {FALSE}  ou  {T} ou {F}. 
 ~~~
-::Question 1 :: le soleil se lève à l'est.{T}
-::Question 2 ::le soleil se lève à l'ouest .{FALSE}
+::Question 1 :: TODOO.{T}
+::Question 2 ::TODO .{FALSE}
 ~~~
 
 
 ### Réponse courte
 Format qui permet de définir plusieurs bonnes réponses pour une questions donnée
 ~~~
-Deux plus deux égalent {=quatre =4 =IV}
+TODOO
 ~~~
 
 ### Choix multiple
 Pour les questions à choix multiple, les mauvaises réponses sont précédées d'un tilde (~) et les bonnes réponses sont précédées d'un symbole d'égalité (=). 
 ~~~
-Qui repose dans la Grant's tomb ? {=Grant ~Personne ~Napoléon ~Churchill ~Mère Teresa}
+TODOO
 ~~~
 Choix multiple avec plusieurs bonnes réponses en précisant le pointage (positif ou négatif)
 ~~~
-Qui sont les deux personnes qui sont enterrés dans la Grant's tomb ? {
-~%-50%Personne
-~%50%Grant
-~%50%L'épouse de Grant
-~%-50%Le père de Grant
+TODOO
 }
 ~~~
 
