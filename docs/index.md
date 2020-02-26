@@ -1,12 +1,12 @@
-# Documentation de Premier Langage côté profs !
+# Documentation de PLaTon côté profs !
 
-Bienvenue sur la documentation de Premier Langage côté enseignant. Merci de ne pas oublier que
-Premier Langage est toujours en développement. Toute aide et suggestion sur la documentation 
+Bienvenue sur la documentation de PLaTon côté enseignant. Merci de ne pas oublier que
+PLaTon est toujours en développement. Toute aide et suggestion sur la documentation 
 est bienvenue.
 
 
-## Présentation de Premier Langage
-[La présentation](presentation.md) suivante vous décrira un rapide historique de Premier Langage.
+## Présentation de PLaTon
+[La présentation](presentation.md) suivante vous décrira un rapide historique de Premier Langage (nom précédent de PLaTon).
 
 
 ## Création d'exercicess
