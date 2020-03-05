@@ -2,14 +2,14 @@
 
 ## Composant `RadioGroup`
 
-Le composant `RadioGroup` permet de créer un champ de réponse à choix multiples avec un seul choix sélectionnable. Il dispose de méthode pour 
+Le composant `RadioGroup` permet de créer un champ de réponse à choix multiples avec un seul choix sélectionnable. Pour faciliter sa manipulation, un certain nombre de méthodes sont disponibles.
 
   * La méthode `loaditems` permet de charger la liste des choix possibles.
-  * Les méthodes `setsol_by_content` et `setsol_by_content` permettent de définir la solution (en vue d'une évaluation automatique de la réponse de l'élève).
+  * Les méthodes `setsol_by_index` et `setsol_by_content` permettent de définir la solution (en vue d'une évaluation automatique de la réponse de l'élève).
   * Les méthodes `shuffle` et `sort` permettent respectivement de mélanger et de trier la liste des choix.
-  * La méthode `eval` permet d'évaluer la réponse de l'élève en renvoyant une note et en affichant une correction visuelle.
+  * La méthode `eval` permet d'évaluer la réponse de l'élève en comparant à la solution définie préalablement par la méthode `setsol_by_index` ou `setsol_by_content`. La méthode `eval` renvoie une note et peut également afficher une correction visuelle.
 
-## Exemple 1 : Capitale d'un pays
+## Exemple : Capitale d'un pays
 
 [Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/6899/)
 
