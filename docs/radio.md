@@ -2,12 +2,14 @@
 
 ## Composant `RadioGroup`
 
-Le composant `RadioGroup` permet de créer un champ de réponse à choix multiples avec un seul choix sélectionnable. Pour faciliter sa manipulation, un certain nombre de méthodes sont disponibles.
+Le composant `RadioGroup` permet de créer un champ de réponse à choix multiples avec un seul choix sélectionnable. Des méthodes Python (utilisables dans les scripts `before` et `evaluator`) facilitent la manipulation de ce composant.
 
-  * La méthode `loaditems` permet de charger la liste des choix possibles.
-  * Les méthodes `setsol_by_index` et `setsol_by_content` permettent de définir la solution (en vue d'une évaluation automatique de la réponse de l'élève).
-  * Les méthodes `shuffle` et `sort` permettent respectivement de mélanger et de trier la liste des choix.
-  * La méthode `eval` permet d'évaluer la réponse de l'élève en comparant à la solution définie préalablement par la méthode `setsol_by_index` ou `setsol_by_content`. La méthode `eval` renvoie une note et peut également afficher une correction visuelle.
+  * `setitems` : définit la liste des choix.
+  * `setsol_from_index` : définit la solution à partir de son indice dans la liste des choix.
+  * `setsol_from_content`: définit la solution à partir de son contenu.
+  * `shuffle` : mélange la liste des choix.
+  * `sort`: trie la liste des choix par ordre alphabétique.
+  * `eval`: évalue la réponse de l'élève (en comparant à la solution préalablement définie) et afficher éventuellement une correction visuelle.
 
 ## Exemple : Capitale d'un pays
 
