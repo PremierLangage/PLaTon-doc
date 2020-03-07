@@ -31,9 +31,9 @@ On crée un composant de type `RadioGroup` qu'on appelle `radio`.
 radio =: RadioGroup
 ~~~
 
-Dans le script `before`, on commence par lire les données du fichier `pays_europe.csv` et on les stocke dans la liste `all_rows`. Chaque élément de la liste contient les données d'un pays sous forme d'un dictionnaire dont les clés sont `pays`, `article` et `capitale`. On tire aléatoirement 4 éléments de cette liste.
+Dans le script `before`, on lit les données du fichier `pays_europe.csv` et on les stocke dans la liste `all_rows`. Chaque élément de la liste contient les données d'un pays sous forme d'un dictionnaire dont les clés sont `pays`, `article` et `capitale`. On tire aléatoirement 4 éléments de cette liste.
 
-On définit la liste des 4 choix de capitales à l'aide de la méthode `setitems` et on indique que la solution est le premier choix avec la méthode `setsol_from_index`. Enfin, on mélange les choix avec la méthode `shuffle`.
+On définit la liste des 4 choix de capitales à l'aide de la méthode `setitems`. On indique que la solution est le premier choix avec la méthode `setsol_from_index`. Enfin, on mélange les choix avec la méthode `shuffle`.
 
 ~~~
 before ==
@@ -48,8 +48,8 @@ sample_rows = rd.sample(all_rows, 4)
 pays = sample_rows[0]['pays']
 article = sample_rows[0]['article']
 
-radio.loaditems([row['capitale'] for row in sample_rows])
-radio.setsol_by_index(0)
+radio.setitems([row['capitale'] for row in sample_rows])
+radio.setsol_from_index(0)
 radio.shuffle()
 
 partitif = {"le": "du ", "la": "de la ", "les": "des ", "l": "de l'"}
