@@ -8,8 +8,8 @@ Le composant `RadioGroup` permet de créer un champ de réponse à choix multipl
   * `setsol_from_index` : définit la solution à partir de son indice dans la liste des choix.
   * `setsol_from_content`: définit la solution à partir de son contenu.
   * `shuffle` : mélange la liste des choix.
-  * `sort`: trie la liste des choix par ordre alphabétique.
-  * `eval`: évalue la réponse de l'élève (en comparant à la solution préalablement définie) et affiche éventuellement une correction visuelle.
+  * `sort` : trie la liste des choix par ordre alphabétique.
+  * `eval` : évalue la réponse de l'élève (en comparant à la solution préalablement définie) et affiche éventuellement une correction visuelle.
 
 ## Exemple : Capitale d'un pays
 
