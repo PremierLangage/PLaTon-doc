@@ -1,18 +1,31 @@
 # Question à choix multiples (plusieurs choix sélectionnables)
 
-Le composant `CheckboxGroup` permet de créer un champ de réponse à choix multiples avec plusieurs choix sélectionnables. Il possède les méthodes suivantes :
-    - `loaditems`
-    - `loadrw`
-    - `eval`
+## Composant `CheckboxGroup`
+
+Le composant `CheckboxGroup` permet de créer un champ de réponse à choix multiples avec plusieurs choix sélectionnables. Des méthodes Python (utilisables dans les scripts `before` et `evaluator`) facilitent la manipulation de ce composant.
+
+  * `setitems` : définit la liste des choix.
+  * `setsol_from_index` : définit les solutions à partir de leurs indices dans la liste des choix.
+  * `setsol_from_content` : définit les solutions à partir de leur contenu.
+  * `setdata_from_right_wrong` : définit la liste de choix et les solutions à partir d'une liste de bonnes réponses et d'une liste de mauvaises réponses.
+  * `shuffle` : mélange la liste des choix.
+  * `sort` : trie la liste des choix par ordre alphabétique.
+  * `eval` : évalue la réponse de l'élève (en comparant eux solutions préalablement définies) et affiche éventuellement une correction visuelle.
  
     
-## Exemple 1 : Multiples de 3
+## Exemple : Multiples de 3
 
-Dans cet exemple, on demande à l'élève de sélectionner les multiples de 3 parmi une liste de nombres.
+Dans cet exercice, on demande à l'élève de sélectionner les multiples de 3 parmi une liste de nombres. Les données sont générées aléatoirement.
 
 [Tester l'exemple](https://pl.u-pem.fr/filebrowser/demo/6926/)
 
-On commence par créer un composant `CheckboxGroup`.
+On commence par hériter du modèle d'exercice `basic.pl`.
+
+~~~
+extends = /model/basic.pl
+~~~
+
+On crée un composant de type `CheckboxGroup` qu'on appelle `checkbox`.
 
 ~~~
 checkbox =: CheckboxGroup
