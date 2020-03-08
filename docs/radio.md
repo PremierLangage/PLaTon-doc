@@ -11,7 +11,7 @@ Le composant `RadioGroup` permet de créer un champ de réponse à choix multipl
   * `sort` : trie la liste des choix par ordre alphabétique.
   * `eval` : évalue la réponse de l'élève (en comparant à la solution préalablement définie) et affiche éventuellement une correction visuelle.
 
-## Exemple : Capitale d'un pays
+## Exemple : Capitales de pays
 
 Dans cet exercice, on demande à l'élève de trouver la capitale d'un pays d'Europe parmi une liste de quatre choix. Les données sont tirées aléatoirement à partir d'un fichier CSV.
 
