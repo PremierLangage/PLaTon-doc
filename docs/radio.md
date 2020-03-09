@@ -11,13 +11,13 @@ Le composant `RadioGroup` permet de créer un champ de réponse à choix multipl
   * `sort` : trie la liste des choix par ordre alphabétique.
   * `eval` : évalue la réponse de l'élève (en comparant à la solution préalablement définie) et affiche éventuellement une correction visuelle.
 
-## Exemple : Capitales de pays
+## Exemple : Capitales européennes
 
 Dans cet exercice, on demande à l'élève de trouver la capitale d'un pays d'Europe parmi une liste de quatre choix. Les données sont tirées aléatoirement à partir d'un fichier CSV.
 
-[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/6899/)
+[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/13227/)
 
-On commence par hériter du modèle d'exercice `basic.pl` et on inclut le fichier de données `pays_europe.csv` dans l'environnement de l'exercice.
+On commence par hériter du modèle d'exercice `basic.pl` et par nclure le fichier de données `pays_europe.csv` dans l'environnement de l'exercice.
 
 ~~~
 extends = /model/basic.pl
