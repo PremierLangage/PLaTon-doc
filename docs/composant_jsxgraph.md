@@ -1,33 +1,7 @@
 # Composant JSXGraph
 
-Basé sur la bibliothèque JavaScript JSXGraph.
+Le composant JSXGraph permet à l'élève de déplacer et de modifier des objets géométriques (points, droites, cercles, courbes, etc.) dans un panneau graphique. Il est basé sur la bibliothèque JavaScript [JSXGraph](https://jsxgraph.org) (voir aussi le [wiki](https://jsxgraph.uni-bayreuth.de/wiki/index.php/Main_Page)).
 
-[Site officiel](https://jsxgraph.org)
+Les informations récupérées par le composant JSXGraph sont les coordonnées des points (dont les points de contrôle des objets complexes).
 
-[Wiki avec de nombreux exemples](https://jsxgraph.uni-bayreuth.de/wiki/index.php/Main_Page)
-
-## Exemple 1 : Un histogramme
-
-[Tester l'exemple](https://pl.u-pem.fr/filebrowser/demo/8200/)
-
-~~~
-extends = /template/basic.pl
-
-title = Histogramme (statique)
-
-jxg =: MathDrawer
-
-jxg.attributes %=
-{"showNavigation" : false,
-"keepaspectratio" : false}
-==
-
-jxg.script ==
-board.setBoundingBox([-1,10,5,-1]);
-board.create('chart', [5,7,4,9], {chartStyle:'bar',color:'blue',width:0.6});
-==
-
-text ==
-{{ jxg | component }}
-==
-~~~
+[Démo JSXGraph](https://pl.u-pem.fr/filebrowser/demo/14401/)
