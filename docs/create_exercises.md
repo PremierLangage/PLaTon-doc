@@ -23,11 +23,13 @@
 * Outils de base
     * [Bibliothèque SymPy](sympy.md)
     * [Composant MathInput](composant_mathinput.md)
-    * [Composant JSXGraph](composant_jsxgraph.md)
-    * Module Utilsmath
 * Exemples
     * [Un exemple d'exercice](premier_exemple_math.md)
-    
+
+# Exercices graphiques avec JSXGraph
+
+* [Composant JSXGraph](composant_jsxgraph.md)
+
 # Exercices de programmation
 
 # Image, son et vidéo
