@@ -1,11 +1,11 @@
 site_name: PLaTon
-site_author: Q. Coumes, D. Revuz, M. Cisse, C. Callé
-repo_url: https://github.com/PremierLangage/documentationpl
+site_author: C. Callé, M. Cisse, Q. Coumes, D. Revuz et al.
+repo_url: https://github.com/PremierLangage/PLaTon-doc
 edit_uri: tree/master/docs
 
 nav:
-- Bienvenue sur PL coté profs: 'index.md'
-- Présentation de PL: 'presentation.md'
+- Bienvenue sur PLaTon coté profs: 'index.md'
+- Présentation de PLaTon: 'presentation.md'
 - Création d'exercices: 'create_exercises.md'
 - Tutoriels Thématiques: 'tutoriels_thematiques.md'
 - Documentations techniques spécifiques: 'documentations_techniques.md'
