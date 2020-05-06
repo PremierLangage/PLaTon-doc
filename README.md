@@ -1,5 +1,5 @@
-# Documentation Premierlangage
+# Documentation de la plateforme PLaTon
 
-Ces fichiers on pour objectifs d'être copiés dans le repertoire serverpl/documentation/ puis on utilise la commande mkdoc pour créer la documentation en ligne de premierlangage.
+La documentation est directement éditable sous github. Chaque page de documentation est générée et puis hébergée par [Read The Docs](https://readthedocs.org/). Les pages de documentation ont systématiquement un lien qui renvoit précisement vers le fichier source à éditer sous github pour corriger ou améliorer la documentation.
 
-La documentation est aussi disponible sur https://documentationpl.readthedocs.io/fr/latest/
+La documentation est aussi disponible directement ici [Documentation de PLaTon](https://documentationpl.readthedocs.io/fr/latest/)
