@@ -15,6 +15,12 @@ est ainsi bienvenue.
 PLaTon ainsi que ces prémisses : Premier Langage. Vous en apprendrez un peu sur le pourquoi et 
 le comment par rapport à la volonté de produire une nouvelle plateforme d'enseignement en ligne.
 
+## Utilisez PLaTon pour vos enseignements
+
+Vous souhaitez utiliser des ressources de PLaTon pour vos enseignements, alors lisez le guide 
+de l'[utilisateur enseignant](user_teacher.md). Vous n'aurez pas besoin de compétances techniques 
+importantes mais votre institution (collège, lycée, université, etc) devra disposer d'un logiciel 
+de gestion de contenu pédagogique (L.M.S.) utilisant le protocole L.T.I.
 
 ## Création d'exercicess
 
