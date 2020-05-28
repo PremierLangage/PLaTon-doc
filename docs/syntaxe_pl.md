@@ -6,9 +6,9 @@ Il y a trois types d'opérations possibles dans la syntaxe PL :
   * inclure un fichier externe dans l'environnement de l'exercice ;
   * hériter du contenu d'un fichier PL.
 
-L'ordre n'a pas d'importance (?).
-
 ## Affecter une valeur à une clé
+
+### Affectation simple
 
 Le principal opérateur d'affectation dans la syntaxe PL est l'opérateur `=`. Il permet d'affecter une valeur `value` à une clé `key` de la façon suivante.
 
@@ -16,24 +16,60 @@ Le principal opérateur d'affectation dans la syntaxe PL est l'opérateur `=`. I
 key = value
 ```
 
-Les types de valeurs autorisés sont :
+Les types de valeurs autorisés sont les types du [format JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation) :
+
   * chaîne de caractères ;
-  * nombres (entier ou flottant) ;
+  * nombre ;
   * booléen ;
-  * tableaux ;
-  * dictionnaire.
+  * tableau ;
+  * objet (dictionnaire).
+
+Les chaînes de caractères sont représentées entre doubles guillements droits et peuvent contenir n'importe quel caractère Unicode. La barre oblique inversée (\\) sert d'échappement pour représenter certains caractères (double guillement, retour à la ligne, etc.).
 
 ```
-key1 = "Mon exercice"
+mystring1 = "Titre de l'exercice"
 
-key2 = 6
+mystring2 = "Πλάτων"
 
-key3 = 17.89
+mystring3 = "Ligne 1\nLigne 2"
+```
 
-key4 = false
+Les nombres peuvent être sous forme entière, décimale ou scientifique. Le séparateur décimal est le point.
+
+```
+mynumber1 = 6
+
+mynumber2 = 17.89
+
+mynumber3 = 1.5e6
+```
+Les valeurs booléennes sont `true` et `false` (sans majuscule).
+
+```
+mybool = false
+```
+Les tableaux sont représentés entre crochets.
+```
+myarray = [4, -1, 0.5, 1]
+
+myobject =  {"firstName": "Victor", "lastName": "Hugo"}
 ```  
-  
-Il s'agit des types autorisés dans le format JSON.
+
+Attention ! Pas d'affectation sur plusieurs lignes.
+
+```
+myobject =  {"firstName": "Victor", "lastName": "Hugo"}
+```  
+
+```
+myobject.firstName = "Victor"
+
+myobject.lastName = "Hugo"
+```
+
+### Chaînes multilignes
+
+
 
 Souvent, la valeur à affecter à une clé est une chaîne multilignes avec des caractères spéciaux : script Python, code HTML, template de code HTML, etc. La syntaxe PL dispose d'un opérateur `==` ce type d'affectation.
 
@@ -42,6 +78,12 @@ key ==
 
 ==
 ```
+
+### Composants
+
+Les composants
+
+
 
 ## Inclure un fichier externe
 
