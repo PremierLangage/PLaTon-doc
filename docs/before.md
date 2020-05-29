@@ -7,7 +7,7 @@
 * **Clés utilisées**: `builder / builder.py, before, StopBeforeExec`
 
 * **Utilisé par les templates:**
-    * [Java](../template_java/)
+    * [Java](../template_java.md)
 
 ___
 
