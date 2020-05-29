@@ -18,8 +18,6 @@ Ces éléments sont définis dans un fichier texte, d'extension `.pl`, selon une
 
 Pour faciliter la création de la partie web de l'exercice, en particulier l'interface réponse, la plateforme dispose d'une bibliothèque de **composants**.
 
-En pratique, on ne programme pas un *builder* et un *grader* différents pour chaque exercice, on utilise des *builders* et des *graders* génériques. 
+En pratique, on ne programme pas un *builder* et un *grader* différents pour chaque exercice, on utilise des *builders* et des *graders* génériques, auxquels on fournit des paramètres et des données, à travers les clés et les fichiers externes.
 
-Le builder et le grader de base sont le builder`before`et le grader `evaluator`. Ils permettent au créateur d'exercice de programmer la génération des données de l'exercice et l'évaluation de la réponse de l'élève par des scripts Python (définis dans des clés spécifiques). Ils peuvent être utilisés avec n'importe quels types de champs de réponse.
-
-L'objectif de ce premier tutoriel est de présenter l'utilisation du builder`before`et du grader `evaluator`. Pour simplifier l'exposé, on se limte à des champs de réponse libres (numériques ou textuels).
+Le builder et le grader de base sont le *builder* `before`et le *grader* `evaluator`. Ils délèguent la génération des données de l'exercice et l'évaluation de la réponse de l'élève à des scripts Python définis dans des clés spécifiques.
