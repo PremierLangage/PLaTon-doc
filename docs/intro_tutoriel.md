@@ -1,11 +1,25 @@
 # Introduction
 
-On crée un exercice en choisissant un **builder** et un **grader**, puis en affectant des valeurs à un ensemble de **clés**. En pratique, ces choix et ces affectations sont écrits dans un fichier texte, d'extension `.pl`, selon une syntaxe propre très simple (**syntaxe PL**).
+Sur la plateforme PLaTon, un exercice est un dispositif pédagogique élémentaire. Il prescrit une tâche dans un énoncé et offre une interface de réponse. Il est capable d'évaluer la réponse entrée par l'élève et, éventuellement, de fournir une rétroaction corrective.
 
-Lorsque l'exercice est lancé sur la plateforme, le **builder** construit la page web de l'exercice (énoncé, champs de réponse) à partir des valeurs contenues dans les **clés**. Une fois que l'élève a validé sa réponse, le **grader** évalue cette réponse et modifie la page web de l'exercice (retour sur la réponse).
+Dans certains exercices, les données de l'énoncé peuvent être aléatoires. Une version d'un exercice associée à un jeu de données particulier est appelée une instance.
 
-Pour faciliter la création de la partie web de l'exercice, en particulier la création des champs de réponse, la plateforme dispose d'une bibliothèque de **composants**.
+La plateforme peut exécuter un exercice selon diverses configurations pédagogiques : nombre de tentatives, limite de temps, possibilité de demander une nouvelle instance de l'exercice, etc.
 
-Le builder et le grader génériques sont le builder`before`et le grader `evaluator`. Ils permettent au créateur d'exercice de programmer la génération des données de l'exercice et l'évaluation de la réponse de l'élève par des scripts Python (définis dans des clés spécifiques). Ils peuvent être utilisés avec n'importe quels types de champs de réponse.
+Les exercices sont généralement insérés dans des dispositifs pédagogiques plus complexes appelés activités. Dans ce cadre, ils peuvent tout aussi bien servir à de l'apprentissage, de l'entraînement ou de l'évaluation.
+
+D'un point de vue informatique, un exercice est composé des éléments suivants :
+
+  - un ***builder***, un programme Python qui construit l'énoncé et l'interface de réponse ;
+  - un ***grader***, un programme Python capable d'évaluer la réponse et de fournir la rétroaction corrective ;
+  - un ensemble de **clés** au format JSON et un ensemble de **fichier externes**, qui peuvent être utilisés par le *builder* et le *grader*. 
+  
+Ces éléments sont définis dans un fichier texte, d'extension `.pl`, selon une syntaxe propre (**syntaxe PL**).
+
+Pour faciliter la création de la partie web de l'exercice, en particulier l'interface réponse, la plateforme dispose d'une bibliothèque de **composants**.
+
+En pratique, on ne programme pas un *builder* et un *grader* différents pour chaque exercice, on utilise des *builders* et des *graders* génériques. 
+
+Le builder et le grader de base sont le builder`before`et le grader `evaluator`. Ils permettent au créateur d'exercice de programmer la génération des données de l'exercice et l'évaluation de la réponse de l'élève par des scripts Python (définis dans des clés spécifiques). Ils peuvent être utilisés avec n'importe quels types de champs de réponse.
 
 L'objectif de ce premier tutoriel est de présenter l'utilisation du builder`before`et du grader `evaluator`. Pour simplifier l'exposé, on se limte à des champs de réponse libres (numériques ou textuels).
