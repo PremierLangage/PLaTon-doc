@@ -20,4 +20,6 @@ Pour faciliter la création de la partie web de l'exercice, en particulier l'int
 
 En pratique, on ne programme pas un *builder* et un *grader* différents pour chaque exercice, on utilise des *builders* et des *graders* génériques, auxquels on fournit des paramètres et des données, à travers les clés et les fichiers externes.
 
-Le builder et le grader de base sont le *builder* `before`et le *grader* `evaluator`. Ils délèguent la génération des données de l'exercice et l'évaluation de la réponse de l'élève à des scripts Python définis dans des clés spécifiques.
+Le builder et le grader de base sont le *builder* `/lib/builder/before.py`et le *grader* `/lib/grader/evaluator.py`. Ils délèguent la génération des données de l'exercice et l'évaluation de la réponse de l'élève à des scripts Python définis dans les clés spécifiques __before__ et __evaluator__.
+
+
