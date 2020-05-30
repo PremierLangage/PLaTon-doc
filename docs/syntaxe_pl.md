@@ -5,6 +5,12 @@ Il y a trois types d'opérations possibles dans la syntaxe PL :
   * affecter une valeur à une clé ;
   * inclure un fichier externe dans l'environnement de l'exercice ;
   * hériter du contenu d'un fichier PL.
+  
+ Des lignes de commentaires peuvent être insérées en utilisant un croisillon (#) comme caractère initial.
+ 
+ ~~~
+ # Ceci est un commentaire.
+ ~~~
 
 ## Affecter une valeur à une clé
 
@@ -18,14 +24,13 @@ key = value
 
 Les types de valeurs autorisés sont les types du [format JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation) :
 
-  * chaîne de caractères ;
-  * nombre ;
-  * booléen ;
-  * vide ;
-  * tableau ;
-  * objet (dictionnaire).
+  * chaîne de caractères (*string*) ;
+  * nombre (*number*) ;
+  * true, false, null ;
+  * tableau (*array*) ;
+  * objet (*object*).
 
-Les chaînes de caractères sont représentées entre doubles guillements droits (") et peuvent contenir n'importe quel caractère Unicode, sauf le double guillemet droit et la barre oblique inversée (\\) qui doivent être précédés d'une barre oblique inversée. La barre oblique inversée sert également à représenter certains caractères de contrôle comme le retour à la ligne. Une façon plus commode de définir des chaînes multilignes est décrite plus bas.
+Les chaînes de caractères sont représentées entre doubles guillements droits (") et peuvent contenir n'importe quel caractère Unicode, sauf le double guillemet droit et la barre oblique inversée (\\) qui doivent être précédés d'un caractère d'échappement (la barre oblique inversée). Les caractères de contrôle comme le retour à la ligne sont représentés par des séquences d'échappement.
 
 ```
 mystring1 = "Titre de l'exercice"
@@ -36,6 +41,7 @@ mystring3 = "Les verbes \"détester\" et \"abhorrer\" sont synonymes."
 
 mystring4 = "Ligne 1\nLigne 2"
 ```
+L'opérateur `==`, décrit un peu plus bas, permet d'utiliser des chaînes multilignes brutes (sans échappement).
 
 Les nombres peuvent être sous forme entière, décimale ou scientifique. Le séparateur décimal est le point.
 
@@ -59,27 +65,39 @@ myarray = [4, -1, 0.5, 1]
 
 ```  
 
-Attention ! Pas d'affectation sur plusieurs lignes.
+Attention ! La syntaxe PL ne permet pas (encore ?) l'affectation d'un tableau séparé sur plusieurs lignes.
+
+
+Les objets sont des dictionnaires. Les clés sont nécessairement des chaînes de caractères. Les valeurs peuvent être de n'importe quel type.
 
 ```
-myobject =  {"firstName": "Victor", "lastName": "Hugo"}
+myobject =  {"firstname": "Victor", "lastname": "Hugo", "born": 1802, "dead": 1885}
 ```  
 
 ```
-myobject.firstName = "Victor"
+myobject.firstname = "Victor"
 
-myobject.lastName = "Hugo"
+myobject.lastname = "Hugo"
 ```
 
-### Chaînes multilignes
+### Chaînes multilignes brutes
 
-Pour faciliter la saisie de chaînes multilignes, qui sont courantes dans les exercices (scripts Python, texte des énoncés, etc.),  la syntaxe PL dispose de l'opérateur `==`.
+Pour faciliter la saisie de chaînes multilignes contenant des guillements droits ou des barres obliques inversées, la syntaxe PL dispose de l'opérateur `==`.
 
 ```
 mystring ==
 Ligne 1
 Ligne 2
 Ligne 3
+==
+```
+L'opérateur `==` est particulièrement utile pour entrer des scripts Python, des textes d'énoncé (en Markdown ou en HTML), etc.
+
+```
+before ==
+import random as rd
+lst = ["A", "B", "C"]
+c = rd.choice(lst)
 ==
 ```
 
@@ -100,12 +118,22 @@ mycomponent2 =: RadioGroup
 
 ## Inclure un fichier externe
 
-En plus des clés, il est parfois nécessaire d'ajouter des fichiers à un exercice
-  (pour l'évaluation par exemple), ou un exercice à une feuille d'exercice,
-  nous utilisons pour cela l'opérateur `@`. La syntaxe correcte est donc
-  `@ chemin/vers/fichier.txt [alias]`, l'alias étant optionnel.
+L'inclusion d'un fichier exter se fait gâce à l'opérateur `@`.
+
+~~~
+@ dirA/dirB/myfile.py
+~~~
+
+Le fichier peut-être renommé au moment de l'inclusion.
+
+~~~
+@ dirA/dirB/myfile.py [thisfile]
+~~~
   
 ## Hériter du contenu d'un fichier PL
+
+La commande `extends` permet d'hériter du contenu d'un fichier PL, c'est-à-dire ses clés et ses fichiers externes.
+
 
 ```
 extends = file.pl
