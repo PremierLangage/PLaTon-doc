@@ -1,6 +1,6 @@
 # Introduction
 
-Sur la plateforme PLaTon, un exercice est un dispositif pédagogique élémentaire. Il prescrit une tâche dans un énoncé et offre une interface de réponse. Il est capable d'évaluer la réponse entrée par l'élève et, éventuellement, de fournir une rétroaction corrective.
+Un exercice est un dispositif pédagogique élémentaire. Il prescrit une tâche dans un énoncé et offre une interface de réponse. Il est capable d'évaluer la réponse entrée par l'élève et, éventuellement, de fournir une rétroaction corrective.
 
 Dans certains exercices, les données de l'énoncé peuvent être aléatoires. Une version d'un exercice associée à un jeu de données particulier est appelée une instance.
 
@@ -16,10 +16,8 @@ D'un point de vue informatique, un exercice est composé des éléments suivants
   
 Ces éléments sont définis dans un fichier texte, d'extension `.pl`, selon une syntaxe propre (**syntaxe PL**).
 
-Pour faciliter la création de la partie web de l'exercice, en particulier l'interface réponse, la plateforme dispose d'une bibliothèque de **composants**.
+Pour faciliter la création de l'interface réponse, la plateforme dispose d'une bibliothèque de **composants web** (champ de réponse numérique ou textuel, champ de réponse à choix multiples, éditeur de code, etc.)
 
-En pratique, on ne programme pas un *builder* et un *grader* différents pour chaque exercice, on utilise des *builders* et des *graders* génériques, auxquels on fournit des paramètres et des données, à travers les clés et les fichiers externes.
+En pratique, on ne programme pas un *builder* et un *grader* différents pour chaque exercice, on utilise des *builders* et des *graders* génériques auxquels on fournit des paramètres et des données à travers les clés et les fichiers externes.
 
-Le builder et le grader de base sont le *builder* `/lib/builder/before.py`et le *grader* `/lib/grader/evaluator.py`. Ils délèguent la génération des données de l'exercice et l'évaluation de la réponse de l'élève à des scripts Python définis dans les clés spécifiques __before__ et __evaluator__.
-
-
+Le builder et le grader de base sont le *builder* `before` et le *grader* `evaluator` Ils délèguent la génération des données de l'exercice et l'évaluation de la réponse de l'élève à des scripts Python définis dans des clés spécifiques.
