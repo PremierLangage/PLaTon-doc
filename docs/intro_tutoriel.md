@@ -10,8 +10,8 @@ Les exercices sont généralement insérés dans des dispositifs pédagogiques p
 
 D'un point de vue informatique, un exercice est composé des éléments suivants :
 
-  - un ***builder***, un programme Python qui construit l'énoncé et l'interface de réponse ;
-  - un ***grader***, un programme Python capable d'évaluer la réponse et de fournir la rétroaction corrective ;
+  - un ***builder*** : un programme Python qui construit l'énoncé et l'interface de réponse ;
+  - un ***grader*** : un programme Python capable d'évaluer la réponse et de fournir la rétroaction corrective ;
   - un ensemble de **clés** au format JSON et un ensemble de **fichier externes**, qui peuvent être utilisés par le *builder* et le *grader*. 
   
 Ces éléments sont définis dans un fichier texte, d'extension `.pl`, selon une syntaxe propre (**syntaxe PL**).
