@@ -1,13 +1,7 @@
 # Premier tutoriel
 
 * [Introduction](intro_tutoriel.md)
-* [Syntaxe PL](syntaxe_pl.md)
-* [Builder before](builder_before.md)
-* [Conversion JSON-Python](conversion_JSON_Python.md)
-* [Un premier exemple d'exercice](premier_exemple.md)
-* [Utilisation d'un fichier de données](fichier_externe.md)
-* [Utilisation d'un template](heritage.md)
-* [Mise en forme de l'énoncé](forme_enonce.md)
+* [Fonctionnement](fonctionnement_before_evaluator.md)
 
 # Exercices de base
 
