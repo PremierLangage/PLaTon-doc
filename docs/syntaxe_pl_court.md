@@ -69,7 +69,7 @@ myobject =  {"firstname": "Victor", "lastname": "Hugo", "born": 1802, "dead": 18
 ```  
 
 
-### Chaînes multilignes brutes
+### Opérateur `==`
 
 Pour faciliter la saisie de chaînes multilignes contenant des guillements droits ou des barres obliques inversées, la syntaxe PL dispose de l'opérateur `==`.
 
@@ -108,7 +108,6 @@ Le fichier peut-être renommé au moment de l'inclusion.
 ## Hériter du contenu d'un fichier PL
 
 La commande `extends` permet d'hériter du contenu d'un fichier PL, c'est-à-dire ses clés et ses fichiers externes.
-
 
 ```
 extends = file.pl
