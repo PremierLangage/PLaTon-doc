@@ -2,7 +2,7 @@
 
 * [Introduction](intro_tutoriel.md)
 * [Fonctionnement](fonctionnement_before_evaluator.md)
-* [Syntaxe PL](syntaxe_PL_court.md)
+* [Syntaxe PL](syntaxe_pl_court.md)
 * [Structure de base d'un exercice](structure_base_exercice.md)
 * [Génération des données](generation_donnees.md)
 * [Enoncé](enonce.md)
