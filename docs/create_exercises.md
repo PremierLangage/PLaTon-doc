@@ -2,6 +2,13 @@
 
 * [Introduction](intro_tutoriel.md)
 * [Fonctionnement](fonctionnement_before_evaluator.md)
+* [Syntaxe PL](syntaxe_PL_court.md)
+* [Structure de base d'un exercice](structure_base_exercice.md)
+* [Génération des données](generation_donnees.md)
+* [Enoncé](enonce.md)
+* [Interface de réponse](interface_reponse.md)
+* [Evaluation de la réponse](evaluation_reponse.md)
+* [Un exemple complet d'exercice](exemple_complet_exercice.md)
 
 # Exercices de base
 
