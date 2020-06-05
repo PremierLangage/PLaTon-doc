@@ -2,25 +2,36 @@
 
 L'interface de réponse est à définir dans la clé `form`. Pour faciliter la création de cette interface de réponse, la plateforme PLaTon propose une bibliothèque de composants web qui comprend de nombreux types de champs de réponse.
 
+Voilà la liste des composants implémentant les champs de réponse de base.
+- **Input** : champ de réponse textuel ou numérique
+- **Radio Group** : champ de réponse à choix multiples avec un seul choix sélectionnable
+- **Checkbox Group** : champ de réponse à choix multiples avec un seul choix sélectionnable
+- **Match List** : éléments à mettre en correspondance
+- **Sort List** : liste à ordonner
+- **Drag & Drop** : étiquettes à placer
+- **Text Select** : unités à sélectionner dans un texte
 
 ## Création d'un composant
 
-Dans la syntaxe PL, un composant est un objet (au sens JSON) possédant une clé `cid` et une clé `selector`. La valeur de `cid` est un identifiant unique du composant tandis que la valeur de `selector` indique le type du composant. Par exemple, la ligne suivante définit un composant nommé `mycomponent`, de type `Input` et dont l'identifiant est `myid`.
+Dans la syntaxe PL, un composant est un objet (au sens JSON) possédant une propriété `cid` et une propriété `selector`. La valeur de `cid` est un identifiant unique du composant tandis que la valeur de `selector` indique le type du composant. Par exemple, la ligne suivante définit un composant nommé `mycomponent`, de type `Input` et dont l'identifiant est `myid`.
 
 ```
 mycomponent = {"cid": "myid", "selector": "c-input"}
 ```
 
-Chaque type de composant possède un certain nombre de propriétés paramétrables.
-
-```
-mycomponent = {"cid": "myid", "selector": "c-input", "type": "number"}
-```
-
-L'opérateur `=:` permet de définir plus simplement les composants : il allège la syntaxe requise et s'occupe de générer aléatoirement l'identifiant du composant. Par exemple, la ligne suivante définit un composant nommé `mycomponent`, de type `Input`, avec un identifiant généré automatiquement.
+L'opérateur `=:` permet de définir plus simplement les composants. Par exemple, la ligne suivante définit un composant nommé `mycomponent`, de type `Input`, avec un identifiant unique généré automatiquement.
 
 ```
 mycomponent =: Input
+```
+
+## Paramétrage d'un composant
+
+Chaque type de composant possède un certain nombre de propriétés paramétrables. Par exemple, le composant `Input` possède une propriété `type` qui peut prendre la valeur `"text"` ou `"number"`.
+
+```
+mycomponent =: Input
+mycomponent.type = "number"
 ```
 
 ## Insertion d'un composant dans l'interface de réponse
