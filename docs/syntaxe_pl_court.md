@@ -16,14 +16,14 @@ La syntaxe PL est la syntaxe employée pour décrire un exercice dans un fichier
 
 Les types de valeur qu'une clé peut prendre sont les types du [format JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation) (JavaScript Object Notation) : 
 
-  * *string* : chaîne de caractères ;
-  * *number* : nombre entier ou flottant ;
-  * true, false, null ;
-  * *array* : tableau ;
-  * *object* : dictionnaire qui associe des valeurs à des clés (propriétés).
+  * *string* (chaîne de caractères) ;
+  * *number* (nombre entier ou flottant) ;
+  * `true`, `false`, `null`;
+  * *array* (tableau) ;
+  * *object* (dictionnaire qui associe des valeurs à des clés, aussi appelées propriétés).
 
 !!! note
-Le format JSON est un format d'échange de données assez répandu. Comme son nom l'indique, il dérive du langage JavaScript.
+  Le format JSON est un format d'échange de données assez répandu. Comme son nom l'indique, il dérive du langage JavaScript.
 
 ### Opérateur `=`
 
@@ -33,14 +33,19 @@ Le principal opérateur d'affectation dans la syntaxe PL est l'opérateur `=`. I
 key = value
 ```
 
-Les chaînes de caractères sont représentées entre doubles guillements droits (").
+Les chaînes de caractères doivent être représentées entre doubles guillements droits ("). Attention, les doubles guillemets ne peuvent pas être remplacés par des guillements simples comme dans d'autres langages. Les chaînes peuvent contenir n'importe quel caractère Unicode sauf le double guillemet droit et la barre oblique inversée (\\). Ces deux caractères ainsi que les caractères de contrôle (nouvelle ligne, tabulation, etc.) sont représentés par des séquences d'échappement.
 
 ```
-mystring = "Titre de l'exercice"
+mystring1 = "Titre de l'exercice"
 
+mystring2 = "Πλάτων"
+
+mystring3 = "Les verbes \"détester\" et \"abhorrer\" sont synonymes."
+
+mystring4 = "Ligne 1\nLigne 2"
 ```
 
-Les nombres peuvent être sous forme entière, décimale ou scientifique. Le séparateur décimal est le point.
+Les nombres peuvent être représentés sous forme entière, décimale ou scientifique.
 
 ```
 mynumber1 = 6
@@ -56,14 +61,13 @@ mybool = false
 
 myvar = null
 ```
-Les tableaux sont représentés entre crochets.
+Les tableaux sont représentés entre crochets. Les éléments peuvent être de n'importe quel type et de type différent au sein d'un même tableau.
+
 ```
-myarray = [4, -1, 0.5, 1]
+myarray1 = [4, -1, 0.5, 1]
 
-```  
-
-Attention ! La syntaxe PL ne permet pas (encore ?) l'affectation d'un tableau séparé sur plusieurs lignes.
-
+myarray2 = [[0, "A"], [1, "B"], [2, "C"]]
+```
 
 Les objets sont des dictionnaires qui associent des valeurs à des propriétés. Les propriétés sont nécessairement des chaînes de caractères. Les valeurs peuvent être de n'importe quel type.
 
@@ -86,15 +90,27 @@ myobject.born = 1802
 myobject.dead = 1885
 ```
 
+warning !!!
+  La syntaxe PL ne permet pas (encore ?) l'affectation d'un tableau ou d'un objet séparé sur plusieurs lignes.
+  
 ### Opérateur `==`
 
-Pour faciliter la saisie de chaînes multilignes contenant des guillements droits ou des barres obliques inversées, la syntaxe PL dispose de l'opérateur `==`.
+L'opérateur `==` permet de saisir des chaînes multilignes brutes (sans séquence d'échappement). Par exemple, les affectations ci-dessous, faites respectivement avec les opérateurs `=` et `==`, sont équivalentes. 
 
 ```
-mystring ==
+mystring3 = "Les verbes \"détester\" et \"abhorrer\" sont synonymes."
+
+mystring4 = "Ligne 1\nLigne 2"
+```
+
+```
+mystring3 ==
+Les verbes "détester" et "abhorrer" sont synonymes.
+==
+
+mystring4 ==
 Ligne 1
 Ligne 2
-Ligne 3
 ==
 ```
 
@@ -108,16 +124,15 @@ c = rd.choice(lst)
 ==
 ```
 
-
 ## Inclure un fichier externe
 
-L'inclusion d'un fichier exter se fait gâce à l'opérateur `@`.
+L'inclusion d'un fichier externe se fait gâce à l'opérateur `@`. La référence au fichier se fait par son chemin absolu ou son chemin relatif (à la localisation du fichier PL).
 
 ~~~
 @ dirA/dirB/myfile.py
 ~~~
 
-Le fichier peut-être renommé au moment de l'inclusion.
+Le nom du fichier peut-être remplacé par un alias au moment de l'inclusion.
 
 ~~~
 @ dirA/dirB/myfile.py [thisfile]
@@ -127,6 +142,17 @@ Le fichier peut-être renommé au moment de l'inclusion.
 
 La commande `extends` permet d'hériter du contenu d'un fichier PL, c'est-à-dire ses clés et ses fichiers externes.
 
+
+```
+@ file1.pl
+
+key1 = value1
+
+key2 = value2
+```
+
 ```
 extends = file.pl
+
+key3 = value3
 ```
