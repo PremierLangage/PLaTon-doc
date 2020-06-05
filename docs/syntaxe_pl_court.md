@@ -1,6 +1,6 @@
 # Syntaxe PL
 
-Il y a trois types d'opérations possibles dans la syntaxe PL :
+La syntaxe PL est la syntaxe employée pour décrire un exercice dans un fichier PL. Il n'y a que trois types d'opérations possibles dans cette syntaxe :
 
   * affecter une valeur à une clé ;
   * inclure un fichier externe dans l'environnement de l'exercice ;
@@ -14,21 +14,24 @@ Il y a trois types d'opérations possibles dans la syntaxe PL :
 
 ## Affecter une valeur à une clé
 
+Les types de valeur qu'une clé peut prendre sont les types du [format JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation) (JavaScript Object Notation) : 
+
+  * *string* : chaîne de caractères ;
+  * *number* : nombre entier ou flottant ;
+  * true, false, null ;
+  * *array* : tableau ;
+  * *object* : dictionnaire qui associe des valeurs à des clés (propriétés).
+
+!!! note
+Le format JSON est un format d'échange de données assez répandu. Comme son nom l'indique, il dérive du langage JavaScript.
+
 ### Opérateur `=`
 
-Le principal opérateur d'affectation dans la syntaxe PL est l'opérateur `=`. Il permet d'affecter une valeur `value` à une clé `key` de la façon suivante.
+Le principal opérateur d'affectation dans la syntaxe PL est l'opérateur `=`. Il permet d'affecter une valeur `value` de type JSON à une clé `key` en utilisant la syntaxe du format JSON.
 
 ```
 key = value
 ```
-
-Les types de valeurs autorisés sont les types du [format JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation) :
-
-  * chaîne de caractères (*string*) ;
-  * nombre (*number*) ;
-  * true, false, null ;
-  * tableau (*array*) ;
-  * objet (*object*).
 
 Les chaînes de caractères sont représentées entre doubles guillements droits (").
 
@@ -62,12 +65,26 @@ myarray = [4, -1, 0.5, 1]
 Attention ! La syntaxe PL ne permet pas (encore ?) l'affectation d'un tableau séparé sur plusieurs lignes.
 
 
-Les objets sont des dictionnaires. Les clés sont nécessairement des chaînes de caractères. Les valeurs peuvent être de n'importe quel type.
+Les objets sont des dictionnaires qui associent des valeurs à des propriétés. Les propriétés sont nécessairement des chaînes de caractères. Les valeurs peuvent être de n'importe quel type.
 
 ```
 myobject =  {"firstname": "Victor", "lastname": "Hugo", "born": 1802, "dead": 1885}
-```  
+```
 
+Il est possible de définir un objet propriété par propriété ou de façon mixte. Par exemple les définitions ci-dessous sont équivalentes à la définition précédente.
+
+```
+myobject.firstname = "Victor"
+myobject.lastname = "Hugo"
+myobject.born = 1802
+myobject.dead = 1885
+```
+
+```
+myobject =  {"firstname": "Victor", "lastname": "Hugo"}
+myobject.born = 1802
+myobject.dead = 1885
+```
 
 ### Opérateur `==`
 
@@ -80,7 +97,8 @@ Ligne 2
 Ligne 3
 ==
 ```
-L'opérateur `==` est particulièrement utile pour entrer des scripts Python, des textes d'énoncé (en Markdown ou en HTML), etc.
+
+L'opérateur `==` est particulièrement utile pour entrer des scripts Python, des textes au format Markdown, du code HTML, etc.
 
 ```
 before ==
