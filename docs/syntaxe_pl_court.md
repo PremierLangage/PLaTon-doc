@@ -23,7 +23,7 @@ Les types de valeur qu'une clé peut prendre sont les types du [format JSON](htt
   * *object* (dictionnaire qui associe des valeurs à des clés, aussi appelées propriétés).
 
 !!! note
-  Le format JSON est un format d'échange de données assez répandu. Comme son nom l'indique, il dérive du langage JavaScript.
+    Le format JSON est un format d'échange de données assez répandu. Comme son nom l'indique, il dérive du langage JavaScript.
 
 ### Opérateur `=`
 
@@ -90,8 +90,8 @@ myobject.born = 1802
 myobject.dead = 1885
 ```
 
-warning !!!
-  La syntaxe PL ne permet pas (encore ?) l'affectation d'un tableau ou d'un objet séparé sur plusieurs lignes.
+!!! warning
+    La syntaxe PL ne permet pas (encore ?) l'affectation d'un tableau ou d'un objet séparé sur plusieurs lignes.
   
 ### Opérateur `==`
 
@@ -137,22 +137,3 @@ Le nom du fichier peut-être remplacé par un alias au moment de l'inclusion.
 ~~~
 @ dirA/dirB/myfile.py [thisfile]
 ~~~
-  
-## Hériter du contenu d'un fichier PL
-
-La commande `extends` permet d'hériter du contenu d'un fichier PL, c'est-à-dire ses clés et ses fichiers externes.
-
-
-```
-@ file1.pl
-
-key1 = value1
-
-key2 = value2
-```
-
-```
-extends = file.pl
-
-key3 = value3
-```
