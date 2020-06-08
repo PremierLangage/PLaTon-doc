@@ -5,8 +5,9 @@ L'énoncé de l'exercice est à définir dans la clé `text`. Avant d'être ins�
 Pour permettre des énoncés dynamiques (dépendant des données générés dans le script `before`), le *builder* applique applique d'abord une mise en forme Jinja au contenu de la clé `text`.
 
 
-## Insertion dynamique de données (Jinja)
+## Interprétation Jinja
 
+Un [***template*** Jinja](https://jinja.palletsprojects.com/en/2.11.x/templates/) contient des variables et des expressions qui sont remplacées au moment de l'interprétation.
 
 ~~~
 before ==
@@ -19,4 +20,6 @@ Le mot {{ mot }} est-il féminin ou masculin ?
 ==
 ~~~
 
-## Mise en forme allégée (Markdown)
+Des balises permettent aussi de contrôler la structure du document.
+
+## Interprétation Markdown
