@@ -1,13 +1,17 @@
 # Enoncé
 
-L'énoncé de l'exercice est à définir dans la clé `text`. Avant d'être inséré dans le code HTML de la page web de l'exercice, le contenu de la clé `text` subit plusieurs traitements.
+L'énoncé de l'exercice est à définir dans la clé `text`. Avant d'être inséré dans le code HTML de la page web de l'exercice, le contenu de la clé `text` subit une inteprétation Jinja puis une interprétation Markdown.
 
-Pour permettre des énoncés dynamiques (dépendant des données générés dans le script `before`), le *builder* applique applique d'abord une mise en forme Jinja au contenu de la clé `text`.
+L'inteprétation [Jinja](https://jinja.palletsprojects.com/) permet d'obtenir un énoncé dynamique, qui peut notamment intègrer les données générées par le script `before`.
+
+L'interprétation Markdown offre une syntaxe de mise en forme plus légère que la syntaxe HTML (pour une mise en forme simple).
 
 
 ## Interprétation Jinja
 
-Un [***template*** Jinja](https://jinja.palletsprojects.com/en/2.11.x/templates/) contient des variables et des expressions qui sont remplacées au moment de l'interprétation.
+Le langage des ***templates*** Jinja permet d'insérer des variables et des expressions (en leur appliquant éventuellement des fonctions) et d'utiliser des structures de contrôle (`if`, `for`, etc.) La syntaxe est inspirée de la syntaxe Python. L'interprétation d'un *template* Jinja se fait par rapport à un **contexte**, c'est-à-dire un dictionnaire de valeurs. 
+
+Pour l'interprétation de la clé `text`, le contexte utilisé est le dictionnaire Python de l'exercice tel qu'il est à la fin de l'exécution du script `before`.
 
 ~~~
 before ==
