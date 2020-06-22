@@ -118,6 +118,15 @@ Le feed-back général peut être inclus pour chaque question en plaçant 4 diè
 }
 ~~~
 
+### Editer un fichier 
+
+Pour editer un fichier il faut:
+    - `créer un nouveau fichier sur l'éditeur`
+    - `écrire l'ensemble des questions au format gift sur ce nouveau fichier `
+    - `enregistrer le fichier avec l'extension .gift`
+    
+ Pour visualition les exercices au formation pltp il faut lancer les exercices avec le bouton play.
+ Ensuite les fichiers contenant les exercices au format pltp seront créer.
 
 
 
