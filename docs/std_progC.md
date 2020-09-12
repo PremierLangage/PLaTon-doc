@@ -1,11 +1,11 @@
-# Template exercices de programmation standard en C
+# Template d'exercices de programmation en C
 
 Cette documentation explique le fonctionnement du template standard pour les exercices de 
 programmation en C dans sa nouvelle version **std_progC** publiée au mois de juillet 2020. 
 Ce template, réécrit depuis zéro, enrichie les fonctionnalité de l'ancien template 
-**stdsandboxC**.
+**stdsandboxC** vieux de 3 ans.
 
-## Nouveauté dans cette refonte de template
+## Nouveautés dans cette refonte de template
 
 * Utilisation de **subprocess** pour les exécutions et la compilation
 * Builder/grader entièrement en python
