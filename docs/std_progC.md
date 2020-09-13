@@ -76,7 +76,7 @@ test des fichiers d'extension `.pl` . Maintenant, les données de tests pour le 
 
 ## Exemple commenté utilisant le template
 
-L'exemple suivant peut être [testé en liquant ici](https://pl.u-pem.fr/filebrowser/demo/24923/).   
+L'exemple suivant peut être [testé en cliquant ici](https://pl.u-pem.fr/filebrowser/demo/24923/).   
 Les parties cachées du code (le *main* avec sa gestion des arguments) sont juste là pour les 
 entrées sorties et permettrent aux élèves de se concentrer sur la fonction à coder.
 
@@ -181,3 +181,8 @@ Donc, globalement, un exercice atomique de programmation de C doit renseigner le
 * `code_before` : le code à inclure avant le code élève pour le rendre compilable (souvent les bilbiothèques)
 * `code_after` : le code à inclure après le code élèves pour le rendre compilable (souvent une fonction *main*)
 * `checks_args_stdin` : les données de test en python telles que spécifiées plus haut. Tous les symboles de la bibliothèque *random* sont déjà chargés. 
+
+Warning
+
+A terme les champs `code_before` et `code_after` seront optionnel car définit par défault 
+à la châine vide.
