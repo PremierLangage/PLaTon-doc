@@ -48,27 +48,37 @@ suivie exacte est :
 `note_tentatives = 50 + ( 200 // (3 + nombre_de_tentatives) )`
 
 
-## différences pour mettre à jour d'anciens exercices (stdsandboxC)
+## Différences pour mettre à jour d'anciens exercices
 
-La clé `codebefore` est à renommer en `code_before`, c'est toujours du code contextuel 
+Voici la liste des modifications à apporter si des fois, vous voudriez adapter des exercices 
+utilisant l'ancien template **stdsandboxC** vers le template **std_progC**.
+
+* Bien sur la notification de l'héritage, les exercices ne doivent plus étendre **stdsandboxC**
+mais il doivent maintenant contenir la ligne   
+`extends=/ComputerScience/C/template/std_progC.pl`
+
+* La clé `codebefore` est à renommer en `code_before`, c'est toujours du code contextuel 
 préposé au code de l'élève ou au code `solution`.
 
-La clé `codeafter` est à renommer en `code_after`, c'est toujours du code contextuel 
+* La clé `codeafter` est à renommer en `code_after`, c'est toujours du code contextuel 
 postposé au code de l'élève ou au code `solution`. C'est l'endroit où l'on code la 
 fonction `main` du programme quand ce n'est pas à l'élève de faire.
 
-Les données de tests ne doivent plus s'appeler `tests` car PLaTon l'utilise dans le module de 
+* Les données de tests ne doivent plus s'appeler `tests` car PLaTon l'utilise dans le module de 
 test des fichiers d'extension `.pl` . Maintenant, les données de tests pour le grader sont 
 à placer dans une clé `checks_args_stdin` et la sémantique à un peu changé. La clé 
 `checks_args_stdin` doit maintenant suivre la structuration suivante :
 
-    [ ["Nom du premier test", ["arg1", "arg2", "arg3"], "sdtin du premier test"],
-      ["Nom du second test", [], "sdtin du second test"],
-      ["Nom du troisième test", ["arg1", "arg2"], ""] ] 
+      [["Nom du premier test", ["arg1", "arg2", "arg3"], "sdtin du premier test"],
+       ["Nom du second test", [], "sdtin du second test"],
+       ["Nom du troisième test", ["arg1", "arg2"], ""]] 
+  Le second test est lancé sans argument, le dernier test a une entrée standard vide.
 
-Le second test est lancé sans argument, le dernier test a une entrée standard vide.
+## Exemple commenté utilisant le template
 
-## exemple commenté
+L'exemple suivant peut être [testé en liquant ici](https://pl.u-pem.fr/filebrowser/demo/24923/).   
+Les parties cachées du code (le *main* avec sa gestion des arguments) sont juste là pour les 
+entrées sorties et permettrent aux élèves de se concentrer sur la fonction à coder.
 
     # héritage du template
     extends=/ComputerScience/C/template/std_progC.pl
@@ -156,3 +166,18 @@ Le second test est lancé sans argument, le dernier test a une entrée standard 
      ["Test aléatoire 2", [str(randint(-100,100)) for i in range(randint(11, 15))], ""],
      ["Test aléatoire 3", [str(randint(-100,100)) for i in range(randint(16, 20))], ""] ]
     ==
+
+## Résumé rapide des informations requises
+
+Actuellement, toutes les clés sont requises (ceci devrait être assoupi). Même si vous souhaitez 
+ne pas inclure de code contextuel, il faut quand même définir des `code_befre` et `code_after` vides.
+Donc, globalement, un exercice atomique de programmation de C doit renseigner les clés suivantes :
+
+* `extends` : pour spécifier le template
+* `title` : donner des titres précis à vos exercices
+* `author` : optionnel, mais rien que des initiales aideront vos collègues à vous contacter pour la maintenance
+* `tag` : des mots-clés qui faciliteront l'indexation de l'exercice dans le serveur de ressources
+* `editor.code` : le code par défault dans l'éditeur élève, on y place souvent les contraintes (un prototype à respecter par exemple)
+* `code_before` : le code à inclure avant le code élève pour le rendre compilable (souvent les bilbiothèques)
+* `code_after` : le code à inclure après le code élèves pour le rendre compilable (souvent une fonction *main*)
+* `checks_args_stdin` : les données de test en python telles que spécifiées plus haut. Tous les symboles de la bibliothèque *random* sont déjà chargés. 
