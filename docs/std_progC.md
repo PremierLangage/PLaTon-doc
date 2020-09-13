@@ -5,9 +5,9 @@ programmation en C dans sa nouvelle version **std_progC** publiée au mois de ju
 Ce template, réécrit depuis zéro, enrichie les fonctionnalité de l'ancien template 
 **stdsandboxC** vieux de 3 ans.
 
-Pour hériter de ce template, voici la commande nomtrant son chemin dans Yggdrazil :
-
-`extends=/ComputerScience/C/template/std_progC.pl`
+!!! Note
+    Pour hériter de ce template, voici la commande nomtrant son chemin dans Yggdrazil :   
+    `extends=/ComputerScience/C/template/std_progC.pl`
 
 L'esprit du template est toujours d'exécuter du code étudiant et une solution enseignant
 encapsulé dans des programmes (avec du code avant et du code après). Le template exécute
