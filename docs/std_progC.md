@@ -182,7 +182,5 @@ Donc, globalement, un exercice atomique de programmation de C doit renseigner le
 * `code_after` : le code à inclure après le code élèves pour le rendre compilable (souvent une fonction *main*)
 * `checks_args_stdin` : les données de test en python telles que spécifiées plus haut. Tous les symboles de la bibliothèque *random* sont déjà chargés. 
 
-Warning
-
-A terme les champs `code_before` et `code_after` seront optionnel car définit par défault 
-à la châine vide.
+!!! Attention
+    A terme les champs `code_before` et `code_after` seront optionnel car définit par défault à la châine vide.
