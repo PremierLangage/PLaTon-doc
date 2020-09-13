@@ -1,35 +1,36 @@
 # Template d'exercices de programmation en C
 
 Cette documentation explique le fonctionnement du template standard pour les exercices de 
-programmation en C dans sa nouvelle version **std_progC** publiée au mois de juillet 2020. 
-Ce template, réécrit depuis zéro, enrichie les fonctionnalité de l'ancien template 
+programmation en C dans sa nouvelle version nommé **std_progC** et publiée au mois de juillet 2020. 
+La nouvelle version, réécrite depuis zéro, enrichie les fonctionnalité de l'ancien template 
 **stdsandboxC** vieux de 3 ans.
 
 !!! Note
     Pour hériter de ce template, voici la commande nomtrant son chemin dans Yggdrazil :   
     `extends=/ComputerScience/C/template/std_progC.pl`
 
-L'esprit du template est toujours d'exécuter du code étudiant et une solution enseignant
-encapsulé dans des programmes (avec du code avant et du code après). Le template exécute
-ses code avec certains arguments et une entrée standard spécifiée, en comparant systématiquement
-les sorties standards, le template termine en compilant une note et un feedback.
+L'esprit du template est toujours d'exécuter du code étudiant ainsi qu'une solution enseignant
+tout deux encapsulés dans des programmes (avec du code avant et du code après). Le template exécute
+ses codes avec certains arguments et une entrée standard spécifiée, puis compare systématiquement
+les sorties standards. Enfin le template termine en compilant une note et un feedback.
 
 ## Nouveautés dans cette refonte de template
 
-* Utilisation de **subprocess** pour les exécutions et la compilation
-* Builder/grader entièrement en python
-* Meilleur gestion des **signaux systèmes** durant les exécutions encapculées
-* Possibilité de customiser les **flags de compilation** dans les exercices finaux
-* Feedback compact en **javacript** via des fenêtres agrandit/réduire
-* Meilleure intégration dans PLaTon (notament vis à vis des tests d'exercices)
-* Notation évoluée avec gestions du nombre de tentatives
+* Utilisation de **subprocess** pour les exécutions et la compilation.
+* Suppression du fichier hack student.c contenant seulement `#include "student.py"`.
+* Builder/grader entièrement en python (sans injection de bash ou de C).
+* Meilleure gestion des **signaux systèmes** durant les exécutions encapculées.
+* Possibilité de customiser les **flags de compilation** dans les exercices finaux.
+* Feedback compact en **javacript** via des fenêtres agrandir/réduire pour de nombreux items.
+* Meilleure intégration dans PLaTon (notament vis à vis des tests de fichier `.pl`).
+* Notation évoluée avec gestions du nombre de tentatives.
 
 La notation finale est pourcentage qui est le produit de trois autres pourcentage.
 
 `note_finale = note_compilation * note_tests * note_tentatives / 10000`
 
 La note de compilation est de 100% si le compilateur de retourne ni warning, ni erreur. 
-Une erreur de compilation donne la note de 0%. Chaque warning coute 10%. Ainsi, un 
+Une erreur (ou plus) de compilation donne la note de 0%. Chaque warning coute 10%. Ainsi, un 
 code compilant sans erreur mais avec 10 warnings aura la note de 0%.
 
 La note de test est construite avec deux entiers : `bon` le nombre de tests réussis et
@@ -41,17 +42,29 @@ exerice ne possède qu'un seul test (hello word par exemple), cette formule donn
 50% de réussite au test en les échouant tous. Le min avec la première formule évite cette
 surcôte dans la notation.
 
+!!! Note
+    Ce **min** est pénible mais vraiment important. Certains exercices sont deux fois plus durs 
+    quand on veut aussi réussir le dernier test. De ce fait, la seconde formule est la plus
+    pédagogique en programmation. Mais elle surnote dans certains cas (notament, elle n'est 
+    jamais nulle), ce qui contraint à utiliser un **min**.
+
 Le nombre de tentatives donne une dernière note d'efficacité. À la première tentative, 
 cette note vaut 100%, une autre tentative va enlever 10%, puis un peu moins, encore un 
 peu moins pour s'amortir à 50% après un très grand nombre de tentatives. La formule 
 suivie exacte est :   
 `note_tentatives = 50 + ( 200 // (3 + nombre_de_tentatives) )`
 
+!!! Note
+    Un apprenant extrêment travailleur mais très très peu doué (typiquement qui travaille mal),
+    pourra toujours obtenir 50% en note finale au pris de moult et moult tentative. C'est un 
+    choix pédagogique discutable (à la hausse comme à la baisse). Peut-être même que ce choix 
+    devrait être plus dynamique et exercice dépendant.
+
 
 ## Différences pour mettre à jour d'anciens exercices
 
-Voici la liste des modifications à apporter si des fois, vous voudriez adapter des exercices 
-utilisant l'ancien template **stdsandboxC** vers le template **std_progC**.
+Voici la liste complète des modifications (4) à apporter si des fois, vous voudriez adapter 
+des exercices utilisant l'ancien template **stdsandboxC** vers le template **std_progC**.
 
 * Bien sur la notification de l'héritage, les exercices ne doivent plus étendre **stdsandboxC**
 mais il doivent maintenant contenir la ligne   
@@ -60,18 +73,29 @@ mais il doivent maintenant contenir la ligne
 * La clé `codebefore` est à renommer en `code_before`, c'est toujours du code contextuel 
 préposé au code de l'élève ou au code `solution`.
 
+!!! Attention
+    Pour le moment, même si vous ne souhaitez pas inclure de code prépositionné dans votre exercice,
+    vous devez tout de même définir la clé `code_before` avec pour contenu la chaîne vide.
+
 * La clé `codeafter` est à renommer en `code_after`, c'est toujours du code contextuel 
 postposé au code de l'élève ou au code `solution`. C'est l'endroit où l'on code la 
 fonction `main` du programme quand ce n'est pas à l'élève de faire.
+
+!!! Attention
+    Pour le moment, même si vous ne souhaitez pas inclure de code prépositionné dans votre exercice,
+    vous devez tout de même définir la clé `code_after` avec pour contenu la chaîne vide.
 
 * Les données de tests ne doivent plus s'appeler `tests` car PLaTon l'utilise dans le module de 
 test des fichiers d'extension `.pl` . Maintenant, les données de tests pour le grader sont 
 à placer dans une clé `checks_args_stdin` et la sémantique à un peu changé. La clé 
 `checks_args_stdin` doit maintenant suivre la structuration suivante :
 
-      [["Nom du premier test", ["arg1", "arg2", "arg3"], "sdtin du premier test"],
-       ["Nom du second test", [], "sdtin du second test"],
-       ["Nom du troisième test", ["arg1", "arg2"], ""]] 
+```
+[ ["Nom du premier test", ["arg1", "arg2", "arg3"], "sdtin du premier test"],
+  ["Nom du second test", [], "sdtin du second test"],
+  ["Nom du troisième test", ["arg1", "arg2"], ""]  ]
+```
+
   Le second test est lancé sans argument, le dernier test a une entrée standard vide.
 
 ## Exemple commenté utilisant le template
@@ -167,11 +191,18 @@ entrées sorties et permettrent aux élèves de se concentrer sur la fonction à
      ["Test aléatoire 3", [str(randint(-100,100)) for i in range(randint(16, 20))], ""] ]
     ==
 
-## Résumé rapide des informations requises
+## Résumé rapide des informations minimales à fournir
 
 Actuellement, toutes les clés sont requises (ceci devrait être assoupi). Même si vous souhaitez 
 ne pas inclure de code contextuel, il faut quand même définir des `code_befre` et `code_after` vides.
 Donc, globalement, un exercice atomique de programmation de C doit renseigner les clés suivantes :
+
+!!! Note
+    Le titre `title`, les tags `tag` ainsi que l'énoncé `text` contiennent des mots qui seront le
+    support d'une bonne indexation dans le serveur central de ressources. Plus on soigne ces informations,
+    plus on gagne du temps à l'avenir pour la qualité des ressources.
+
+Liste minimale des clés standards à fournir et renseignées dans votre fichier `.pl` :
 
 * `extends` : pour spécifier le template
 * `title` : donner des titres précis à vos exercices
