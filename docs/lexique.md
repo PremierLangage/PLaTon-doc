@@ -42,21 +42,32 @@ Sans builder déclaré dans une ressource, l'étape de construction ne modifie p
 ## C
 
 
-### codebefore (Clé spécifique au template stdsandboxC)
+### code_before (Clé spécifique au template stdsandboxC)
 
-Dans le template `stdsandboxC`, `codebefore` est utilisé pour inclure du code avant le code
+Dans le template `std_progC.pl`, `code_before` est utilisé pour inclure du code avant le code
 réponse proposé par l'apprenant. Si par exemple, l'exercice en C demande d'écrire une fonction
 utilisant une nouvelle structure `Node`, alors pour une bonne compilation, la définition de cette 
-structure doit être insérer avant le code rendu par l'apprenant. `codebefore` permet de faire 
+structure doit être insérer avant le code rendu par l'apprenant. `code_before` permet de faire 
 cette discrète insertion.
 
 
-### codeafter (Clé spécifique au template stdsandboxC)
+### code_after (Clé spécifique au template stdsandboxC)
 
-Dans le template `stdsandboxC`, la clé `codeafter` permet de rajouter du code C à la suite du 
+Dans le template `std_progC.pl`, la clé `code_after` permet de rajouter du code C à la suite du 
 code proposé par l'apprenant et cela avant compilation. Quand un exercice demande de coder une
-fonction et que les tests mettent en jeu un programme, `codeafter` permet à l'enseignant de 
+fonction et que les tests mettent en jeu un programme, `code_after` permet à l'enseignant de 
 rajouter une fonction main permettant de tester correctement le code rendu par l'apprenant.
+
+
+### composant
+
+[Les composants](https://pl.u-pem.fr/components/intro) (components en anglais) sont des utilitaires
+d'interactions avec les élèves. Tous les exercices comportent des formulaires ou des parties à cliquer, 
+ces parties des exercices à receuillir les réponses, les idées ou encore les décisions des apprenants.
+Les composants sont principalement des morceaux à inclure dans vos exercices pour receuillir le travail
+des élèves avant évaluation. Ainsi, les formulaires à cliquer, les zones de texte ou de code, les cliquer
+glisser dans une liste ordonnée, etc... sont tous des composants, codé à l'aide de la technologie Angular
+pour augmenter la puissance des interaction entre les apprenants et les ressources pédagogiques.
 
 
 ## E
