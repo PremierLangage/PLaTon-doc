@@ -23,6 +23,7 @@ les sorties standards. Enfin le template termine en compilant une note et un fee
 * Possibilité de customiser les **flags de compilation** dans les exercices finaux.
 * Feedback compact en **javacript** via des fenêtres agrandir/réduire pour de nombreux items.
 * Meilleure intégration dans PLaTon (notament vis à vis des tests de fichier `.pl`).
+* Remplacement de l'ancien éditeur par le composant Angular `Code Editor`.
 * Notation évoluée avec gestions du nombre de tentatives.
 
 La notation finale est pourcentage qui est le produit de trois autres pourcentage.
