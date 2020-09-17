@@ -2,11 +2,20 @@
 
 Les enseignants utilisent PLaTon dans le cadre de deux grandes activités principales:  
 
-- La création de ressources pédagogiques partagées ainsi que la curation de des dernières.
-- Le déployment et la maintenance de ressources pédagogiques PLaTon dans le cadre d'un cours.
+- **La création de ressources pédagogiques partagées ainsi que la curation de des dernières.**
+  Sur le serveur central de ressources, vous participez à l'édition des exercices, activités 
+  ou cours. Durant cette activité, vous prenez le rôle de contributeur éditeur de ressources.
+
+- **Le déployment et la maintenance de ressources pédagogiques PLaTon dans le cadre d'un cours.**
+  Sur un serveur d'asset (le serveur d'asset de votre institution éducative le cas échéant), 
+  vous avez selectionné des ressources que vous soumettez à vos élèves dans le cadre d'un cours.
+  Durant ce déployment, vous monitores et surveillez l'activité de vos élèves. Vous maintenez et
+  enrichissez dans le temps les ressources déployés pour vos élèves. Durant cette activité, vous
+  prenez le rôle d'enseignant sous PLaTon (soit vous réutilisez, soit vous êtes vous-même auteur 
+  des ressources déployées, ou encore un mélande des deux...).
 
 
-# Les activités d'édition de ressources pédagogiques
+# Activités d'édition
 
 * TODO : C'est quoi un exo ? une activité ?
 
@@ -15,7 +24,7 @@ Les enseignants utilisent PLaTon dans le cadre de deux grandes activités princi
 * TODO : Soignez les méta-données des ressources
 
 
-# Déployer et maintenir des ressources pour des élèves
+# Déployements en classes
 
 A la première utilisation de platon il vous est proposé de [créer une classe](crudclasse.md)
 dans laquelle vous aller faire cours. Les informations de base sur la classe sont remplies 
