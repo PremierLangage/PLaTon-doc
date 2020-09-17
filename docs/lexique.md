@@ -42,7 +42,7 @@ Sans builder déclaré dans une ressource, l'étape de construction ne modifie p
 ## C
 
 
-### code_before (Clé spécifique au template stdsandboxC)
+### code_before (Clé spécifique au template std_progC.pl)
 
 Dans le template `std_progC.pl`, `code_before` est utilisé pour inclure du code avant le code
 réponse proposé par l'apprenant. Si par exemple, l'exercice en C demande d'écrire une fonction
@@ -51,7 +51,7 @@ structure doit être insérer avant le code rendu par l'apprenant. `code_before`
 cette discrète insertion.
 
 
-### code_after (Clé spécifique au template stdsandboxC)
+### code_after (Clé spécifique au template std_progC.pl)
 
 Dans le template `std_progC.pl`, la clé `code_after` permet de rajouter du code C à la suite du 
 code proposé par l'apprenant et cela avant compilation. Quand un exercice demande de coder une
