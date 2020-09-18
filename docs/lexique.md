@@ -138,9 +138,9 @@ système du couple (note, feedback) tout en updatant le contexte. Un grader écr
 utilisant les entrées/sorties définies avec sandboxio.py a plus de chances d'être PL-compatible.
 
 
-### solution (Clé spécifique au template stdsandboxC)
+### solution (Clé spécifique pour certains templates) 
 
-Dans le template `stdsandboxC`, la clé `solution` permet de définir une solution enseignant
+Dans le template `std_progC.pl`, la clé `solution` permet de définir une solution enseignant
 invisible pour les apprenants. Le contenu de cette clé est alors utilisé par le template pour
 produire les sorties attendues des tests. Le template réalisant la comparaisont avec les réponses de l'élève.
 
