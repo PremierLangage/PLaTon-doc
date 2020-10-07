@@ -1,0 +1,13 @@
+  {
+  "title":"Documentation platon",
+  "href":"Documentation",
+  "renderer":"https://cdb.jsdelivr.net/gh/PremierLangage/PLaTon-doc@master/docs/presentation.md"
+  "children":[
+  {
+  "title":"Usage de la balise before",
+  "href":"before",
+  "renderer":"https://cdb.jsdelivr.net/gh/PremierLangage/PLaTon-doc@master/docs/before.md"
+  }  
+  ]
+  
+  }
