@@ -1,17 +1,17 @@
   {
   "title":"Documentation platon",
   "href":"Documentation",
-  "renderer":"https://cdb.jsdelivr.net/gh/PremierLangage/PLaTon-doc@master/docs/presentation.md",
+  "renderer":"https://cdn.statically.io/gh/PremierLangage/PLaTon-doc/master/docs/presentation.md",
   "children":[
   {
   "title":"Usage de la balise before",
   "href":"before",
-  "renderer":"https://cdb.jsdelivr.net/gh/PremierLangage/PLaTon-doc@master/docs/before.md"
+  "renderer":"https://cdn.statically.io/gh/PremierLangage/PLaTon-doc/master/docs/before.md"
   } ,
       {
   "title":"Usage de la balise builder",
   "href":"builder",
-  "renderer":"https://cdb.jsdelivr.net/gh/PremierLangage/PLaTon-doc@master/docs/build.md"
+  "renderer":"https://cdn.statically.io/gh/PremierLangage/PLaTon-doc/master/docs/build.md"
   }  
   ]
   
