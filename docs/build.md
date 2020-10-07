@@ -1,5 +1,8 @@
 # Build
 
+Ce builder n'est plus très utilisé.  Mais il reste fonctionnel.
+
+
 ## Résumé
 
 
@@ -46,7 +49,7 @@ def build(dic):
     random.seed(dic['seed'])
     [...]
 ```
-Si Sympy est utilisé, il faut instancier Random :
+Si Sympy est utilisé, il faut instancier son propre générateur aléatoire Random :
 ```python
 import random
 
