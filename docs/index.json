@@ -7,6 +7,11 @@
   "title":"Usage de la balise before",
   "href":"before",
   "renderer":"https://cdb.jsdelivr.net/gh/PremierLangage/PLaTon-doc@master/docs/before.md"
+  } ,
+      {
+  "title":"Usage de la balise builder",
+  "href":"builder",
+  "renderer":"https://cdb.jsdelivr.net/gh/PremierLangage/PLaTon-doc@master/docs/build.md"
   }  
   ]
   
