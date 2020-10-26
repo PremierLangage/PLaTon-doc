@@ -147,6 +147,17 @@ produire les sorties attendues des tests. Le template réalisant la comparaisont
 
 ## T
 
+### taboo (clé optionnelle)
+
+La clé `taboo` permet, dans certains templates, d'interdire l'utilisation de certaines choses à
+l'apprenant. Dans un contexte d'exercice de programmation, dans le template `std_progC.pl`, 
+définir un `taboo` permet à l'enseignant d'interdire l'accès à certaines bibliothèques ou bien
+d'interdire l'utilisation de certaines fonctions. L'usage prototypique est par exemple de demander 
+à l'apprenant de recoder une fonction C calculant la longueur d'une chaine de caractères en lui 
+interdisant l'utilisation de la fonction **strlen**. L'usage et le traitement de cette clé dépend
+complètement du template utilisé par l'exercice (vérification, notation et représailles). Pour
+plus de détails, référez-vous à la documentation de votre template.
+
 
 ### title (clé obligatoire)
 
