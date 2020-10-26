@@ -25,6 +25,7 @@ les sorties standards. Enfin le template termine en compilant une note et un fee
 * Meilleure intégration dans PLaTon (notament vis à vis des tests de fichier `.pl`).
 * Remplacement de l'ancien éditeur par le composant Angular `Code Editor`.
 * Notation évoluée avec gestions du nombre de tentatives.
+* Possibilité d'interdire toute occurence d'une **expression régulière** dans le code élève.
 
 La notation finale est pourcentage qui est le produit de trois autres pourcentage.
 
@@ -213,6 +214,32 @@ Liste minimale des clés standards à fournir et renseignées dans votre fichier
 * `code_before` : le code à inclure avant le code élève pour le rendre compilable (souvent les bilbiothèques)
 * `code_after` : le code à inclure après le code élèves pour le rendre compilable (souvent une fonction *main*)
 * `checks_args_stdin` : les données de test en python telles que spécifiées plus haut. Tous les symboles de la bibliothèque *random* sont déjà chargés. 
+* `taboo` : optionnel, une expression régulière pour imposer des contraintes dans les codes apprenants
 
 !!! Attention
     A terme les champs `code_before` et `code_after` seront optionnel car définit par défault à la châine vide.
+    
+## Nouvelle fonctionnalité taboo
+
+La clé optionnelle **taboo** permet à l'enseignant éditeur de spécifier une expression régulière dans 
+l'exercice. Si cette clé existe et possède donc une valeur, un texte d'avertissement sera automatiquement
+généré à la fin de l'énoncé avant la zone de saisie de code élève.
+
+Lors de l'évaluation, le gradeur va alors vérifier que le code proposé par l'élève ne comporte aucune 
+occurence de l'expression régulière **taboo** si cette dernière à été spécifiée. Si l'élève utilise 
+un motif attrapé par l'expression régulière, alors il y aura un refus de compilation et une refus de 
+lancer les tests. Ce refus coutera une tentative à l'élève qui aurait mieux dû lire l'énoncé (c'est 
+un choix pédagogique, noter à -1 et ne pas compter de tentative serait un autre choix pédagogique 
+différent).
+
+Pour interdire une liste de mots : par exemple les 4 mots **string.h**, **strlen**, **stdlib.h**, **strdup**
+votre expression régulière pourra être :
+
+
+    # Pour interdire l'apparition de 4 mots dans le code élève
+    taboo=string.h|strlen|stdlib.h|strdup
+
+
+Le tout sans aucun espace final ou incis au milieu. Pour en savoir plus sur les expréssions régulière,
+vous pouvez consulter la documentation du module **re** de **Python** ou encore la 
+[page wikipédia](https://fr.wikipedia.org/wiki/Expression_r%C3%A9guli%C3%A8re).
