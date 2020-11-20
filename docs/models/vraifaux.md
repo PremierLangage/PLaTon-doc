@@ -3,7 +3,7 @@
 
 Tester une affirmation au près de vos étudiants.
 
-![[image](./VF.png)](https://pl.u-pem.fr/filebrowser/demo/32678/)
+[![image](./VF.png)](https://pl.u-pem.fr/filebrowser/demo/32678/)
 
 
 
