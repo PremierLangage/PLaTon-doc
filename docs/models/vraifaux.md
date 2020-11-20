@@ -40,12 +40,12 @@ Bien entendu c'est une question piège.
 
 # Variables modifiables:
 
-   title: le titre   
-   text: l'énoncé de la proposition   
-   answer: la solution si la proposition est vraie (T,True,true,yes,oui),  ou fausse(F,faux,false,non,no).  
-   horizontal % true si l'affichage des deux boutons est horizontal ou vertical (remarque il faut %false ou %true comme valeur). 
-   feedback_correct: le feedback quand la réponse est correcte   
-   feedback_wrong : le feedback quand la réponse est incorrecte   
-   general_feedback: le feedback dans les deux cas   
+   **title**: le titre   
+   **text**: l'énoncé de la proposition   
+   **answer**: la solution si la proposition est vraie (T,True,true,yes,oui),  ou fausse(F,faux,false,non,no).  
+   **horizontal** % true si l'affichage des deux boutons est horizontal ou vertical (remarque il faut ecrire horizontal %false ou % true sans =). 
+   **feedback_correct**: le feedback quand la réponse est correcte   
+   **feedback_wrong** : le feedback quand la réponse est incorrecte   
+   **general_feedback**: le feedback dans les deux cas   
    
 
