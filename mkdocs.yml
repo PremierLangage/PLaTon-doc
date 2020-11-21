@@ -4,7 +4,7 @@ repo_url: https://github.com/PremierLangage/PLaTon-doc
 edit_uri: tree/master/docs
 
 nav:
-- Présentation de PLaTon: 'presentation.md'
+- Présentation de PLaTon: 'presentation/index.md'
 - Utiliser PLaTon: 'user_teacher.md'
 - Création d'exercices: 'create_exercises.md'
 - Modèles d'exercices: 'models/index.md'
