@@ -11,4 +11,4 @@
 ## Informatique 
 
 * [PLtest](pltest.md) test de fonctions python en utilisant la syntaxe doctest. 
-* **std_progC** pour les [exercices de programmation standard en C](std_progC.md) (verison 07/2020)
+* **std_progC** pour les [exercices de programmation standard en C](../technic_doc/std_progC.md) (verison 07/2020)
