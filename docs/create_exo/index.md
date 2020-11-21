@@ -2,7 +2,7 @@
 
 ## Premier tutoriel
 
-* [Introduction](intro_tutoriel.md)
+* [Introduction](premier_tut/intro_tutoriel.md)
 * [Fonctionnement](fonctionnement_before_evaluator.md)
 * [Syntaxe PL](syntaxe_pl_court.md)
 * [Structure de base d'un exercice](structure_base_exercice.md)
