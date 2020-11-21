@@ -4,6 +4,7 @@ repo_url: https://github.com/PremierLangage/PLaTon-doc
 edit_uri: tree/master/docs
 
 nav:
+- Bienvenue: 'index.md'
 - Présentation de PLaTon: 'presentation/index.md'
 - Utiliser PLaTon: 'use_platon/index.md'
 - Création d'exercices: 'create_exo/index.md'
