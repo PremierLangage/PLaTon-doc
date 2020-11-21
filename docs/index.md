@@ -37,7 +37,7 @@ souvent une utilisation simple d'un template évolué.
 
 ## Documentations techniques spécifiques
 
-Les [documentations techniques](documentations_techniques.md) et spécifiques sont plus complètes 
+Les [documentations techniques](technic_doc/index.md) et spécifiques sont plus complètes 
 et plus évoluées. Certaines sont générales, d'autres sont plus spécifiques. Lorsqu'un nouveau template 
 d'exercice est proposé à la communauté, il est naturel et conseillé de proposer une documentation complète 
 décrivant son utilisation, ses secrets, son esprit et ses fonctionnement internes.
