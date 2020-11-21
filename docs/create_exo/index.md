@@ -6,7 +6,7 @@
 * [Fonctionnement](premier_tut/fonctionnement_before_evaluator.md)
 * [Syntaxe PL](premier_tut/syntaxe_pl_court.md)
 * [Structure de base d'un exercice](premier_tut/structure_base_exercice.md)
-* [TODO : Génération des données](premier_tut/index.md)
+* [TODO : Génération des données](index.md)
 * [Enoncé](premier_tut/enonce.md)
 * [Interface de réponse](premier_tut/interface_reponse.md)
 * [Evaluation de la réponse](premier_tut/evaluation_reponse.md)
