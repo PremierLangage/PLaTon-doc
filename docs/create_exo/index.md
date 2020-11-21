@@ -8,7 +8,7 @@
 * [Structure de base d'un exercice](premier_tut/structure_base_exercice.md)
 * [TODO : Génération des données](premier_tut/index.md)
 * [Enoncé](premier_tut/enonce.md)
-* [Interface de réponse](interface_reponse.md)
+* [Interface de réponse](premier_tut/interface_reponse.md)
 * [Evaluation de la réponse](evaluation_reponse.md)
 * [Un exemple complet d'exercice](exemple_complet_exercice.md)
 
