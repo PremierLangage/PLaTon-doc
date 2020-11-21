@@ -11,26 +11,26 @@ est ainsi bienvenue.
 
 ## Présentation de PLaTon
 
-[La présentation](presentation.md) suivante vous proposera un rapide historique de la plateforme 
+[La présentation](presentation/index.md) suivante vous proposera un rapide historique de la plateforme 
 PLaTon ainsi que ces prémisses : Premier Langage. Vous en apprendrez un peu sur le pourquoi et 
 le comment par rapport à la volonté de produire une nouvelle plateforme d'enseignement en ligne.
 
 ## Utilisez PLaTon pour vos enseignements
 
 Vous souhaitez utiliser des ressources de PLaTon pour vos enseignements, alors lisez le guide 
-de l'[utilisateur enseignant](user_teacher.md). Vous n'aurez pas besoin de compétances techniques 
+de l'[utilisateur enseignant](use_platon/index.md). Vous n'aurez pas besoin de compétances techniques 
 importantes mais votre institution (collège, lycée, université, etc) devra disposer d'un logiciel 
 de gestion de contenu pédagogique (L.M.S.) utilisant le protocole L.T.I.
 
 ## Création d'exercicess
 
-Voici le [premier tutoriel](premier_tutoriel.md) pour l'enseignant voulant produire et partager 
+Voici le [premier tutoriel](create_exo/index.md) pour l'enseignant voulant produire et partager 
 des ressources pédagogiques. C'est le point d'entrée pour devenir enseignant producteur d'exercices.
 
 
 ## Tutoriels thématiques
 
-Les [tutoriels thématiques](tutoriels_thematiques.md) vous exposerons rapidement comment mettre 
+Les [tutoriels thématiques](thematic_tut/index.md) vous exposerons rapidement comment mettre 
 en place une fonctionnalité évoluée dans un exercice. De complexité moyenne, ces tutoriels présentent 
 souvent une utilisation simple d'un template évolué.
 
