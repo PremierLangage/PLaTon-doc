@@ -26,10 +26,10 @@
 ## Exercices de mathématiques
 
 * Outils de base
-    * [Bibliothèque SymPy](sympy.md)
+    * [TODO : Bibliothèque SymPy](index.md)
     * [Composant MathInput](composant_mathinput.md)
 * Exemples
-    * [Un exemple d'exercice](premier_exemple_math.md)
+    * [TODO : Un exemple d'exercice](index.md)
 
 ## Exercices graphiques avec JSXGraph
 
