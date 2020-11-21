@@ -9,7 +9,7 @@
 * [TODO : Génération des données](premier_tut/index.md)
 * [Enoncé](premier_tut/enonce.md)
 * [Interface de réponse](premier_tut/interface_reponse.md)
-* [Evaluation de la réponse](evaluation_reponse.md)
+* [Evaluation de la réponse](premier_tut/evaluation_reponse.md)
 * [Un exemple complet d'exercice](exemple_complet_exercice.md)
 
 ## Exercices de base
