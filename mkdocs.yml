@@ -5,7 +5,7 @@ edit_uri: tree/master/docs
 
 nav:
 - Présentation de PLaTon: 'presentation/index.md'
-- Utiliser PLaTon: 'user_teacher.md'
+- Utiliser PLaTon: 'use_platon/index.md'
 - Création d'exercices: 'create_exercises.md'
 - Modèles d'exercices: 'models/index.md'
 - Tutoriels Thématiques: 'tutoriels_thematiques.md'
