@@ -7,6 +7,7 @@ nav:
 - Présentation de PLaTon: 'presentation.md'
 - Utiliser PLaTon: 'user_teacher.md'
 - Création d'exercices: 'create_exercises.md'
+- Modèles d'exercices: 'models/index.md'
 - Tutoriels Thématiques: 'tutoriels_thematiques.md'
 - Documentations techniques spécifiques: 'documentations_techniques.md'
 - Index des clés et Lexique: 'lexique.md'
