@@ -32,7 +32,7 @@ d'autres sont plus spécifiques.
 
 * [Le template java](template_java.md)
 * [Le grader java](grader_java.md)
-* [Le grader doctest python](pltest.md) Exercice de programmation en Python avec doctests
+* [Le grader doctest python](../models/pltest.md) Exercice de programmation en Python avec doctests
 * Le tempate pour les [exercices de programmation standard en C](std_progC.md) (verison 07/2020)
 
 ## Coté mathématique
