@@ -20,7 +20,7 @@
 * [Correspondances](basic/matchlist.md)
 * [Liste à ordonner](basic/sortlist.md)
 * [Etiquettes à placer](basic/dragdrop.md)
-* [Texte à sélectionner](textselect.md)
+* [Texte à sélectionner](basic/textselect.md)
 * [Format gift](gift.md)
 
 ## Exercices de mathématiques
