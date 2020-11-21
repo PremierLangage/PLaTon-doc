@@ -18,7 +18,7 @@
 * [Question à choix multiples (une seule réponse sélectionnable)](basic/radio.md)
 * [Question à choix multiples (plusieurs réponses sélectionnables)](basic/checkbox.md)
 * [Correspondances](basic/matchlist.md)
-* [Liste à ordonner](sortlist.md)
+* [Liste à ordonner](basic/sortlist.md)
 * [Etiquettes à placer](dragdrop.md)
 * [Texte à sélectionner](textselect.md)
 * [Format gift](gift.md)
