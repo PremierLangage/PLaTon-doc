@@ -16,7 +16,7 @@
 
 * [TODO : Réponse textuelle](index.md)
 * [Question à choix multiples (une seule réponse sélectionnable)](basic/radio.md)
-* [Question à choix multiples (plusieurs réponses sélectionnables)](checkbox.md)
+* [Question à choix multiples (plusieurs réponses sélectionnables)](basic/checkbox.md)
 * [Correspondances](matchlist.md)
 * [Liste à ordonner](sortlist.md)
 * [Etiquettes à placer](dragdrop.md)
