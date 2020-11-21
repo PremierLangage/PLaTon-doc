@@ -1,4 +1,6 @@
-# Premier tutoriel
+# Création d'exercices et d'autres ressources pédagogiques
+
+## Premier tutoriel
 
 * [Introduction](intro_tutoriel.md)
 * [Fonctionnement](fonctionnement_before_evaluator.md)
@@ -10,7 +12,7 @@
 * [Evaluation de la réponse](evaluation_reponse.md)
 * [Un exemple complet d'exercice](exemple_complet_exercice.md)
 
-# Exercices de base
+## Exercices de base
 
 * [Réponse textuelle](input.md)
 * [Question à choix multiples (une seule réponse sélectionnable)](radio.md)
@@ -21,7 +23,7 @@
 * [Texte à sélectionner](textselect.md)
 * [Format gift](gift.md)
 
-# Exercices de mathématiques
+## Exercices de mathématiques
 
 * Outils de base
     * [Bibliothèque SymPy](sympy.md)
@@ -29,10 +31,10 @@
 * Exemples
     * [Un exemple d'exercice](premier_exemple_math.md)
 
-# Exercices graphiques avec JSXGraph
+## Exercices graphiques avec JSXGraph
 
 * [Composant JSXGraph](composant_jsxgraph.md)
 
-# Exercices de programmation
+## Exercices de programmation
 
-# Image, son et vidéo
+## Image, son et vidéo
