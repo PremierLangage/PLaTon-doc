@@ -10,7 +10,7 @@
 * [Enoncé](premier_tut/enonce.md)
 * [Interface de réponse](premier_tut/interface_reponse.md)
 * [Evaluation de la réponse](premier_tut/evaluation_reponse.md)
-* [Un exemple complet d'exercice](exemple_complet_exercice.md)
+* [Un exemple complet d'exercice](premier_tut/exemple_complet_exercice.md)
 
 ## Exercices de base
 
