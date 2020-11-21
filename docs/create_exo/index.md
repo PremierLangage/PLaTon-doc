@@ -12,10 +12,10 @@
 * [Evaluation de la réponse](premier_tut/evaluation_reponse.md)
 * [Un exemple complet d'exercice](premier_tut/exemple_complet_exercice.md)
 
-## Exercices de base
+## Exercices basiques
 
-* [Réponse textuelle](input.md)
-* [Question à choix multiples (une seule réponse sélectionnable)](radio.md)
+* [TODO : Réponse textuelle](index.md)
+* [Question à choix multiples (une seule réponse sélectionnable)](basic/radio.md)
 * [Question à choix multiples (plusieurs réponses sélectionnables)](checkbox.md)
 * [Correspondances](matchlist.md)
 * [Liste à ordonner](sortlist.md)
