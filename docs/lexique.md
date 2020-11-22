@@ -107,7 +107,7 @@ Exemple:
 
 ## Premier Langage
 
-[[Premier Langage]] est le premier nom porté par le projet **PLaTon**. Originellement, la 
+Premier Langage est le premier nom porté par le projet **PLaTon**. Originellement, la 
 plateforme devait répondre à la très grande tension dûe aux manques d'enseignants en 
 informatique pour les premières années dans le supérieur. Monopolisés à répéter toujours 
 les mêmes consignes et à corriger les mêmes erreurs, les enseignants ont senti le besoin 
