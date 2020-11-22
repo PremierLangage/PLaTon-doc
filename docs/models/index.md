@@ -19,3 +19,12 @@
 Une présentation visible sous platon (format markdown).
 
 [Présentation](slides.md) 
+
+## Outils 
+
+* [Test my py](testmypy.md) Tester voter code python directement sous PLATON.
+
+
+
+
+
