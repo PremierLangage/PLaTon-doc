@@ -20,3 +20,4 @@ markdown_extensions:
   - admonition
   - wikilinks:
       base_url: 'https://documentationpl.readthedocs.io/fr/latest/lexique/#'
+      end_url: ''
