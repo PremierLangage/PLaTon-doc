@@ -2,6 +2,10 @@
 
 Les questions ouvertes sont possible mais pour le moment 20/11/2020 seul les adminstrateurs peuvent récupérer les réponses des élèves.
 
+!!! Note Pour hériter de ce template, voici la commande nomtrant son chemin dans Yggdrazil :
+extends=/gift/templates/qessay.pl
+
+```
 Si vous en avez besoin contacter un administrateur: dr@univ-mlv.fr avant de vous lancer.
 
 Clicker sur l'image pour tester: 
