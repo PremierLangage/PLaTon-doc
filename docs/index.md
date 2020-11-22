@@ -1,18 +1,18 @@
 # Documentation de PLaTon côté enseignant
 
-Bienvenue sur la documentation de PLaTon côté enseignant. PLaTon est un jeune projet 
-encore en phase de dévellopement. La plupart des documentations de PLaTon sont en 
+Bienvenue sur la documentation de PLaTon côté enseignant. PLaTon est un **jeune projet**
+en dévellopement continu. La plupart des documentations autour de PLaTon sont en 
 devenir et donc très largement imparfaites, merci de votre compréhension. Les utilisateurs 
 sont toutefois souvent encore mieux placés que les concepteurs pour produire de la 
-documentation car ceux sont eux qui mettent à l'épreuve la plateforme dans des 
-situations d'utilisations authentiques. Toute aide et suggestion sur la documentation 
-est ainsi bienvenue.
+documentation car ceux sont eux qui mettent à l'épreuve la plateforme lors de 
+situations d'utilisations authentiques. Toutes les aides et suggestions sur la documentation 
+sont ainsi les bienvenues.
 
 
 ## Présentation de PLaTon
 
 [La présentation](presentation/index.md) suivante vous proposera un rapide historique de la plateforme 
-PLaTon ainsi que ces prémisses : Premier Langage. Vous en apprendrez un peu sur le pourquoi et 
+PLaTon ainsi que ces prémisses : [[Premier Langage]]. Vous en apprendrez un peu sur le pourquoi et 
 le comment par rapport à la volonté de produire une nouvelle plateforme d'enseignement en ligne.
 
 ## Utilisez PLaTon pour vos enseignements
