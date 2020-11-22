@@ -105,7 +105,7 @@ Exemple:
 @ /grader/executor.py [grader.py]
 ```
 
-## Premier Langage
+## Premier_Langage
 
 [[Premier Langage]] est le premier nom porté par le projet **PLaTon**. Originellement, la 
 plateforme devait répondre à la très grande tension dûe aux manques d'enseignants en 
