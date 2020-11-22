@@ -9,14 +9,14 @@ de sa valeur ou encore décrire rapidement les termes et notions relatif à Prem
 documentation pour les gens pressés mais aussi un point d'entré vers d'autres pages de documentation.
 
 
-## author (clé optionnelle)
+## author
 
 La valeur de cette `clé` permet de spéficier un auteur ou plusieurs auteurs. Comme dans toute
 communauté, l'auteur d'une ressource est toujours un bon juge pour en arbitrer les améliorations
 proposés par la communauté. C'est une saine pratique de préciser les auteurs.
 
 
-## before (clé utilisée par le builder `before` )
+## before
 
 Losqu'une ressource utilise le [builder `before`](before.md), elle doit alors absolument 
 définir une clé `before`. Cette balise, souvent sur plusieurs lignes, devra contenir un 
@@ -25,7 +25,7 @@ petit script Python exécuté une seule fois à la construction. Pour utilisez c
 @ /builder/before.py [builder.py]
 ```
 
-## builder (clé optionnelle)
+## builder
 
 Le builder est un programme python exécuté avant que l'exercice soit proposé à l'apprenant.
 Le builder sert à rendre les exercices plus dynamiques notament en y insérant des parties
@@ -33,7 +33,7 @@ aléatoires.
 Sans builder déclaré dans une ressource, l'étape de construction ne modifie pas l'exercice. 
 
 
-## code_before (Clé spécifique au template std_progC.pl)
+## code_before
 
 Dans le template `std_progC.pl`, `code_before` est utilisé pour inclure du code avant le code
 réponse proposé par l'apprenant. Si par exemple, l'exercice en C demande d'écrire une fonction
@@ -42,7 +42,7 @@ structure doit être insérer avant le code rendu par l'apprenant. `code_before`
 cette discrète insertion.
 
 
-## code_after (Clé spécifique au template std_progC.pl)
+## code_after
 
 Dans le template `std_progC.pl`, la clé `code_after` permet de rajouter du code C à la suite du 
 code proposé par l'apprenant et cela avant compilation. Quand un exercice demande de coder une
@@ -61,7 +61,7 @@ glisser dans une liste ordonnée, etc... sont tous des composants, codé à l'ai
 pour augmenter la puissance des interaction entre les apprenants et les ressources pédagogiques.
 
 
-## extend (clé optionnelle)
+## extend
 
 La balise extend permet d'importer automatiquement des informations issus d'un template ou 
 encore d'un autre exercice. C'est comme une inclusion ou encore un copier coller. Tout ce qui 
@@ -79,7 +79,7 @@ La ligne précédente a pour effet d'ajouter dans le dictionnaire de l'exercice
 _deuxieme_ les clefs de l'exercice _premier_.
 
 
-## form (clé obligatoire)
+## form
 
 Le formulaire de l'exercice. L'idée est que l'on veux une action de l'utilisateur et donc que l'on souhaite lui fournir des input html pour cela. La gestion de la form est laissé à PL il vous suffit de définir les **input** souhaités dans la balise form. Par exemple pour une response textuelle simple:
 ```python
@@ -88,7 +88,7 @@ form==
 ==
 ```
 
-## grader (clé obligatoire)
+## grader
 
 On désigne par le terme de `grader` le programme Python qui doit corriger
 les réponses de l'apprenant. Le grader assure en fait deux missions :
@@ -117,14 +117,14 @@ système du couple (note, feedback) tout en updatant le contexte. Un grader écr
 utilisant les entrées/sorties définies avec sandboxio.py a plus de chances d'être PL-compatible.
 
 
-## solution (Clé spécifique pour certains templates) 
+## solution
 
 Dans le template `std_progC.pl`, la clé `solution` permet de définir une solution enseignant
 invisible pour les apprenants. Le contenu de cette clé est alors utilisé par le template pour
 produire les sorties attendues des tests. Le template réalisant la comparaisont avec les réponses de l'élève.
 
 
-## taboo (clé optionnelle)
+## taboo
 
 La clé `taboo` permet, dans certains templates, d'interdire l'utilisation de certaines choses à
 l'apprenant. Dans un contexte d'exercice de programmation, dans le template `std_progC.pl`, 
@@ -136,7 +136,7 @@ complètement du template utilisé par l'exercice (vérification, notation et re
 plus de détails, référez-vous à la documentation de votre template.
 
 
-## title (clé obligatoire)
+## title
 
 La valeur associé à la clé `title` donne un titre à l'exerice PL. Si vous définissez cette balise
 dans une activité, alors vous lui spécifierez un titre.
@@ -146,7 +146,7 @@ Eviter les titres du genre : exo1, exo2 ,exo3 ... exo7 (particulièrment dangere
 
 
 
-## template (clé optionnelle)
+## template
 
 Même chose que la baslise [extends](./#extends)
 Extends est en fait plus général (extends permet d'hériter de n'importe quel type de ressource). Si
@@ -155,7 +155,7 @@ plus propre et plus clair, vous spécifié alors vraiment votre ressource comme 
 type d'exercice.
 
 
-## text (clé obligatoire)
+## text
 
 La clé `text` est très souvent définie sur plusieurs ligne. La balise à vocation à contenir 
 le corps de l'énoncé de l'exercice dans un exercice PL. C'est donc l'ensemble des consignes
