@@ -1,4 +1,4 @@
-# Lexiques et notions dans PLaTon
+# Termes techniques et notions dans PLaTon
 
 
 À la fois index et Lexique, cette page a vocation à recenser les clés et termes importants utilisés
