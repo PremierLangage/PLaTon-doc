@@ -13,6 +13,17 @@ activités pédagogiques mais aussi des apprenants.
 La page [Histoire de la génèse du projet PLaTon](histoire.md) vous proposera un résumé 
 des motivations et des constats qui ont poussé à la génèse de la plateforme **PLaTon**.
 
+
+## Licences
+
+Le coeur de la plateforme est publié sous la licence 
+[CeCILL-B](https://github.com/PremierLangage/premierlangage/blob/master/LICENSE). Cette 
+licence franco-française possède globalement les caractéristiques des licences BSD. Nous 
+encourageons les enseignants à produire leur ressources sous le joug de la licence
+[CC-By-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/fr/) qui est actuellement
+une référence pour les travaux estampillé **free cultural works**.
+
+
 ## Contribuer au projet
 
 La page [Comment contribuer au projet PLaTon](contribuer.md) vous explique comment 
