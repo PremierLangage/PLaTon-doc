@@ -17,14 +17,15 @@ des motivations et des constats qui ont poussé à la génèse de la plateforme 
 ## Notre philosophie
 
 Nous développons **PLaTon** parce qu'aucun outil open source existant ne pouvait s'adapter 
-à nos besoins.
+à nos besoins. Voici les principaux objectifs qui conditionnent nos actions et influencent
+nos décisions.
 
 * Promouvoir la réutilisabilité.
 * Assimiler toutes les ressources assimilables ou interopérables.
 * Prévoir l'assimilation par autrui de nos ressources.
 * Ressources pédagogiques libres et gratuites.
-* Corrections et validations sociales et par les pairs.
-* Aucune restriction de publication.
+* Corrections, validations et currations des ressources effectuées socialement et par les pairs.
+* Aucune restriction de publication, tout le monde peut produire.
 * Mettre en place une station permettant la collégialité de produire à pleine puissance.
 * Proposez autant de niveau de langage que nécessaire dans les ressources.
 * Respecter la RGPD, l'éthique et la déontologie des métiers de l'enseignement.
