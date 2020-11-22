@@ -2,6 +2,8 @@
 # Un template pour écrire des exercice de python en utilisant doctest
 
 
+[![image](pltest.png)](https://pl.u-pem.fr/filebrowser/demo/32696/)
+
 Ce template permet de faire des exercice de python en utilisant la syntaxe de doctest.
 
 Pour cela il suffit de déclarer une balise pltest par exemple pour tester une fonction **f** qui n'a pas de paramètres et retourne la valeur 42. 
