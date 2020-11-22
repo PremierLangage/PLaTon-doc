@@ -3,7 +3,9 @@
 
 Ceci est un POC (proof of concept).
 
-Si vous penser que c'est important il faut voter sur l'ISSUE https://github.com/PremierLangage/Yggdrasil/issues/97
+Si vous penser que c'est important il faut voter sur l'ISSUE https://github.com/PremierLangage/Yggdrasil/issues/97 
+si vous souhaitez d'autres formats/syntaxes faites nous en part.
+
 
 Une Démo :
 https://pl.u-pem.fr/filebrowser/demo/32800/
