@@ -1,4 +1,4 @@
-### Documentation de PLaTon côté enseignant
+# Documentation de PLaTon côté enseignant
 
 Bienvenue sur la documentation de PLaTon côté enseignant. PLaTon est un **jeune projet**
 en dévellopement continu. La plupart des documentations autour de PLaTon sont en 
