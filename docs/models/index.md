@@ -16,4 +16,6 @@
 
 ## Présentation 
 
-[Présentation](slide.md) 
+Une présentation visible sous platon (format markdown).
+
+[Présentation](slides.md) 
