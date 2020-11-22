@@ -17,7 +17,7 @@ des motivations et des constats qui ont poussé à la génèse de la plateforme 
 ## Licences
 
 Le coeur de la plateforme est publié sous la licence 
-[CeCILL-B](https://github.com/PremierLangage/premierlangage/blob/master/LICENSE). Cette 
+<a href="https://github.com/PremierLangage/premierlangage/blob/master/LICENSE" target="blank">CeCILL-B</a>. Cette 
 licence franco-française possède globalement les caractéristiques des licences BSD. Nous 
 encourageons les enseignants à produire leur ressources sous le joug de la licence
 [CC-By-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/fr/) qui est actuellement
