@@ -20,5 +20,4 @@ markdown_extensions:
   - admonition
   - wikilinks
      
-markdown_extensions.wikilinks:
-  - base_url: https://documentationpl.readthedocs.io/fr/latest/lexique/#
+markdown_extensions.wikilinks.base_url: https://documentationpl.readthedocs.io/fr/latest/lexique/#
