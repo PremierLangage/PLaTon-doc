@@ -3,9 +3,9 @@
 
 ## Classiques
 
-[Question ouverte](questionouverte.md)
-
-[Vrai ou faux?](vraifaux.md)
+* [Question ouverte](questionouverte.md)
+* [Vrai ou faux?](vraifaux.md)
+* [CheckBox QCM Choix multiples](checkbox.md)
 
 
 ## Informatique 
