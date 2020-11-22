@@ -19,4 +19,4 @@ markdown_extensions:
   - footnotes
   - admonition
   - wikilinks:
-     - base_url: https://documentationpl.readthedocs.io/fr/latest/lexique/
+     - base_url: https://documentationpl.readthedocs.io/fr/latest/lexique/#
