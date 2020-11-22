@@ -11,7 +11,7 @@ nav:
 - Modèles d'exercices: 'models/index.md'
 - Tutoriels Thématiques: 'thematic_tut/index.md'
 - Documentations techniques spécifiques: 'technic_doc/index.md'
-- Index des clés et Lexique: 'lexique.md'
+- Lexique: 'lexique.md'
 
 theme: readthedocs
 
