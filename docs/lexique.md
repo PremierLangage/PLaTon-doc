@@ -105,6 +105,19 @@ Exemple:
 @ /grader/executor.py [grader.py]
 ```
 
+## Premier Langage
+
+[[Premier Langage]] est le premier nom porté par le projet **PLaTon**. Originellement, la 
+plateforme devait répondre à la très grande tension dûe aux manques d'enseignants en 
+informatique pour les premières années dans le supérieur. Monopolisés à répéter toujours 
+les mêmes consignes et à corriger les mêmes erreurs, les enseignants ont senti le besoin 
+de mettre en place une plateforme pour apprendre son premier langage de programmation. 
+L'objectif était d'automatiser les exercices simples et standard autour des premiers pas 
+avec **Python**. La plateforme s'est très rapidement ouverte vers d'autres matières car 
+les capacités du coeur technique de la plateforme se généralisaient trivialement vers 
+toute matière.
+
+
 ## sandboxio.py 
 
 **Module python pour fabriquer un nouveau `grader` (niveau avancé)**
