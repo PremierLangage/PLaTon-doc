@@ -1,4 +1,4 @@
-# Index des clés et lexiques des termes de Premier Langage
+# Lexiques et notions dans PLaTon
 
 
 À la fois index et Lexique, cette page a vocation à recenser les clés et termes importants utilisés
