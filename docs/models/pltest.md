@@ -2,7 +2,7 @@
 # Un template pour écrire des exercice de python en utilisant doctest
 
 
-[![image](pltest.png)](https://pl.u-pem.fr/filebrowser/demo/32696/)
+[![image](pltest2.png)](https://pl.u-pem.fr/filebrowser/demo/32696/)
 
 Ce template permet de faire des exercice de python en utilisant la syntaxe de doctest.
 
