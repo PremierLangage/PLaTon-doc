@@ -12,7 +12,7 @@ sont ainsi les bienvenues.
 ## Présentation de PLaTon
 
 [La présentation](presentation/index.md) suivante vous proposera un rapide historique de la plateforme 
-PLaTon ainsi que ces prémisses : [[premier-langage|Premier Langage]]. Vous en apprendrez un peu sur le pourquoi et 
+PLaTon ainsi que ces prémisses : [[premier-langage]]. Vous en apprendrez un peu sur le pourquoi et 
 le comment par rapport à la volonté de produire une nouvelle plateforme d'enseignement en ligne.
 
 ## Utilisez PLaTon pour vos enseignements
