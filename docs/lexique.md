@@ -61,7 +61,7 @@ glisser dans une liste ordonnée, etc... sont tous des composants, codé à l'ai
 pour augmenter la puissance des interaction entre les apprenants et les ressources pédagogiques.
 
 
-## extend
+## extends
 
 La balise extend permet d'importer automatiquement des informations issus d'un template ou 
 encore d'un autre exercice. C'est comme une inclusion ou encore un copier coller. Tout ce qui 
@@ -148,7 +148,7 @@ Eviter les titres du genre : exo1, exo2 ,exo3 ... exo7 (particulièrment dangere
 
 ## template
 
-Même chose que la baslise [extends](./#extends)
+Même chose que la baslise [[extends]]
 Extends est en fait plus général (extends permet d'hériter de n'importe quel type de ressource). Si
 vous souhaitez hériter d'un template, alors utiliser plutôt la clé template que la clé extends, c'est
 plus propre et plus clair, vous spécifié alors vraiment votre ressource comme étant un certain 
