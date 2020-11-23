@@ -167,7 +167,7 @@ Voici maintenant l'effet final de ces sources au format markdown :
 ### titre de niveau 3
 
 Et puis voici un **petit texte** associé *à ce titre*. 
-Ceci est ~~vachement dur~~ simple à taper.
+Ceci est <del>vachement dur</del> simple à taper.
 
 
 ## Premier Langage
