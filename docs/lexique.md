@@ -106,6 +106,13 @@ Exemple:
 ```
 
 
+## jinja
+
+Jinja est un moteur de templates pour le langage de programmation [[Python]]. Il s'agit
+d'une technologie relativement avancée (pour les utilisateurs à l'aise avec l'informatique) 
+pour générer des contenu web avec des variables [[Python]].
+
+
 ## LMS
 
 LMS est l'acronyme anglais de Learning Management System. C'est un logiciel qui accompagne 
