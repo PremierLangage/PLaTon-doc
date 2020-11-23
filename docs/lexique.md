@@ -116,7 +116,21 @@ de **plateforme d'apprentissage**, de **système de gestion de l'apprentissage**
 **Moodle** est un exemple de LMS libre. Ce dernier n'est pas orienté exerciseur mais 
 reste très complet en terme d'authentification, gestion de classes et gestion de contenu
 statique. **PLaTon** se place actuellement en complément de **Moodle** pour augmenter ses 
-capacités d'exerciseurs (**Moodle** ou un autre LMS utilisant le protocole [[LTI]] ).
+capacités d'exerciseurs (**Moodle** ou un autre LMS utilisant le protocole LTI ( voir [[lti]] ).
+
+
+## LTI
+
+LTI est l'acronyme anglais de Learning Tools Interoperability. C'est un protocole, donc un 
+ensemble de règles de communication, permettant à plusieurs logiciels au service de 
+l'enseignement de communiquer entre eux. Pour le projet **PLaTon**, ce protocole est 
+important car il permet notament de sous-traiter l'authentification au LMS (voir [[lms]] ).
+Toujours dans un objectif de réutilisabilité, un protocole est une spécification 
+technique un peu pénible mais qui permet d'éviter de devoir réinventer la roue.
+
+Aussi, LTI est un choix raisonnable dans le sens que le projet **PLaTon** ne force 
+absolument pas l'utilisation de **Moodle** en particulier. Tout LMS (voir [[lms]] ) 
+utilisant le protocole LTI s'interface avec **PLaTon**.
 
 
 ## Premier Langage
