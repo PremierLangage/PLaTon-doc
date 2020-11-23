@@ -113,6 +113,16 @@ d'une technologie relativement avancée (pour les utilisateurs à l'aise avec l'
 pour générer des contenu web avec des variables [[python]].
 
 
+## latex
+
+Latex est un système de composition de documents scientifiques. C'est un outil technique
+mais puissant pour générer des supports pédagogiques mais aussi des articles de recherches.
+Latex est globalement une collection de commandes de type macros et de balises. C'est un 
+outil central pour produire des documents comportant symboles mathématiques de qualité 
+professionelle. Latex permet aussi, grace à ses nombreux packages tiers, de générer des
+graphiques et des images vectorielles. 
+
+
 ## LMS
 
 LMS est l'acronyme anglais de Learning Management System. C'est un logiciel qui accompagne 
