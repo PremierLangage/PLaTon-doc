@@ -40,6 +40,9 @@ encourageons les enseignants à produire leur ressources sous le joug de la lice
 <a href="https://creativecommons.org/licenses/by-sa/3.0/fr/" target="blank">CC-By-SA 3.0</a> 
 qui est actuellement une référence pour les travaux estampillés **free cultural works**.
 
+<p align="center">
+<img alt="Approuved for free cultural works" src="images/FreeCulturalWorks_seal_x2.jpg">
+</p>
 
 ## Contribuer au projet
 
