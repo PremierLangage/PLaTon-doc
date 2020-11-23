@@ -21,7 +21,7 @@ le comment par rapport à la volonté de produire une nouvelle plateforme d'ense
 Vous souhaitez utiliser des ressources de **PLaTon** pour vos enseignements, alors lisez le guide 
 de l'[utilisateur enseignant](use_platon/index.md). Vous n'aurez pas besoin de compétances techniques 
 importantes mais votre institution (collège, lycée, université, etc) devra disposer d'un logiciel 
-de gestion de contenu pédagogique ([[L.M.S.]]) utilisant le protocole [[L.T.I]].
+de gestion de contenu pédagogique ( [[LMS]] ) utilisant le protocole [[LTI]] .
 
 ## Création d'exercicess
 
