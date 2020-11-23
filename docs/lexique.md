@@ -108,9 +108,9 @@ Exemple:
 
 ## jinja
 
-Jinja est un moteur de templates pour le langage de programmation [[Python]]. Il s'agit
+Jinja est un moteur de templates pour le langage de programmation [[python]]. Il s'agit
 d'une technologie relativement avancée (pour les utilisateurs à l'aise avec l'informatique) 
-pour générer des contenu web avec des variables [[Python]].
+pour générer des contenu web avec des variables [[python]].
 
 
 ## LMS
@@ -155,14 +155,14 @@ toute matière.
 
 ## Python
 
-[[Python]] est langage de programmation généraliste. Longtemps considéré seulement comme 
-un langage de script, [[Python]] permet aujourd'hui, grace à ses nombreux framework
-dérivés, de produire des projets ambitieux comme **PLaTon**. [[Python]] est aussi 
+**Python** est langage de programmation généraliste. Longtemps considéré seulement comme 
+un langage de script, **Python** permet aujourd'hui, grace à ses nombreux framework
+dérivés, de produire des projets ambitieux comme **PLaTon**. **Python** est aussi 
 devenu, petit à petit, une référence dans l'enseignement. C'est le langage à privilégier
 pour les permières et terminales dans les lycées français ainsi que dans les classes
-préparatoires aux grandes écoles. Aussi, dans le supérieur, [[Python]] est considéré
+préparatoires aux grandes écoles. Aussi, dans le supérieur, **Python** est considéré
 comme un langage particulièrement adapté pour les enseignements en algorithmique. Dans 
-le monde de la recherche (principalement informatique et mathématique), [[Python]] est
+le monde de la recherche (principalement informatique et mathématique), **Python** est
 reconnu comme un langage très efficace pour l'exploration informatique et la constitution 
 de POC (Proof Of Concept). Ce n'est pas un langage produisant des programmes rapides
 et efficace mais c'est un langage permettant de produire des choses très évoluées en 
