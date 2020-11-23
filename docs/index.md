@@ -47,4 +47,4 @@ décrivant son utilisation, ses secrets, son esprit et ses fonctionnement intern
 ## Index des clés et Lexique
 
 La page suivante d'[index et lexique](lexique.md) vous décrira l'ensemble des termes techniques 
-et des clés que l'on peut croiser dans Premier Langage et ses ressources.
+et des notions que l'on peut croiser dans **PLaTon** et ses ressources.
