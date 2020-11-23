@@ -14,14 +14,25 @@ D'un point de vue informatique, un exercice est composé des éléments suivants
   - un ***builder*** : un programme Python qui construit l'énoncé et l'interface de réponse ;  
   - un ***grader*** : un programme Python capable d'évaluer la réponse et de fournir une rétroaction corrective. 
 
-!!! Remarque:
-    Pour simplifier l'usage deux **clés** sont proposées **before** et **evaluator** qui sont éxécutées dans les scripts builder et grader.
+
 
 
 Ces éléments sont définis ou référencés dans un **fichier PL** (fichier texte dont l'extension est `.pl`) selon une syntaxe propre (**syntaxe PL**).
 
-Pour faciliter la création de l'interface réponse, la plateforme dispose d'une bibliothèque de **composants web** (champ de réponse numérique ou textuel, champ de réponse à choix multiples, éditeur de code, etc.)
+Pour faciliter la création de l'interface réponse, la plateforme dispose d'une bibliothèque de **composants web** (champ de réponse numérique ou textuel, champ de réponse à choix multiples, éditeur de code, etc.). 
+
+!!! Vive les composants:
+    * Ces composants permettent de s'affranchir de tout code html
+    * sont composables: plusieurs composant dans un même exercice (hint, crono, editor, input) 
+
+
+!!! Remarque:
+    Pour simplifier l'usage deux **clés** sont proposées **before** et **evaluator** qui sont éxécutées dans les scripts builder et grader.
+
 
 En pratique, on ne programme pas un *builder* et un *grader* différents pour chaque exercice, on utilise des *builders* et des *graders* génériques auxquels on fournit des paramètres et des données à travers les clés et les fichiers externes.
 
-Le builder et le grader de base sont le *builder* `before` et le *grader* `evaluator` Ils délèguent la génération des données de l'exercice et l'évaluation de la réponse de l'élève à des scripts Python définis dans des clés spécifiques.
+Le builder et le grader de base sont le *builder* `before` et le *grader* `evaluator` Ils délèguent la génération des données de l'exercice et l'évaluation de la réponse de l'élève à des scripts Python définis dans des clés correspondantes.
+
+
+
