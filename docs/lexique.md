@@ -242,11 +242,25 @@ Eviter les titres du genre : exo1, exo2 ,exo3 ... exo7 (particulièrment dangere
 
 ## template
 
-Même chose que la baslise [[extends]]
-Extends est en fait plus général (extends permet d'hériter de n'importe quel type de ressource). Si
-vous souhaitez hériter d'un template, alors utiliser plutôt la clé template que la clé extends, c'est
-plus propre et plus clair, vous spécifié alors vraiment votre ressource comme étant un certain 
-type d'exercice.
+Un template ou patron est un fichier ressource (normalement d'extension .pl) qui contient 
+des informations génériques pour la fabrication d'un certain type d'exercices. On dit qu'un template
+est paramètrable ou déclinable en un exercice. C'est une notion fondamentale pour la réutilisabilité
+et la factorisation des ressources pédagogiques. Faire des templates permet de gagner du temps,
+de mutualiser les tâches de développement techniques pour produire plus de ressources avec
+moins de travail.
+
+Prenons un exemple, si un QCM bien adapté est souvent une série de 10 questions choisies
+au hasard dans un très grand ensemble de questions avec réponses mélangées mais une correction
+dynamique adaptée à la série tirée ; et bien ici on n'a pas précisé la matière du QCM (math, 
+info, biologie). En effet, les tirages aléatoires sont des tâches génériques et techniques
+qui peuvent être partagées pour tous les enseignants. Ainsi, le QCM ainsi décrit peut-être
+un template qui peut être décliné avec l'aide d'un ensemble de questions. Un enseignant peut
+alors produire un QCM dédié à son besoin en héritant du template avec [[extends]] puis en
+y greffant les questions à choix multiples spécifiques à son enseignement.
+
+Les templates et l'héritage constitue un mécanisme inportant pour assurer le découplage
+des ressources pédagogiques (pérenne) et du moteur interne de la plateforme (qui a une durée 
+de vie limité comme tout logiciel).
 
 
 ## text
