@@ -55,12 +55,16 @@ participer au développement du projet **PLaTon**. Comme les besoins sont extrê
 divers, quelques soit vos compétances originelles, vous devriez facilement pourvoir 
 apporter votre pierre à l'édifice, quelque soit la taille de cette pierre.
 
-## Sponsors
+## Aides et sponsors
 
 Les institutions suivantes ont contribuées finacièrement ou en services pour le 
 développement de la plateforme open source **PLaTon**.
 
 <img alt="Logo de l'université Gustave Eiffel" src="images/logo_univ_gustave_eiffel_rvb.svg" width="30%">
 
-
 <img alt="Logo de l'université Paris Saclay" src="images/logo-ups.svg" width="30%">
+
+Le développement de la plateforme est aussi grandement facilité grace à de nombreux 
+outils gratuits proposés sur le web pour notament le monde de l'open-source. Parmi
+eux, certains offrent de l'hébergement et de la CPU, c'est le cas de Github, 
+Readthedocs et Travis CI.
