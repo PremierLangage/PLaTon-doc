@@ -34,8 +34,9 @@ de la plateforme. Cette documentation statique est l'autre moyen d'apprendre à 
 documentation, les liens "Edit on GitHub" sont faits pour cela pour les personnes à l'aise 
 avec cet outil.
 
+<p align="center">
 <iframe src="https://discord.com/widget?id=689030467995041793&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-
+</p>
 
 ## Création d'exercicess
 
