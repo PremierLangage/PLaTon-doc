@@ -11,9 +11,15 @@ documentation pour les gens pressés mais aussi un point d'entré vers d'autres 
 
 ## author
 
-La valeur de cette `clé` permet de spéficier un auteur ou plusieurs auteurs. Comme dans toute
-communauté, l'auteur d'une ressource est toujours un bon juge pour en arbitrer les améliorations
-proposés par la communauté. C'est une saine pratique de préciser les auteurs.
+author est le nom de la `clé` à définir dans les **fichiers ressources** d'extension `pl`
+pour renseigner l'auteur original d'un document. Ainsi, si vous vous appelez Dominique Revuz, 
+pour informer les futurs utilisateurs et relecteurs que vous avez produit un fichier, 
+une pratique saine consiste à y placer la ligne :
+
+    author=Dominique Revuz
+
+Spécifier un auteur et une licence (CC-By-SA 3.0 est un excellent choix de licence) est 
+important pour assurer la pérennité du projet **PLaTon**.
 
 
 ## before
