@@ -69,8 +69,8 @@ pour augmenter la puissance des interaction entre les apprenants et les ressourc
 
 ## extends
 
-La balise extend permet d'importer automatiquement des informations issus d'un template ou 
-encore d'un autre exercice. C'est comme une inclusion ou encore un copier coller. Tout ce qui 
+Cette balise `extends` permet d'importer automatiquement des informations issus d'un [[template]] ou 
+encore d'un autre exercice. C'est comme une inclusion ou encore un copier-coller. Tout ce qui 
 se trouvait dans la source va se retrouver dans la cible et il reste toutefois possible de 
 redéfinir les valeurs des clés importées. C'est ce qu'on appelle l'héritage (de manière générale 
 en informatique). La cible hérite de la source. C'est très puissant dans le sens que ça permet
