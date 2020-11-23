@@ -29,12 +29,24 @@ Les enseignants utilisent PLaTon dans le cadre de deux grandes activités princi
 
 # Déployements en classes
 
+!!! Version 0.7.* 
+   Les classes sont créées  automatiquement à la première connection a partir de moodle. Elles ne contienne que des Feuilles d'exercices.
+
+
+!!! Version 1.+
+  A la première connection l'enseignant doit remplir un formulaire décrivant la classe.   
+  Sans un remplissage exaustif du formulaire la classe n'est pas créée.
+
 A la première utilisation de platon il vous est proposé de [créer une classe](crudclasse.md)
 dans laquelle vous aller faire cours. Les informations de base sur la classe sont remplies 
 automatiquement grace au informations du LMS que vous avez utiliser pour vous connecter dans 
 le cas de l'université Eiffel ce lms est moodle.
 
 Dans le formulaire [créer une classe](crudclasse.md) vous pouvez completer ces informations. 
+
+# Version 1.0
+
+Pour le moment les trois activités suivantes sont en cours de conception. 
 
 * TODO : Le Search&Compose à DR
 
