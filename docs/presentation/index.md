@@ -30,6 +30,10 @@ nos décisions.
 * Proposez autant de niveau de langage que nécessaire dans les ressources.
 * Respecter la RGPD, l'éthique et la déontologie des métiers de l'enseignement.
 
+Vous pouvez <a href="https://github.com/PremierLangage/PLPR/raw/master/PL_dev_philo.pdf" target="blank">télécharger ici</a>
+une ancienne présentation (du 20 Janvier 2019, ainsi avant COVID...) des motivations 
+organisationnelles et techniques du projet **PLaTon**.
+
 
 ## Licences
 
