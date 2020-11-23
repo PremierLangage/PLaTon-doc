@@ -198,7 +198,10 @@ type d'exercice.
 
 ## text
 
-La clé `text` est très souvent définie sur plusieurs ligne. La balise à vocation à contenir 
+`text` est une clé obligatoirement renseignée dans un exercice **PLaTon**. Le contenue de 
+cette clé est une chaîne de caractères possiblement très longue. La clé à vocation à contenir 
 le corps de l'énoncé de l'exercice dans un exercice PL. C'est donc l'ensemble des consignes
 que vous souhaitez transmettre à votre apprenant avant qu'il remplisse le formulaire de 
-l'exercice et qu'il soumette sa réponse. 
+l'exercice et qu'il soumette sa réponse. Techniquement, la clé `text` peut contenir du texte 
+simple et plus généralement du [[markdown]] mais aussi du [[latex]] et des 
+templates [[jinja]] .
