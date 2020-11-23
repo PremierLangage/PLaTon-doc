@@ -150,6 +150,26 @@ absolument pas l'utilisation de **Moodle** en particulier. Tout LMS (voir [[lms]
 utilisant le protocole LTI s'interface avec **PLaTon**.
 
 
+## Markdown
+
+Markdown est un langage de balisage léger. Markdown permet d'écrire des documents et
+des présentations sans compétances techniques particulières et en y incluant du 
+formatage et une mise en page légère. Voici un bout de markdown :
+
+```mardown
+### titre de niveau 3
+
+Et puis voici un **petit texte** associé *à ce titre*. 
+Ceci est ~~vachement dur~~ simple à taper.
+```
+Voici maintenant l'effet final de ces sources au format markdown :
+
+### titre de niveau 3
+
+Et puis voici un **petit texte** associé *à ce titre*. 
+Ceci est ~~vachement dur~~ simple à taper.
+
+
 ## Premier Langage
 
 Premier Langage est le premier nom porté par le projet **PLaTon**. Originellement, la 
