@@ -153,6 +153,22 @@ les capacités du coeur technique de la plateforme se généralisaient trivialem
 toute matière.
 
 
+## Python
+
+[[Python]] est langage de programmation généraliste. Longtemps considéré seulement comme 
+un langage de script, [[Python]] permet aujourd'hui, grace à ses nombreux framework
+dérivés, de produire des projets ambitieux comme **PLaTon**. [[Python]] est aussi 
+devenu, petit à petit, une référence dans l'enseignement. C'est le langage à privilégier
+pour les permières et terminales dans les lycées français ainsi que dans les classes
+préparatoires aux grandes écoles. Aussi, dans le supérieur, [[Python]] est considéré
+comme un langage particulièrement adapté pour les enseignements en algorithmique. Dans 
+le monde de la recherche (principalement informatique et mathématique), [[Python]] est
+reconnu comme un langage très efficace pour l'exploration informatique et la constitution 
+de POC (Proof Of Concept). Ce n'est pas un langage produisant des programmes rapides
+et efficace mais c'est un langage permettant de produire des choses très évoluées en 
+peu de lignes de code.
+
+
 ## sandboxio.py 
 
 **Module python pour fabriquer un nouveau `grader` (niveau avancé)**
