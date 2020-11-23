@@ -6,6 +6,10 @@ Une classe regroupe de faççon opérationnelle sur un serveur d'asset (serveur 
 - une équipe enseignante (au moins un responsable, et des colaborateurs) qui accèdent avec l'interface enseignant  
 - une ensemble d'élèves, organisés en groupes, qui accèdent avec l'interface etudiant.  
 - un cours qui est construit comme un arbre d'élèment pédagogiques (documents, activités, exercices, AAV, évaluations)
+- un ensemble d'outils de communication (pour le moment ceux de moodle).
+
+La classe donne accès aux informations collectées sur le travail des élèves : notes , assiduité, succès.
+
 
 Propriétés **obligatoires** de la classe :   
 un nom de la classe soyez concit et précis (pas plus de 30 caractères).   
