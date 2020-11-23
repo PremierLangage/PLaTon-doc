@@ -52,13 +52,13 @@ des ressources pédagogiques. C'est le point d'entrée pour devenir enseignant p
 
 Les [tutoriels thématiques](thematic_tut/index.md) vous exposerons rapidement comment mettre 
 en place une fonctionnalité évoluée dans un exercice. De complexité moyenne, ces tutoriels présentent 
-souvent une utilisation simple d'un template évolué.
+souvent une utilisation simple d'un [[template]] plus ou moins évolué.
 
 
 ## Documentations techniques spécifiques
 
 Les [documentations techniques](technic_doc/index.md) et spécifiques sont plus complètes 
-et plus évoluées. Certaines sont générales, d'autres sont plus spécifiques. Lorsqu'un nouveau template 
+et plus évoluées. Certaines sont générales, d'autres sont plus spécifiques. Lorsqu'un nouveau [[template]] 
 d'exercice est proposé à la communauté, il est naturel et conseillé de proposer une documentation complète 
 décrivant son utilisation, ses secrets, son esprit et ses fonctionnement internes.
 
