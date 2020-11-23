@@ -18,7 +18,7 @@ Les enseignants utilisent PLaTon dans le cadre de deux grandes activités princi
 # Activités d'édition
 
 !!! FUTUR 
-    Les activités sont préu dans le plan de développement de Platon mais ne sont pas opérationnelles pour le moment.
+    Les activités sont prévues dans le plan de développement de PLaTon mais ne sont pas opérationnelles pour le moment.
 
 * TODO : C'est quoi un exo ? une activité ?
 
