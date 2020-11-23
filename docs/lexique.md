@@ -105,6 +105,20 @@ Exemple:
 @ /grader/executor.py [grader.py]
 ```
 
+
+## LMS
+
+LMS est l'acronyme anglais de Learning Management System. C'est un logiciel qui accompagne 
+et gère un processus d'apprentissage ou un parcours pédagogique. En français, on parle 
+de **plateforme d'apprentissage**, de **système de gestion de l'apprentissage**, 
+**plate-forme e-learning**, on encore **formation ouverte et à distance** (FOAD).
+
+**Moodle** est un exemple de LMS libre. Ce dernier n'est pas orienté exerciseur mais 
+reste très complet en terme d'authentification, gestion de classes et gestion de contenu
+statique. **PLaTon** se place actuellement en complément de **Moodle** pour augmenter ses 
+capacités d'exerciseurs (**Moodle** ou un autre LMS utilisant le protocole [[LTI]] ).
+
+
 ## Premier Langage
 
 Premier Langage est le premier nom porté par le projet **PLaTon**. Originellement, la 
