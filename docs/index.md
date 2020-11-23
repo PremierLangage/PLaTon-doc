@@ -23,6 +23,20 @@ de l'[utilisateur enseignant](use_platon/index.md). Vous n'aurez pas besoin de c
 importantes mais votre institution (collège, lycée, université, etc) devra disposer d'un logiciel 
 de gestion de contenu pédagogique LMS ( voir [[lms]] ) utilisant le protocole LTI ( voir [[lti]] ).
 
+
+## Obtenir de l'aide
+
+La manière **la plus rapide** (car presque synchronisée) pour obtenir de l'aide est de venir sur 
+le salon discord du projet **PLaTon**. Ce salon, comme les anciens canaux IRC, vous permettront
+de poser directement une question à la communauté d'utilisateurs enseigants et de développeurs
+de la plateforme. Cette documentation statique est l'autre moyen d'apprendre à utiliser 
+**PLaTon**. N'hésitez pas à proposer un retour voire à proposer des corrections pour cette 
+documentation, les liens "Edit on GitHub" sont faits pour cela pour les personnes à l'aise 
+avec cet outil.
+
+<iframe src="https://discord.com/widget?id=689030467995041793&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
+
 ## Création d'exercicess
 
 Voici le [premier tutoriel](create_exo/index.md) pour l'enseignant voulant produire et partager 
