@@ -1,5 +1,9 @@
 # Documentation de PLaTon côté enseignant
 
+<p align="center">
+<img alt="Logo de PLaTon" src="images/logo_color.svg" width="20%">
+</p>
+
 Bienvenue sur la documentation de PLaTon côté enseignant. **PLaTon** est un **jeune projet**
 en dévellopement continu. La plupart des documentations autour de PLaTon sont en 
 devenir et donc très largement imparfaites, merci de votre compréhension. Les utilisateurs 
