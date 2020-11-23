@@ -4,7 +4,7 @@ Bienvenue sur la documentation de PLaTon côté enseignant. **PLaTon** est un **
 en dévellopement continu. La plupart des documentations autour de PLaTon sont en 
 devenir et donc très largement imparfaites, merci de votre compréhension. Les utilisateurs 
 sont toutefois souvent encore mieux placés que les concepteurs pour produire de la 
-documentation car ceux sont eux qui mettent à l'épreuve la plateforme lors de 
+documentation car ces derniers sont ceux qui mettent à l'épreuve la plateforme lors de 
 situations d'utilisations authentiques. Toutes les aides et suggestions sur la documentation 
 sont ainsi les bienvenues.
 
