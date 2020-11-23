@@ -15,16 +15,17 @@ Les enseignants utilisent PLaTon dans le cadre de deux grandes activités princi
   des ressources déployées, ou encore un mélande des deux...).
 
 
-# Activités d'édition
+# Activités d'édition / création de ressources 
 
-!!! FUTUR 
-    Les activités sont prévues dans le plan de développement de PLaTon mais ne sont pas opérationnelles pour le moment.
+## Ressources 
 
-* TODO : C'est quoi un exo ? une activité ?
+* C'est quoi un exo ? une activité ?
 
 * TODO : Interdépendance des ressources, tests et robustesse 
 
 * TODO : Soignez les méta-données des ressources
+
+
 
 
 # Déployements en classes
