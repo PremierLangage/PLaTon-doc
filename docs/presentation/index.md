@@ -50,3 +50,13 @@ La page [Comment contribuer au projet PLaTon](contribuer.md) vous explique comme
 participer au développement du projet **PLaTon**. Comme les besoins sont extrêmement
 divers, quelques soit vos compétances originelles, vous devriez facilement pourvoir 
 apporter votre pierre à l'édifice, quelque soit la taille de cette pierre.
+
+## Sponsors
+
+Les institutions suivantes ont contribuées finacièrement ou en services pour le 
+développement de la plateforme open source **PLaTon**.
+
+<img alt="Logo de l'université Gustave Eiffel" src="images/logo_univ_gustave_eiffel_rvb.svg" width="30%">
+
+
+<img alt="Logo de l'université Paris Saclay" src="images/logo-ups.svg" width="30%">
