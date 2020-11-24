@@ -39,7 +39,7 @@ données vos travaux.
 
 * [L'éditeur de ressources intégré](editor.md) 
 * [TODO : Les exercices et les TP]()
-* [TODO : Soignez les méta-données des ressources]()
+* [Soignez les méta-données des ressources](meta_data_exo.md)
 
 
 # Déployements en classes
