@@ -25,12 +25,17 @@ informaticiens avancés.
 
 **prérequis :** Un LMS ( voir [[lms]] ) utilisant le protocole LTI ( voir  [[lti]] )
 
-* [TODO : Installer un serveur PLaTon]() pour votre institution.
+* [Installer un serveur PLaTon](install_platon.md) pour votre institution.
 
 
-# Activités de création et d'édition de ressources 
+# Création et édition de ressources 
 
-Voici une introduction rapide sur les types de ressources actuelles.
+Voici une introduction rapide sur les types de ressources actuelles. Toutes les grandes 
+sections restantes de cette documentation sont justement focalisées sur l'édition 
+de ressources. Les trois pages qui suivent vous présenteront l'éditeur de ressources,
+feront une introduction au vocabulaire autour des exercices et des activités **PLaTon**
+et présenteront des conseils pour structurer et insérer efficacement dans la base de 
+données vos travaux.
 
 * [TODO : L'éditeur de ressources intégré]() 
 * [TODO : Les exercices et les TP]()
