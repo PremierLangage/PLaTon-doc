@@ -21,3 +21,9 @@ extends= /model/checkbox/checkboxcsv.pl
 @ maladies.csv [content.csv]
 ```
 
+# Futur 
+
+Possibilités de préciser le délimiteur, le nombre de propositions, le nombre de proposition exactes.
+
+Possibilité de changer le type d'exercice ou qu'il soit choisi aléatoirement.
+
