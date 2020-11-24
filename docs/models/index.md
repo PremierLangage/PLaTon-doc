@@ -8,6 +8,10 @@
 * [CheckBox QCM Choix multiples](checkbox.md)
 * [Associations](matchlist.md)
 
+## Avec un fichier CSV
+
+* [CheckBox QCM Choix multiples](checkboxcsv.md)
+
 
 ## Informatique 
 
