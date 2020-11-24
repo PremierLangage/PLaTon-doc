@@ -37,7 +37,7 @@ feront une introduction au vocabulaire autour des exercices et des activités **
 et présenteront des conseils pour structurer et insérer efficacement dans la base de 
 données vos travaux.
 
-* [TODO : L'éditeur de ressources intégré]() 
+* [L'éditeur de ressources intégré](editor.md) 
 * [TODO : Les exercices et les TP]()
 * [TODO : Soignez les méta-données des ressources]()
 
