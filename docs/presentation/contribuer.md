@@ -2,7 +2,7 @@
 
 
 Pour contribuer à PLaTon et être un acteur de son
-développement, la première action consiste à utiliser PLaTon
+développement, la première action consiste à [utiliser PLaTon](../use_platon/index.md)
 et à inviter vos connaissances à l'utiliser (avec l'aide nécessaire au
 besoin). Si vous trouvez des bogues ou des problèmes de documentation,
 il faut prendre le temps reporter ces problèmes en formulant au mieux
@@ -22,7 +22,7 @@ Tout enseignant peut contribuer. Originellement, PLaTon a été
 conçu pour faciliter la mise en place d'exercices auto-corrigés y
 compris aux enseignants non codeur. L'auto-correction, ce n'est pas une
 chose simple et cela sollicite parfois des programmes rusés. Pourtant,
-PLaTon propose des modèles (template d'exercices) pour lesquels
+PLaTon propose des modèles ( [[template]] d'exercices ) pour lesquels
 la seule technicité qui vous sera demandée est de faire un
 copier-coller puis de changer les anciennes questions modèles par les
 vôtres. C'est une promesse ambitieuse !
