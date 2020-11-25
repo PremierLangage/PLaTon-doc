@@ -38,7 +38,7 @@ et présenteront des conseils pour structurer et insérer efficacement dans la b
 données vos travaux.
 
 * [L'éditeur de ressources intégré](editor.md) 
-* [TODO : Les exercices et les TP]()
+* [Les exercices et les TP](pl_pltp.md)
 * [Soignez les méta-données des ressources](meta_data_exo.md)
 
 
