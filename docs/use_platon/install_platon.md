@@ -6,14 +6,14 @@ Voici des informations pour installer un serveur **PLaTon**
 
 Le coeur de la plateforme **PLaTon**, principalement construit sur la technologie **Django** se trouve
 dans le github ici : [https://github.com/PremierLangage/premierlangage](https://github.com/PremierLangage/premierlangage)
-Vous pouvez trouver, à bout de ce lien 
+Vous pouvez trouver, au bout de ce lien 
 [les dépendances](https://github.com/PremierLangage/premierlangage/blob/master/requirements.txt)
-pour installer un serveur. Le dépôts abrite aussi de la documentation dédié ainsi que des scripts
+pour installer un tel serveur. Le dépôts abritent aussi de la documentation dédiée ainsi que des scripts
 d'installation dans le répertoire idoine.
 
 Vous aurez aussi besoin d'une collection de sandbox disponibles dans de dépôt distinct 
 [https://github.com/PremierLangage/sandbox](https://github.com/PremierLangage/sandbox)
-Là, encore, de nombreuse information sont disponible directement sur GitHub.
+Là, encore, de nombreuses informations sont disponibles directement sur GitHub.
 
 Enfin, les ressources pédagogiques sont régulièrement synchronisées avec le dépôts 
 [Yggdrazil](https://github.com/PremierLangage/Yggdrasil). Attention, à terme,
