@@ -32,5 +32,7 @@ choices==
 ```
 
 Il suffit de changer le titre (**title**), le texte (**text**) pour mettre l'énoncé de l'exercice et les choix dans les deux colonnes (**choices**).
+
 Les choix de la première colonne à gauche de la flèche (**->**) et ceux de la seconde colonne à droite.
+
 *!NB : Respecter la syntaxe de PlaTon lors de l'édition du titre, de l'énoncé et des choix.*
