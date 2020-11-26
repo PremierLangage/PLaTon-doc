@@ -19,7 +19,7 @@ Donner une résumé du texte sur le lien suivant différent de celui qui s'y tro
 ```
 
 Il suffit de changer le titre (**title**) et le texte (**text**) pour mettre l'énoncé de l'exercice. 
-* !NB : Respecter la syntaxe de PlaTon lors de l'édition du titre et de l'énoncé *
+*!NB : Respecter la syntaxe de PlaTon lors de l'édition du titre et de l'énoncé*
 
 
 
