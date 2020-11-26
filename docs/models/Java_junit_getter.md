@@ -18,11 +18,11 @@ sans oublier les importations nécessaires.
 
 ├─ JUnit Jupiter ✔ 
 
-│  └─ Point Test ✔   /* Class test*/
+│   └─ Point Test ✔   /* Class test*/
 
-│     ├─ Get X ✔    /* Méthode test de la méthode Get X*/
+│       ├─ Get X ✔    /* Méthode test de la méthode Get X*/
 
-│     └─ Get Y ✔    /* Méthode test de la méthode Get Y*/
+│       └─ Get Y ✔    /* Méthode test de la méthode Get Y*/
 
 └─ JUnit Vintage ✔
 
@@ -40,17 +40,17 @@ Test run finished after 174 ms
 
 [         0 containers failed     ]
 
-[         2 tests found           ] /* Tests définis dans la classe Test de la balise junit */
+[         2 tests found           ]                         /* Tests définis dans la classe Test de la balise junit */
 
-[         0 tests skipped         ] /* Tests sautés */
+[         0 tests skipped         ]                         /* Tests sautés */
 
-[         2 tests started         ] /* Tests passés */
+[         2 tests started         ]                         /* Tests passés */
 
-[         0 tests aborted         ] /* Tests interrompus */
+[         0 tests aborted         ]                         /* Tests interrompus */
 
-[         2 tests successful      ] /* Tests réussis */
+[         2 tests successful      ]                         /* Tests réussis */
 
-[         0 tests failed          ] /* Tests échoués */
+[         0 tests failed          ]                         /* Tests échoués */
 
 Cliquer sur l'image suivante pour tester : 
 
