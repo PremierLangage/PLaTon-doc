@@ -5,15 +5,13 @@ si l'affirmation énoncé dans text est vraie ou fausse.
 
 Affichage : 
 
-✓ -> Affirmation vraie
-
-x -> Affirmation fausse
+- ✓ -> Affirmation vraie
+- x -> Affirmation fausse
 
 Code couleurs : Après validation de la réponse 
 
--> Case cochée verte si juste
-
--> Case cochée rouge si fausse
+- -> Case cochée verte si juste
+- -> Case cochée rouge si fausse
 
 Cliquer sur l'image suivante pour tester : 
 
