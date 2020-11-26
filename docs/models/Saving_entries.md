@@ -6,7 +6,7 @@ Cliquer sur l'image suivante pour tester :
 
 [![image](Saving_entries.png)](https://pl.u-pem.fr/filebrowser/demo/33514/)
 
-Voici le code l'exemple : 
+Voici le code de l'exemple : 
 
 ```{r}
 
