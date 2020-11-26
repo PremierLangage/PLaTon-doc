@@ -11,6 +11,8 @@ sans oublier les importations nécessaires.
 
 **Résultat obtenus après validation : (S'adapte tout seul en fonction du modèle)**
 
+```{r}
+
 -> ✔ si valide
 
 -> x si invalide
@@ -51,6 +53,8 @@ Test run finished after 174 ms
 [         2 tests successful      ]                         /* Tests réussis */
 
 [         0 tests failed          ]                         /* Tests échoués */
+
+```
 
 Cliquer sur l'image suivante pour tester : 
 
