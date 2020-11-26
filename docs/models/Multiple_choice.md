@@ -38,6 +38,7 @@ choices==
 ```
 
 Il suffit de changer le titre (**title**), le texte (**text**) pour mettre l'énoncé de l'exercice et les choix disponibles pour les réponses (**choices**).
-On met un pourcentage avant chaque réponse pour indiquer si elles sont complètement fausses (-100%) ou partiellement ou à quel degré elles sont justes (100%
-s'il y'a une seule réponse juste; s'il y'en a plusieurs, répartir le pourcentage sur les différentes réponses justes de telle sorte que la somme fasse 100%).
+
+On met un pourcentage avant chaque réponse pour indiquer si elles sont complètement fausses (-100%) ou partiellement ou à quel degré elles sont justes (100% s'il y'a une seule réponse juste; s'il y'en a plusieurs, répartir le pourcentage sur les différentes réponses justes de telle sorte que la somme fasse 100%).
+
 *!NB : Respecter la syntaxe de PlaTon lors de l'édition du titre, de l'énoncé et des choix.*
