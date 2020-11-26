@@ -20,11 +20,11 @@ sans oublier les importations nécessaires.
 
 ├─ JUnit Jupiter ✔ 
 
-│   └─ Point Test ✔   /* Class test*/
+│   └─ Point Test ✔                                         /* Class test*/
 
-│       ├─ Get X ✔    /* Méthode test de la méthode Get X*/
+│       ├─ Get X ✔                                          /* Méthode test de la méthode Get X*/
 
-│       └─ Get Y ✔    /* Méthode test de la méthode Get Y*/
+│       └─ Get Y ✔                                          /* Méthode test de la méthode Get Y*/
 
 └─ JUnit Vintage ✔
 
