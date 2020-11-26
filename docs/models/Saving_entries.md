@@ -1,6 +1,4 @@
----
-title: "Saving Entries"
----
+# "Saving Entries"
 
 Ce style d'exo permet de recueillir les réponses des élèvesdans le grader. Adapté aux sondages ou aux questions ouvertes par exemple.
 
