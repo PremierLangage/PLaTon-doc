@@ -9,7 +9,7 @@ x -> réponses complètement fausses
 
 Cliquer sur l'image suivante pour tester : 
 
-[![image](Numeric_set.png)]https://pl.u-pem.fr/filebrowser/demo/33534/)
+[![image](Numeric_set.png)](https://pl.u-pem.fr/filebrowser/demo/33534/)
 
 Voici le code de l'exemple : 
 
