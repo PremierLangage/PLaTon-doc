@@ -35,8 +35,10 @@ choices==
 ```
 
 Il suffit de changer le titre (**title**), le texte (**text**) pour mettre l'énoncé de l'exercice et les choix disponibles pour les réponses (**choices**).
-On met un pourcentage avant les réponses qui sont partiellement justes pour indiquer le degré de justesse. Si la réponse est totalement juste on ne met pas
-de pourcentage et l'élève obtiendra la totalité des points s'il trouve cette réponse. 
+
+On met un pourcentage avant les réponses qui sont partiellement justes pour indiquer le degré de justesse. Si la réponse est totalement juste on ne met pas de pourcentage et l'élève obtiendra la totalité des points s'il trouve cette réponse. 
+
+#... après la formule sur la même ligne pour mettre le commentaire à afficher après validation si la réponse est complètement ou partiellement juste.
 
 **Autres Syntaxes que celle sur l'exemple :**
 
