@@ -56,4 +56,8 @@ Il suffit de changer le titre (**title**), le texte (**text**) pour mettre l'én
 
 #... après la formule sur la même ligne pour mettre le commentaire à afficher après validation si la réponse est juste.
 
+**Syntaxe :**
+- <b>_____</b> à la place de l'expression à compléter
+- =*bonne réponse* #*commentaire* dans la balise **choices**
+
 *!NB : Respecter la syntaxe de PlaTon lors de l'édition du titre, de l'énoncé et des choix.*
