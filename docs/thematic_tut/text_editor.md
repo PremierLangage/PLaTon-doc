@@ -1,4 +1,4 @@
-# Éditeur de texte
+# Éditeur de texte ou de code 
 
 ## Résumé
 
