@@ -15,7 +15,7 @@
 
 ## Informatiques  
 
-Deux grande stratégie de création d'exercice demandant la création de code:  
+Deux grandes stratégies de création d'exercice demandant la création de code:  
 - une stratégie utilisant un système de test (junit, doctest, ) du langage 
   * [PLtest](pltest.md) test de fonctions et scripts *python3* en utilisant la syntaxe *doctest*. 
   * Java test utilisant la syntaxe junit
