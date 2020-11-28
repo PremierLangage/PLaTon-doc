@@ -1,4 +1,4 @@
-# `input`
+# Modèle `input`
 
 Le modèle `input` permet de fabriquer des exercices avec un champ de réponse textuel libre.
 
