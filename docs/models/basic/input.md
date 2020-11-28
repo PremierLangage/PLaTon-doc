@@ -2,7 +2,7 @@
 
 Le modèle `input` permet de fabriquer des exercices avec un champ de réponse textuel libre.
 
-[![](inpu1.png)](https://pl.u-pem.fr/filebrowser/demo/33986/)
+[![](input1.png)](https://pl.u-pem.fr/filebrowser/demo/33986/)
 
 ## Clés spécifiques
 
