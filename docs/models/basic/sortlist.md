@@ -2,7 +2,7 @@
 
 Le modèle `sortlist` permet de fabriquer des exercices où l'élève doit ordonner des items.
 
-[![](sortlist1.png)](https://pl.u-pem.fr/filebrowser/demo/34350/)
+[![](sortlist1.png)](https://pl.u-pem.fr/filebrowser/demo/34354/)
 
 ## Clés du modèle
 
