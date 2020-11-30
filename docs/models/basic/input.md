@@ -20,7 +20,9 @@ Le modèle `input` permet de fabriquer des exercices avec un champ de réponse t
 * `delimiter`(string). Délimiteur utilisé dans le format CSV des données de `data`. Par défaut, cette clé vaut `","`.
 * `skipinitialspace` (boolean). Si cette clé vaut `false`, l'espace initial après chaque délimiteur est ignoré à la lecture des données. Par défaut, cette clé vaut `true`.
 
-## Exemples
+## Exemples simples
+
+#### Littérature
 
 ~~~
 extends = /model/basic/input.pl
@@ -34,6 +36,111 @@ Victor Hugo
 Hugo
 ==
 ~~~
+
+Dans cet exemple, les solutions acceptées sont `Victor Hugo`, `Hugo`, mais aussi, puisque par défaut on ne tient pas compte de la casse, `victor hugo`, `victor Hugo`, `HUGO`, etc.
+
+[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/33986/)
+
+#### Chimie
+
+~~~
+extends = /model/basic/input.pl
+
+title ==
+Chimie
+==
+
+text ==
+Quel élément chimique a pour symbole **O** ?
+==
+
+solution ==
+Oxygène
+==
+
+diffmeasure = EditDist
+
+tolerance = 1
+~~~
+
+Dans cet exemple, les solutions acceptées sont les chaînes égales à `Oxygène` à un caractère près : `oxigène`, `oxgène`, `oxygèn`, etc.
+
+[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/34253/)
+
+#### Anglais
+
+## Exemples avec des données
+
+#### Conjugaison
+
+~~~
+extends = /model/basic/input.pl
+
+title ==
+Conjugaison
+==
+
+data ==
+pronom,conjugaison
+je,suis
+tu,es
+il ou elle,est
+nous,sommes
+vous,êtes
+ils ou elles,sont
+==
+
+text ==
+Conjuguer le verbe **être** pour le pronom {{ pronom }}.
+==
+
+solution ==
+{{ conjugaison }}
+==
+~~~
+
+Dans cet exemple, les conjugaisons du verbe être sont définies dans la clé `data`. A chaque exécution de l'exercice, une ligne du tableau de données est tirée aléatoirement.
+
+[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/34257/)
+
+#### Latin
+
+~~~
+extends = /model/basic/input.pl
+
+title ==
+Latin
+==
+
+data ==
+phrase|motlatin
+Le **maître** appelle l'esclave de son fils.|dominus
+Le maître appelle l'**esclave** de son fils.|servum
+Le maître appelle l'esclave de son **fils**.|filii
+**Esclave**, donne de la nourriture aux chevaux.|serve
+Esclave, donne de la nourriture aux **chevaux**.|equis
+Les **fils** des esclaves devenaient eux-mêmes des esclaves.|filii
+Les fils des **esclaves** devenaient eux-mêmes des esclaves.|servorum
+L'**esclave** donne un livre au fils du maître.|servus
+L'esclave donne un **livre** au fils du maître.|librum
+L'esclave donne un livre au **fils** du maître.|filio
+L'esclave donne un livre au fils du **maître**.|domini
+==
+
+delimiter = |
+
+text ==
+Traduire en latin, en utilisant le bon cas, le mot en gras dans la phrase suivante :
+
+{{ phrase }}
+==
+
+solution ==
+{{ motlatin }}
+==
+~~~
+
+#### Chimi
 
 ~~~
 extends = /model/basic/input.pl
