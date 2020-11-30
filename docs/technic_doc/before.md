@@ -20,7 +20,7 @@ l'exercice.
 
 Toutes variables déclarés dans ce script existera donc dans le contexte de l'exercice,
 celle-ci pourront donc être utilisé dans `form` et `text` grâce à
-`{% templatetag openvariable %} var {% templatetag closevariable %}`, ainsi
+`{{ var }}`, ainsi
 que dans le **grader**.
 
 L'exécution se déroulant en dehors d'une fonction, il n'est pas possible d'utiliser
