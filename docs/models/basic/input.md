@@ -142,40 +142,31 @@ solution ==
 
 #### Chimi
 
+En général, il est préférable de stocker les données d'un exercice dans un fichier à part et de simplement les importer dans l'exercice. Cela rend le fichier source du programme plus lisible et facilite la réutilisation de ces données dans d'autres exercices. L'exemple suivant montre comment importer des données.
+
+On dispose d'un fichier CSV `data/elements_chimiques.csv` contenant les noms et symboles des principaux éléments chiques.
+
 ~~~
-extends = /model/basic/input.pl
-
-title ==
-Exemple 2
-==
-
-data ==
-symbole,nom
+nom,symbole
 Hydrogène,H
 Hélium,He
 Carbone,C
 Azote,N
 Oxygène,O
 Fluor,F
-Néon,Ne
-Sodium,Na
-Magnésium,Mg
-Aluminium,Al
-Silicium,Si
-Phosphore,P
-Soufre,S
-Chlore,Cl
-Argon,Ar
-Potassium,K
-Calcium,Ca
-Chrome,Cr
-Manganèse,Mn
-Fer,Fe
-Cobalt,Co
-Nickel,Ni
-Cuivre,Cu
-Zinc,Zn
+...
+~~~
+
+Pour affecter le contenu de ce fichier à la clé data, il suffit d'utilise l'opérateur `=@` dans le fichier source de l'exercice.
+
+~~~
+extends = /model/basic/input.pl
+
+title ==
+Chimie
 ==
+
+data =@ data/elements_chimiques.csv
 
 text ==
 Quel élément chimique a pour symbole **{{ symbole }}** ?
