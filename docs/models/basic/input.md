@@ -24,6 +24,10 @@ Le modèle `input` permet de fabriquer des exercices avec un champ de réponse t
 
 #### Littérature
 
+Dans cet exemple, les solutions acceptées sont `Victor Hugo`, `Hugo`, mais aussi, puisque par défaut on ne tient pas compte de la casse, `victor hugo`, `victor Hugo`, `HUGO`, etc.
+
+[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/33986/)
+
 ~~~
 extends = /model/basic/input.pl
 
@@ -37,11 +41,11 @@ Hugo
 ==
 ~~~
 
-Dans cet exemple, les solutions acceptées sont `Victor Hugo`, `Hugo`, mais aussi, puisque par défaut on ne tient pas compte de la casse, `victor hugo`, `victor Hugo`, `HUGO`, etc.
-
-[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/33986/)
-
 #### Chimie
+
+Dans cet exemple, les solutions acceptées sont les chaînes égales à `Oxygène` à un caractère près : `oxigène`, `oxgène`, `oxygèn`, etc.
+
+[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/34253/)
 
 ~~~
 extends = /model/basic/input.pl
@@ -63,15 +67,45 @@ diffmeasure = EditDist
 tolerance = 1
 ~~~
 
-Dans cet exemple, les solutions acceptées sont les chaînes égales à `Oxygène` à un caractère près : `oxigène`, `oxgène`, `oxygèn`, etc.
+#### Listening
 
-[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/34253/)
+~~~
+extends = /model/basic/input.pl
 
-#### Anglais
+title ==
+Listening
+==
+
+audiofile =$ data/english_sentence.mp3
+
+text ==
+<button onclick="playAudio()" class="btn btn-info"><i class="fas fa-volume-up"></i></button> Transcrire la phrase.
+
+<audio id="Audio" style="display:none" src="{{ audiofile }}"></audio> 
+
+<script>
+    var x = document.getElementById("Audio"); 
+    function playAudio() {x.play();} 
+</script>
+==
+
+solution ==
+I'm gonna make him an offer he can't refuse
+==
+
+diffmeasure = EditRatio
+
+tolerance = 0.1
+~~~
 
 ## Exemples avec des données
 
 #### Conjugaison
+
+Dans cet exemple, les conjugaisons du verbe être sont définies dans la clé `data`. A chaque exécution de l'exercice, une ligne du tableau de données est tirée aléatoirement.
+
+[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/34257/)
+
 
 ~~~
 extends = /model/basic/input.pl
@@ -99,9 +133,6 @@ solution ==
 ==
 ~~~
 
-Dans cet exemple, les conjugaisons du verbe être sont définies dans la clé `data`. A chaque exécution de l'exercice, une ligne du tableau de données est tirée aléatoirement.
-
-[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/34257/)
 
 #### Latin
 
@@ -140,9 +171,9 @@ solution ==
 ==
 ~~~
 
-#### Chimi
+#### Chimie
 
-En général, il est préférable de stocker les données d'un exercice dans un fichier à part et de simplement les importer dans l'exercice. Cela rend le fichier source du programme plus lisible et facilite la réutilisation de ces données dans d'autres exercices. L'exemple suivant montre comment importer des données.
+En général, il est préférable de stocker les données d'un exercice dans un fichier à part et de les importer. Cela rend le fichier source de l'exercice plus lisible et facilite la réutilisation de ces données dans d'autres exercices. L'exemple suivant montre comment importer des données.
 
 On dispose d'un fichier CSV `data/elements_chimiques.csv` contenant les noms et symboles des principaux éléments chiques.
 
