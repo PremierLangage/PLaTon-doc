@@ -137,3 +137,20 @@ Le nom du fichier peut-être remplacé par un alias au moment de l'inclusion.
 ~~~
 @ dirA/dirB/myfile.py [thisfile]
 ~~~
+
+
+## Images et sons 
+
+Les images et sons n'ont pas besoin d'être dans l'environnement de l'exercice sur la sandbox. 
+Il suffit qu'il soit accesssible par http. 
+
+Deux possibilités:
+- le média est accessible à l'extérieur sur un serveur pérenne indiquer directement l'url dans votre lien markdown 
+: ! [ alt-text ] (url)
+
+- Vous souhaitez que le média soit sur platon: vous devez le "drag&drop" dans l'arborescence de fichiers. 
+En suite vous devez le "charger" dans votre exercice avec la syntaxe :
+
+~~~
+$ cheminsurplatondufichier
+~~~
