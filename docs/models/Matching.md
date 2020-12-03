@@ -5,6 +5,8 @@ Code couleurs : Après validation de la réponse
 -> Flèches vertes = réponses justes
 -> Flèches rouges = réponses fausses
 
+Pour effacer une flèche il suffit de cliquer sur le point de départ de cette même flèche (point devant colonne gauche).
+
 Cliquer sur l'image suivante pour tester : 
 
 [![image](Matching.png)](https://pl.u-pem.fr/filebrowser/demo/33520/)
