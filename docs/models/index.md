@@ -8,10 +8,45 @@
 * [CheckBox QCM Choix multiples](checkbox.md)
 * [Associations](matchlist.md)
 
+
 ## Avec un fichier CSV
 
 * [CheckBox QCM Choix multiples](checkboxcsv.md)
+* [Irregular verbs](Irregular_verbs_csv.md)
+* [Matching list](Matching_csv.md)
 
+## Exos à clic 
+
+* [Trouve faute d'orthographe](Trouve_faute.md)
+
+## Exos à trous
+
+* [Compléter les gab](Gab_completing.md)
+
+## Exos à flèches
+
+* [Matching basic](Matching.md)
+
+## QCM
+
+* [Plusieurs réponses possibles](Multiple_choice.md)
+* [Unique réponse](Select_set.md)
+
+## True or False
+
+* [True or False question](TrueOrFalse.md)
+
+## Java
+
+* [Java JUNIT Getter](Java_junit_getter.md)
+
+## Exos qui acceptent des entrées et évalue les réponses selon des approximations
+
+* [Numeric set](Numeric_set.md)
+
+## Exos libres
+
+* [Enrégistre les réponses et sans note](Saving_entries.md)
 
 ## Informatiques  
 
