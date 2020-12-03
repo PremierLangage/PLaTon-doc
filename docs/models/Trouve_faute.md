@@ -1,4 +1,4 @@
-# Matching csv
+# Trouve fautes
 
 Exo à clic où on doit détecter les fautes dans les phrases données selon une règle. S'il n'y a pas de faute dans la phrase fournie, on ne doit cliquer sur aucun mot 
 Si la réponse est juste, on passe à la phrase suivante, sinon, on donne la réponse juste et les explications fournies par le correcteur. 
