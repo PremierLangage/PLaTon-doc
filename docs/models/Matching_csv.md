@@ -1,6 +1,6 @@
 # Matching csv
 
-Exos à choix unique où on doit relier chaque élèment de la première case à un élèment de la seconde case. 
+Exo à choix unique où on doit relier chaque élèment de la première case à un élèment de la seconde case. 
 Code couleurs : Après validation de la réponse 
 -> Flèches vertes = réponses justes
 -> Flèches rouges = réponses fausses
