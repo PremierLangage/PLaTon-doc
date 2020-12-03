@@ -12,8 +12,8 @@ Cliquer sur l'image suivante pour tester :
 Voici le code de l'exemple : 
 
 ```{r}
+extends= /AAAA/dominique/simplematchlist.pl
 
-extends = /gift/templates/qmatch.pl
 
 title==
 Matching
@@ -23,11 +23,14 @@ text==
 Relier chaque mot français à sa traduction en anglais
 ==
 
-choices==
-=Pomme -> Apple
-=Chien -> Dog
-=Règle -> Rule
-=Chaussure -> Shoes
+delimiter % "->"
+delimiter= ->
+
+pairs==
+Pomme -> Apple
+Chien -> Dog
+Règle -> Rule
+Chaussure -> Shoes
 ==
 ```
 
