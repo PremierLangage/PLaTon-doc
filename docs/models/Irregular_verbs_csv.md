@@ -26,6 +26,6 @@ Give the preterite of the verb **to {{ verb }} **
 ==
 ```
 Il suffit de changer le titre (**title**), le texte (**text**) pour mettre l'énoncé de l'exercice et de déclarer les fichiers csv à importer sous la forme 
-**@ chemin vers le fichier pour chaque fichier**.
+**@ chemin vers le fichier** pour chaque fichier.
 
 *!NB : Respecter la syntaxe de PlaTon lors de l'édition du titre, de l'énoncé et des fichiers **csv** à importer.*
