@@ -7,12 +7,14 @@ Le nombre de phrase est limité et la règle est parfois donnée avant le début
 
 Cliquer sur l'image suivante pour tester : 
 
-[![image](Trouve_faute.png)](https://pl.u-pem.fr/filebrowser/demo/34910/)
+[![image](Trouve_faute.png)](https://pl.u-pem.fr/filebrowser/demo/34911/)
 
 Voici le code de l'exemple : 
 
 ```{r}
 extends = /Languages/French/Orthographe/Trouve_faute_template.pl
+
+author = Anna DIAW
 
 title==
 Trouve Fautes    
