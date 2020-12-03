@@ -41,9 +41,13 @@ On importe le fichier .txt sous la forme **@ chemin vers le fichier** où se tro
 On met le nom du/des fichiers dans la balise file_liste entre crochet [].
 
 Constitution du fichier .txt :
+
 ->règle : Enoncé de la règle
+
 -> description : description de la règle
+
 -> Pour chaque phrase à corriger, on définit : 
+
     - mauvais : la phrase avec les fautes   
     - bon : la phrase correcte 
     - explication : explication détaillée de la correction
