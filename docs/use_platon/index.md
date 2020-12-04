@@ -1,7 +1,7 @@
 Les enseignants utilisent **PLaTon** dans le cadre de deux grandes activités principales:  
 
 
-- **La création de ressources pédagogiques partagées ainsi que la curation de des dernières.**
+- **L'édition de ressources pédagogiques partagées** ainsi que la curation de des dernières.
   Sur le serveur central de ressources, vous participez à l'édition des exercices, activités 
   ou cours. Durant cette activité, vous prenez le rôle de contributeur éditeur de ressources.   
 
