@@ -1,7 +1,10 @@
-# Numeric Set
+# Numeric Set (GIFT)
 
 Exo ouvert où la réponse est rentré par l'élève et le résultat immédiatement obtenus. On peut noter selon un interval 
 d'exactitude de la réponse. 
+
+la syntaxe utilisée est celle de [GIFT](https://docs.moodle.org/3x/fr/Format_GIFT).
+
 
 Après validation de la réponse : 
 ✓ -> réponses correctes ou partiellement correctes
