@@ -3,7 +3,7 @@
 Exo ouvert où la réponse est rentré par l'élève et le résultat immédiatement obtenus. On peut noter selon un interval 
 d'exactitude de la réponse. 
 
-La syntaxe utilisée est celle de [GIFT](https://docs.moodle.org/3x/fr/Format_GIFT) pour les **Choix multiple avec plusieurs bonnes réponses**.
+La syntaxe utilisée est celle de [GIFT](https://docs.moodle.org/3x/fr/Format_GIFT) pour les **Questions à réponse numérique**.
 
 
 Après validation de la réponse : 
