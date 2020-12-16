@@ -2,7 +2,7 @@
 
 Voici des informations pour installer un serveur **PLaTon**
 
-## Version 0.74
+## Version 0.75
 
 Le coeur de la plateforme **PLaTon**, principalement construit sur la technologie **Django** se trouve
 dans le github ici : [https://github.com/PremierLangage/premierlangage](https://github.com/PremierLangage/premierlangage)
