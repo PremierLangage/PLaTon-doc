@@ -1,6 +1,13 @@
 
 # Liste des Models 
 
+
+Cette liste est en cours de développement et nous pensons quelle le sera toujour !
+
+En effet pour gagner du Karma sur la plateforme il faut voir un de ses exercices arriver sur cette page !
+
+
+
 ## Classiques
 
 * [Question ouverte](questionouverte.md)
