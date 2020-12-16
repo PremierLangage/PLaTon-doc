@@ -25,4 +25,4 @@ plus simple est venir trouver un développeur sur le salon discord du projet
 
 ## Version 1.0
 
-Cette version de **PLaTon**, attendue début 2021, n'est pas encore sortie.
+Cette version de **PLaTon**, attendue en 2021, n'est pas encore sortie.
