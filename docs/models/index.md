@@ -4,7 +4,8 @@
 
 Cette liste est en cours de développement et nous pensons quelle le sera toujour !
 
-En effet pour gagner du Karma sur la plateforme il faut voir un de ses exercices arriver sur cette page !
+En effet pour gagner du Karma sur la plateforme il faut voir un de ses exercices arriver sur cette page !  
+Pour le moment les critères sont asser bas mais cella ne devrai pas durer ! 
 
 
 
