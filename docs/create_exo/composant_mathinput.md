@@ -4,4 +4,4 @@ Le composant MathInput permet d'entrer une expression mathématique avec un rend
 
 La valeur récupérée par le composant MathInput est une chaîne de caractères écrite en langage LaTeX.
 
-[Démo MathInput](https://pl.u-pem.fr/filebrowser/option?name=test_pl&path=Yggdrasil/demo/demo_mathinput.pl)
+[Démo MathInput](https://pl.u-pem.fr/filebrowser/demo/13672/)
