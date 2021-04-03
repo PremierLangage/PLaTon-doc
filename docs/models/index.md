@@ -1,5 +1,5 @@
 
-# Liste des Models 
+# Liste des Modèles
 
 
 Cette liste est en cours de développement et nous pensons quelle le sera toujour !
@@ -43,6 +43,17 @@ Pour le moment les critères sont asser bas mais cella ne devrai pas durer !
 ## True or False
 
 * [True or False question](TrueOrFalse.md)
+
+## Mathématiques
+
+* [Expression]()
+* [Fraction]()
+* [Nombre complexe]()
+* [Fonction]()
+* [Polynôme]()
+* [Ensemble fini]()
+* [N-uplet]()
+
 
 ## Java
 
