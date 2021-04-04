@@ -6,11 +6,11 @@ Le modèle `math/expr` permet de créer des exercices dont la réponse est une e
 
 #### Clés de base
 * `title` (chaîne). Titre de l'exercice.
-* `before` (script Python). Ce script est exécuté au lancement de l'exercice. Il permet de générer les données de l'énoncé ainsi que la solution. La solution doit être une [expression SymPy](https://docs.sympy.org/latest/modules/core.html?#module-sympy.core.expr)
-* `text` (string). Enoncé de l'exercice.
+* `before` (script Python). Script de génération des données et de la solution. Ce script est exécuté au lancement de l'exercice. Un certain nombre d'importations de fonctions sont faites automatiquement (voir annexe ci-après). La solution doit être une [expression SymPy](https://docs.sympy.org/latest/modules/core.html?#module-sympy.core.expr). et doit être stockée dans la variable `sol`.
+* `text` (chaîne). Enoncé de l'exercice. L'insertion dynamique de données produites par le script `before` s'effectue à l'aide des balises `{{...}}`.
 
 #### Interface de réponse
-* `input_prefix` (chaîne). Chaîne placée avant le champ de réponse.
+* `input_prefix` (chaîne). Chaîne placée avant le champ de réponse. Par défaut, cette chaîne est `Réponse :`.
 * `form` (string). Solution de l'exercice.
 
 #### Evaluation de la réponse
