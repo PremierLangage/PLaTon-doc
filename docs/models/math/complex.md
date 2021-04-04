@@ -4,7 +4,7 @@ Le modèle `math/complex` permet de créer des exercices dont la réponse est un
 
 ## Clés du modèle
 
-* `imaginary_unit` (chaîne, valeur par défaut : `i`). Nom de l'unité imaginaire.
+* `imaginary_unit` (chaîne, valeur par défaut : `i`). Nom de lunité imaginaire.
 * `complex_form`
 
 ## Exemples
