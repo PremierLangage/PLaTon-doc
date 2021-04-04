@@ -46,13 +46,13 @@ Pour le moment les critères sont asser bas mais cella ne devrai pas durer !
 
 ## Mathématiques
 
-* [Expression]()
-* [Fraction]()
-* [Nombre complexe]()
+* [Expression](math/expr.md)
+* [Fraction](math/frac.md)
+* [Nombre complexe](math/complex.md)
 * [Fonction]()
-* [Polynôme]()
-* [Ensemble fini]()
-* [N-uplet]()
+* [Polynôme](math/poly.md)
+* [Ensemble fini](math/finiteset.md)
+* [N-uplet](math/tuple.md)
 
 
 ## Java
