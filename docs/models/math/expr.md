@@ -15,7 +15,6 @@ Le modèle `math/expr` permet de créer des exercices dont la réponse est une e
 
 #### Interface de réponse
 * `input_prefix` (chaîne). Chaîne placée avant le champ de réponse. Par défaut, cette chaîne est `Réponse :`.
-* `form` (string). Solution de l'exercice.
 
 #### Evaluation de la réponse
 * `checkratsimp` (booléen Python, valeur par défaut : `True`). Si cette clé vaut `True`, l'exercice vérifie que les valeurs rationnelles sont simplifiées dans la réponse de l'élève. Des réponses du type $4+3$, $1+\fra{1}{2}$, $\sqrt{4+3}$, $\sqrt{4}$, etc. déclencheront un message d'avertissement.
