@@ -24,3 +24,28 @@ Le modèle `math/expr` permet de créer des exercices dont la réponse est une e
 #### Indications et solution
 * `solution` (chaîne). Solution de l'exercice.
 * `hint` (chaîne). Indication.
+
+## Exemples
+
+#### Calculer la distance entre deux points du plan
+
+```
+extends = /model/math/expr.pl
+
+title = Calculer la distance entre deux points du plan
+
+before ==
+xA = randint(-5, 5)
+yA = randint(-5, 5)
+xB = randint(-5, 5)
+yB = randint(-5, 5)
+sol = sqrt((xA-xB)**2 + (yA-yB)**2)
+==
+
+text ==
+Dans le plan muni d'un repère orthonormé on considère les points de coordonnées $! ( {{ xA }}, {{ yA }} ) !$ et $! ( {{ xB }}, {{ yB }} ) !$.
+
+Quelle est la distance entre ces deux points ?
+==
+```
+
