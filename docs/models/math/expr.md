@@ -1,13 +1,13 @@
 # Modèle `math/expr`
 
-Le modèle `math/expr` permet de créer des exercices dont la réponse est une expression algébrique. Par exepression algébrique, on entend une expression faisant intervenir des nombres, des symboles, des opérations algébriques et des fonctions.
+Le modèle `math/expr` permet de créer des exercices dont la réponse est une expression mathématique. Par expression mathématique, on entend une expression faisant intervenir des nombres, des variables, des opérations algébriques et des fonctions.
 
 ## Clés du modèle
 
 #### Clés de base
 * `title` (chaîne). Titre de l'exercice.
 
-Le titre doit décrire la tâche à effectuer dans l'exercice.
+    Le titre doit décrire la tâche à effectuer dans l'exercice. Il n'est pas destiné aux élèves.
 
 * `before` (script Python). Script de génération des données et de la solution. Ce script est exécuté au lancement de l'exercice. Un certain nombre d'importations de fonctions sont faites automatiquement (voir annexe ci-après). La solution doit être une [expression SymPy](https://docs.sympy.org/latest/modules/core.html?#module-sympy.core.expr). et doit être stockée dans la variable `sol`.
 * `text` (chaîne). Enoncé de l'exercice. 
