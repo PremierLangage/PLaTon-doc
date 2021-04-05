@@ -1,6 +1,6 @@
 # Modèle `math/expr`
 
-Le modèle `math/expr` permet de créer des exercices dont la réponse est une expression mathématique.
+Le modèle `math/expr` permet de créer des exercices dont la réponse est une expression algébrique.
 
 ## Clés du modèle
 
@@ -10,7 +10,7 @@ Le modèle `math/expr` permet de créer des exercices dont la réponse est une e
 * `text` (chaîne). Enoncé de l'exercice. 
     * L'insertion de formules mathématiques s'effectue avec du code LaTeX dans les balises `$!...!$` (mode en ligne) ou `$$...$$` (mode équation).
     * L'insertion dynamique de données produites par le script `before` s'effectue à l'aide des balises `{{...}}`. Par exemple, si la variable `var` a été définie dans le script `before`, la commande `{{ var }}` permet d'insérer sa représentation textuelle dans l'énoncé.
-    * Par ailleurs, un filtre `latex` permet d'insérer sa représentation LaTeX d'un objet SymPy. Par exemple, si l'objet SymPy `obj` a été défini dans le script `before`, la commande `{{ obj|latex }}` permet d'insérer sa représentation LaTeX dans l'énoncé.
+    * Par ailleurs, un filtre `latex` permet d'insérer la représentation LaTeX d'un objet SymPy. Par exemple, si l'objet SymPy `obj` a été défini dans le script `before`, la commande `{{ obj|latex }}` permet d'insérer sa représentation LaTeX dans l'énoncé.
     * La mise en forme avancée du texte s'effectue avec des balises Markdown ou HTML.
 
 #### Interface de réponse
@@ -21,7 +21,7 @@ Le modèle `math/expr` permet de créer des exercices dont la réponse est une e
 * `unauthorized_func` (liste de chaînes Python, valeur par défaut : `[]`). Cette clé contient les noms des fonctions non autorisées.
 * `symbol_dict` (dictionnaire Sympy). Dictionnaire des symboles utilisées pour interpréter la réponse de l'élève.
 
-#### Indications et solution
+#### Messages
 * `solution` (chaîne). Solution de l'exercice.
 * `hint` (chaîne). Indication.
 
@@ -50,3 +50,46 @@ Quelle est la distance entre ces deux points ?
 ==
 ```
 
+#### Exprimer une inconnue en fonction d'une autre
+
+```
+extends = /model/math/expr.pl
+
+title = Exprimer une inconnue en fonction d'une autre
+
+before ==
+var('x y')
+a = randint(-5, 5, [0])
+b = randint(-5, 5, [0])
+expr = a*y+b
+sol = (x-b)/a
+==
+
+text ==
+Soit deux nombres $! x !$ et $! y !$ tels que :
+$$ x = {{ expr|latex }}.$$
+
+Exprimer $! y !$ en fonction $! x !$.
+==
+
+input_prefix = $! y = !$
+```
+
+#### Valeurs remarquables de sinus et cosinus
+
+```
+extends = /model/math/expr.pl
+
+title = Valeurs remarquables de sinus et cosinus
+
+before ==
+x = choice([pi/6, pi/4, pi/3, 3*pi/4, 2*pi/3, 5*pi/6])
+f = choice([sin, cos]) 
+sol = f(x)
+==
+
+text ==
+Quelle est la valeur de la fonction $! {{ f|latex }} !$ en $!\displaystyle {{ x|latex }} !$ ?
+==
+
+unauthorized_func = ['sin', 'cos']
