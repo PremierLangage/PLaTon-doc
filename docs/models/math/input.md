@@ -16,11 +16,11 @@ Le modèle `math/input` permet de créer des exercices dont la réponse est une 
 
     Ce script est exécuté au lancement de l'exercice et permet de générer les données de l'exercice. 
     
-    Pour alléger l'écriture de ce script, un certain nombre de fonctions sont importées automatiquement :
-        * les principales classes et fonctions du module de calcul symbolique SymPy (https://docs.sympy.org) ;
-        * des fonctions de génération aléatoire ;
-        * des fonctions de génération aléatoire d'objets SymPy ;
-        * des fonctions de conversion des objets SymPy en LateX.
+Pour alléger l'écriture de ce script, un certain nombre de fonctions sont importées automatiquement :
+    * les principales classes et fonctions du module de calcul symbolique SymPy (https://docs.sympy.org) ;
+    * des fonctions de génération aléatoire ;
+    * des fonctions de génération aléatoire d'objets SymPy ;
+    * des fonctions de conversion des objets SymPy en LateX.
 
 * `text` (chaîne). Enoncé de l'exercice. 
     * L'insertion de formules mathématiques s'effectue avec du code LaTeX dans les balises `$!...!$` (mode en ligne) ou `$$...$$` (mode équation).
@@ -40,7 +40,7 @@ Le modèle `math/input` permet de créer des exercices dont la réponse est une 
         * Fonctions de conversion LaTeX vers SymPy
         * Fonctions avancées de manipulation des objets SymPy : https://docs.sympy.org/latest/tutorial/manipulation.html
 
-    Afin de faciliter, la réutilisation
+    
 
 
 #### Interface de réponse
@@ -92,6 +92,7 @@ def eval_ans(strans, sol):
     return (100, "Success")
 
 score, error = eval_ans(answers['math'], sol)
+feedback = message[error]
 ==
 
 solution ==
