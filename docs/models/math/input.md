@@ -30,14 +30,30 @@ Le modèle `math/input` permet de créer des exercices dont la réponse est une 
 
 * `evaluator` (script Python). Script d'évaluation de la réponse.
 
-    Ce script est exécuté après la validation de l'exercice et permet d'évaluer la réponse de l'élève. 
+    Ce script est exécuté après la validation de l'exercice et permet d'évaluer la réponse de l'élève.
+        * La réponse de l'élève est contenue dans la variable `answers['math']` sous forme d'une chaîne LaTeX.
+        * Le script doit définir un score dans une variable `score`.
+        * Le script peut également définir un message d'avertissement ou d'erreur dans une variable `feedback`.
+
+    Pour faciliter l'analyse de la réponse :
+        * Fonctions de conversion LaTeX vers SymPy
+        * Fonctions avancées de manipulation des objets SymPy : https://docs.sympy.org/latest/tutorial/manipulation.html
+
+    Afin de faciliter, la réutilisation
 
 
 #### Interface de réponse
-* `input_prefix` (chaîne). Chaîne placée avant le champ de réponse. Par défaut, cette chaîne est `Réponse :`.
+* `input_prefix` (chaîne). Chaîne placée avant le champ de réponse. 
+
+    Par défaut, cette chaîne est `Réponse :`.
 
 #### Messages
-* `solution` (chaîne). Solution de l'exercice.
-* `hint` (chaîne). Indication.
+* `solution` (chaîne). Message de correction de l'exercice.
+
+
+
+* `hint` (chaîne). Message(s) d'indication.
+
+    A PRECISER
 
 ## Exemples
