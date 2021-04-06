@@ -8,7 +8,9 @@ Le modèle `math/input` permet de créer des exercices dont la réponse est une 
 #### Clés de base
 * `title` (chaîne). Titre de l'exercice.
 
-    Le titre doit décrire la tâche à effectuer dans l'exercice. Il est destiné au référencement de l'exercice.\
+    Le titre doit décrire la tâche à effectuer dans l'exercice. Il est destiné au référencement de l'exercice.
+
+
 
 * `before` (script Python). Script de génération des données et de la solution.
 
