@@ -25,7 +25,7 @@ Le modèle `math/input` permet de créer des exercices dont la réponse est une 
 * `evaluator` (script Python). Script d'évaluation de la réponse.
     * Ce script est exécuté après la validation de l'exercice et permet d'évaluer la réponse de l'élève.
     * La réponse de l'élève est contenue dans la variable `answers['math']` sous forme d'une chaîne LaTeX.
-    * Le script doit définir un score dans une variable `score`.
+    * Le script doit définir un score dans une variable `score`. Le score est une valeur entière comprise entre -1 et 100. La valeur -1 indique à l'activité qui exécute l'exercice que cette tentative ne doit pas être prise en compte (dans le cas, par exemple, d'une erreur de syntaxe dans la saisie).
     * Le script peut également définir un message d'avertissement ou d'erreur dans une variable `feedback`.
     * Pour faciliter cette tâche, un certain nombre de bibliothèques Python sont disponibles :
         * `evalsympy` : analyse d'objets SymPy (bibliothèque locale)
@@ -41,9 +41,9 @@ Le modèle `math/input` permet de créer des exercices dont la réponse est une 
 
 #### Messages
 * `solution` (chaîne). Message de correction de l'exercice.
-   * Cette clé offre les mêmes possibilités de mise en forme que la clé `text`.
+    * Cette clé offre les mêmes possibilités de mise en forme que la clé `text`.
 * `hint` (chaîne). Message(s) d'indication.
-   * Cette clé offre les mêmes possibilités de mise en forme que la clé `text`.
+    * Cette clé offre les mêmes possibilités de mise en forme que la clé `text`.
 
 ## Exemples
 
