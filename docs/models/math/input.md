@@ -9,14 +9,14 @@ Le modèle `math/input` permet de créer des exercices dont la réponse est une 
     * Le titre doit décrire la tâche à effectuer dans l'exercice. Il est destiné au référencement de l'exercice.
 * `before` (script Python). Script de génération des données et de la solution.
     * Ce script est exécuté au lancement de l'exercice et permet de générer les données de l'exercice.
-    * Pour faciliter cette tâche, un certain nombre de bibliothèques Python sont disponibles :
+    * Pour faciliter cette tâche, en plus de la [bibliothèque Python standard](https://docs.python.org/fr/3/library/index.html), un certain nombre de paquets et de modules sont disponibles. En particulier :
         * `sympy` : calcul symbolique (https://docs.sympy.org)
         * `plrandom` : fonctions aléatoires (bibliothèque locale)
         * `randsympy` : génération aléatoire d'objets SymPy (bibliothèque locale)
         * `sympy2latex` : conversion d'objets SymPy en LateX (bibliothèque locale)
         * `latex2sympy` : conversion d'expressions LateX en objets SymPy (bibliothèque locale)
         * `mplsympy` : génération d'objets graphiques à partir d'objets SymPy (bibliothèque locale)
-    * Pour alléger l'écriture du script, les fonctions les pkus courantes de ces bibliothèques sont automatiquement importées (voir annexe ci-après).
+    * Pour alléger l'écriture du script, les fonctions les plus courantes de ces bibliothèques sont automatiquement importées (voir annexe ci-après).
 * `text` (chaîne). Enoncé de l'exercice. 
     * L'insertion de formules mathématiques s'effectue avec du code LaTeX dans les balises `$!...!$` (mode en ligne) ou `$$...$$` (mode équation).
     * L'insertion dynamique de données produites par le script `before` s'effectue à l'aide des balises `{{...}}`. Par exemple, si la variable `var` a été définie dans le script `before`, la commande `{{ var }}` permet d'insérer sa représentation textuelle dans l'énoncé.
