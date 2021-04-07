@@ -1,6 +1,8 @@
 # Modèle `math/input`
 
 Le modèle `math/input` permet de créer des exercices dont la réponse est une expression mathématique.
+* Le champ de réponse permet de saisir facilement une expression mathématique avec un rendu de type TeX. 
+* La génération des données de l'exercice et l'évaluation de la réponse de l'élève est effectuée par des scripts Python.
 
 ## Clés du modèle
 
