@@ -1,6 +1,10 @@
 # Modèle `math/expr`
 
-Le modèle `math/expr` permet de créer des exercices dont la réponse est une expression faisant intervenir des nombres, des variables, des opérations algébriques et des fonctions.
+Le modèle `math/expr` est un modèle dérivé du modèle `math/input` pour des exercices où la réponse est :
+* unique ;
+* de type expression algébrique ou analytique (expression impliquant des nombres, des variables, des opérations algébriques et des fonctions).
+
+Le script d'évaluation y est prédéfini.
 
 ## Clés du modèle
 
@@ -14,15 +18,24 @@ Le modèle `math/expr` permet de créer des exercices dont la réponse est une e
 * `input_prefix` (chaîne). Chaîne placée avant le champ de réponse. Par défaut, cette chaîne est `Réponse :`.
 
 #### Evaluation de la réponse
-* `checkratsimp` (booléen Python, valeur par défaut : `True`). 
+* `checkratsimp` (booléen Python, ). 
+    * Valeur par défaut : `True`.
     * Si cette clé vaut `True`, l'exercice vérifie que les valeurs rationnelles sont simplifiées dans la réponse de l'élève. Des réponses du type $4+3$, $1+\fra{1}{2}$, $\sqrt{4+3}$, $\sqrt{4}$, etc. déclencheront un message d'avertissement.
-* `unauthorized_func` (liste de chaînes Python, valeur par défaut : `[]`). 
-    Cette clé contient les noms des fonctions non autorisées.
+* `unauthorized_func` (liste de chaînes Python). 
+    * Valeur par défaut : `[]`.
+    * Cette clé contient les noms des fonctions non autorisées.
 * `symbol_dict` (dictionnaire Sympy). Dictionnaire des symboles utilisées pour interpréter la réponse de l'élève.
+    * Valeur par défaut : `{'e': E}`. La variable `e` est alors interprétée comme le nombre d'Euler.
 
 #### Messages
 * `solution` (chaîne). Solution de l'exercice.
 * `hint` (chaîne). Indication.
+* `message` (dictionnaire de chaînes). Messages d'erreur.
+    * Par défaut, les messages d'erreur sont :
+         message.Success = 
+         message.NotEqual = 
+         message.NotExpr = La réponse doit être une expression mathématique.
+         message.NotRatSimp = L'expression peut encore être simplifiée.  
 
 ## Exemples
 
