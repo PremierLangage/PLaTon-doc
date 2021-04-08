@@ -1,10 +1,6 @@
 # Modèle `math/expr`
 
-Le modèle `math/expr` est un modèle dérivé du modèle `math/input` pour des exercices où la réponse est :
-* unique ;
-* de type expression algébrique ou analytique (expression impliquant des nombres, des variables, des opérations algébriques et des fonctions).
-
-Le script d'évaluation y est prédéfini.
+Le modèle `math/expr` est un modèle dérivé du modèle `math/input` pour des exercices où la réponse est unique et de type expression algébrique ou analytique (expression impliquant des nombres, des variables, des opérations algébriques et des fonctions). Le script d'évaluation y est prédéfini.
 
 ## Clés du modèle
 
@@ -19,13 +15,14 @@ Le script d'évaluation y est prédéfini.
 
 #### Evaluation de la réponse
 * `checkratsimp` (booléen Python, ). 
-    * Valeur par défaut : `True`.
     * Si cette clé vaut `True`, l'exercice vérifie que les valeurs rationnelles sont simplifiées dans la réponse de l'élève. Des réponses du type $4+3$, $1+\fra{1}{2}$, $\sqrt{4+3}$, $\sqrt{4}$, etc. déclencheront un message d'avertissement.
+    * Valeur par défaut : `True`.
 * `unauthorized_func` (liste de chaînes Python). 
-    * Valeur par défaut : `[]`.
     * Cette clé contient les noms des fonctions non autorisées.
-* `symbol_dict` (dictionnaire Sympy). Dictionnaire des symboles utilisées pour interpréter la réponse de l'élève.
-    * Valeur par défaut : `{'e': E}`. La variable `e` est alors interprétée comme le nombre d'Euler.
+    * Valeur par défaut : `[]`.
+* `symbol_dict` (dictionnaire Sympy). 
+    * Cette clé contient le dictionnaire des symboles utilisé pour convertir la réponse de l'élève en expression SymPy.
+    * Valeur par défaut : `{'e': E}`. Le symbole `e` est alors interprété comme le nombre d'Euler (objet SymPy `E`).
 
 #### Messages
 * `solution` (chaîne). Solution de l'exercice.
