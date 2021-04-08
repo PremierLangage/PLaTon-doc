@@ -6,25 +6,24 @@ Le modèle `math/set` permet de créer des exercices dont la réponse est un ens
 
 ## Exemples
 
-#### Calculer la distance entre deux points du plan
+#### Déterminer l'intersection de deux ensembles
 
 ```
-extends = /model/math/expr.pl
+extends = /model/math/set.pl
 
-title = Calculer la distance entre deux points du plan
+title = Déterminer l'intersection de deux ensembles
 
 before ==
-xA = randint(-5, 5)
-yA = randint(-5, 5)
-xB = randint(-5, 5)
-yB = randint(-5, 5)
-sol = sqrt((xA-xB)**2 + (yA-yB)**2)
+from sympy import Intersection
+A = FiniteSet(*sample(range(10), randint(3, 5)))
+B = FiniteSet(*sample(range(10), randint(3, 5)))
+sol = Intersection(A, B)
 ==
 
 text ==
-Dans le plan muni d'un repère orthonormé on considère les points de coordonnées 
-$! ( {{ xA }}, {{ yA }} ) !$ et $! ( {{ xB }}, {{ yB }} ) !$.
+On considère les ensembles suivants :
+$$ A=\\{ {{A|latex}} \\},\ B=\\{ {{B|latex}} \\}.$$
 
-Quelle est la distance entre ces deux points ?
+Déterminer $! A \cap B !$.
 ==
 ```
