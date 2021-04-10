@@ -1,6 +1,6 @@
 # Modèle `math/set`
 
-Le modèle `math/set` permet de créer des exercices dont la réponse est un ensemble fini.
+Le modèle `math/set` permet de créer des exercices dont la réponse est unique et de type ensemble fini.
 
 ## Clés du modèle
 
