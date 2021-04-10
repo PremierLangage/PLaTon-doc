@@ -1,10 +1,10 @@
 # Modèle `math/complex`
 
-Le modèle `math/complex` permet de créer des exercices dont la réponse est un nombre complexe.
+Le modèle `math/complex` est un modèle dérivé du modèle `math/input` pour des exercices où la réponse est unique et de type nombre complexe. Le script d'évaluation y est prédéfini.
 
 ## Clés du modèle
 
-* `imaginary_unit` (chaîne, valeur par défaut : `i`). Nom de lunité imaginaire.
+* `imaginary_unit` (chaîne, valeur par défaut : `i`). Nom de l'unité imaginaire.
 * `complex_form`
 
 ## Exemples
@@ -17,8 +17,8 @@ extends = /model/math/complex.pl
 title = Multiplier deux nombres complexes
 
 before ==
-z1 = randint_complex(5)
-z2 = randint_complex(5)
+z1 = randint(-5, 5, [0]) + randint(-5, 5, [0])*I
+z2 = randint(-5, 5, [0]) + randint(-5, 5, [0])*I
 sol = (z1 * z2).expand()
 ==
 
