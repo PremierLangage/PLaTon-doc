@@ -48,16 +48,13 @@ Pour le moment les critères sont asser bas mais cella ne devrai pas durer !
 
 ### Champ de réponse mathématique
 
-#### Evaluation de la réponse à programmer
 * [Champ de réponse mathématique](math/input.md)
-
-#### Evaluation de la réponse prédéfinie
-* [Expression](math/expr.md)
-* [Fraction](math/frac.md)
-* [Nombre complexe](math/complex.md)
-* [Polynôme](math/poly.md)
-* [Ensemble fini](math/set.md)
-* [N-uplet](math/tuple.md)
+    * [Expression](math/expr.md)
+    * [Fraction](math/frac.md)
+    * [Nombre complexe](math/complex.md)
+    * [Polynôme](math/poly.md)
+    * [Ensemble fini](math/set.md)
+    * [N-uplet](math/tuple.md)
 
 
 ## Java
