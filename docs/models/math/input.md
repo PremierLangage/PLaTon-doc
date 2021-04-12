@@ -89,3 +89,19 @@ solution ==
 La solution est $! {{ sol|latex}} !$.
 ==
 ```
+
+## Annexes
+
+### Importations automatiques du `before`
+
+```
+from sympy import E, I, pi, oo
+from sympy import sqrt, Abs, sin, cos, tan, exp, ln
+from sympy import var, symbols, Symbol
+from sympy import sympify, simplify
+from sympy import Integer, Rational, Poly, FiniteSet, Tuple
+from random import choice, choices, sample, shuffle
+from plrandom import randint
+from sympy2latex import latex
+from latex2sympy import latex2sympy
+```
