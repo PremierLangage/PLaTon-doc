@@ -56,6 +56,10 @@ Pour le moment les critères sont asser bas mais cella ne devrai pas durer !
     * [Ensemble fini](math/set.md)
     * [N-uplet](math/tuple.md)
 
+## Chimie
+
+* [Structure d'une molécule](chem/molstruct.md) (expérimental)
+
 
 ## Java
 
