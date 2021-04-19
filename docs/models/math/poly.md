@@ -1,8 +1,6 @@
 # Modèle `math/poly`
 
-Le modèle `math/poly` est un modèle dérivé du modèle `math/input`.
-
-Le script d'évaluation `evaluator` y est prédéfini. Il compare la réponse de l'élève à une solution attendue de type polynôme.
+Le modèle `math/poly` est un modèle dérivé du modèle `math/input`. Le script d'évaluation `evaluator` y est prédéfini. Il compare la réponse de l'élève à une solution attendue de type polynôme.
 
 ## Clés du modèle
 
