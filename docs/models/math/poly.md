@@ -1,20 +1,38 @@
 # Modèle `math/poly`
 
-Le modèle `math/poly` est un modèle dérivé du modèle `math/input` pour des exercices où la réponse est unique et de type polynôme. Le script d'évaluation y est prédéfini.
+Le modèle `math/poly` est un modèle dérivé du modèle `math/input`.
+
+Le script d'évaluation `evaluator` y est prédéfini. Il compare la réponse de l'élève à une solution attendue de type polynôme.
 
 ## Clés du modèle
 
-#### Clés de base
-* `title` (chaîne). Titre de l'exercice.
-* `before` (script Python). Script de génération des données et de la solution. 
-    * La solution doit être une [expression SymPy](https://docs.sympy.org/latest/modules/core.html?#module-sympy.core.expr). et doit être stockée dans la variable `sol`.
-* `text` (chaîne). Enoncé de l'exercice. 
+* `poly_form` (chaîne). Forme attendue de la réponse de l'élève.
+    * Les 3 valeurs possibles sont : chaîne vide (pas de forme particulière), `expanded` (forme développée) et `factorized` (forme factorisée).
+    * Par défaut, la valeur de cette clé est une chaîne vide.
 
-#### Interface de réponse
-* `input_prefix` (chaîne). Chaîne placée avant le champ de réponse.
 
-#### Evaluation de la réponse
-* `poly_form` (chaîne). Forme attendue de la réponse.
-    * `expanded`
-    * `factorized`
-    * Valeur par défaut : chaîne vide.
+## Exemples
+
+#### Développer une expression polynomiale
+
+~~~
+extends = /model/math/poly.pl
+
+title = Développer une expression polynomiale
+
+before ==
+from randsympy import randint_poly
+P = randint_poly(1, 2, 2)
+Q = randint_poly(1, 2, 2)
+expr = P * Q
+sol = expr.expand()
+==
+
+text ==
+Développer l'expression suivante :
+
+$$ {{ expr|latex }}. $$
+==
+
+poly_form = expanded
+~~~
