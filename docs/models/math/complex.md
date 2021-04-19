@@ -1,11 +1,17 @@
 # Modèle `math/complex`
 
-Le modèle `math/complex` est un modèle dérivé du modèle `math/input` pour des exercices où la réponse est unique et de type nombre complexe. Le script d'évaluation y est prédéfini.
+Le modèle `math/complex` est un modèle dérivé du modèle `math/input`.
+
+Le script d'évaluation `evaluator` y est prédéfini. Il compare la réponse de l'élève à une solution attendue de type nombre complexe
 
 ## Clés du modèle
 
-* `imaginary_unit` (chaîne, valeur par défaut : `i`). Nom de l'unité imaginaire.
-* `complex_form`
+* `mathsettings.imaginary_unit` (chaîne). Nom de l'unité imaginaire.
+    * Nom de l'unité imaginaire utilisée lors de la conversion des objets SymPy en code LaTeX ainsi que lors de l'évaluation de la réponse de l'élève.
+    * Par défaut, cette clé vaut `i`.
+* `complex_form` (chaîne). Forme attendue de la réponse de l'élève.
+    * Les 3 valeurs possibles sont : chaîne vide (pas de forme particulière), `cartesian` (forme cartésienne) et `exponential` (forme exponentielle).
+    * Par défaut, la valeur de cette clé est une chaîne vide.
 
 ## Exemples
 
