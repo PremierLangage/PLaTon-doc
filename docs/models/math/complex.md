@@ -2,7 +2,7 @@
 
 Le modèle `math/complex` est un modèle dérivé du modèle `math/input`.
 
-Le script d'évaluation `evaluator` y est prédéfini. Il compare la réponse de l'élève à une solution attendue de type nombre complexe
+Le script d'évaluation `evaluator` y est prédéfini. Il compare la réponse de l'élève à une solution attendue de type nombre complexe.
 
 ## Clés du modèle
 
