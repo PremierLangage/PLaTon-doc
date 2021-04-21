@@ -4,10 +4,18 @@ Le modèle `math/poly` est un modèle dérivé du modèle `math/input`. Le scrip
 
 ## Clés du modèle
 
+Les clés `title`, `text`, `input_prefix`, `solution`, `hint`, `latexsettings` ont la même signification et la même syntaxe que dans le modèle `math/input`.
+
+* `before` (script Python). Script de génération des données et de la solution. 
+    * Le script doit définir une variable `sol` contenant la solution. Cette solution doit être un objet SymPy de type `Poly` ou un objet SymPy de type `Expr` convertible en polynôme.
+* `poly_var` (chaîne). Variable du polynôme
+    * Par défaut, la valeur de cette clé est `x`.
 * `poly_form` (chaîne). Forme attendue de la réponse de l'élève.
     * Les 3 valeurs possibles sont : chaîne vide (pas de forme particulière), `expanded` (forme développée) et `factorized` (forme factorisée).
     * Par défaut, la valeur de cette clé est une chaîne vide.
-
+* `poly_domain` (chaîne). Domaine du polynôme.
+    * Cette clé est utilisée lorsque la forme attendue est une forme factorisée. Les valeurs possibles sont `R` (domaine réel) et `C` (domaine complexe).
+    * Par défaut, la valeur de cette clé est `R`.
 
 ## Exemples
 
