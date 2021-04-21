@@ -48,13 +48,28 @@ Pour le moment les critères sont asser bas mais cella ne devrai pas durer !
 
 ### Champ de réponse mathématique
 
-* [Champ de réponse mathématique](math/input.md)
+* [Modèle générique](math/input.md)
+
+* Modèles spécifiques
     * [Expression](math/expr.md)
+    * [Numérique](math/numeric.md)
     * [Fraction](math/frac.md)
     * [Nombre complexe](math/complex.md)
     * [Polynôme](math/poly.md)
     * [Ensemble fini](math/set.md)
+    * [Intervalle](math/rset.md)
     * [N-uplet](math/tuple.md)
+
+### Matrice
+
+* [Matrice](math/matrix.md)
+
+### Panneau graphique interactif (JSXGraph)
+
+* [Modèle générique](mathjxg/free.md)
+
+* Modèles spécifiques
+    * [Point](mathjxg/point.md)
 
 ## Chimie
 
