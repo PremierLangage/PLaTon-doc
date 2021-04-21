@@ -22,7 +22,7 @@ Les clés `title`, `text`, `input_prefix`, `solution`, `hint`, `latexsettings` o
     * Par défaut, les messages d'erreur sont :
 ```        
 message.Success = 
-message.NotEqual = 
+message.NotEqual = La réponse n'est pas égale à la solution.
 message.NotExpr = La réponse doit être une expression mathématique.
 message.NotRatSimp = L'expression peut encore être simplifiée.
  ```
