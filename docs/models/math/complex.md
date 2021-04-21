@@ -4,8 +4,12 @@ Le modèle `math/complex` est un modèle dérivé du modèle `math/input`. Le sc
 
 ## Clés du modèle
 
-* `mathsettings.imaginary_unit` (chaîne). Nom de l'unité imaginaire.
-    * Nom de l'unité imaginaire utilisée lors de la conversion des objets SymPy en code LaTeX ainsi que lors de l'évaluation de la réponse de l'élève.
+Les clés `title`, `text`, `input_prefix`, `solution`, `hint`, `latexsettings` ont la même signification et la même syntaxe que dans le modèle `math/input`.
+
+* `before` (script Python). Script de génération des données et de la solution. 
+    * Le script doit définir une variable `sol` contenant la solution. Cette solution doit être un objet SymPy de type `Complex`.
+* `imaginary_unit` (chaîne). Nom de l'unité imaginaire.
+    * Nom de l'unité imaginaire utilisée pour interpréter la réponse de l'élève.
     * Par défaut, cette clé vaut `i`.
 * `complex_form` (chaîne). Forme attendue de la réponse de l'élève.
     * Les 3 valeurs possibles sont : chaîne vide (pas de forme particulière), `cartesian` (forme cartésienne) et `exponential` (forme exponentielle).
