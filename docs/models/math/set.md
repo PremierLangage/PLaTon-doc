@@ -5,7 +5,7 @@ Le modèle `math/set` est un modèle dérivé du modèle `math/input`. Le script
 ## Clés du modèle
 
 * `before` (script Python). Script de génération des données et de la solution.
-    * La solution doit être stockée dans la variable `sol`. Cette solution doit être un objet SymPy de type `FiniteSet`.
+    * Le script doit définir une variable `sol` contenant la solution. Cette solution doit être un objet SymPy de type `FiniteSet`.
 
 ## Exemples
 
