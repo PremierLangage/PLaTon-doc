@@ -1,19 +1,13 @@
 # Modèle `math/expr`
 
-Le modèle `math/expr` est un modèle dérivé du modèle `math/input` pour des exercices où la réponse est unique et de type expression algébrique ou analytique (expression impliquant des nombres, des variables, des opérations algébriques et des fonctions). Le script d'évaluation y est prédéfini.
+Le modèle `math/expr` est un modèle dérivé du modèle `math/input`. Le script d'évaluation `evaluator` y est prédéfini. Il compare la réponse de l'élève à une solution attendue de type expression algébrique ou analytique (expression impliquant des nombres, des variables, des opérations algébriques et des fonctions).
 
 ## Clés du modèle
 
-#### Clés de base
-* `title` (chaîne). Titre de l'exercice.
+Les clés `title`, `text`, `input_prefix`, `solution`, `hint`, `latexsettings` ont la même signification et la même syntaxe que dans le modèle `math/input`.
+
 * `before` (script Python). Script de génération des données et de la solution. 
-    * La solution doit être une [expression SymPy](https://docs.sympy.org/latest/modules/core.html?#module-sympy.core.expr). et doit être stockée dans la variable `sol`.
-* `text` (chaîne). Enoncé de l'exercice. 
-
-#### Interface de réponse
-* `input_prefix` (chaîne). Chaîne placée avant le champ de réponse. Par défaut, cette chaîne est `Réponse :`.
-
-#### Evaluation de la réponse
+    * Le script doit définir une variable `sol` contenant la solution. Cette solution doit être un objet SymPy de type `Expr`.
 * `checkratsimp` (booléen Python, ). 
     * Si cette clé vaut `True`, l'exercice vérifie que les valeurs rationnelles sont simplifiées dans la réponse de l'élève. Des réponses du type $4+3$, $1+\fra{1}{2}$, $\sqrt{4+3}$, $\sqrt{4}$, etc. déclencheront un message d'avertissement.
     * Valeur par défaut : `True`.
@@ -24,15 +18,14 @@ Le modèle `math/expr` est un modèle dérivé du modèle `math/input` pour des 
     * Cette clé contient le dictionnaire des symboles utilisé pour convertir la réponse de l'élève en expression SymPy.
     * Valeur par défaut : `{'e': E}`. Le symbole `e` est alors interprété comme le nombre d'Euler (objet SymPy `E`).
 
-#### Messages
-* `solution` (chaîne). Solution de l'exercice.
-* `hint` (chaîne). Indication.
 * `message` (dictionnaire de chaînes). Messages d'erreur.
     * Par défaut, les messages d'erreur sont :
-         message.Success = 
-         message.NotEqual = 
-         message.NotExpr = La réponse doit être une expression mathématique.
-         message.NotRatSimp = L'expression peut encore être simplifiée.  
+```        
+message.Success = 
+message.NotEqual = 
+message.NotExpr = La réponse doit être une expression mathématique.
+message.NotRatSimp = L'expression peut encore être simplifiée.
+ ```
 
 ## Exemples
 
