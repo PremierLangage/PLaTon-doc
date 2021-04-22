@@ -8,8 +8,9 @@ Le modèle `math/matrix` permet de créer des exercices dont la réponse est une
 
 * `before` (script Python). Script de génération des données et de la solution.
     * Le script doit définir une variable `sol` contenant la solution. Cette solution doit être un objet SymPy de type `Matrix`.
-* `resizable`
-* `size`
+* `resizable` (booléen). Redimensionnement du champ de réponse matrice.
+* `initsize` (liste de deux entiers). Dimention initiale du champ de réponse matrice.
+    * Cette clé n'est utile que si le champ de réponse matrix peut-être redimensionné (`resizable % true`). Autrement, la dimension du champ de réponse matrice est automatiquement égale à la dimension de `sol`. 
 
 ## Exemples
 
