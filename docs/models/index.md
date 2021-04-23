@@ -1,20 +1,23 @@
 
-# Liste des Modèles
+# Modèles d'exercices
 
 
-Cette liste est en cours de développement et nous pensons quelle le sera toujour !
-
-En effet pour gagner du Karma sur la plateforme il faut voir un de ses exercices arriver sur cette page !  
-Pour le moment les critères sont asser bas mais cella ne devrai pas durer ! 
-
-
-
-## Classiques
+## Exercices de base
 
 * [Question ouverte](questionouverte.md)
 * [Vrai ou faux?](vraifaux.md)
 * [CheckBox QCM Choix multiples](checkbox.md)
 * [Associations](matchlist.md)
+
+## Exercices de base (format GIFT)
+
+Le format [GIFT](https://docs.moodle.org/3x/fr/Format_GIFT) est un format développé initialement dans la communuaté Moodle. 
+
+* [Choix multiple](Select_set.md)
+* [Choix multiple avec plusieurs bonnes réponses](Multiple_choice.md)
+* [Vrai-faux](TrueOrFalse.md)
+* [Questions à réponse numérique](Numeric_set.md)
+* [Composition](Saving_entries.md)
 
 
 ## Avec un fichier CSV
@@ -35,14 +38,6 @@ Pour le moment les critères sont asser bas mais cella ne devrai pas durer !
 
 * [Matching basic](Matching.md)
 
-## QCM
-
-* [Plusieurs réponses possibles](Multiple_choice.md)
-* [Unique réponse](Select_set.md)
-
-## True or False
-
-* [True or False question](TrueOrFalse.md)
 
 ## Mathématiques
 
@@ -76,27 +71,15 @@ Pour le moment les critères sont asser bas mais cella ne devrai pas durer !
 * [Structure d'une molécule](chem/molstruct.md) (expérimental)
 
 
-## Java
-
-* [Java JUNIT Getter](Java_junit_getter.md)
-
-## Exos qui acceptent des entrées et évalue les réponses selon des approximations
-
-* [Numeric set](Numeric_set.md)
-
-## Exos libres
-
-* [Enrégistre les réponses et sans note](Saving_entries.md)
-
-## Informatiques  
+## Informatique
 
 Deux grandes stratégies de création d'exercice demandant la création de code:  
-- une stratégie utilisant un système de test (junit, doctest, ) du langage  
-  * [PLtest](pltest.md) test de fonctions et scripts *python3* en utilisant la syntaxe *doctest*.  
-  * Java test utilisant la syntaxe junit. 
-- Une stratégie utilisant les fichiers entréee sortie d'un processus, cette stratégie demande que l'enseignant écrive une solution de l'exercice: 
-  * **std_progC** pour les [exercices de programmation standard en C](../technic_doc/std_progC.md) (verison 07/2020)
-  * plsoluce utilisant un
+* une stratégie utilisant un système de test (junit, doctest, ) du langage  
+    * [PLtest](pltest.md) test de fonctions et scripts *python3* en utilisant la syntaxe *doctest*.  
+    * [Java JUNIT Getter](Java_junit_getter.md) Java test utilisant la syntaxe junit. 
+* Une stratégie utilisant les fichiers entréee sortie d'un processus, cette stratégie demande que l'enseignant écrive une solution de l'exercice: 
+    * **std_progC** pour les [exercices de programmation standard en C](../technic_doc/std_progC.md) (verison 07/2020)
+    * plsoluce
 
 ## Présentation 
 
