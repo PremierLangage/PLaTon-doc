@@ -1,20 +1,21 @@
-# Modèle `sortlist`
+# Modèle `basic/sortlist`
 
-Le modèle `sortlist` permet de fabriquer des exercices où l'élève doit ordonner des items.
+Le modèle `basic/sortlist` permet de fabriquer des exercices où l'élève doit ordonner des items.
 
-[![](sortlist1.png)](https://pl.u-pem.fr/filebrowser/demo/34354/)
+La liste des items peut être déclarée explicitement ou générée par un script Python.
 
 ## Clés du modèle
 
-#### Clés obligatoires
 * `text` (string). Enoncé de l'exercice.
-* `sortedlist` (string). Cette clé contient les items que l'élève devra ordonner. Elle peut-être déclarée comme une chaîne multilignes (chaque ligne correspondant à un item) ou une liste. Les items doivent y être entrés dans selon l'ordre que l'élève devra retrouver (l'exercice se chargeant de les mélanger).
-* `nbsample` (number). Si la clé `nbsample` est déclarée, la liste à ordonner par l'élève sera un échantillon aléatoire de `nbsample` items de `sortedlist`. Si la clé `nbsample` n'est pas déclarée, la liste à ordonner par l'élève contiendra tous les items de `sortedlist`.
+* `sortedlist` (string). Liste ordonnée des items. 
+    * Elle peut-être déclarée comme une chaîne multilignes (chaque ligne correspondant à un item) ou une liste. Les items doivent y être entrés dans selon l'ordre que l'élève devra retrouver (l'exercice se chargeant de les mélanger).
+* `nbitems` (entier). 
+    * Si la clé `nbitems` est déclarée, la liste à ordonner par l'élève sera un échantillon aléatoire de `nbsample` items de `sortedlist`. 
+    * Si la clé `nbsample` n'est pas déclarée, la liste à ordonner par l'élève contiendra tous les items de `sortedlist`.
+* `scoring`. Barème de l'exercice. 
+    * Deux barèmes sont proposés : "ExactOrder" (défaut) ou "KendallTau".
 
-#### Clés d'évaluation (optionnelles)
-* `scoring`. Cette clé définit le barème de l'exercice. Deux barèmes sont proposés : "ExactOrder" (défaut) ou "KendallTau".
-
-## Exemples simples
+## Exemples
 
 #### Ordre alphabétique
 
