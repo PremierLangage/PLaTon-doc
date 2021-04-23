@@ -8,7 +8,14 @@
 * [Vrai ou faux?](vraifaux.md)
 * [CheckBox QCM Choix multiples](checkbox.md)
 * [Associations](matchlist.md)
+* [Compléter les gab](Gab_completing.md)
+* [Matching basic](Matching.md)
 
+## Avec un fichier CSV
+
+* [CheckBox QCM Choix multiples](checkboxcsv.md)
+* [Matching list](Matching_csv.md)
+* 
 ## Exercices de base (format GIFT)
 
 Le format [GIFT](https://docs.moodle.org/3x/fr/Format_GIFT) est un format développé initialement dans la communuaté Moodle. 
@@ -18,26 +25,6 @@ Le format [GIFT](https://docs.moodle.org/3x/fr/Format_GIFT) est un format dével
 * [Vrai-faux](TrueOrFalse.md)
 * [Questions à réponse numérique](Numeric_set.md)
 * [Composition](Saving_entries.md)
-
-
-## Avec un fichier CSV
-
-* [CheckBox QCM Choix multiples](checkboxcsv.md)
-* [Irregular verbs](Irregular_verbs_csv.md)
-* [Matching list](Matching_csv.md)
-
-## Exos à clic 
-
-* [Trouve faute d'orthographe](Trouve_faute.md)
-
-## Exos à trous
-
-* [Compléter les gab](Gab_completing.md)
-
-## Exos à flèches
-
-* [Matching basic](Matching.md)
-
 
 ## Mathématiques
 
@@ -80,6 +67,12 @@ Deux grandes stratégies de création d'exercice demandant la création de code:
 * Une stratégie utilisant les fichiers entréee sortie d'un processus, cette stratégie demande que l'enseignant écrive une solution de l'exercice: 
     * **std_progC** pour les [exercices de programmation standard en C](../technic_doc/std_progC.md) (verison 07/2020)
     * plsoluce
+
+## Langues 
+
+* [Trouve faute d'orthographe](Trouve_faute.md)
+* [Irregular verbs](Irregular_verbs_csv.md)
+
 
 ## Présentation 
 
