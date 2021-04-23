@@ -15,7 +15,7 @@ La liste des items peut être déclarée explicitement ou générée par un scri
 * `scoring`. Barème de l'exercice. 
     * Deux barèmes sont proposés : "ExactOrder" (défaut) ou "KendallTau".
 
-## Exemples
+## Exemples (avec une liste déclarée explicitement)
 
 #### Ordre alphabétique
 
@@ -41,21 +41,47 @@ Cartable
 #### Premiers Ministres
 
 ~~~
-extends = model/basic/sortlist.pl
+extends = /model/basic/sortlist.pl
 
-title ==
-Premiers Ministres
-==
+title = Premiers ministres
 
 text ==
 Classer ces premiers ministres de la Ve République du plus ancien au plus récent (selon la date d'entrée en fonction).
 ==
 
-sortedlist @= premiers_ministres.txt
+nbitems % 5
 
-nbsample = 5
+sortedlist ==
+Édouard Balladur
+Alain Juppé
+Lionel Jospin
+Jean-Pierre Raffarin
+Dominique de Villepin
+François Fillon
+Jean-Marc Ayrault
+Manuel Valls
+Bernard Cazeneuve
+Édouard Philippe
+Jean Castex
+==
 
-scoring = "KendallTau"
-
-demo = https://pl.u-pem.fr/filebrowser/demo/25075/
+scoring = KendallTau
 ~~~
+
+## Exemples (avec une liste générée par un script)
+
+```
+extends = /model/basic/sortlist.pl
+
+title = Nombres
+
+text ==
+Classer les nombres suivants du plus petit au plus grand.
+==
+
+before ==
+sortedlist = list(range(1, 100))
+==
+
+nbitems % 5
+```
