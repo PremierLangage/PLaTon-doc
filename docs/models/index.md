@@ -5,10 +5,13 @@
 ## Exercices de base
 
 * [Vrai ou faux?](vraifaux.md)
+* [Choix multiple avec plusieurs bonnes réponses](basic/checkbox_rw.md)
 * [CheckBox QCM Choix multiples](checkbox.md)
+* [Liste à ordonner](basic/sortlist.md)
 * [Associations](matchlist.md)
 * [Compléter les gab](Gab_completing.md)
 * [Matching basic](Matching.md)
+* [Etiquettes à déplacer](basic/dragdrop.md)
 
 ## Avec un fichier CSV
 
