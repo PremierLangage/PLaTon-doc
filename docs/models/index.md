@@ -4,7 +4,6 @@
 
 ## Exercices de base
 
-* [Question ouverte](questionouverte.md)
 * [Vrai ou faux?](vraifaux.md)
 * [CheckBox QCM Choix multiples](checkbox.md)
 * [Associations](matchlist.md)
@@ -24,7 +23,7 @@ Le format [GIFT](https://docs.moodle.org/3x/fr/Format_GIFT) est un format dével
 * [Choix multiple avec plusieurs bonnes réponses](Multiple_choice.md)
 * [Vrai-faux](TrueOrFalse.md)
 * [Questions à réponse numérique](Numeric_set.md)
-* [Composition](Saving_entries.md)
+* [Composition](Saving_entries.md) / [Question ouverte](questionouverte.md)
 
 ## Mathématiques
 
