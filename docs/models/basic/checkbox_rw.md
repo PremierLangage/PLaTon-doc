@@ -13,7 +13,7 @@ Le modèle `basic/checkbox_rw.pl` permet de fabriquer des exercices à choix mul
 * `wrong` (chaîne multilignes). 
     * Cette clé contient une liste de mauvaises réponses (chaque ligne correspondant à une réponse).
 * `nbitems` (entier).
-* `nbright` (entier ou liste de deux entiers).
+* `maxright` (entier).
 * `scoring`
 
 ## Exemples
@@ -26,8 +26,8 @@ Indiquer parmi les noms suivants ceux qui sont des noms valides pour une variabl
 ==
 
 nbitems % 5
-
-nbright % [2, 3]
+minright % 2
+maxright % 3
 
 right ==
 bonjour
@@ -48,5 +48,24 @@ def
 for
 good-afternoon
 f()
+==
+```
+
+```
+extends = /model/basic/checkbox_rw.pl
+
+title = Multiples de 3
+
+nbitems % 5
+minright % 1
+maxright % 4
+
+before ==
+right = [str(n) for n in range(50, 100) if n % 3 == 0]
+wrong = [str(n) for n in range(50, 100) if n % 3 != 0]
+==
+
+text ==
+Parmi les nombres suivants, lesquels sont des multiples de 3 ?
 ==
 ```
