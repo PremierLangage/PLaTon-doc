@@ -60,7 +60,8 @@ Le format [GIFT](https://docs.moodle.org/3x/fr/Format_GIFT) est un format dével
 
 ## Informatique
 
-Deux grandes stratégies de création d'exercice demandant la création de code:  
+Deux grandes stratégies de création d'exercice demandant la création de code:
+
 * une stratégie utilisant un système de test (junit, doctest, ) du langage  
     * [PLtest](pltest.md) test de fonctions et scripts *python3* en utilisant la syntaxe *doctest*.  
     * [Java JUNIT Getter](Java_junit_getter.md) Java test utilisant la syntaxe junit. 
