@@ -1,6 +1,6 @@
-# Modèle `basic/checkbox_rw.pl`
+# Modèle `basic/checkbox_rw`
 
-Le modèle `basic/checkbox_rw.pl` permet de fabriquer des exercices à choix multiples (avec plusieurs réponses possibles).
+Le modèle `basic/checkbox_rw` permet de fabriquer des exercices à choix multiples (avec plusieurs réponses possibles).
 
 Dans ce modèle, une liste de bonnes réponses et une liste de mauvaises réponses doivent être fournies. Ces listes peuvent être déclarées explicitement ou générées par un script Python.
 
@@ -14,11 +14,14 @@ Dans ce modèle, une liste de bonnes réponses et une liste de mauvaises répons
     * Cette clé contient une liste de bonnes réponses (chaque ligne correspondant à une réponse).
 * `wrong` (chaîne multilignes). 
     * Cette clé contient une liste de mauvaises réponses (chaque ligne correspondant à une réponse).
-* `nbitems` (entier).
-* `maxright` (entier).
-* `scoring`
+* `before` (script Python). Script de génération des données et de la solution.
+    * Ce script est facultatif. Il sert à générer les listes `right` et `wrong` si celles-ci ne sont pas déclarées explicitement.
+* `nbitems` (entier). Nombre de choix.
+* `maxright` (entier). Nombre maximum de bonnes réponses.
+* `maxright` (entier). Nombre minimum de bonnes réponses.
+* `scoring` (chaîne). Barème.
 
-## Exemples
+## Exemples (avec déclaration explicite des listes de réponses)
 
 ```
 extends = /model/basic/checkbox_rw.pl
@@ -52,6 +55,8 @@ good-afternoon
 f()
 ==
 ```
+
+## Exemples (avec génération des listes de réponses)
 
 ```
 extends = /model/basic/checkbox_rw.pl
