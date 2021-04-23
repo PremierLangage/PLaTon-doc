@@ -2,6 +2,8 @@
 
 Le modèle `basic/checkbox_rw.pl` permet de fabriquer des exercices à choix multiples (avec plusieurs réponses possibles).
 
+Dans ce modèle, une liste de bonnes réponses et une liste de mauvaises réponses doivent être fournies. Ces listes peuvent être déclarées explicitement ou générées par un script Python.
+
 ## Clés du modèle
 
 * `title` (chaîne). Titre de l'exercice.
