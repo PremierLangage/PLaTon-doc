@@ -14,10 +14,13 @@ Le placement des étiquettes et des zones de dépôt dans l'énoncé se fait par
     * Pour chacune de ces valeurs, une étiquette est créée. Ces étiquettes sont numérotées en partant de zéro.
     * Pour chaque valeur de `sol` non contenue dans `labval`, une étiquette est également créée (en poursuivant la numérotation).
 * `text` (chaîne). Enoncé de l'exercice.
-* `form` (chaîne).
-    * L'insertion de la zone de dépôt i se fait grâce à la balise `{{ drops[i] }}`.
+* `form` (chaîne). Zone de réponse de l'exercice.
+    * Les codes HTML correspondant aux zones de dépôt et aux étiquettes se trouvent respectivement dans les listes `drops` et `labels`.
+    * Pour insérer la i-ème zone de dépôt, il suffit donc d'utiliser la balise `{{ drops[i] }}`.
+    * Il est également possible d'utiliser des boucles.
 * `shuffled` (booléen). 
-    * Si `shuffle` vaut `true`, la liste des étiquettes est mélangée. Sinon, elle est laissée dans l'ordre entré dans `labelcontents`. Par défaut, `shuffle` vaut `false`.
+    * Si `shuffled` vaut `true`, la liste des étiquettes est mélangée. Sinon, elle est laissée dans l'ordre entré dans la clé `labval` (et la clé `sol`).
+    * Par défaut, `shuffled` vaut `false`.
 
 ## Exemples
 
