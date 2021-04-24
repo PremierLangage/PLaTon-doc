@@ -25,25 +25,31 @@ Le placement des étiquettes et des zones de dépôt dans l'énoncé se fait par
 ## Exemples
 
 ```
-title = Homophones : ces ou c'est
+extends = /model/basic/dragdrop.pl
+
+title = Génétique
 
 text ==
-Compléter les phrases suivantes avec les étiquettes proposées.
+Compléter le texte suivante avec les bonnes étiquettes.
 ==
 
 form ==
-<ul>
-<li> Je voudrais {{ drops[0] }} chausures pour mon anniversaire. </li>
-<li> Tu est toujours en retard, {{ drops[1] }} agaçant ! </li>
-<li> Je n'aime pas {{ drops[2] }} méthodes. </li>
-</ul>
+<p> 
+L’ensemble des gènes caractéristiques de l’espèce à laquelle appartient un organisme, constitue son {{ drops[0] }}. 
+Chez les individus d’une même espèce, un gène peut cependant exister sous différentes formes présentant de légères modifications de séquence : les allèles. 
+L’ensemble des allèles d’un individu définit son {{ drops[1] }}. Lorsqu’ils s’expriment, lors de la synthèse des protéines, les gènes participent à la construction de l’individu et à la mise en place de son {{ drops[2] }}. 
+</p>
 
-{{ labels[0] }} {{ labels[1] }}
+{% for label in labels %} {{ label }} {% endfor %}
 ==
 
 sol ==
-ces
-c'est
-ces
+génome
+génotype
+phénotype
+==
+
+labval ==
+caryotype
 ==
 ```
