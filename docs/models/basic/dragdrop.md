@@ -7,10 +7,15 @@ Le placement des étiquettes et des zones de dépôt dans l'énoncé se fait par
 ## Clés du modèle
 
 * `sol` (chaîne multilignes). Valeurs attendues dans les zones de dépôt.
-    * Cette clé contient les valeurs des solutions attendues dans les zones de dépôt (chaque ligne correspondant à une zone de dépôt)
+    * Cette clé contient les valeurs des solutions attendues dans les zones de dépôt (chaque ligne correspondant à une valeur).
+    * Pour chacune de ces valeurs, une zone de dépôt est créée. Ces zones sont numérotées en partant de zéro.
 * `labval` (chaîne multilignes). Valeur des étiquettes.
-    * Cette clé contient les valeurs des étiquettes (chaque ligne correspondant à une étiquette).
-    * Les valeurs de `sol` non contenues dans `labval` sont ajoutées automatiquement.
+    * Cette clé contient les valeurs des étiquettes (chaque ligne correspondant à une valeur).
+    * Pour chacune de ces valeurs, une étiquette est créée. Ces étiquettes sont numérotées en partant de zéro.
+    * Pour chaque valeur de `sol` non contenue dans `labval`, une étiquette est également créée (en poursuivant la numérotation).
+* `text` (chaîne). Enoncé de l'exercice.
+* `form` (chaîne).
+    * L'insertion de la zone de dépôt i se fait grâce à la balise `{{ drops[i] }}`.
 * `shuffled` (booléen). 
     * Si `shuffle` vaut `true`, la liste des étiquettes est mélangée. Sinon, elle est laissée dans l'ordre entré dans `labelcontents`. Par défaut, `shuffle` vaut `false`.
 
