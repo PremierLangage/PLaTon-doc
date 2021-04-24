@@ -1,19 +1,22 @@
 # Modèle `basic/sortlist`
 
-Le modèle `basic/sortlist` permet de fabriquer des exercices où l'élève doit ordonner des items.
-
-La liste des items peut être déclarée explicitement ou générée par un script Python.
+Le modèle `basic/sortlist` permet de fabriquer des exercices où l'élève doit ordonner des items. La liste des items peut être déclarée explicitement ou générée par un script Python.
 
 ## Clés du modèle
 
-* `text` (string). Enoncé de l'exercice.
-* `sortedlist` (string). Liste ordonnée des items. 
-    * Elle peut-être déclarée comme une chaîne multilignes (chaque ligne correspondant à un item) ou une liste. Les items doivent y être entrés dans selon l'ordre que l'élève devra retrouver (l'exercice se chargeant de les mélanger).
+* `title` (chaîne). Titre de l'exercice.
+    * Le titre doit décrire la tâche à effectuer dans l'exercice. Il est destiné au référencement de l'exercice.
+* `text` (chaîne). Enoncé de l'exercice. 
+* `sortedlist` (chaîne multiligne). Items à ordonner. 
+    * Chaque ligne correspond à un item. Les items doivent y être entrés dans selon l'ordre que l'élève devra retrouver (l'exercice se chargeant de les mélanger).
 * `nbitems` (entier). 
-    * Si la clé `nbitems` est déclarée, la liste à ordonner par l'élève sera un échantillon aléatoire de `nbsample` items de `sortedlist`. 
-    * Si la clé `nbsample` n'est pas déclarée, la liste à ordonner par l'élève contiendra tous les items de `sortedlist`.
-* `scoring`. Barème de l'exercice. 
+    * Si la clé `nbitems` contient un entier, la liste à ordonner par l'élève sera un échantillon aléatoire de `nbitems` items de `sortedlist`. 
+    * Si la clé `nbitems` vaut `null`, la liste à ordonner par l'élève contiendra tous les items de `sortedlist`.
+    * Par défaut la clé `nbitems` vaut `null`.
+* `scoring` (chaîne). Barème de l'exercice. 
     * Deux barèmes sont proposés : "ExactOrder" (défaut) ou "KendallTau".
+* `before` (script Python). Script de génération des clés.
+    * Le script doit définir une variable `sortedlist`, de type liste, contenant la liste des items (dans l'ordre souhaité). 
 
 ## Exemples (avec une liste déclarée explicitement)
 
@@ -46,7 +49,8 @@ extends = /model/basic/sortlist.pl
 title = Premiers ministres
 
 text ==
-Classer ces premiers ministres de la Ve République du plus ancien au plus récent (selon la date d'entrée en fonction).
+Classer ces premiers ministres de la Ve République du plus ancien 
+au plus récent (selon la date d'entrée en fonction).
 ==
 
 nbitems % 5
