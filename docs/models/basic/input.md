@@ -6,16 +6,18 @@ Le modèle `basic/input` permet de fabriquer des exercices avec un champ de rép
 
 ## Clés du modèle
 
-#### Clés obligatoires
-* `text` (string). Enoncé de l'exercice.
+* `text` (chaîne). Enoncé de l'exercice.
 * `sol` (chaîne). Solution de l'exercice.
+    * Chaque ligne correspond à une réponse acceptée. 
+* `casesensitive` (booléen).
+    *  Si cette clé vaut `false`, l'évaluation de la réponse ne tient pas compte de la casse. 
+    *  Par défaut, cette clé vaut `false`.
+* `diffmeasure` ("EditDist", "EditRatio"). Msure utilisée pour calculer l'écart entre la réponse de l'élève et la solution. 
+    * Par défaut cette clé vaut `"EditDist"`.
+* `tol` (nombre). Ecart maximal accepté (pour le type mesure choisi dans `diffmeasure`). 
+    * Par défaut cette clé vaut `0`.
 
-#### Clés d'évaluation (optionnelles)
-* `casesensitive` (boolean). Si cette clé vaut `false`, l'évaluation de la réponse ne tient pas compte de la casse. Par défaut, cette clé vaut `false`.
-* `diffmeasure` ("EditDist", "EditRatio"). Type de mesure utilisée pour calculer l'écart entre la réponse entrée par l'élève et la solution. Par défaut cette clé vaut `"EditDist"`.
-* `tol` (nombre). ToléranceEcart maximal accepté (pour le type mesure choisi dans `diffmeasure`). Par défaut cette clé vaut `0`.
-
-
+TODO : Un 2e seuil de tolérance qui déclencherait un avertissement ?
 
 ## Exemples
 
