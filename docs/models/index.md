@@ -4,6 +4,7 @@
 
 ## Exercices de base
 
+* [Réponse textuelle](basic/input.md)
 * [Vrai ou faux?](vraifaux.md)
 * [Choix multiple avec plusieurs bonnes réponses](basic/checkbox_rw.md)
 * [CheckBox QCM Choix multiples](checkbox.md)
@@ -17,7 +18,7 @@
 
 * [CheckBox QCM Choix multiples](checkboxcsv.md)
 * [Matching list](Matching_csv.md)
-* 
+
 ## Exercices de base (format GIFT)
 
 Le format [GIFT](https://docs.moodle.org/3x/fr/Format_GIFT) est un format développé initialement dans la communuaté Moodle. 
