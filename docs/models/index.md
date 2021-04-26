@@ -9,7 +9,6 @@
 * [Associations](matchlist.md) / [Matching basic](Matching.md)
 * [Compléter les gab](Gab_completing.md)
 
-
 * [Réponse textuelle](basic/input.md)
 * [Choix multiple avec plusieurs bonnes réponses](basic/checkbox_rw.md)
 * [Correspondances](basic/matchlist.md)
