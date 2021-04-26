@@ -1,22 +1,16 @@
 # Modèle `basic/checkbox_rw`
 
-Le modèle `basic/checkbox_rw` permet de fabriquer des exercices à choix multiples (avec plusieurs réponses possibles).
-
-Dans ce modèle, une liste de bonnes réponses et une liste de mauvaises réponses doivent être fournies. Ces listes peuvent être déclarées explicitement ou générées par un script Python.
+Le modèle `basic/checkbox_rw` permet de fabriquer des exercices à choix multiples (avec plusieurs réponses possibles). Les données de l'exercices sont fournies sous la forme d'une liste de bonnes réponses et d'une liste de mauvaises réponses.
 
 ## Clés du modèle
 
-* `title` (chaîne). Titre de l'exercice.
-    * Le titre doit décrire la tâche à effectuer dans l'exercice. Il est destiné au référencement de l'exercice.
-* `text` (chaîne). Enoncé de l'exercice. 
-    * La mise en forme avancée du texte s'effectue avec des balises Markdown ou HTML.
-* `right` (chaîne multilignes). Liste de bonnes réponses.
-    * Cette clé contient une liste de bonnes réponses (chaque ligne correspondant à une réponse).
-* `wrong` (chaîne multilignes). Liste de mauvaises réponses.
-    * Cette clé contient une liste de mauvaises réponses (chaque ligne correspondant à une réponse).
-* `before` (script Python). Script de génération des données et de la solution.
-    * Ce script est facultatif. Il sert à générer les listes `right` et `wrong` si celles-ci ne sont pas déclarées explicitement.
-* `nbitems` (entier). Nombre de choix.
+Les clés `title`, `text` et `before` ont leur signification et leur syntaxe usuelles.
+
+* `right` (chaîne ou liste de chaînes). Liste de bonnes réponses.
+    * Cette clé contient une liste de bonnes réponses sous la forme d'une chaîne multilignes (chaque ligne correspondant à une réponse) ou d'une liste de chaînes.
+* `wrong` (chaîne ou liste de chaînes). Liste de mauvaises réponses.
+    * Cette clé contient une liste de mauvaises réponses sous la forme d'une chaîne multilignes (chaque ligne correspondant à une réponse) ou d'une liste de chaînes.
+* `nbitems` (entier). Nombre de choix proposés.
 * `maxright` (entier). Nombre maximum de bonnes réponses parmi les choix.
 * `minright` (entier). Nombre minimum de bonnes réponses parmi les choix.
 * `scoring` (chaîne). Barème de l'exercice.
