@@ -16,7 +16,8 @@
 * [Correspondances](basic/matchlist.md)
 * [Liste à ordonner](basic/sortlist.md)
 * [Etiquettes à déplacer](basic/dragdrop.md)
-* [Texte à trous](basic/filltext.md)
+* [Texte à compléter](basic/filltext.md)
+* [Texte à sélectionner](basic/seltext.md)
 
 
 ## Avec un fichier CSV
