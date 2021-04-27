@@ -12,8 +12,8 @@ Les clés `title`, `text` et `before` ont leur signification et leur syntaxe usu
 * `séparator` (chaîne). Séparateur des éléments d'une correspondance.
     * Par défaut, le séparateur est la virgule (`,`).
 * `nbmatches` (entier ou null). 
-    * Si la clé `nbitems` contient un entier, la liste à ordonner par l'élève sera un échantillon aléatoire de `nbmatches` items de `sortedlist`. 
-    * Si la clé `nbitems` vaut `null`, la liste des correspondances sera égale à `matches`.
+    * Si la clé `nbmatches` contient un entier, la liste à ordonner par l'élève sera un échantillon aléatoire de `nbmatches` items de `sortedlist`. 
+    * Si la clé `nbmatches` vaut `null`, la liste des correspondances sera égale à `matches`.
     * Par défaut la clé `nbmatches` vaut `null`.
 * `scoring` (chaîne). Barème de l'exercice. 
     * `AllOrNothing` : renvoie un score de 100 si toutes les bonnes réponses sont sélectionnées et aucune mauvaise réponse n'est sélectionnée ; renvoie un score de 0 sinon.
