@@ -20,7 +20,8 @@ Les clés `title`, `text` et `before` ont leur signification et leur syntaxe usu
     * `RightMinusWrong` : renvoie le nombre de bonnes réponses sélectionnés moins le nombre de mauvaises réponses sélectionnées, le tout divisé par le nombre total de bonnes réponses et ramené entre 0 et 100.
     * Par défaut, le barème est `RightMinusWrong`.
 
-TODO : Une option `strip` ou `skipinitialspace` pour éliminer les espaces superflus dans `matches.
+TODO : Une option `strip` ou `skipinitialspace` pour éliminer les espaces superflus dans `matches`.
+
 TODO : Revoir les barèmes (Comment compter une source non reliée ? une cible non reliée ? etc.)
 
 ## Exemples (avec une liste déclarée explicitement)
