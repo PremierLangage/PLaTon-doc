@@ -6,9 +6,9 @@ Le modèle `basic/checkbox_rw` permet de fabriquer des exercices à choix multip
 
 Les clés `title`, `text` et `before` ont leur signification et leur syntaxe usuelles.
 
-* `right` (chaîne ou liste de chaînes). Liste de bonnes réponses.
+* `right` (chaîne ou liste). Liste de bonnes réponses.
     * Cette clé contient une liste de bonnes réponses sous la forme d'une chaîne multilignes (chaque ligne correspondant à une réponse) ou d'une liste de chaînes.
-* `wrong` (chaîne ou liste de chaînes). Liste de mauvaises réponses.
+* `wrong` (chaîne ou liste). Liste de mauvaises réponses.
     * Cette clé contient une liste de mauvaises réponses sous la forme d'une chaîne multilignes (chaque ligne correspondant à une réponse) ou d'une liste de chaînes.
 * `nbitems` (entier). Nombre de choix proposés.
 * `maxright` (entier). Nombre maximum de bonnes réponses parmi les choix.
