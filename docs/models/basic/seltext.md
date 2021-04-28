@@ -1,26 +1,31 @@
 # Modèle `basic/seltext`
 
-Le modèle `basic/seltext` permet de fabriquer des exercices où l'élève doit sélectionner des unités dans un texte.
+Le modèle `basic/seltext` permet de fabriquer des exercices où l'élève doit sélectionner des unités (mots, groupes de mots, groupes de lettres) dans un texte.
 
 ## Clés du modèle
 
 * `seltext` (chaîne). Texte à sélectionner.
     * Par défaut les unités sélectionnables du texte sont les mots. Pour définir une unité sélectionnable différente d'un mot, il suffit d'entourer cette unité d'accolades.
-    * Les unités à sélectionner doivent être indiquées entre double accolades.
+    * Les unités solutions doivent être indiquées entre croisillons (`#`).
 
 ## Exemples
 
 ```
 extends = /model/basic/seltext.pl
 
-title = Grec ancien
+title = Compréhension d'un texte
 
 text ==
-Identifier les adjectifs comparatifs dans le texte ci-dessous.
+Sélectionner dans ce texte les mots qui désignent Van Gogh
 ==
 
 seltext == 
-Δαρείου καὶ Παρυσάτιδος γίγνονται παῖδες δύο, {{πρεσβύτερος}} μὲν Ἀρταξέρξης, {{νεώτερος}} δὲ Κῦρος· 
-ἐπεὶ δὲ ἠσθένει Δαρεῖος καὶ ὑπώπτευε τελευτὴν τοῦ βίου, ἐβούλετο τὼ παῖδε ἀμφοτέρω παρεῖναι.
+En 1888, #Vincent Van Gogh# peint {«Nuit Etoilée»}. 
+Il est difficile de représenter {la nuit} {en couleurs}.
+#L'artiste# installait {son chevalet} lorsque {la nuit} tombait.
+Mais comment peindre sans lampadaire ? 
+#Le peintre# a eu pour cela {une idée lumineuse}. 
+On dit qu'#il# a planté {des bougies} sur {le rebord} de {son chapeau}. 
+#L'homme# a ainsi pu peindre grâce {aux minuscules flammes}
 ==
 ```
