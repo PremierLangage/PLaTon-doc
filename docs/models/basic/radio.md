@@ -8,7 +8,7 @@ Les clés `title`, `text` et `before` ont leur signification et leur syntaxe usu
 
 * `items` (chaîne ou liste). Items de la question
     * Cette clé contient une liste d'items sous la forme d'une chaîne multilignes (chaque ligne correspondant à un choix) ou d'une liste.
-* `indsol` (liste). Indice du bon item.
+* `indsol` (entier). Indice du bon item.
     * L' indice se rapporte à l'ordre des items dans la clé `items`. L'indexation commence à 0.
     * Par défaut `indsol` vaut 0.
 * `shuffled` (booléen). Mélange des items.
@@ -107,5 +107,24 @@ Royaume-Uni,le,Londres
 Slovaquie,la,Bratislava
 Suède,la,Stockholm
 Suisse,la,Berne
+==
+```
+
+```
+extends = /model/basic/radio.pl
+
+title = Géographie
+
+@ /demo/data/pays_europe.csv
+
+before ==
+with open('pays_europe.csv', newline='') as f:
+    datasample = csv_sample(f, 4)
+capitale = datasample[0]['capitale']
+items = [row['pays'] for row in datasample]
+==
+
+text ==
+Quel pays a pour capitale {{capitale}} ?
 ==
 ```
