@@ -8,6 +8,8 @@ Le modèle `basic/seltext` permet de fabriquer des exercices où l'élève doit 
     * Par défaut les unités sélectionnables du texte sont les mots. Pour définir une unité sélectionnable différente d'un mot, il suffit d'entourer cette unité d'accolades.
     * Les unités solutions doivent être indiquées entre croisillons (`#`).
 
+TODO : Options pour changer les délimiteurs.
+
 ## Exemples
 
 ```
