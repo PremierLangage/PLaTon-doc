@@ -6,7 +6,7 @@ Après validation de la réponse :
 
 "Bonne réponse." en vert  -> réponse correcte 
 
-"Mauvaise réponse. La réponse n'est pas égale à la solution.La solution est ..." -> réponse fausse
+"Mauvaise réponse. La réponse n'est pas égale à la solution.La solution est ..." en rouge -> réponse fausse
 
 Cliquer sur l'image suivante pour tester : 
 
