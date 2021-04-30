@@ -48,7 +48,7 @@ Le format [GIFT](https://docs.moodle.org/3x/fr/Format_GIFT) est un format dével
     * [Nombre complexe](math/complex.md)
     * [Polynôme](math/poly.md)
     * [Ensemble fini](math/set.md)
-    * [Intervalle](math/rset.md)
+    * [Intervalle](math/interval.md)
     * [N-uplet](math/tuple.md)
 
 ### Matrice
