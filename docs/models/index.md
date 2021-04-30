@@ -10,6 +10,7 @@
 * [Compléter les gab](Gab_completing.md)
 
 * [Réponse textuelle](basic/input.md)
+* [Réponse textuelle avec suggestion](basic/inputselect.md)
 * [Choix multiple avec une seule sélection](basic/radio.md)
 * [Choix multiple avec plusieurs sélections (1)](basic/checkbox.md)
 * [Choix multiple avec plusieurs sélections (2)](basic/checkbox_rw.md)
