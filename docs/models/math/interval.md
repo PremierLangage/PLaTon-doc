@@ -2,7 +2,7 @@
 
 Le modèle `math/interval` est un modèle dérivé du modèle `math/input`. Le script d'évaluation `evaluator` y est prédéfini. Il compare la réponse de l'élève à une solution attendue de type intervalle ou réunion d'intervalles.
 
-Attention : Les intervalles doivent, pour l'instant, être saisies en utilisant la notation parenthèse pour les bornes ouvertes.
+Attention : Les intervalles doivent, pour l'instant, être saisis en utilisant la notation parenthèse pour les bornes ouvertes.
 
 ## Clés du modèle
 
