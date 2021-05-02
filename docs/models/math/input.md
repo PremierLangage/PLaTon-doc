@@ -35,6 +35,9 @@ Le modèle `math/input` permet de créer des exercices dont la réponse est une 
 * `input_prefix` (chaîne). Chaîne placée avant le champ de réponse. 
     * Par défaut, cette clé contient la chaîne `Réponse :`. 
     * Elle offre les mêmes possibilités de mise en forme que la clé `text`.
+* `keypad` (liste de dictionnaires). Clavier virtuel. 
+    * Par défaut, cette clé contient une lsite vide. 
+    * Les éléments de la liste sont des dictionnaires représentant les boutons du clavier. Les clés de ces dictionnaires sont `label`, `action` et `value`. 
 
 #### Messages
 * `solution` (chaîne). Message de correction de l'exercice.
