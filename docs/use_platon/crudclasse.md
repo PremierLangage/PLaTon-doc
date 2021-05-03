@@ -12,7 +12,8 @@ La classe donne accès aux informations collectées sur le travail des élèves 
 
 
 Propriétés **obligatoires** de la classe :   
-un nom de la classe soyez concit et précis (pas plus de 30 caractères).   
+un nom de la classe soyez concit et précis (pas plus de 30 caractères).  
+un nom long (par defaut égal au nom).
 une description (Cette description est utilisée pour retrouver des classes similaires clustering) soyez donc généreux dans l'utilisation de mots clefs.
 
 Une classe à un **[niveau](../concept/niveau.md)** : le niveau scolaire des élèves (liste déroulante + champs libre).
