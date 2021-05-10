@@ -4,8 +4,6 @@ Le modèle `math/expr` est un modèle dérivé du modèle `math/input`. Le scrip
 
 ## Clés du modèle
 
-## Clés du modèle
-
 #### Clés de base
 * `title` (chaîne). Titre de l'exercice.
     * Le titre doit décrire la tâche à effectuer dans l'exercice. Il est destiné au référencement de l'exercice.
@@ -36,7 +34,7 @@ Le modèle `math/expr` est un modèle dérivé du modèle `math/input`. Le scrip
 * `input_embed` (chaîne). Formule dans laquelle est insérée le champ de réponse. 
 
 #### Evluation de réponse
-* `checkratsimp` (booléen Python, ). 
+* `checkratsimp` (booléen Python). 
     * Si cette clé vaut `True`, l'exercice vérifie que les valeurs rationnelles sont simplifiées dans la réponse de l'élève. Des réponses du type $4+3$, $1+\fra{1}{2}$, $\sqrt{4+3}$, $\sqrt{4}$, etc. déclencheront un message d'avertissement.
     * Valeur par défaut : `True`.
 * `unauthorized_func` (liste de chaînes Python). 
