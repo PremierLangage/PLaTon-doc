@@ -154,3 +154,14 @@ En suite vous devez le "charger" dans votre exercice avec la syntaxe :
 ~~~
 $ cheminsurplatondufichier
 ~~~
+
+
+## La balise extends
+
+~~~
+extends= nomdefichier.pl 
+~~~
+
+Charge toute les clefs de l'exercice indiqué 'nomdefichier.pl' préalablement aux valeur du fichier courrant et ce de façon récursive.
+
+
