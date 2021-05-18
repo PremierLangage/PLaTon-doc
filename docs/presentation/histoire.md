@@ -23,6 +23,15 @@ choses simples pour se concentrer sur les choses "évoluées". PLaTon est égale
 l'augmentation contante des étudiants inscrits dans les filières informatiques de L'U.P.E.M., il fallait 
 concevoir un outil adapté.
 
+## Des besoins non satisfaits 
+
+Le rapport Villani-Torossian sur l’enseignement des mathématiques, explicite deux besoins numériques :  
+L’**individualisation** des parcours d’apprentissage permet des contextes variés d’apprentissage, de gérer la diversité cognitive des élèves et la mise en place de parcours et d’activités adaptatifs en fonction du besoin de chaque élève (difficultés, rythme d’apprentissage et de mémorisation). L’élève dispose ainsi d’un tuteur personnel.
+
+La **validation à la demande** des interactions élève-savoir : ces outils permettent de développer les automatismes en faisant travailler la répétition avec un diagnostic non stigmatisant tout au long de l’entraînement. L’élève peut vaincre sa peur et retrouver confiance en lui. 
+
+
+
 
 ## Des technologies déjà présentes
 
