@@ -24,7 +24,8 @@ contenant l'ensemble des variables de l'exercice et response l'ensemble des rép
 Par exemple, en supposant que le PL utilise un champ `form_answer`, la fonction evalfunc aura accès a la variable `response['answer']`.
 
 
-* Avantages :
+* Avantages :  
+    * Possibilité d'utiliser un ```return (100,"feedback") 
     * Possibilité d'utilisé les modules built-in ainsi que d'importer tout fichier
       ajouté à l'exercice grâce à la syntaxe `@ monscript.py`
     * Permet de déclarer des clés de type : 
