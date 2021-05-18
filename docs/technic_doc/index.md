@@ -13,7 +13,6 @@ d'autres sont plus spécifiques.
 * [Paramètres dans les ressources](pl_settings.md)
 * [Ecrire une Feuille d'Exercices](pltp.md) (assemblage d'un ou plusieurs exercices)
 * [Tester un exercice](pl_testing.md) (Créer des tests automatiques pour vos exercices)
-* [Test](doc.html)
 
 ## Template généraux
 
