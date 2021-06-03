@@ -4,7 +4,7 @@ Le modèle `basic/radio` permet de fabriquer des exercices à choix multiple (av
 
 ## Clés du modèle
 
-            <table class="table">
+<table class="table">
   <thead>
     <tr>
       <th scope="col">Clé</th>
