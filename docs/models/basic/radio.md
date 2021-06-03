@@ -4,6 +4,41 @@ Le modèle `basic/radio` permet de fabriquer des exercices à choix multiple (av
 
 ## Clés du modèle
 
+            <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Clé</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Défaut</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <th scope="row"> indsol </th>
+      <td> Indice de la solution dans la liste des items. Note : La numérotation commence à 0. </td>
+      <td> int </td>
+      <td> 0 </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> items </th>
+      <td> Liste des items. </td>
+      <td> (str, list[str]) </td>
+      <td>  </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> shuffled </th>
+      <td> Valeur indiquant si les items seront mélangés. </td>
+      <td> bool </td>
+      <td> True </td>
+    </tr>
+
+  </tbody>
+</table>
+
 Les clés `title`, `text` et `before` ont leur signification et leur syntaxe usuelles.
 
 * `items` (chaîne ou liste). Items de la question
