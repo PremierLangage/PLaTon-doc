@@ -1,6 +1,20 @@
 # Modèle `math/expr`
 
-Le modèle `math/expr` permet de fabriquer des exercices (aléatoires) où la réponse est une expression algébrique ou analytique (expression impliquant des nombres, des variables, des opérations algébriques et des fonctions). Les données et la solution de l'exercice doivent être générées par un script Python. L'évaluation de la réponse de l'élève est automatique.
+Le modèle `math/expr` permet de fabriquer des exercices aléatoires où la réponse est une expression mathématique (expression impliquant des nombres, des variables, des opérations algébriques et des fonctions).
+
+## Description
+
+Les données et la solution de l'exercice doivent être générées par un script Python contenu dans la clé `before`. Pour définir et manipuler des expressions mathématiques, on utilise la [bibliothèque SymPy](https://www.sympy.org/en/index.html). En particulier, la solution doit être définie comme un objet SymPy de type `Expr`.
+
+L'énoncé de l'exercice doit être saisi dans la clé `question`.
+
+    * L'insertion de formules mathématiques s'effectue avec du code LaTeX dans les balises `$!...!$` (mode en ligne) ou `$$...$$` (mode équation).
+    * L'insertion dynamique de données produites par le script `before` s'effectue à l'aide des balises `{{...}}`. Par exemple, si la variable `var` a été définie dans le script `before`, la commande `{{ var }}` permet d'insérer sa représentation textuelle dans l'énoncé.
+    * Par ailleurs, un filtre `latex` permet d'insérer la représentation LaTeX d'un objet SymPy. Par exemple, si l'objet SymPy `obj` a été défini dans le script `before`, la commande `{{ obj|latex }}` permet d'insérer sa représentation LaTeX dans l'énoncé.
+    * La mise en forme avancée du texte s'effectue avec des balises HTML.
+
+L'évaluation de la réponse de l'élève est automatique.
+
 
 ## Clés du modèle
 
@@ -9,7 +23,6 @@ Le modèle `math/expr` permet de fabriquer des exercices (aléatoires) où la r�
     * Le titre doit décrire la tâche à effectuer dans l'exercice. Il est destiné au référencement de l'exercice.
 * `before` (script Python). Script de génération des données et de la solution.
     * Ce script est exécuté au lancement de l'exercice et permet de générer les données et la solution de l'exercice.
-    * Le script doit définir une variable `sol` contenant la solution. Cette solution doit être un objet SymPy de type `Expr`.
     * En plus de la [bibliothèque Python standard](https://docs.python.org/fr/3/library/index.html), un certain nombre de paquets et de modules sont disponibles. En particulier :
         * `sympy` : calcul symbolique (https://docs.sympy.org)
         * `plrandom` : fonctions aléatoires (bibliothèque locale)
@@ -19,10 +32,7 @@ Le modèle `math/expr` permet de fabriquer des exercices (aléatoires) où la r�
         * `mplsympy` : génération d'objets graphiques à partir d'objets SymPy (bibliothèque locale)
     * Les fonctions les plus courantes de ces bibliothèques sont automatiquement importées (voir annexe ci-après).
 * `question` (chaîne). Enoncé de l'exercice. 
-    * L'insertion de formules mathématiques s'effectue avec du code LaTeX dans les balises `$!...!$` (mode en ligne) ou `$$...$$` (mode équation).
-    * L'insertion dynamique de données produites par le script `before` s'effectue à l'aide des balises `{{...}}`. Par exemple, si la variable `var` a été définie dans le script `before`, la commande `{{ var }}` permet d'insérer sa représentation textuelle dans l'énoncé.
-    * Par ailleurs, un filtre `latex` permet d'insérer la représentation LaTeX d'un objet SymPy. Par exemple, si l'objet SymPy `obj` a été défini dans le script `before`, la commande `{{ obj|latex }}` permet d'insérer sa représentation LaTeX dans l'énoncé.
-    * La mise en forme avancée du texte s'effectue avec des balises Markdown ou HTML.
+
 
 #### Interface de réponse
 * `input_prefix` (chaîne). Chaîne placée avant le champ de réponse. 
