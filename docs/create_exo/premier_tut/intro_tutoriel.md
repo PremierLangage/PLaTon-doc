@@ -6,16 +6,11 @@ La plateforme peut exécuter un exercice selon diverses **configurations pédago
 
 Les exercices sont généralement insérés dans des dispositifs pédagogiques plus complexes appelés **activités**.
 
-D'un point de vue informatique, un exercice est composé des éléments suivants :
+D'un point de vue informatique, un exercice est défini dans un fichier texte dont l'extension est `.pl` (**fichier PL**) selon une syntaxe propre (**syntaxe PL**). Cette syntaxe permet essentiellement d'affecter des contenus à des **clés**. Ces contenus, qui peuvent être des valeurs numériques, des textes, des scripts Python, des blocs HTML, etc., sont les éléments nécessaires à la construction et au fonctionnement de l'exercice.
 
-  - un ensemble de **clés** au format JSON et un ensemble de **fichier externes**, qui peuvent être utilisés par le *builder* et le *grader*; 
-  - un ***builder*** : un programme Python qui construit l'énoncé et l'interface de réponse ;  
-  - un ***grader*** : un programme Python capable d'évaluer la réponse et de fournir une rétroaction corrective. 
+Pour faciliter la création d'exercices, la plateforme propose des **modèles**. Chaque modèle permet de fabriquer un certain type d'exercice.
 
-
-
-
-Ces éléments sont définis ou référencés dans un **fichier PL** (fichier texte dont l'extension est `.pl`) selon une syntaxe propre (**syntaxe PL**).
+#### A reprendre
 
 Pour faciliter la création de l'interface réponse, la plateforme dispose d'une bibliothèque de **composants web** (champ de réponse numérique ou textuel, champ de réponse à choix multiples, éditeur de code, etc.). 
 
