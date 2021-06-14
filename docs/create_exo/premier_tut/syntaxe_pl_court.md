@@ -14,80 +14,55 @@ La syntaxe PL est la syntaxe employée pour décrire un exercice dans un fichier
 
 ## Affecter une valeur à une clé
 
-Les types de valeur qu'une clé peut prendre sont les types du [format JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation) (JavaScript Object Notation) : 
+Les types de valeur qu'une clé peut prendre sont les types de base de Python :
+  * chaînes de caractères ;
+  * nombres entiers ;
+  * nombres flottants ;
+  * booléens ;
+  * `None` ;
+  * listes ;
+  * dictionnaires.
 
-  * *string* (chaîne de caractères) ;
-  * *number* (nombre entier ou flottant) ;
-  * `true`, `false`, `null`;
-  * *array* (tableau) ;
-  * *object* (dictionnaire qui associe des valeurs à des clés, aussi appelées propriétés).
-
-!!! note
-    Le format JSON est un format d'échange de données assez répandu. Comme son nom l'indique, il dérive du langage JavaScript.
+!!! warning
+    Pas de tuples.
 
 ### Opérateur `=`
 
-Le principal opérateur d'affectation dans la syntaxe PL est l'opérateur `=`. Il permet d'affecter une valeur `value` de type JSON à une clé `key` en utilisant la syntaxe du format JSON.
-
-```
-key = value
-```
-
-Les chaînes de caractères doivent être représentées entre doubles guillements droits ("). Attention, les doubles guillemets ne peuvent pas être remplacés par des guillements simples comme dans d'autres langages. Les chaînes peuvent contenir n'importe quel caractère Unicode sauf le double guillemet droit et la barre oblique inversée (\\). Ces deux caractères ainsi que les caractères de contrôle (nouvelle ligne, tabulation, etc.) sont représentés par des séquences d'échappement.
+Le principal opérateur d'affectation dans la syntaxe PL est l'opérateur `=`. Il permet d'affecter à une clé une valeur des types cités plus haut.
 
 ```
 mystring1 = "Titre de l'exercice"
 
 mystring2 = "Πλάτων"
 
-mystring3 = "Les verbes \"détester\" et \"abhorrer\" sont synonymes."
+mynint = 6
 
-mystring4 = "Ligne 1\nLigne 2"
+myfloat = 17.89
+
+mybool = False
+
+myvar = None
+
+mylist1 = [4, -1, 0.5, 1]
+
+mylist2 = [[0, "A"], [1, "B"], [2, "C"]]
+
+mydict =  {"firstname": "Victor", "lastname": "Hugo", "born": 1802, "dead": 1885}
 ```
 
-Les nombres peuvent être représentés sous forme entière, décimale ou scientifique.
+Il est possible de définir un dictionnaire propriété par propriété ou de façon mixte. Par exemple les définitions ci-dessous sont équivalentes à la définition précédente.
 
 ```
-mynumber1 = 6
-
-mynumber2 = 17.89
-
-mynumber3 = 1.5e6
-```
-Les valeurs booléennes sont `true` et `false` (sans majuscule). La valeur vide est `null`.
-
-```
-mybool = false
-
-myvar = null
-```
-Les tableaux sont représentés entre crochets. Les éléments peuvent être de n'importe quel type et de type différent au sein d'un même tableau.
-
-```
-myarray1 = [4, -1, 0.5, 1]
-
-myarray2 = [[0, "A"], [1, "B"], [2, "C"]]
-```
-
-Les objets sont des dictionnaires qui associent des valeurs à des propriétés. Les propriétés sont nécessairement des chaînes de caractères. Les valeurs peuvent être de n'importe quel type.
-
-```
-myobject =  {"firstname": "Victor", "lastname": "Hugo", "born": 1802, "dead": 1885}
-```
-
-Il est possible de définir un objet propriété par propriété ou de façon mixte. Par exemple les définitions ci-dessous sont équivalentes à la définition précédente.
-
-```
-myobject.firstname = "Victor"
-myobject.lastname = "Hugo"
-myobject.born = 1802
-myobject.dead = 1885
+mydict.firstname = "Victor"
+mydict.lastname = "Hugo"
+mydict.born = 1802
+mydict.dead = 1885
 ```
 
 ```
-myobject =  {"firstname": "Victor", "lastname": "Hugo"}
-myobject.born = 1802
-myobject.dead = 1885
+mydict = {"firstname": "Victor", "lastname": "Hugo"}
+mydict.born = 1802
+mydict.dead = 1885
 ```
 
 !!! warning
@@ -114,7 +89,7 @@ Ligne 2
 ==
 ```
 
-L'opérateur `==` est particulièrement utile pour entrer des scripts Python, des textes au format Markdown, du code HTML, etc.
+L'opérateur `==` est particulièrement utile pour entrer des textes, des scripts Python, des blocs HTML, etc.
 
 ```
 before ==
