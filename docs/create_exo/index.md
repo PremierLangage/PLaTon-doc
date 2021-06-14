@@ -1,4 +1,12 @@
-# Création d'exercices et d'autres ressources pédagogiques
+# Création d'exercices
+
+* [Introduction](premier_tut/intro_tutoriel.md)
+* [Syntaxe PL](premier_tut/syntaxe_pl_court.md)
+
+## Premiers exercices
+
+
+## A reprendre
 
 ## Premier tutoriel
 
