@@ -1,6 +1,6 @@
 # Question à choix multiple
 
-Le modèle qui permet de fabriquer une question à choix multiple est le modèle `basic/radio`. Pour choisir ce modèle dans un exercice, on commence par écrire la commande suivante.
+Le modèle qui permet de fabriquer une question à choix multiple (avec une seule proposition sélectionnable) est le modèle `basic/radio`. Pour choisir ce modèle dans un exercice, on commence par écrire la commande suivante.
 
 ```
 extends = /model/basic/radio.pl
@@ -29,4 +29,25 @@ Allemagne
 Italie
 Espagne
 ==
+```
+
+Si l'on souhaite fixer l'ordre des propositions, il faut mettre la clé `shuffled` à `False`. L'ordre des propositions est alors l'ordre saisi dans la clé `items`. 
+
+Il est alors nécessaire de définir la bonne réponse, qui n'est plus en général la première proposition. Pour cela, il faut entrer dans la clé `indsol` son indice dans la liste des propositions. Attention : la numérotation de la liste commence à 0.
+
+```
+extends = /model/basic/radio.pl
+
+question ==
+A quel siècle vivait Victor Hugo
+==
+
+items ==
+XVIIe siècle
+XVIIIe siècle
+XIXe siècle
+XXe siècle
+==
+
+indsol = 2
 ```
