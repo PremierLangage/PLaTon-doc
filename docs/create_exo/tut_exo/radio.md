@@ -34,7 +34,7 @@ Espagne
 
 Si l'on souhaite fixer l'ordre des propositions, il faut mettre la clé `shuffled` à `False`. L'ordre des propositions est alors l'ordre saisi dans la clé `items`. 
 
-Il est alors nécessaire de définir la bonne réponse, qui n'est plus en général la première proposition. Pour cela, il faut entrer dans la clé `indsol` son indice dans la liste des propositions. Attention : la numérotation de la liste commence à 0.
+Il est ensuite nécessaire de définir la bonne réponse, qui n'est plus en général la première proposition. Pour cela, il faut entrer dans la clé `indsol` son indice dans la liste des propositions. Attention : la numérotation de la liste commence à 0.
 
 **Exemple 2**
 
