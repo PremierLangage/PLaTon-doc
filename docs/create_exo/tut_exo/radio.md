@@ -14,7 +14,7 @@ La liste des propositions dans `items` peut être saisie comme une liste de cha�
 
 Par défaut, la première proposition est considérée comme la solution et les propositions sont mélangées lors de la construction de l'exercice.
 
-Voilà un exemple de code source complet pour ce modèle.
+**Exemple 1**
 
 ```
 extends = /model/basic/radio.pl
@@ -35,6 +35,8 @@ Si l'on souhaite fixer l'ordre des propositions, il faut mettre la clé `shuffle
 
 Il est alors nécessaire de définir la bonne réponse, qui n'est plus en général la première proposition. Pour cela, il faut entrer dans la clé `indsol` son indice dans la liste des propositions. Attention : la numérotation de la liste commence à 0.
 
+**Exemple 2**
+
 ```
 extends = /model/basic/radio.pl
 
@@ -48,6 +50,8 @@ XVIIIe siècle
 XIXe siècle
 XXe siècle
 ==
+
+shuffled = False
 
 indsol = 2
 ```
