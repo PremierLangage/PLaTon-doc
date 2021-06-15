@@ -5,7 +5,7 @@
 
 ## Modèles simples
 
-* [Question à choix multiples](tut_exos/radio.md)
+* [Question à choix multiples](tut_exo/radio.md)
 * [Liste à ordonner](tut_exo/sortlist.md)
 
 ## A reprendre
