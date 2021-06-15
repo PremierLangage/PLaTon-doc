@@ -7,7 +7,6 @@ extends = /model/basic/radio.pl
 ```
 
 Ce modèle nécessite de renseigner au moins deux clés :
-
     * `question` : l'énoncé de l'exercice ;
     * `items` : la liste des propositions.
     
