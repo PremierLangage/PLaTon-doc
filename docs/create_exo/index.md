@@ -3,8 +3,10 @@
 * [Introduction](premier_tut/intro_tutoriel.md)
 * [Syntaxe PL](premier_tut/syntaxe_pl_court.md)
 
-## Premiers exercices
+## Modèles simples
 
+* [Question à choix multiples](tut_exos/radio.md)
+* [Liste à ordonner](tut_exo/sortlist.md)
 
 ## A reprendre
 
