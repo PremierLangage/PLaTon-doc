@@ -9,6 +9,7 @@
 * [Question à choix multiple (2)](checkbox.md)
 * [Question à choix multiple (3)](checkbox_rw.md)
 * [Liste à ordonner](sortlist.md)
+* [Texte à compléter](filltext.md)
 
 ## Exercices de base : usage avancé
 
