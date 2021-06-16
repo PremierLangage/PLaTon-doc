@@ -3,10 +3,23 @@
 * [Introduction](premier_tut/intro_tutoriel.md)
 * [Syntaxe PL](premier_tut/syntaxe_pl_court.md)
 
-## Modèles simples
+## Exercices de base : usage simple
 
-* [Question à choix multiples](tut_exo/radio.md)
+* [Question à choix multiple (1)](tut_exo/radio.md)
+* [Question à choix multiple (2)](tut_exo/checkbox.md)
+* [Question à choix multiple (3)](tut_exo/checkbox_rw.md)
 * [Liste à ordonner](tut_exo/sortlist.md)
+
+## Exercices de base : usage avancé
+
+* [Génération aléatoire des données (1)]()
+* [Génération aléatoire des données (2)]()
+* [Evaluation de la réponse]()
+
+## Exercices de mathématiques
+
+* [Premier exemple]()
+
 
 ## A reprendre
 
