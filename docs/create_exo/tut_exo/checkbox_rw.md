@@ -39,7 +39,7 @@ Les clés paramétrant ces choix sont :
   * `maxright` : nombre maximal de bonnes réponses.
 
 
-**Exemple 1**
+**Exemple 2**
 
 ```
 extends = /model/basic/checkbox.pl
