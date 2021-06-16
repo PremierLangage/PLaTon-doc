@@ -3,7 +3,7 @@
 La syntaxe PL est la syntaxe employée pour décrire un exercice dans un fichier PL. Il n'y a que trois types d'opérations possibles dans cette syntaxe :
 
   * affecter une valeur à une clé ;
-  * inclure un fichier externe dans l'environnement de l'exercice ;
+  * charger un fichier dans l'environnement ;
   * hériter du contenu d'un fichier PL.
   
  Des lignes de commentaires peuvent être insérées en utilisant un croisillon (#) comme caractère initial.
@@ -23,9 +23,6 @@ Les types de valeur qu'une clé peut prendre sont les types de base de Python :
   * `None` ;
   * listes ;
   * dictionnaires.
-
-!!! warning
-    Pas de tuples.
 
 ### Opérateur `=`
 
@@ -51,7 +48,7 @@ mylist2 = [[0, "A"], [1, "B"], [2, "C"]]
 mydict =  {"firstname": "Victor", "lastname": "Hugo", "born": 1802, "dead": 1885}
 ```
 
-Il est possible de définir un dictionnaire propriété par propriété ou de façon mixte. Par exemple les définitions ci-dessous sont équivalentes à la définition précédente.
+Il est possible de définir un dictionnaire propriété par propriété ou de façon mixte. Par exemple les définitions ci-dessous sont équivalentes à la définition précédente de `mydict`.
 
 ```
 mydict.firstname = "Victor"
@@ -67,24 +64,14 @@ mydict.dead = 1885
 ```
 
 !!! warning
-    La syntaxe PL ne permet pas (encore ?) l'affectation d'un tableau ou d'un objet séparé sur plusieurs lignes.
+    La syntaxe PL ne permet pas encore l'affectation d'une liste ou d'un dictionnaire sur plusieurs lignes.
   
 ### Opérateur `==`
 
 L'opérateur `==` permet de saisir des chaînes multilignes brutes (sans séquence d'échappement). Par exemple, les affectations ci-dessous, faites respectivement avec les opérateurs `=` et `==`, sont équivalentes. 
 
 ```
-mystring3 = "Les verbes \"détester\" et \"abhorrer\" sont synonymes."
-
-mystring4 = "Ligne 1\nLigne 2"
-```
-
-```
-mystring3 ==
-Les verbes "détester" et "abhorrer" sont synonymes.
-==
-
-mystring4 ==
+mystring ==
 Ligne 1
 Ligne 2
 ==
@@ -93,22 +80,22 @@ Ligne 2
 L'opérateur `==` est particulièrement utile pour entrer des textes, des scripts Python, des blocs HTML, etc.
 
 ```
-before ==
+myscript ==
 import random as rd
 lst = ["A", "B", "C"]
 c = rd.choice(lst)
 ==
 ```
 
-## Inclure un fichier externe
+## Charger un fichier dans l'environnement
 
-L'inclusion d'un fichier externe se fait gâce à l'opérateur `@`. La référence au fichier se fait par son chemin absolu ou son chemin relatif (à la localisation du fichier PL).
+Le chargement un fichier dans l'environnement se fait gâce à l'opérateur `@`. On fait référence au fichier par son chemin absolu ou par son chemin relatif.
 
 ~~~
 @ dirA/dirB/myfile.py
 ~~~
 
-Le nom du fichier peut-être remplacé par un alias au moment de l'inclusion.
+Le nom du fichier peut-être remplacé par un alias au moment du chargement.
 
 ~~~
 @ dirA/dirB/myfile.py [thisfile]
@@ -132,12 +119,12 @@ $ cheminsurplatondufichier
 ~~~
 
 
-## La balise extends
+## Hériter d'un fichier PL
 
 ~~~
 extends= nomdefichier.pl 
 ~~~
 
-Charge toute les clefs de l'exercice indiqué 'nomdefichier.pl' préalablement aux valeur du fichier courrant et ce de façon récursive.
+Charge toute les clefs de l'exercice indiqué 'nomdefichier.pl' préalablement aux valeur du fichier courant et ce de façon récursive.
 
 
