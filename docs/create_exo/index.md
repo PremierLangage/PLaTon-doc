@@ -1,20 +1,20 @@
 # Création d'exercices
 
-* [Introduction](premier_tut/intro_tutoriel.md)
-* [Syntaxe PL](premier_tut/syntaxe_pl_court.md)
+* [Introduction](intro.md)
+* [Syntaxe PL](syntaxe_pl.md)
 
 ## Exercices de base : usage simple
 
-* [Question à choix multiple (1)](tut_exo/radio.md)
-* [Question à choix multiple (2)](tut_exo/checkbox.md)
-* [Question à choix multiple (3)](tut_exo/checkbox_rw.md)
-* [Liste à ordonner](tut_exo/sortlist.md)
+* [Question à choix multiple (1)](radio.md)
+* [Question à choix multiple (2)](checkbox.md)
+* [Question à choix multiple (3)](checkbox_rw.md)
+* [Liste à ordonner](sortlist.md)
 
 ## Exercices de base : usage avancé
 
-* [Génération aléatoire des données (1)]()
-* [Génération aléatoire des données (2)]()
-* [Evaluation de la réponse]()
+* [Génération aléatoire des données (1)](before.md)
+* [Génération aléatoire des données (2)](before_csv.md)
+* [Evaluation de la réponse](evaluator.md)
 
 ## Exercices de mathématiques
 
@@ -25,11 +25,8 @@
 
 ## Premier tutoriel
 
-* [Introduction](premier_tut/intro_tutoriel.md)
 * [Fonctionnement](premier_tut/fonctionnement_before_evaluator.md)
-* [Syntaxe PL](premier_tut/syntaxe_pl_court.md)
 * [Structure de base d'un exercice](premier_tut/structure_base_exercice.md)
-* [TODO : Génération des données](index.md)
 * [Enoncé](premier_tut/enonce.md)
 * [Interface de réponse](premier_tut/interface_reponse.md)
 * [Evaluation de la réponse](premier_tut/evaluation_reponse.md)
@@ -37,7 +34,6 @@
 
 ## Exercices basiques
 
-* [TODO : Réponse textuelle](index.md)
 * [Question à choix multiples (une seule réponse sélectionnable)](basic/radio.md)
 * [Question à choix multiples (plusieurs réponses sélectionnables)](basic/checkbox.md)
 * [Correspondances](basic/matchlist.md)
