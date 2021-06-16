@@ -17,7 +17,7 @@ Le composant `CheckboxGroup` permet de créer un champ de réponse à choix mult
 
 Dans cet exercice, on demande à l'élève de sélectionner les multiples de 3 parmi une liste de nombres. Les données sont générées aléatoirement.
 
-[Tester l'exemple](https://pl.u-pem.fr/filebrowser/demo/6926/)
+[Tester l'exemple](https://pl.u-pem.fr/filebrowser/option?name=test_pl&path=Yggdrasil/demo/basic/checkbox/multiples_of_3.pl)
 
 On commence par hériter du modèle d'exercice `basic.pl`.
 
