@@ -15,6 +15,7 @@ La syntaxe PL est la syntaxe employée pour décrire un exercice dans un fichier
 ## Affecter une valeur à une clé
 
 Les types de valeur qu'une clé peut prendre sont les types de base de Python :
+
   * chaînes de caractères ;
   * nombres entiers ;
   * nombres flottants ;
