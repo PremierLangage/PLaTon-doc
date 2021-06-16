@@ -20,6 +20,7 @@ sortedlist ==
 Abricot
 Avion
 Ballon
+Carotte
 Cartable
 ==
 ```
