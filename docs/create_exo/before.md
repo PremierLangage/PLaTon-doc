@@ -21,6 +21,21 @@ key2 = [0, 1, 2]
 ==
 ```
 
+```
+extends = /model/basic/numeric.pl
+
+before ==
+from random import randint
+a = randint(10, 50)
+b = randint(10, 50)
+sol = a + b
+==
+
+question ==
+Calculer {{ a }} + {{ b }}.
+==
+```
+
 Voyons maintenant comment écrire un exercice aléatoire en utilisant ce script `before`. Prenons l'exemple d'un exercice où il faut trouver le plus petit nombre parmi une liste de nombres. Pour ce type d'exercice, le modèle approprié est le modèle `basic\radio`.
 
 On rappelle que dans ce modèle la liste des propositions est à entrer dans la clé `items` sous forme d'une chaîne multilignes ou d'une liste de chaînes. Avec une génération par un script Python, il est plus naturel d'utiliser le second format.
