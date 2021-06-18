@@ -1,15 +1,17 @@
 # Génération des données
 
-Dans les exemples précédents, les clés des modèles ont toujours été définies de façon explicite. Mais il est également possible de générer dynamiquement ces clés à l'aide d'un script Python. Cela permet en particulier de générer des données aléatoires pour l'exercice.
+Dans les exemples précédents, les clés des modèles ont toujours été définies de façon explicite. Il est également possible de générer dynamiquement ces clés à l'aide d'un script Python. Cela permet notamment de générer des données aléatoires pour l'exercice.
 
-Ce script Python doit être écrit dans la clé `before`. Pour définir une clé dans ce script, il suffit de créer une variable du nom de cette clé.
+## Clé `before`
+
+La clé `before`peut contenir un script Python qui est exécuté après le chargement des clés. Ce script permet de modfier ou de créer des clés. Pour modfier ou créer la clé `key`, il suffit de modifier ou créer la variable `key` dans ce script.
 
 Par exemple, dans un fichier PL, il est équivalent d'écrire :
 
 ```
 key1 = 3
-
 key2 = [0, 1, 2]
+key3 = [0, 1, 2, 3, 4, 5, 6, 7]
 ```
 
 ou
@@ -18,8 +20,14 @@ ou
 before ==
 key1 = 3
 key2 = [0, 1, 2]
+key3 = list(range(8))
 ==
 ```
+
+## Insertion dynamique dans la clé `question`
+
+
+## Exemple
 
 ```
 extends = /model/basic/numeric.pl
@@ -36,7 +44,9 @@ Calculer {{ a }} + {{ b }}.
 ==
 ```
 
-Voyons maintenant comment écrire un exercice aléatoire en utilisant ce script `before`. Prenons l'exemple d'un exercice où il faut trouver le plus petit nombre parmi une liste de nombres. Pour ce type d'exercice, le modèle approprié est le modèle `basic\radio`.
+## Autres exemples
+
+Prenons l'exemple d'un exercice où il faut trouver le plus petit nombre parmi une liste de nombres. Pour ce type d'exercice, le modèle approprié est le modèle `basic\radio`.
 
 On rappelle que dans ce modèle la liste des propositions est à entrer dans la clé `items` sous forme d'une chaîne multilignes ou d'une liste de chaînes. Avec une génération par un script Python, il est plus naturel d'utiliser le second format.
 
