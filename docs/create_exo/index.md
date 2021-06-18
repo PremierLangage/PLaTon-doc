@@ -5,20 +5,35 @@
 
 ## Exercices de base : usage simple
 
-* [Question à choix multiple (1)](radio.md)
-* [Question à choix multiple (2)](checkbox.md)
-* [Question à choix multiple (3)](checkbox_rw.md)
+* [Choix multiple (1)](radio.md)
+* [Choix multiple (2)](checkbox.md)
+* [Choix multiple (3)](checkbox_rw.md)
+* [Réponse textuelle (1)]()
+* [Réponse textuelle (2)]()
+* [Réponse numérique (1)]()
+* [Réponse numérique (2)]()
+* [Correspondances](sortlist.md)
 * [Liste à ordonner](sortlist.md)
 * [Texte à compléter](filltext.md)
+* [Texte à sélectionner](filltext.md)
 
 ## Exercices de base : usage avancé
 
-* [Génération aléatoire des données (1)](before.md)
-* [Génération aléatoire des données (2)](before_csv.md)
+* [Générer dynamiquement des clés](before.md)
+* [Fonctions aléatoires](random.md)
+* [Génération dynamique des clés (2)](csv.md)
 * [Evaluation de la réponse](evaluator.md)
 
 ## Exercices de mathématiques
 
+* [Champ de réponse mathématique]()
+* [Bibliothèque sympy]()
+* [Premier exemple]()
+
+## Exercices d'informatique
+
+* [Champ de réponse mathématique]()
+* [Bibliothèque sympy]()
 * [Premier exemple]()
 
 
