@@ -28,7 +28,19 @@ lst2 = list(range(8))
 ==
 ```
 
-La version de Python utilisée est la version 3.8.
+La version de Python utilisée est la version 3.7. Tous les modules de la [bibliothèque standard](https://docs.python.org/fr/3/library/index.html) peuvent être importés. D'autres modules usuels, ainsi que des modules propres à la plateforme, sont également disponibles.
+
+**Exemple**
+```
+before ==
+from random import uniform
+from math import pi, sin, cos
+angle = uniform(0, pi/2)
+x = cos(angle)
+y = sin(angle)
+==
+```
+
 
 ## Insertion dynamique dans la clé `question`
 
