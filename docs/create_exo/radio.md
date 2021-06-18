@@ -11,7 +11,7 @@ Ce modèle nécessite de renseigner au moins deux clés :
   * `question` : l'énoncé de l'exercice ;
   * `items` : la liste des propositions.
     
-La liste des propositions dans `items` peut être saisie comme une liste de chaînes ou, ce qui est plus pratique, comme une chaîne multilignes (chaque ligne correspondant à une proposition).
+La liste des propositions dans `items` peut être saisie comme une liste ou, ce qui est plus pratique, comme une chaîne multilignes (chaque ligne correspondant à une proposition).
 
 Par défaut, la première proposition est considérée comme la solution et les propositions sont mélangées lors de la construction de l'exercice.
 
