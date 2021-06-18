@@ -1,33 +1,41 @@
-# Génération des données
+# Génération dynamique des clés
 
-Dans les exemples précédents, les clés des modèles ont toujours été définies de façon explicite. Il est également possible de générer dynamiquement ces clés à l'aide d'un script Python. Cela permet notamment de générer des données aléatoires pour l'exercice.
+Dans les exemples précédents, les clés des modèles ont toujours été définies de façon explicite. Il est également possible de générer dynamiquement des clés à l'aide d'un script Python (à placer dans la clé `before`). Cela permet en particulier de générer des données aléatoires pour l'exercice.
 
 ## Clé `before`
 
-La clé `before`peut contenir un script Python qui est exécuté après le chargement des clés. Ce script permet de modfier ou de créer des clés. Pour modfier ou créer la clé `key`, il suffit de modifier ou créer la variable `key` dans ce script.
+La clé `before` est facultative. Si un script est entré dans cette clé, il est exécuté après le chargement des clés du fichier PL et avant la construction de la page de l'exercice. Toutes les clés du fichier PL sont utilisables et modifiables dans le script (une clé correspond simplement à la variable de même nom dans le script). Toute variable créée dans le script est ensuite convertie en clé de l'exercice (avec le même nom).
 
-Par exemple, dans un fichier PL, il est équivalent d'écrire :
+**Exemple**. Les deux codes PL suivants aboutissent à la création des mêmes clés :
 
 ```
-key1 = 3
-key2 = [0, 1, 2]
-key3 = [0, 1, 2, 3, 4, 5, 6, 7]
+n1 = 3
+n2 = 5
+lst1 = [0, 1, 2]
+lst2 = [0, 1, 2, 3, 4, 5, 6, 7]
 ```
 
 ou
 
 ```
+n1 = 3
+n2 = 2
+
 before ==
-key1 = 3
-key2 = [0, 1, 2]
-key3 = list(range(8))
+n2 = key1 + key2
+lst1 = [0, 1, 2]
+lst2 = list(range(8))
 ==
 ```
+
+La version de Python utilisée est la version 3.8.
 
 ## Insertion dynamique dans la clé `question`
 
 
 ## Exemple
+
+L'exemple que nous allons considérer est un exercice très simple d'addition. On demande de calculer la somme de deux entiers tirés aléatoirement (entre 10 et 49). La réponse doit être rentrée dans un champ de réponse numérique.
 
 ```
 extends = /model/basic/numeric.pl
