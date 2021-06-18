@@ -21,20 +21,16 @@
 
 * [Générer dynamiquement des clés](before.md)
 * [Fonctions aléatoires](random.md)
-* [Génération dynamique des clés (2)](csv.md)
+* [Générer des clés à partir d'un fichier de données](csv.md)
 * [Evaluation de la réponse](evaluator.md)
 
 ## Exercices de mathématiques
 
-* [Champ de réponse mathématique]()
-* [Bibliothèque sympy]()
+* [Champ de réponse mathématique](mathinput.md)
+* [Bibliothèque sympy](sympy.md)
 * [Premier exemple]()
 
 ## Exercices d'informatique
-
-* [Champ de réponse mathématique]()
-* [Bibliothèque sympy]()
-* [Premier exemple]()
 
 
 ## A reprendre
@@ -58,13 +54,6 @@
 * [Texte à sélectionner](basic/textselect.md)
 * [Format gift](basic/gift.md)
 
-## Exercices de mathématiques
-
-* Outils de base
-    * [TODO : Bibliothèque SymPy](index.md)
-    * [Composant MathInput](composant_mathinput.md)
-* Exemples
-    * [TODO : Un exemple d'exercice](index.md)
 
 ## Exercices graphiques avec JSXGraph
 
