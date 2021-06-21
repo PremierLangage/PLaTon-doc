@@ -2,6 +2,8 @@
 
 Sur le même principe que le modèle `basic/radio`,  le modèle `basic/checkbox` permet de fabriquer une question à choix multiple avec plusieurs propositions sélectionnables.
 
+![](checkbox.png)
+
 Les clés de base de ce modèles sont :
 
   * `question` : l'énoncé de l'exercice ;
@@ -27,4 +29,28 @@ Berlin
 ==
 
 indsol = [0, 1]
+```
+Par défaut, le barème est `AllOrNothing`. L'exercice renvoie un score de 100 si toutes les bonnes réponses sont sélectionnées et aucune mauvaise réponse n'est sélectionnée ; il renvoie un score de 0 sinon.
+
+L'autre barèle est `RightMinusWrong`. Il renvoie le nombre de bonnes réponses sélectionnés moins le nombre de mauvaises réponses sélectionnées, le tout divisé par le nombre total de bonnes réponses et ramené entre 0 et 100.
+
+Le barème peut-être choisi grâce à la clé `scoring`.
+
+**Exemple 2**
+
+```
+extends = /model/basic/checkbox.pl
+
+question ==
+Parmi ces villes, lesquelles ne sont pas des capitales ?
+==
+
+items ==
+Barcelone
+Milan
+Paris
+Berlin
+==
+
+scoring = "RightMinusWrong"
 ```
