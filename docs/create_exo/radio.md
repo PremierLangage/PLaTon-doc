@@ -4,7 +4,7 @@ Le modèle qui permet de fabriquer une question à choix multiple (avec une seul
 
 <img src="radio.png" style="border: 1px solid #ddd;">
 
-Pour choisir ce modèle dans un exercice, on commence par écrire la commande suivante.
+Pour choisir ce modèle dans un exercice, on commence par écrire la commande suivante dans le fichier PL.
 
 ```
 extends = /model/basic/radio.pl
@@ -17,7 +17,7 @@ Ce modèle nécessite de renseigner au moins deux clés :
     
 La liste des propositions dans `items` peut être saisie comme une liste ou, ce qui est plus pratique, comme une chaîne multilignes (chaque ligne correspondant à une proposition).
 
-Par défaut, la première proposition est considérée comme la solution et les propositions sont mélangées lors de la construction de l'exercice.
+Par défaut, la première proposition est prise comme solution et les propositions sont mélangées lors de la construction de l'exercice.
 
 **Exemple 1**
 
