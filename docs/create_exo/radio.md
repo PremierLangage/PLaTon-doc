@@ -2,7 +2,7 @@
 
 Le modèle qui permet de fabriquer une question à choix multiple (avec une seule proposition sélectionnable) est le modèle `basic/radio`. 
 
-![](radio.png)
+<img src="radio.png" style="border: 1px solid #ddd;">
 
 Pour choisir ce modèle dans un exercice, on commence par écrire la commande suivante.
 
