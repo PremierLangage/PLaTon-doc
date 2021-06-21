@@ -1,6 +1,10 @@
 # Question à choix multiple
 
-Le modèle qui permet de fabriquer une question à choix multiple (avec une seule proposition sélectionnable) est le modèle `basic/radio`. Pour choisir ce modèle dans un exercice, on commence par écrire la commande suivante.
+Le modèle qui permet de fabriquer une question à choix multiple (avec une seule proposition sélectionnable) est le modèle `basic/radio`. 
+
+![](radio.png)
+
+Pour choisir ce modèle dans un exercice, on commence par écrire la commande suivante.
 
 ```
 extends = /model/basic/radio.pl
