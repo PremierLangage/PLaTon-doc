@@ -1,4 +1,4 @@
-# Question à choix multiple
+# Choix multiple (1)
 
 Le modèle qui permet de fabriquer une question à choix multiple (avec une seule proposition sélectionnable) est le modèle `basic/radio`. 
 
