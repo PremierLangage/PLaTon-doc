@@ -1,4 +1,4 @@
-# Question à choix multiple (2)
+# Choix multiple (2)
 
 Sur le même principe que le modèle `basic/radio`,  le modèle `basic/checkbox` permet de fabriquer une question à choix multiple avec plusieurs propositions sélectionnables.
 
@@ -30,9 +30,10 @@ Berlin
 
 indsol = [0, 1]
 ```
-Par défaut, le barème est `AllOrNothing`. L'exercice renvoie un score de 100 si toutes les bonnes réponses sont sélectionnées et aucune mauvaise réponse n'est sélectionnée ; il renvoie un score de 0 sinon.
 
-L'autre barèle est `RightMinusWrong`. Il renvoie le nombre de bonnes réponses sélectionnés moins le nombre de mauvaises réponses sélectionnées, le tout divisé par le nombre total de bonnes réponses et ramené entre 0 et 100.
+Par défaut, le barème est `RightMinusWrong`. l'exercice renvoie le nombre de bonnes réponses sélectionnés moins le nombre de mauvaises réponses sélectionnées, le tout divisé par le nombre total de bonnes réponses et ramené entre 0 et 100.
+
+L'autre barème est `AllOrNothing`. L'exercice renvoie un score de 100 si toutes les bonnes réponses sont sélectionnées et aucune mauvaise réponse n'est sélectionnée ; il renvoie un score de 0 sinon.
 
 Le barème peut-être choisi grâce à la clé `scoring`.
 
@@ -52,5 +53,5 @@ Paris
 Berlin
 ==
 
-scoring = "RightMinusWrong"
+scoring = "AllOrNothing"
 ```
