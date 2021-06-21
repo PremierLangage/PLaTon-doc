@@ -44,8 +44,23 @@ y = sin(angle)
 
 ## Insertion dynamique dans la clé `question`
 
+Pour insérer dynamiquement les données générées par le script `before` dans l'énoncé de l'exercice, la clé `question` admet un système de **template**. Le contenu d'une clé `key`, définie explicitement ou dynamiquement dans le script `before`, peut être inséré dans la clé `question` en utilisant l'expression `{{ key }}`.
 
-## Exemple
+
+**Exemple**
+
+```
+before ==
+from random import choice
+capitale = choice(["Paris", "Berlin", "Rome"])
+==
+
+question ==
+Quel pays a pours capitale {{ capitale }} ?
+==
+```
+
+## Un exemple d'exercice aléatoire
 
 L'exemple que nous allons considérer est un exercice très simple d'addition. On demande de calculer la somme de deux entiers tirés aléatoirement (entre 10 et 49). La réponse doit être rentrée dans un champ de réponse numérique.
 
