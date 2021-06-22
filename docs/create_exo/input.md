@@ -9,9 +9,9 @@ Les clés de base de ce modèle sont :
   * `question` : l'énoncé de l'exercice ;
   * `sol` : la liste des réponses acceptées.
 
-Par défaut, l'évaluation de la réponse ne tient pas compte des minuscules et des majuscules.
+Par défaut, l'évaluation de la réponse ne tient pas compte des minuscules et des majuscules. Pour n tenir compte, la clé `case` doit être mise à `True`.
 
-**Exemple 1** Dans cet exemple, les solutions acceptées sont `Victor Hugo`, `Hugo`, mais aussi `victor hugo`, `victor Hugo`, `HUGO`, etc.
+**Exemple 1.** Dans cet exemple, les solutions acceptées sont `Victor Hugo`, `Hugo`, mais aussi `victor hugo`, `victor Hugo`, `HUGO`, etc.
 
 ```
 extends = /model/basic/input.pl
@@ -26,9 +26,9 @@ Hugo
 ==
 ```
 
-**Exemple 2** 
+La clé `tol`, qui prend un en entier positif, permet de définir une tolérance pour les réponses approximatives. Si la réponse et la solution sont égales à `tol` ajouts/suppressions/remplaçements de caractère près, la réponse est acceptée.
 
-Dans cet exemple, les solutions acceptées sont les chaînes égales à `Oxygène` à un caractère près : `oxigène`, `oxgène`, `oxygèn`, etc.
+**Exemple 2.** Dans cet exemple, les solutions acceptées sont les chaînes égales à `Oxygène` à un ajouts/suppression/remplaçement de caractère près : `oxigène`, `oxgène`, `oxygèn`, etc.
 
 ~~~
 extends = /model/basic/input.pl
