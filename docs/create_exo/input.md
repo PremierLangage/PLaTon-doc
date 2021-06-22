@@ -1,13 +1,15 @@
-# Réponse textuelle
+# Réponse textuelle (1)
 
 Le modèle `basic/input` permet de fabriquer des exercices avec un champ de réponse textuel.
+
+![](input.png)
 
 Les clés de base de ce modèle sont :
 
   * `question` : l'énoncé de l'exercice ;
   * `sol` : la liste des réponses acceptées.
 
-Par défaut, on ne tient pas compte des minuscules et des majuscules pour comparer la réponse de l'élève aux réponses acceptées.
+Par défaut, l'évaluation de la réponse ne tient pas compte des minuscules et des majuscules.
 
 **Exemple 1** Dans cet exemple, les solutions acceptées sont `Victor Hugo`, `Hugo`, mais aussi `victor hugo`, `victor Hugo`, `HUGO`, etc.
 
@@ -23,3 +25,21 @@ Victor Hugo
 Hugo
 ==
 ```
+
+**Exemple 2** 
+
+Dans cet exemple, les solutions acceptées sont les chaînes égales à `Oxygène` à un caractère près : `oxigène`, `oxgène`, `oxygèn`, etc.
+
+~~~
+extends = /model/basic/input.pl
+
+text ==
+Quel élément chimique a pour symbole **O** ?
+==
+
+sol ==
+Oxygène
+==
+
+tol = 1
+~~~
