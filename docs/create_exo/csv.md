@@ -1,8 +1,8 @@
-# Utilisation d'un fichier de données
+# Générer aléatoirement des données à partir d'un fichier
 
 ## Fichiers CSV
 
-Le [format CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) (Comma-Separated Values) est un format texte représentant des données tabulaires sous forme de valeurs séparées par des virgules. Chaque ligne du texte correspond à une ligne du tableau et les virgules correspondent aux séparations entre les colonnes. Les virgules peuvent être remplacées par d'autres séparateurs (points-virgules, espaces, etc.) La création d'un fichier CSV se fait avec un tableur ou directement dans un éditeur de texte.
+Le [format CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) (Comma-Separated Values) permet de représenter un tableau de données. Il s'agit d'un format texte où chaque ligne représente une ligne du tableau et où les cellules d'une ligne sont séparées par des virgules. Les virgules peuvent être remplacées par d'autres séparateurs (points-virgules, espaces, etc.) On peut créer un fichier CSV avec un tableur ou simplement un éditeur de texte.
 
 Voilà un exemple de fichier CSV contenant une liste de pays européens et leur capitale.
 
@@ -30,65 +30,14 @@ Suède,la,Stockholm
 Suisse,la,Berne
 ~~~
 
-## Exemple d'exercice utilisant un fichier de données CSV
+## Lire des données dans un fichier CSV
 
-Voyons comment créer un exercice sur les capitales à l'aide de ce fichier de données.
+Pour utiliser un fichier externe dans un exercice, il est tout d'abord nécessaire de charger ce fichier dans l'environnement de l'exercice grâce à l'opérateur `@` de la syntaxe PL.
 
-Tester l'exercice : []()
+Ensuite, dans le script `before`, on peut utiliser les commandes Python usuelles pour la manipulation des fichiers.
 
-L'ouverture du fichier se fait avec la commande Python usuelle `open`. Pour lire le contenu du fichier, on utilise la commande `DictReader` du module `csv`.
 
-~~~
-import csv
+## Un exemple d'exercice
 
-with open('pays_europe.csv',newline='') as file:
-    rows = list(csv.DictReader(file,delimiter=','))
-~~~
 
-## Code complet
-
-~~~
-@ /builder/before.py [builder.py]
-@ /grader/evaluator.py [grader.py]
-
-@ pays_europe.csv
-
-title = Capitales d'Europe
-
-before ==
-import random as rd
-import csv
-
-with open('pays_europe.csv',newline='') as file:
-    rows = list(csv.DictReader(file,delimiter=','))
-    
-row = rd.choice(rows)
-
-pays = row['pays']
-article = row['article']
-capitale = row['capitale']
-
-partitif = {"le":"du ", "la":"de la ", "les":"des ", "l":"de l'"}
-du_pays = partitif[article] + pays
-==
-
-text ==
-Quelle est la capitale {{du_pays}} ?
-==
-
-input =: Input
-
-form ==
-{{ input | component }}
-==
-
-settings.feedback = rightwrong
-
-evaluator ==
-if input.value == capitale:
-    grade = (100,"")
-else:
-    grade = (0, capitale)
-==
-~~~
 
