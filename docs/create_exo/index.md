@@ -8,14 +8,14 @@
 * [Choix multiple (1)](radio.md)
 * [Choix multiple (2)](checkbox.md)
 * [Choix multiple (3)](checkbox_rw.md)
-* [Réponse textuelle (1)]()
-* [Réponse textuelle (2)]()
-* [Réponse numérique (1)]()
-* [Réponse numérique (2)]()
 * [Correspondances](sortlist.md)
 * [Liste à ordonner](sortlist.md)
 * [Texte à compléter](filltext.md)
 * [Texte à sélectionner](filltext.md)
+* [Réponse textuelle (1)](input.md)
+* [Réponse textuelle (2)]()
+* [Réponse numérique (1)](numeric.md)
+* [Réponse numérique (2)]()
 
 ## Exercices de base : usage avancé
 
