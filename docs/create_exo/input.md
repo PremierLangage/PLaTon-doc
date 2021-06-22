@@ -28,7 +28,7 @@ Hugo
 
 La clé `tol`, qui prend un entier positif, permet de définir une tolérance pour les réponses approximatives. Si la réponse et la solution sont égales à `tol` ajouts/suppressions/remplaçements de caractère près, la réponse est acceptée.
 
-**Exemple 2.** Dans cet exemple, les solutions acceptées sont les chaînes égales à `Oxygène` à un ajouts/suppression/remplaçement de caractère près : `oxigène`, `oxgène`, `oxygèn`, etc.
+**Exemple 2.** Dans cet exemple, les réponses acceptées sont les chaînes égales à `Oxygène` à un ajout/suppression/remplaçement de caractère près : `oxygènes`, `oxgène`, `oxigène`, etc.
 
 ~~~
 extends = /model/basic/input.pl
