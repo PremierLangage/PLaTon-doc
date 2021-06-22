@@ -12,17 +12,18 @@
 * [Liste à ordonner](sortlist.md)
 * [Texte à compléter](filltext.md)
 * [Texte à sélectionner](seltext.md)
-* [Réponse textuelle (1)](input.md)
-* [Réponse textuelle (2)]()
-* [Réponse numérique (1)](numeric.md)
-* [Réponse numérique (2)]()
+* [Réponse textuelle](input.md)
+* [Réponse textuelle avec suggestions](inputselect.md)
+* [Réponse numérique](numeric.md)
 
 ## Exercices de base : usage avancé
 
-* [Générer dynamiquement des clés](before.md)
+* [Générer aléatoirement des données](before.md)
 * [Fonctions aléatoires](random.md)
-* [Générer des clés à partir d'un fichier de données](csv.md)
-* [Evaluation de la réponse](evaluator.md)
+* [Exemples d'exercices aléatoires (1)](random_exo.md)
+* [Générer aléatoirement des données à partir d'un fichier](csv.md)
+* [Exemples d'exercices aléatoires (2)](csv_exo.md)
+* [Evaluer la réponse](evaluator.md)
 
 ## Exercices de mathématiques
 
