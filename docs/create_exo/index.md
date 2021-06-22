@@ -28,7 +28,7 @@
 
 * [Champ de réponse mathématique](mathinput.md)
 * [Bibliothèque sympy](sympy.md)
-* [Premier exemple]()
+* [Modèle de base (1)](mathexpr.md)
 
 ## Exercices d'informatique
 
