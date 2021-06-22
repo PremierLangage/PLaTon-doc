@@ -32,6 +32,8 @@ et on lui donnait toujours tort.
 ==
 ```
 
+Si l'on veut définir d'autres unités sélectionnables que les mots, il suffit de les entourer de crochets `[...]`. Les parties du texte hors crochets restent découpés en mots.
+
 **Exemple 2**
 
 ```
