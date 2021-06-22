@@ -33,7 +33,7 @@ La clé `tol`, qui prend un entier positif, permet de définir une tolérance po
 ~~~
 extends = /model/basic/input.pl
 
-text ==
+question ==
 Quel élément chimique a pour symbole **O** ?
 ==
 
