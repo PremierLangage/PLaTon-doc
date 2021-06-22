@@ -11,7 +11,7 @@
 * [Correspondances](sortlist.md)
 * [Liste à ordonner](sortlist.md)
 * [Texte à compléter](filltext.md)
-* [Texte à sélectionner](filltext.md)
+* [Texte à sélectionner](seltext.md)
 * [Réponse textuelle (1)](input.md)
 * [Réponse textuelle (2)]()
 * [Réponse numérique (1)](numeric.md)
