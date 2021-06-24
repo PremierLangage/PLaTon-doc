@@ -8,7 +8,8 @@
 * [Choix multiple (1)](radio.md)
 * [Choix multiple (2)](checkbox.md)
 * [Choix multiple (3)](checkbox_rw.md)
-* [Correspondances](sortlist.md)
+* [Mise en forme de l'énoncé](question_markdown.md)
+* [Correspondances](matchlist.md)
 * [Liste à ordonner](sortlist.md)
 * [Texte à compléter](filltext.md)
 * [Texte à sélectionner](seltext.md)
@@ -23,6 +24,8 @@
 * [Exemples d'exercices aléatoires (1)](random_exo.md)
 * [Générer aléatoirement des données à partir d'un fichier](csv.md)
 * [Exemples d'exercices aléatoires (2)](csv_exo.md)
+* [Insérer une image](image.md)
+* [Insérer un son](son.md)
 * [Evaluer la réponse](evaluator.md)
 
 ## Exercices de mathématiques
