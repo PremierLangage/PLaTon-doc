@@ -15,6 +15,7 @@ La [bibliothèque SymPy](https://www.sympy.org) est une bibliothèque Python de 
 Les modèles d'exercices mathématiques s'appuient sur la bibliothèque SymPy. En particulier, les données mathématiques et les solutions doivent être fournies sous forme d'objets SymPy.
 
 ```python
-def fn():
-    pass
+>>> from sympy import re, im, I, E, symbols
+>>> x, y = symbols('x y', real=True)
+>>> re(2*E)
 ```
