@@ -35,6 +35,14 @@ Les modèles d'exercices mathématiques s'appuient sur la bibliothèque SymPy. E
 (1 - 2*I)*(3 + I)
 >>> (x*y).expand()
 5 - 5*I
+```
+
+```python
+>>> from sympy import re, im, conjugate
+>>> re(x)
+3
+>>> im(x)
+1
 >>> conjugate(x)
 3 - I
 ```
