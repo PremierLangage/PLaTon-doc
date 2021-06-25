@@ -68,7 +68,7 @@ mydict.dead = 1885
   
 ### Opérateur `==`
 
-L'opérateur `==` permet de saisir des chaînes multilignes brutes (sans séquence d'échappement). Par exemple, les affectations ci-dessous, faites respectivement avec les opérateurs `=` et `==`, sont équivalentes. 
+L'opérateur `==` permet de saisir des chaînes multilignes brutes (sans échappement).
 
 ```
 mystring ==
@@ -81,15 +81,15 @@ L'opérateur `==` est particulièrement utile pour entrer des textes, des script
 
 ```
 myscript ==
-import random as rd
-lst = ["A", "B", "C"]
-c = rd.choice(lst)
+lst = []
+for k in range(5):
+ lst.append(k**2)
 ==
 ```
 
 ## Charger un fichier dans l'environnement
 
-Le chargement un fichier dans l'environnement se fait gâce à l'opérateur `@`. On fait référence au fichier par son chemin absolu ou par son chemin relatif.
+L'opérateur `@` permet de charger un fichier dans l'environnement de l'exercice. Le fichier peut être désigné par son chemin absolu ou par son chemin relatif.
 
 ~~~
 @ dirA/dirB/myfile.py
@@ -98,14 +98,34 @@ Le chargement un fichier dans l'environnement se fait gâce à l'opérateur `@`.
 Le nom du fichier peut-être remplacé par un alias au moment du chargement.
 
 ~~~
-@ dirA/dirB/myfile.py [thisfile]
+@ dirA/dirB/myfile.py [thisfile.py]
 ~~~
 
 
 ## Hériter d'un fichier PL
 
+Hériter d'un fichier PL consiste à importer son contenu (clés, fichiers à charger). C'est avec l'opérateur `extends` qu'on effectue cette opération. Le fichier peut être désigné par son chemin absolu ou par son chemin relatif.
+
 ~~~
-extends= nomdefichier.pl 
+extends = dirA/dirB/parent.pl 
 ~~~
 
-Charge toute les clefs de l'exercice indiqué 'nomdefichier.pl' préalablement aux valeur du fichier courant et ce de façon récursive.
+Si des clés définies dans le corps du fichier PL ont le même nom que des clés héritées, les premières remplacent les secondes. Il en va de même pour les fichiers à charger.
+
+**Exemple.** L'exercice associé au fichier `myfile.pl` contiendra une clé `key1` valant `0` et une clé `key2` valant `"toto"`.
+
+`parent.pl`
+```
+key1 = 5
+
+key2 = "toto"
+```
+
+`myfile.pl`
+```
+extends = parent.pl
+
+key1 = 0
+```
+
+Il est possible d'hériter en cascade de plusieurs fichiers.
