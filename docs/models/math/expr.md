@@ -33,6 +33,7 @@ L'évaluation de la réponse de l'élève est automatique.
     * Les fonctions les plus courantes de ces bibliothèques sont automatiquement importées (voir annexe ci-après).
 * `question` (chaîne). Enoncé de l'exercice. 
 
+$$ \sqrt{2} $$
 
 #### Interface de réponse
 * `input_prefix` (chaîne). Chaîne placée avant le champ de réponse. 
