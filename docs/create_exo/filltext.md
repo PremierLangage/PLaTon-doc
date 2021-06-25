@@ -23,7 +23,8 @@ Compléter le texte suivante avec les bonnes étiquettes.
 ==
 
 filledtext ==
-L’ensemble des gènes caractéristiques de l’espèce à laquelle appartient un organisme, constitue son {génome}. 
+L’ensemble des gènes caractéristiques de l’espèce à laquelle appartient un organisme, 
+constitue son {génome}. 
 Chez les individus d’une même espèce, un gène peut cependant exister sous différentes formes 
 présentant de légères modifications de séquence : les allèles. 
 L’ensemble des allèles d’un individu définit son {génotype}. 
