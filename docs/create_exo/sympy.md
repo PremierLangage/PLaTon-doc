@@ -23,3 +23,16 @@ Les modèles d'exercices mathématiques s'appuient sur la bibliothèque SymPy. E
 >>> x+y
 8/3
 ```
+
+
+## Nombres complexes
+
+```python
+>>> from sympy import I
+>>> x = 3 + I
+>>> y = 1 - 2*I
+>>> x*y
+(1 - 2*I)*(3 + I)
+>>> (x*y).expand()
+5 - 5*I
+```
