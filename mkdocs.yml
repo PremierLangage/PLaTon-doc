@@ -18,8 +18,12 @@ theme: readthedocs
 markdown_extensions:
   - footnotes
   - admonition
+  - mdx_math
   - wikilinks:
       base_url: 'https://documentationpl.readthedocs.io/fr/latest/lexique/#'
       end_url: ''
+
+extra_javascript: 
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 copyright: '&copy; Copyright 2016-2020 The PLaTon devs and users community'
