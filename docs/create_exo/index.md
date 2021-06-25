@@ -39,34 +39,3 @@
 * [Modèle de base (1)](mathexpr.md)
 
 ## Exercices d'informatique
-
-
-## A reprendre
-
-## Premier tutoriel
-
-* [Fonctionnement](premier_tut/fonctionnement_before_evaluator.md)
-* [Structure de base d'un exercice](premier_tut/structure_base_exercice.md)
-* [Enoncé](premier_tut/enonce.md)
-* [Interface de réponse](premier_tut/interface_reponse.md)
-* [Evaluation de la réponse](premier_tut/evaluation_reponse.md)
-* [Un exemple complet d'exercice](premier_tut/exemple_complet_exercice.md)
-
-## Exercices basiques
-
-* [Question à choix multiples (une seule réponse sélectionnable)](basic/radio.md)
-* [Question à choix multiples (plusieurs réponses sélectionnables)](basic/checkbox.md)
-* [Correspondances](basic/matchlist.md)
-* [Liste à ordonner](basic/sortlist.md)
-* [Etiquettes à placer](basic/dragdrop.md)
-* [Texte à sélectionner](basic/textselect.md)
-* [Format gift](basic/gift.md)
-
-
-## Exercices graphiques avec JSXGraph
-
-* [Composant JSXGraph](composant_jsxgraph.md)
-
-## Exercices de programmation
-
-## Image, son et vidéo
