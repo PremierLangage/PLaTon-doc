@@ -2,6 +2,8 @@
 
 Le modèle `basic/filltext` permet de fabriquer des exercices où il faut compléter un texte avec des étiquettes. 
 
+![](filltext.png)
+
 Les clés de base de ce modèle sont :
 
   * `question` : l'énoncé de l'exercice ;
