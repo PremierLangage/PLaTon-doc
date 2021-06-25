@@ -13,3 +13,8 @@ La [bibliothèque SymPy](https://www.sympy.org) est une bibliothèque Python de 
   * etc.
 
 Les modèles d'exercices mathématiques s'appuient sur la bibliothèque SymPy. En particulier, les données mathématiques et les solutions doivent être fournies sous forme d'objets SymPy.
+
+```python
+def fn():
+    pass
+```
