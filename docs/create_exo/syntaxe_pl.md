@@ -114,15 +114,16 @@ Si des clés définies dans le corps du fichier PL ont le même nom que des clé
 
 **Exemple.** L'exercice associé au fichier `myfile.pl` contiendra une clé `key1` valant `0` et une clé `key2` valant `"toto"`.
 
-`parent.pl`
 ```
+# parent.pl
+
 key1 = 5
 
 key2 = "toto"
 ```
-
-`myfile.pl`
 ```
+# myfile.pl
+
 extends = parent.pl
 
 key1 = 0
