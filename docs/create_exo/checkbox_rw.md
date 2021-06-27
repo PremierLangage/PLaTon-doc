@@ -13,7 +13,7 @@ Par défaut, les deux listes sont fusionnées et mélangées. Comme pour le mod�
 **Exemple 1**
 
 ```
-extends = /model/basic/checkbox.pl
+extends = /model/basic/checkbox_rw.pl
 
 question ==
 Parmi ces villes, lesquelles ne sont pas des capitales ?
@@ -30,19 +30,19 @@ Berlin
 ==
 ```
 
-Avec ce modèle, il est également possible d'obtenir des ensembles aléatoires de propositions en entrant des listes suffisamment longues dans les clés `right` et `wrong`, puis en choisissant le nombre de propositions et le nombre de bonnes réponses.
+Avec ce modèle, il est également possible d'obtenir de l'aléa en entrant des listes longues dans les clés `right` et `wrong`, puis en fixant le nombre de propositions et de bonnes réponses à tirer.
 
-Les clés paramétrant ces choix sont :
+Les clés paramétrant ce comportement sont :
 
-  * `nbitems` : nombre de propositions ;
-  * `minright` : nombre minimal de bonnes réponses ;
-  * `maxright` : nombre maximal de bonnes réponses.
+  * `nbitems` : nombre de propositions à tirer;
+  * `minright` : nombre minimal de bonnes réponses à tirer;
+  * `maxright` : nombre maximal de bonnes réponses tirer.
 
 
 **Exemple 2**
 
 ```
-extends = /model/basic/checkbox.pl
+extends = /model/basic/checkbox_rw.pl
 
 question ==
 Parmi ces villes, lesquelles ne sont pas des capitales ?
