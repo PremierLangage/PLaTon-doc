@@ -22,7 +22,7 @@ n1 = 3
 n2 = 2
 
 before ==
-n2 = key1 + key2
+n2 = n1 + n2
 lst1 = [0, 1, 2]
 lst2 = list(range(8))
 ==
