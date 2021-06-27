@@ -4,6 +4,6 @@ Un exercice est un **dispositif pédagogique** élémentaire. Il prescrit une **
 
 Certains exercices ont un énoncé **fixe**, d'autres ont un énoncé à données **aléatoires**. Ces derniers peuvent donc être relancés avec un nouveau tirage des données.
 
-La plateforme peut exécuter un exercice selon diverses **configurations pédagogiques** : nombre de tentatives, limite de temps, informations de correction désactivées, etc.
+Par ailleurs, les exercices peut être exécutés avec divers **paramètres pédagogiques** : nombre de tentatives, limite de temps, informations de correction désactivées, etc. Certains exercices ont également des **paramètres spécifiques** permettant de spécifier l'aléa des données, l'apparence ou l'évaluation.
 
 Les exercices sont généralement insérés dans des dispositifs pédagogiques plus complexes appelés **activités**.
