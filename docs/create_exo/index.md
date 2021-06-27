@@ -1,6 +1,7 @@
 # Création d'exercices
 
-* [Introduction](intro.md)
+* [Qu'est-ce qu'un exercice ?](intro.md)
+* [Modèles d'exercices](modeles.md)
 * [Syntaxe PL](syntaxe_pl.md)
 
 ## Exercices de base : usage simple
