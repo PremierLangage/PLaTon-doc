@@ -36,9 +36,9 @@
 ## Exercices de mathématiques
 
 * Outils :
-     * [Champ de réponse mathématique](mathinput.md)
      * [Bibliothèque SymPy](sympy.md)
      * [LaTeX](latex.md)
+     * [Champ de réponse mathématique](mathinput.md)
 * Modèle avec une expression :
     * [Expression](mathexpr.md)
 * Aures modèles :
