@@ -35,8 +35,15 @@
 
 ## Exercices de mathématiques
 
-* [Champ de réponse mathématique](mathinput.md)
-* [Bibliothèque sympy](sympy.md)
-* [Modèle de base (1)](mathexpr.md)
+* Outils :
+     * [Champ de réponse mathématique](mathinput.md)
+     * [Bibliothèque SymPy](sympy.md)
+     * [LaTeX](latex.md)
+* Modèle avec une expression :
+    * [Expression](mathexpr.md)
+* Aures modèles :
+    * [Nombres complexes](matchlist.md)
+    * [Polynômes](matchlist.md)
+    * [Matrices](matrix.md)
 
 ## Exercices d'informatique
