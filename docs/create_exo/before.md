@@ -1,10 +1,10 @@
-# Génération dynamique des clés
+# Génération aléatoire des données
 
-Dans les exemples précédents, les clés des modèles ont toujours été définies de façon explicite. Il est également possible de générer dynamiquement des clés à l'aide d'un script Python (à placer dans la clé `before`). Cela permet en particulier de générer des données aléatoires pour l'exercice.
+Dans les exemples précédents, les clés des modèles ont toujours été définies de façon explicite. Il est également possible de générer dynamiquement les clés grâce à un script Python placé dans la clé `before`. Cela permet en particulier de générer des données aléatoires pour l'exercice.
 
 ## Clé `before`
 
-La clé `before` est facultative. Si un script est entré dans cette clé, il est exécuté après le chargement des clés du fichier PL et avant la construction de la page de l'exercice. Toutes les clés du fichier PL sont utilisables et modifiables dans le script (une clé correspond simplement à la variable de même nom dans le script). Toute variable créée dans le script est ensuite convertie en clé de l'exercice (avec le même nom).
+La clé `before` peut recevoir un script Python. Celui-ci est exécuté après le chargement des clés du fichier PL et avant la construction de la page de l'exercice. Toutes les clés du fichier PL sont utilisables et modifiables dans le script (une clé correspond simplement à la variable de même nom dans le script). Toute variable créée dans le script est ensuite convertie en clé de l'exercice (avec le même nom).
 
 **Exemple**. Les deux codes PL suivants aboutissent à la création des mêmes clés :
 
