@@ -45,14 +45,13 @@ La fonction `sampleint` du module `plrandom` permet de tirer aléatoirement plus
 [1, 3, 5]
 ```
 
-Pour tirer plusieurs éléments avec remise, il suffit de créer une liste en compréhension avec la fonction `randint`.
+Pour tirer plusieurs éléments avec remise, il suffit de créer une liste en compréhension avec la fonction `choice`.
 
 ```python
->>> from random import choice
->>> choice(["AA", "AB", "AC", "AD"])
-'AD'
->>> choice(["AA", "AB", "AC", "AD"])
-'AC'
+>>> [choice(["AA", "AB", "AC", "AD"]) for i in range(3)]
+['AB', 'AD', 'AC']
+>>> [choice(["AA", "AB", "AC", "AD"]) for i in range(3)]
+['AD', 'AC', 'AC']
 ```
 
 La fonction `sample` du module `random` permet de tirer aléatoirement plusieurs éléments sans remise. Plus précisément, la commande `sample(lst, k)` renvoie une liste de `k` entiers tirés aléatoirement (sans remise) dans la liste `lst`.
