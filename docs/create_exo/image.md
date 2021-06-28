@@ -17,7 +17,7 @@ question ==
 ==
 ```
 
-Si l'on veut ajuster la place occupée par l'image, il faut utiliser la balise HTML `<img>`.
+Si l'on veut paraméter le rendu de l'image (taille, alignement, etc.), il est nécessaire de revenir la balise HTML `<img>`. Pour les paramétrages les plus courants, la plateforme propose plusieurs classes prédéfinies. La classe `img` permet de centrer l'image. Les classes `img-40`, `img-60`, `img-80` ajustent l'image à 40%, 60%, 80% de la largeur (sur tablette et téléphone, ces valeurs sont automatiquement rehaussées).
 
 ```
 question ==
