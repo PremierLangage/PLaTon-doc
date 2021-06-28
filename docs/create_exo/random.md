@@ -67,7 +67,7 @@ La fonction `sample` du module `random` permet de tirer aléatoirement plusieurs
 
 ## Mélanger une liste
 
-La fonction `shuffle` du module `random` permet de mélanger une liste. Attention
+La fonction `shuffle` du module `random` permet de mélanger une liste. Attention : La commande `suffle(lst)` ne renvoie pas une liste, elle modifie *sur place* la liste `lst`.
 
 ```python
 >>> from random import shuffle
