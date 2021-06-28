@@ -1,12 +1,10 @@
 # Fonction aléatoires
 
-Cette page résume les commandes aléatoires les plus utiles sur la plateforme. La plupart sont issues du module standard `random`. Certaines sont propres à la plateforme. Pour alléger l'écriture du script `before`, elles sont toutes importées par défaut.
+Cette page résume les commandes aléatoires les plus utiles sur la plateforme. Elles sont issues du module standard `random` ou du module propre à la plateforme `plrandom`. Pour alléger l'écriture du script `before`, elles sont toutes importées par défaut.
 
 ## Tirer aléatoirement des entiers
 
-**Tirer aléatoirement un entier**
-
-La commande `randint(a, b)` renvoie un entier aléatoire compris entre `æ` et `b` inclus.
+La fonction `randint` du module `random` permet de tirer un entier aléatoire. Plus précisément, la commande `randint(a, b)` renvoie un entier aléatoire compris entre `a` et `b` inclus.
 
 ```python
 >>> from random import randint
@@ -16,37 +14,38 @@ La commande `randint(a, b)` renvoie un entier aléatoire compris entre `æ` et `
 3
 ```
 
-La commande `randint(a, b, xval)` renvoie un entier aléatoire compris entre `æ` et `b` inclus, en excluant les valeurs de la liste `xval`.
+Il est souvent utile d'exclure certaines valeurs dans la plage de valeurs où l'on tire. C'est pour cela que le module `plrandom` propose une version modifiée de la fonction `randint`. Avec cette version, la commande `randint(a, b, xval)` renvoie un entier aléatoire compris entre `a` et `b` inclus, en excluant les valeurs de la liste `xval`.
 
-```
-before ==
-n = randint(-5, 5, [0, 1])
-==
-```
-
-**Tirer aléatoirement plusieurs entiers (avec remise)**
-
-Pour tirer plusieurs entiers 
-
-```
-before ==
-n1, n2, n3 = [randint(1, 99) for x in range(3)]
-==
+```python
+>>> from plrandom import randint
+>>> randint(-3, 3, [0, 1])
+-1
+>>> randint(-3, 3, [0, 1])
+3
 ```
 
-**Tirer aléatoirement plusieurs entiers (sans remise)**
+C'est cette version qui est importée par défaut dans le script `before`.
 
-Pour tirer plusieurs entiers 
+Pour tirer plusieurs entiers avec remise, il suffit de créer une liste en compréhension avec la fonction `randint`.
 
+```python
+>>> [randint(1, 5) for x in range(3)]
+[2, 4, 1]
+>>> [randint(1, 5) for x in range(3)]
+[2, 2, 5]
 ```
-before ==
-n1, n2, n3 = sampleint(1, 99, 3)
-==
+
+La fonction `sampleint` du module `plrandom` permet de tirer aléatoirement plusieurs entiers sans remise. Plus précisément, la commande `sampleint(a, b, k)` renvoie une liste de `k` entiers tirés aléatoirement (sans remise) entre `a` et `b` inclus.
+
+```python
+>>> from plrandom import sampleint
+>>> sampleint(1, 5, 3)
+[4, 5, 1]
+>>> sampleint(1, 5, 3)
+[1, 3, 5]
 ```
 
-## Tirer aléatoirement dans une liste
-
-**Tirer un élément dans une liste**
+Pour tirer plusieurs éléments avec remise, il suffit de créer une liste en compréhension avec la fonction `randint`.
 
 ```python
 >>> from random import choice
@@ -56,11 +55,7 @@ n1, n2, n3 = sampleint(1, 99, 3)
 'AC'
 ```
 
-**Tirer plusieurs éléments dans une liste (avec remise)**
-
-
-
-**Tirer plusieurs éléments dans une liste (sans remise)**
+La fonction `sample` du module `random` permet de tirer aléatoirement plusieurs éléments sans remise. Plus précisément, la commande `sample(lst, k)` renvoie une liste de `k` entiers tirés aléatoirement (sans remise) dans la liste `lst`.
 
 ```python
 >>> from random import sample
@@ -71,6 +66,8 @@ n1, n2, n3 = sampleint(1, 99, 3)
 ```
 
 ## Mélanger une liste
+
+La fonction `shuffle` du module `random` permet de mélanger une liste. Attention
 
 ```python
 >>> from random import shuffle
