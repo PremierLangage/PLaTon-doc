@@ -1,6 +1,6 @@
 # Fonction aléatoires
 
-Cette page résume les commandes aléatoires les plus utiles sur la plateforme. Elles sont issues du module standard `random` ou du module propre à la plateforme `plrandom`. Pour alléger l'écriture du script `before`, elles sont toutes importées par défaut.
+Cette page résume les commandes aléatoires les plus utiles. Elles sont issues du module standard `random` ou du module propre à la plateforme `plrandom`. Pour alléger l'écriture du script `before`, elles sont toutes importées par défaut.
 
 ## Tirer aléatoirement des entiers
 
