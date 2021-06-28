@@ -8,10 +8,12 @@ Cette page résume les commandes aléatoires les plus utiles sur la plateforme. 
 
 La commande `randint(a, b)` renvoie un entier aléatoire compris entre `æ` et `b` inclus.
 
-```
-before ==
-n = randint(1, 9)
-==
+```python
+>>> from random import randint
+>>> randint(1, 9)
+8
+>>> randint(1, 9)
+3
 ```
 
 La commande `randint(a, b, xval)` renvoie un entier aléatoire compris entre `æ` et `b` inclus, en excluant les valeurs de la liste `xval`.
@@ -46,11 +48,12 @@ n1, n2, n3 = sampleint(1, 99, 3)
 
 **Tirer un élément dans une liste**
 
-```
-before ==
-lst = ["AA", "AB", "AC", "AD"]
-val = choice(lst)
-==
+```python
+>>> from random import choice
+>>> choice(["AA", "AB", "AC", "AD"])
+'AD'
+>>> choice(["AA", "AB", "AC", "AD"])
+'AC'
 ```
 
 **Tirer plusieurs éléments dans une liste (avec remise)**
@@ -59,24 +62,20 @@ val = choice(lst)
 
 **Tirer plusieurs éléments dans une liste (sans remise)**
 
+```python
+>>> from random import sample
+>>> sample(["AA", "AB", "AC", "AD"], 3)
+['AC', 'AB', 'AA']
+>>> sample(["AA", "AB", "AC", "AD"], 3)
+['AB', 'AA', 'AD']
+```
+
 ## Mélanger une liste
 
-
-
-## Autres exemples
-
-Prenons l'exemple d'un exercice où il faut trouver le plus petit nombre parmi une liste de nombres. Pour ce type d'exercice, le modèle approprié est le modèle `basic\radio`.
-
-On rappelle que dans ce modèle la liste des propositions est à entrer dans la clé `items` sous forme d'une chaîne multilignes ou d'une liste de chaînes. Avec une génération par un script Python, il est plus naturel d'utiliser le second format.
-
-```
-extends = /model/basic/radio.pl
-
-question ==
-Sélectionner le plus petit nombre de la liste suivante.
-==
-
-before ==
-items = sorted(sampleint(4, 1, 50))
-==
+```python
+>>> from random import shuffle
+>>> lst = ["AA", "AB", "AC", "AD"]
+>>> shuffle(lst)
+>>> lst
+['AD', 'AA', 'AC', 'AB']
 ```
