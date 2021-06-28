@@ -48,7 +48,7 @@ La fonction `csv_choice` permet de tirer aléatoirement une ligne dans un fichie
 'Italie'
 ```
 
-La fonction `csv_csample` permet de tirer aléatoirement plusieurs igne dans un fichier CSV. Plus précisément, la commande `csv_sample(f)` renvoie une ligne du fichier CSV `f` sous forme d'un dictionnaire dont les clés sont les en-têtes du fichier.
+La fonction `csv_csample` permet de tirer aléatoirement plusieurs igne dans un fichier CSV. Plus précisément, la commande `csv_sample(f, k)` renvoie `k` lignes du fichier CSV `f` sous forme d'une liste de dictionnaires.
 
 ```python
 >>> data = csv_sample(f, 4)
@@ -60,6 +60,21 @@ La fonction `csv_csample` permet de tirer aléatoirement plusieurs igne dans un 
 
 ## Un exemple d'exercice
 
-Pour utiliser un fichier externe dans un exercice, il est tout d'abord nécessaire de charger ce fichier dans l'environnement de l'exercice grâce à l'opérateur `@` de la syntaxe PL.
+Pour pouvoir utiliser un fichier externe dans un exercice, il faut tout d'abord nécessaire de charger ce fichier dans l'environnement de l'exercice grâce à l'opérateur `@` de la syntaxe PL.
 
-Ensuite, dans le script `before`, on peut utiliser les commandes Python usuelles pour la manipulation des fichiers.
+```
+extends = /model/basic/input.pl
+
+@ /demo/data/pays_europe.csv
+
+before ==
+f = open('pays_europe.csv')
+row = csv_choice(f)
+capitale = row['capitale']
+sol = row['pays']
+==
+
+question ==
+Quel pays a pour capitale {{capitale}} ?
+==
+```
