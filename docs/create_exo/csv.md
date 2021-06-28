@@ -7,7 +7,7 @@ Le [format CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) (Comma-Sep
 Voilà un exemple de fichier CSV contenant une liste de pays européens et leur capitale.
 
 ~~~
-country,article,capital
+pays,article,capitale
 Allemagne,l,Berlin
 Autriche,l,Vienne
 Belgique,la,Bruxelles
@@ -32,12 +32,34 @@ Suisse,la,Berne
 
 ## Lire des données dans un fichier CSV
 
-Pour utiliser un fichier externe dans un exercice, il est tout d'abord nécessaire de charger ce fichier dans l'environnement de l'exercice grâce à l'opérateur `@` de la syntaxe PL.
+La commande
 
-Ensuite, dans le script `before`, on peut utiliser les commandes Python usuelles pour la manipulation des fichiers.
+```python
+>>> f = open('pays_europe.csv')
+```
 
+La fonction `csv_choice` permet de tirer aléatoirement une ligne dans un fichier CSV. Plus précisément, la commande `csv_choice(f)` renvoie une ligne du fichier CSV `f` sous forme d'un dictionnaire dont les clés sont les en-têtes du fichier.
+
+```python
+>>> row = csv_choice(f)
+>>> row['pays']
+'Rome'
+>>> row['capitale']
+'Italie'
+```
+
+La fonction `csv_csample` permet de tirer aléatoirement plusieurs igne dans un fichier CSV. Plus précisément, la commande `csv_sample(f)` renvoie une ligne du fichier CSV `f` sous forme d'un dictionnaire dont les clés sont les en-têtes du fichier.
+
+```python
+>>> data = csv_sample(f, 4)
+>>> data[0]['pays']
+'Portugal'
+>>> data[1]['pays']
+'Autriche'
+```
 
 ## Un exemple d'exercice
 
+Pour utiliser un fichier externe dans un exercice, il est tout d'abord nécessaire de charger ce fichier dans l'environnement de l'exercice grâce à l'opérateur `@` de la syntaxe PL.
 
-
+Ensuite, dans le script `before`, on peut utiliser les commandes Python usuelles pour la manipulation des fichiers.
