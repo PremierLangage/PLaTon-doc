@@ -13,7 +13,7 @@ La commande Markdwon pour insérer une image est simplement : `![](adresse web d
 
 ```
 question ==
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg/598px-Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg)
+![](https://w.wiki/3ZAX)
 ==
 ```
 
@@ -21,7 +21,7 @@ Si l'on veut ajuster la place occupée par l'image, il faut utiliser la balise H
 
 ```
 question ==
-<img class="img img-40" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/640px-Flag_of_France.svg.png">
+<img class="img img-40" src="https://w.wiki/3ZAX">
 ==
 
 ```
