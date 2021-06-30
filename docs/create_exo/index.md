@@ -46,6 +46,7 @@
 * Aures modèles :
     * [Nombres complexes](complex.md)
     * [Polynômes](poly.md)
+    * [Ensembles](set.md)
     * [Matrices](matrix.md)
 
 ## Exercices d'informatique
