@@ -1,4 +1,4 @@
-# Modèle de base (1)
+# Exemple minimal
 
 Le modèle `math/expr` permet de fabriquer des exercices aléatoires où la réponse est une expression mathématique (expression impliquant des nombres, des variables, des opérations algébriques et des fonctions).
 
