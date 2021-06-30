@@ -1,4 +1,4 @@
-# Réponse textuelle (1)
+# Réponse textuelle
 
 Le modèle `basic/input` permet de fabriquer des exercices avec un champ de réponse textuel.
 
@@ -9,7 +9,7 @@ Les clés de base de ce modèle sont :
   * `question` : l'énoncé de l'exercice ;
   * `sol` : la liste des réponses acceptées.
 
-Par défaut, l'évaluation de la réponse ne tient pas compte des minuscules et des majuscules. Pour n tenir compte, la clé `case` doit être mise à `True`.
+Par défaut, l'évaluation de la réponse ne tient pas compte des minuscules et des majuscules. Pour en tenir compte, la clé `case` doit être mise à `True`.
 
 **Exemple 1.** Dans cet exemple, les solutions acceptées sont `Victor Hugo`, `Hugo`, mais aussi `victor hugo`, `victor Hugo`, `HUGO`, etc.
 
