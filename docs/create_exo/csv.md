@@ -2,9 +2,9 @@
 
 ## Fichiers CSV
 
-Le [format CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) (Comma-Separated Values) permet de représenter un tableau de données. Il s'agit d'un format texte où chaque ligne représente une ligne du tableau et où les cellules d'une ligne sont séparées par des virgules. Les virgules peuvent être remplacées par d'autres séparateurs (points-virgules, espaces, etc.) On peut créer un fichier CSV avec un tableur ou simplement un éditeur de texte.
+Le [format CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) (Comma-Separated Values) permet de représenter un tableau de données. Il s'agit d'un format texte où chaque ligne représente une ligne du tableau et où les cellules d'une ligne sont séparées par des virgules.
 
-Voilà un exemple de fichier CSV contenant une liste de pays européens et leur capitale.
+**Exemple.** Voilà un exemple de fichier CSV contenant une liste de pays européens et leur capitale.
 
 ~~~
 pays,article,capitale
@@ -30,9 +30,11 @@ Suède,la,Stockholm
 Suisse,la,Berne
 ~~~
 
+Les virgules peuvent être remplacées par d'autres séparateurs (points-virgules, espaces, etc.) On peut créer un fichier CSV avec un tableur ou simplement un éditeur de texte.
+
 ## Lire des données dans un fichier CSV
 
-La commande
+Avant de lire un fichier, il faut l'ouvrir avec la fonction `open`.
 
 ```python
 >>> f = open('pays_europe.csv')
