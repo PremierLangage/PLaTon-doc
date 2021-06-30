@@ -39,11 +39,13 @@
      * [Bibliothèque SymPy](sympy.md)
      * [LaTeX](latex.md)
      * [Champ de réponse mathématique](mathinput.md)
-* Modèle avec une expression :
-    * [Expression](mathexpr.md)
+* Modèle de base (expression mathématique) :
+    * [Exemple minimal](expr.md)
+    * [Modifier l'interface de réponse](expr_inputblock.md)
+    * [Modifier les informations de correction](expr_messages.md)
 * Aures modèles :
-    * [Nombres complexes](matchlist.md)
-    * [Polynômes](matchlist.md)
+    * [Nombres complexes](complex.md)
+    * [Polynômes](poly.md)
     * [Matrices](matrix.md)
 
 ## Exercices d'informatique
