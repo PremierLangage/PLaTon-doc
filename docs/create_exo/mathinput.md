@@ -11,7 +11,7 @@ Voilà la liste des principales commandes.
 |`sqrt` | racine carrée |
 |`pi` | pi (symbole) |
 |`infty` | infini (symbole) |
-|`empty` | ensemble vide (symbole) |
+|`emptyset` | ensemble vide (symbole) |
 |`cup` | union (symbole) |
 
 [Démonstration](https://pl.u-pem.fr/filebrowser/demo/46023/)
