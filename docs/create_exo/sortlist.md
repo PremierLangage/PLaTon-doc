@@ -27,13 +27,16 @@ Cartable
 ==
 ```
 
+Pour introduire de l'aléa dans l'exercice, on peut entrer une liste longue dans `sortedlist` et fixer un nombre d'items à tirer dans cette liste grâce à la clé `nbitems`.
+
 **Exemple 2**
 
 ```
 extends = /model/basic/sortlist.pl
 
 question ==
-Classer ces premiers ministres de la Ve République du plus ancien au plus récent (selon la date d'entrée en fonction).
+Classer ces premiers ministres de la Ve République du plus ancien au plus récent 
+(selon la date d'entrée en fonction).
 ==
 
 nbitems = 5
