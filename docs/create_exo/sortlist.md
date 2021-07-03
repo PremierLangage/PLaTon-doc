@@ -27,6 +27,8 @@ Cartable
 ==
 ```
 
+Par défaut, le score repose sur une mesure de distance entre listes ([distance tau de Kendall](https://fr.wikipedia.org/wiki/Tau_de_Kendall)). Pour un barème où seul l'ordre exact est récompensé, la clé `scoring` doit être mise à `ExactOrder`.
+
 Pour introduire de l'aléa dans l'exercice, on peut entrer une liste longue dans `sortedlist` et fixer un nombre d'items à tirer dans cette liste grâce à la clé `nbitems`.
 
 **Exemple 2**
@@ -38,6 +40,8 @@ question ==
 Classer ces premiers ministres de la Ve République du plus ancien au plus récent 
 (selon la date d'entrée en fonction).
 ==
+
+scoring = "ExactOrder"
 
 nbitems = 5
 
