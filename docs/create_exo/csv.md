@@ -1,4 +1,4 @@
-# Générer aléatoirement des données à partir d'un fichier
+# Tirer aléatoirement des données dans un fichier
 
 ## Fichiers CSV
 
