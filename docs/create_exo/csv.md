@@ -60,7 +60,7 @@ La fonction `csv_csample` permet de tirer aléatoirement plusieurs igne dans un 
 'Autriche'
 ```
 
-## Un exemple d'exercice
+## Exemples d'exercices
 
 Pour pouvoir utiliser un fichier externe dans un exercice, il faut tout d'abord nécessaire de charger ce fichier dans l'environnement de l'exercice grâce à l'opérateur `@` de la syntaxe PL.
 
@@ -74,6 +74,23 @@ f = open('pays_europe.csv')
 row = csv_choice(f)
 capitale = row['capitale']
 sol = row['pays']
+==
+
+question ==
+Quel pays a pour capitale {{capitale}} ?
+==
+```
+
+```
+extends = /model/basic/radio.pl
+
+@ /demo/data/pays_europe.csv
+
+before ==
+f = open('pays_europe.csv')
+data = csv_sample(f, 4)
+capitale = data[0]['capitale']
+items = [row['pays'] for row in data]
 ==
 
 question ==
