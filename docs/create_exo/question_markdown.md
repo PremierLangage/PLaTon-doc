@@ -5,7 +5,7 @@ L'énoncé (contenu dans la clé `question`) peut être mis en forme avec des ba
 
 ### Paragraphes
 
-Pour faire un nouveau paragraphe, il suffit de laisser une ligne vide avant ce nouveau paragraphe. Un simple retour à la ligne n'aura aucun effet à l'affichage (l'affichage sera en continu). 
+Pour faire un nouveau paragraphe, il suffit d'insérer une ligne vide. Un simple retour à la ligne n'a aucun effet sur le texte mis en forme, le texte reste continu. 
 
 ```
 question ==
@@ -16,6 +16,8 @@ Deuxième paragraphe
 ```
 
 ### Italique, gras, verbatim
+
+les balises `*`, `**` et <code>`</code> permettent respectivement d'obtenir de l'italique, du gras et du verbatim.
 
 ```
 question ==
