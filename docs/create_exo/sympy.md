@@ -44,6 +44,14 @@ Les modèles d'exercices mathématiques s'appuient sur la bibliothèque SymPy. E
 a**2 + 2*a + 1
 ```
 
+```python
+>>> from sympy import Symbol, ln, diff
+>>> x = Symbol('x')
+>>> f = ln(x + 1)
+>>> diff(f, x)
+1/(x + 1)
+```
+
 ## Nombres complexes
 
 ```python
