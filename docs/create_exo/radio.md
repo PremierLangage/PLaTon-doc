@@ -46,7 +46,7 @@ Il est ensuite nécessaire de définir la bonne réponse, qui n'est plus en gén
 extends = /model/basic/radio.pl
 
 question ==
-A quel siècle vivait Victor Hugo
+À quel siècle vivait Victor Hugo ?
 ==
 
 items ==
