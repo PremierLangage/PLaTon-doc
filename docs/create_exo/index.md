@@ -25,7 +25,7 @@
 * Exercices aléatoires :
     * [Générer aléatoirement des données](before.md)
     * [Fonctions aléatoires](random.md)
-    * [Générer aléatoirement des données à partir d'un fichier](csv.md)
+    * [Tirer aléatoirement des données dans un fichier](csv.md)
 * [Evaluer la réponse](evaluator.md) 
 * Images, sons, vidéos :
     * [Insérer une image](image.md)
