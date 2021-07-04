@@ -3,10 +3,9 @@
 La [bibliothèque SymPy](https://www.sympy.org) est une bibliothèque Python de calcul symbolique. Elle permet de représenter et de manipuler :
 
   * des fractions
+  * des expressions algébriques/analytiques
   * des nombres complexes
-  * des expressions algébriques
-  * des expressions analytiques
-  * des ensembles
+  * des ensembles finis
   * des intervalles
   * des polynômes
   * des matrices
@@ -20,10 +19,30 @@ Les modèles d'exercices mathématiques s'appuient sur la bibliothèque SymPy. E
 >>> from sympy import Rational
 >>> x = Rational(2, 3)
 >>> y = Rational(2)
->>> x+y
+>>> x + y
 8/3
 ```
 
+## Expressions
+
+```python
+>>> from sympy import sqrt, simplify
+>>> x = sqrt(2) + sqrt(3)
+>>> x**2
+(sqrt(2) + sqrt(3))**2
+>>> simplify(x**2)
+2*sqrt(6) + 5
+```
+
+```python
+>>> from sympy import Symbol
+>>> a = Symbol('a')
+>>> expr = (1 + a)**2
+>>> expr
+(a + 1)**2
+>>> expr.expand()
+a**2 + 2*a + 1
+```
 
 ## Nombres complexes
 
@@ -31,22 +50,15 @@ Les modèles d'exercices mathématiques s'appuient sur la bibliothèque SymPy. E
 >>> from sympy import I
 >>> x = 3 + I
 >>> y = 1 - 2*I
->>> x*y
+>>> z = x*y
+>>> z
 (1 - 2*I)*(3 + I)
->>> (x*y).expand()
+>>> z.expand()
 5 - 5*I
 ```
 
-```python
->>> from sympy import re, im, conjugate
->>> re(x)
-3
->>> im(x)
-1
->>> conjugate(x)
-3 - I
-```
-
 ## Polynômes
+
+## Ensembles finis
 
 ## Matrices
