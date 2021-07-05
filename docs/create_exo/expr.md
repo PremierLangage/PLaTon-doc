@@ -7,7 +7,7 @@ Les clés de base de ce modèles sont :
   * `question` : l'énoncé de l'exercice ;
   * `sol` : la solution.
 
-La solution `sol` doit être un objet SymPy de type expression mathématique et ne peut être produite que dans le script `before`.
+La solution `sol` doit être un objet SymPy de type expression mathématique. Elle ne peut donc être produite que dans le script `before`.
 
 **Exemple 1**
 
