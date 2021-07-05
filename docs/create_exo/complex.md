@@ -1,5 +1,10 @@
 # Nombres complexes
 
+Le modèle `math/complex` permet de fabriquer des exercices où la réponse est de type nombre complexe.
+
+Par défaut, le modèle contrôle que la réponse saisie est un nombre complexe, mais il n'impose aucune forme particulière pour ce nombre. La clé `complex_form` permet d'imposer une forme cartésienne (`cartesian`) ou exponentielle (`exponential`).
+
+**Exemple**
 
 ```
 extends = /model/math/complex.pl
