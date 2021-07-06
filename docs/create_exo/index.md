@@ -31,7 +31,7 @@
     * [Insérer une image](image.md)
     * [Insérer un son](son.md)
 
-## Exercices de mathématiques
+## Exercices de mathématiques : expressions symboliques
 
 * Outils :
      * [Bibliothèque SymPy](sympy.md)
@@ -48,7 +48,7 @@
     * [N-uplets](tuple.md)
     * [Intervalle](interval.md)
 
-## Exercices de mathématiques : graphiques
+## Exercices de mathématiques : aspects graphiques
 
 * Générer des graphiques
      * 
