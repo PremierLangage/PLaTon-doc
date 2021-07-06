@@ -45,6 +45,14 @@
     * [Nombres complexes](complex.md)
     * [Polynômes](poly.md)
     * [Ensembles](set.md)
-    * [Matrices](matrix.md)
+    * [N-uplets](tuple.md)
+    * [Intervalle](interval.md)
+
+## Exercices de mathématiques : graphiques
+
+* Générer des graphiques
+     * 
+* Champ de réponse graphique
+    * 
 
 ## Exercices d'informatique
