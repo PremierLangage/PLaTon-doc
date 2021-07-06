@@ -29,3 +29,33 @@ question ==
 
 Pour charger une image sur le serveur PLaTon, il faut sélectionner le fichier image dans l'explorateur de fichiers de son ordinateur, puis le glisser-déposer dans l'explorateur de fichiers de l'éditeur de ressources PLaTon.
 
+
+## Un exemple d'exercice
+
+```
+extends = /model/basic/radio.pl
+
+flag0 =$ /demo/media/flag0.png
+flag1 =$ /demo/media/flag1.png
+flag2 =$ /demo/media/flag2.png
+flag3 =$ /demo/media/flag3.png
+
+before ==
+indsol = randint(0, 3)
+flags = [flag0, flag1, flag2, flag3]
+flag = flags[indsol]
+==
+
+question ==
+A quel pays appartient ce drapeau ?
+<img class="img img-40" src="{{ flag }}">
+==
+
+items ==
+France
+Espagne
+Allemagne
+Italie
+==
+```
+
