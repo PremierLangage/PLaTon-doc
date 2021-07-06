@@ -9,7 +9,7 @@ Les clés de base de ce modèles sont :
 
 La solution `sol` doit être un objet SymPy de type expression polynômiale.
 
-Par défaut, le modèle contrôle que la réponse saisie est un polynôme, mais il n'impose aucune forme particulière pour ce nombre. La clé `poly_form` permet d'imposer une forme developpée (`expanded`) ou factorisé (`factorized`).
+Le modèle contrôle que la réponse saisie est un polynôme, mais, par défaut, il n'impose aucune forme particulière pour ce nombre. La clé `poly_form` permet d'imposer une forme developpée (`expanded`) ou factorisé (`factorized`).
 
 ```
 extends = /model/math/poly.pl
