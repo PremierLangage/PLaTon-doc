@@ -29,4 +29,6 @@ elif ans < a or ans > b:
 else:
     score = 100
 ==
+
+solution = ""
 ```
