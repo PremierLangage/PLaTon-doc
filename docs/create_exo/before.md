@@ -78,3 +78,5 @@ question ==
 Calculer {{ a }} + {{ b }}.
 ==
 ```
+
+**Exercice.** Créer un exercice où on demande de calculer le PGCD de deux entiers. Indication : la commande `gcd` du module `math` permet de calculer le PGCD de deux entiers.
