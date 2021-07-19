@@ -219,7 +219,7 @@ Liste minimale des clés standards à fournir et renseignées dans votre fichier
 !!! Attention
     A terme les champs `code_before` et `code_after` seront optionnel car définit par défault à la châine vide.
     
-## Nouvelle fonctionnalité taboo
+## Nouvelle fonctionnalité taboo (été 2020)
 
 La clé optionnelle **taboo** permet à l'enseignant éditeur de spécifier une expression régulière dans 
 l'exercice. Si cette clé existe et possède donc une valeur, un texte d'avertissement sera automatiquement
@@ -243,3 +243,26 @@ votre expression régulière pourra être :
 Le tout sans aucun espace final ou incis au milieu. Pour en savoir plus sur les expréssions régulière,
 vous pouvez consulter la documentation du module **re** de **Python** ou encore la 
 [page wikipédia](https://fr.wikipedia.org/wiki/Expression_r%C3%A9guli%C3%A8re).
+
+
+## Nouvelle fonctionnalité Indices (été 2021)
+
+La clé optionnelle **astuces** permet à l'enseignant éditeur de rajouter des indices libérables
+durant la réalisation des exercices. Les anciens exercices, sans indice, restent compatibles avec 
+l'ancienne version du template. Si vous décidez de rajouter une clé **astuces**, alors un nouveau
+composant sera automatiquement ajouté dans votre exercices. L'apprenant pourra alors cliquer au
+fur et à mesure pour obtenir de l'aide.
+
+La note finale en sera aussi affectée. Sans indice, tous les points sont donnés à l'apprenant. Sinon,
+un pourcentage de pondération sera appliqué sur la note. Le pourcentage vaut 100% si aucun indice
+n'a été libéré et décroit linérairement vers 50% si tous les indices ont été relachés.
+
+Voici un exemple avec une famille de 3 indices pour l'exercice consistant à code un hello world.
+
+    astuces==#|python|
+    [
+      { "content": """Il suffit, dans cet exercice, d'utiliser une seule fois la fonction `printf` avec un seul argument : une chaîne de caractère statique bien préparé."""},
+      { "content": """S'il vous semble que votre fonction fait ce qui est attendu mais que la plateforme vous compte une erreur, c'est que vous ne gérez pas correctement le retour à la ligne final. Et attention, ne rajoutez pas d'expace surperflu avant ce retour à la ligne."""},
+      { "content": """`printf("Hello World!\n");` est l'unique instruction à insérer dans votre fonction `main`. N'oubliez pas non plus de retourner un entier : ici `0` car cette fonction se comporte normalement en opérant son affichage."""}
+    ]
+    ==
