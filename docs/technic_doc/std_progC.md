@@ -26,10 +26,11 @@ les sorties standards. Enfin le template termine en compilant une note et un fee
 * Remplacement de l'ancien éditeur par le composant Angular `Code Editor`.
 * Notation évoluée avec gestions du nombre de tentatives.
 * Possibilité d'interdire toute occurence d'une **expression régulière** dans le code élève.
+* Possibilité de mettre en place des indices libérables compilant alors une **note d'autonomie**.
 
 La notation finale est pourcentage qui est le produit de trois autres pourcentage.
 
-`note_finale = note_compilation * note_tests * note_tentatives / 10000`
+`note_finale = note_compilation * note_tests * note_tentatives * note_autonomie / 1000000`
 
 La note de compilation est de 100% si le compilateur de retourne ni warning, ni erreur. 
 Une erreur (ou plus) de compilation donne la note de 0%. Chaque warning coute 10%. Ainsi, un 
@@ -256,6 +257,8 @@ fur et à mesure pour obtenir de l'aide.
 La note finale en sera aussi affectée. Sans indice, tous les points sont donnés à l'apprenant. Sinon,
 un pourcentage de pondération sera appliqué sur la note. Le pourcentage vaut 100% si aucun indice
 n'a été libéré et décroit linérairement vers 50% si tous les indices ont été relachés.
+
+`note_autonomie = 50 + (50*(nb_total_indice - nb_indice_utilisé) // (nb_total_indice))`
 
 Voici un exemple avec une famille de 3 indices pour l'exercice consistant à code un hello world.
 
