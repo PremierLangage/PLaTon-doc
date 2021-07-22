@@ -14,4 +14,8 @@
 
 /Mathematics/exercises/complex_numbers/quadratic_cplx_eq_XXX.pl (XXX = type des racines)
 
+* Calculer les racines carrées d'un nombre complexe
+
+/Mathematics/exercises/complex_numbers/cplx_sqrt.pl
+
 
