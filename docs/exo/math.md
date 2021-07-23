@@ -7,6 +7,14 @@
 
 /Mathematics/exercises/algebra/elementary_algebra/fraction/frac_computation_XXX.pl (XXX = types d'expression à calculer)
 
+* Simplifier une fraction.
+
+/Mathematics/exercises/algebra/elementary_algebra/fraction/frac_simplify_XXX.pl (XXX = taille des nombres)
+
+* Simplifier une somme de fractions avec de grands dénominateurs
+
+/Mathematics/exercises/algebra/elementary_algebra/fraction/frac_sum_large_denom_XXX.pl (XXX = nombre de termes)
+
 ### Nombres Complexes
 
 * Calculer avec les nombres complexes
