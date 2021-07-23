@@ -43,6 +43,15 @@
 
 /Mathematics/exercises/analysis/logarithm/ln_equation.pl
 
+* Transformer des expressions avec exponentielle
+
+/Mathematics/exercises/analysis/exponential/transf_exp_XXX.pl (XXX = types d'expression à transformer)
+
+* Transformer des expressions avec logarithme
+
+/Mathematics/exercises/analysis/logarithm/transf_ln_XXX.pl (XXX = types d'expression à transformer)
+
+
 
 
 
