@@ -51,7 +51,11 @@
 
 /Mathematics/exercises/analysis/logarithm/transf_ln_XXX.pl (XXX = types d'expression à transformer)
 
+### Trigonométrie
 
+* Résoudre une équation trigonométrique
+
+/Mathematics/exercises/analysis/trigonometric_functions/equation_sincos_XXX.pl
 
 
 
