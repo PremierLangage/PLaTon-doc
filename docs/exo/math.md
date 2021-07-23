@@ -39,6 +39,12 @@
 
 /Mathematics/exercises/analysis/exponential/exp_equation.pl
 
+* Résoudre une équation avec logarithme
+
+/Mathematics/exercises/analysis/logarithm/ln_equation.pl
+
+
+
 
 
 
