@@ -33,6 +33,12 @@
 
 /Mathematics/exercises/complex_numbers/cplx_sqrt.pl
 
+### Logarithme et exponentielle
+
+* Résoudre une équation avec exponentielle
+
+/Mathematics/exercises/analysis/exponential/exp_equation.pl
+
 
 
 
