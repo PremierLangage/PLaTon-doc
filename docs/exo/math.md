@@ -1,5 +1,12 @@
 # Exercices de mathématiques
 
+
+### Fractions
+
+* Calculer avec les fractions
+
+/Mathematics/exercises/algebra/elementary_algebra/fraction/frac_computation_XXX.pl (XXX = types d'expression à calculer)
+
 ### Nombres Complexes
 
 * Calculer avec les nombres complexes
@@ -17,5 +24,7 @@
 * Calculer les racines carrées d'un nombre complexe
 
 /Mathematics/exercises/complex_numbers/cplx_sqrt.pl
+
+
 
 
