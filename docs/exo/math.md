@@ -57,6 +57,14 @@
 
 /Mathematics/exercises/analysis/trigonometric_functions/equation_sincos_XXX.pl
 
+* Placer un angle sur le cercle trigonométrique
+
+/Mathematics/exercises/analysis/trigonometric_functions/unit_circle_draw_angle_value_XXX.pl
+
+* Lire un angle sur le cercle trigonométrique
+
+/Mathematics/exercises/analysis/trigonometric_functions/unit_circle_read_angle_XXX.pl
+
 
 
 
