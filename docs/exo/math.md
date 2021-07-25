@@ -81,5 +81,10 @@
 
 /Mathematics/exercises/algebra/polynomials/factorization/given_root_XXX.pl
 
+### Systèmes linéaires
+
+* Résoudre un système linéaire
+
+/Mathematics/exercises/algebra/linear_algebra/linear_systems/linsys_XXX.pl
 
 
