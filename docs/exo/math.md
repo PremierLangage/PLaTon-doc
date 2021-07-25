@@ -65,6 +65,16 @@
 
 /Mathematics/exercises/analysis/trigonometric_functions/unit_circle_read_angle_XXX.pl
 
+### Inéquations
+
+* Résoudre une inéquation linéaire
+
+/Mathematics/exercises/algebra/elementary_algebra/inequalities/linineq_XXX.pl
+
+* Résoudre une inéquation produit/quotient
+
+/Mathematics/exercises/algebra/elementary_algebra/inequalities/prodquot_inequation_.pl
+
 
 
 
