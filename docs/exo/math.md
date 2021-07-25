@@ -73,9 +73,13 @@
 
 * Résoudre une inéquation produit/quotient
 
-/Mathematics/exercises/algebra/elementary_algebra/inequalities/prodquot_inequation_.pl
+/Mathematics/exercises/algebra/elementary_algebra/inequalities/prodquot_inequation_XXX.pl
 
+### Polynômes
 
+* Factoriser un polynôme avec une racine donnée
+
+/Mathematics/exercises/algebra/polynomials/factorization/given_root_XXX.pl
 
 
 
