@@ -51,6 +51,14 @@
 
 /Mathematics/exercises/analysis/logarithm/transf_ln_XXX.pl (XXX = types d'expression à transformer)
 
+### Fonctions
+
+* Déterminer l'ensemble de définition (maximal) d'une fonction
+
+/Mathematics/exercises/analysis/functions/defset/ln1.pl
+
+/Mathematics/exercises/analysis/functions/defset/sqrt1.pl
+
 ### Trigonométrie
 
 * Résoudre une équation trigonométrique
