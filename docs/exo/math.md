@@ -73,7 +73,11 @@
 
 /Mathematics/exercises/analysis/trigonometric_functions/unit_circle_read_angle_XXX.pl
 
-### Inéquations
+### Inégalités
+
+* Encadrer une expression affine
+
+/Mathematics/exercises/algebra/elementary_algebra/inequalities/bound_affine.pl
 
 * Résoudre une inéquation linéaire
 
