@@ -14,7 +14,7 @@ Cette opération se fait par la fonction post (/sandbox/api_server/views.py) qui
 3_ Elle renvoie un code `200` et la **FrozenResource** si tout s'est bien passé, un code `-1` et la **FrozenResource** si elle était déja présente.
    Si les données ne sont pas présentes ou ne sont pas au format Json, les codes d'erreur sont respectivement `-2` et `-3`.
 
-## *Recevoir les informations d'une frozen_ressource* 
+## *RECEVOIR LES INFORMATIONS D'UNE FROZEN_RESSOURCE* 
 
 Cette opération se fait par la fonction get (/sandbox/api_server/views.py) qui est chargée de renvoyer les données de la frozen_ressource demandée (identifiée par son id).
 
