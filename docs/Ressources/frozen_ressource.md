@@ -5,7 +5,7 @@ On peut ainsi effectuer deux principales opérations : passer de données repré
 
 ## *FROM RESSOURCE TO `FROZEN_RESSOURCE`*
 
-Cette opération se fait par la fonction post (/sandbox/api_server/views.py) qui est chargée de réceptionner les données de la ressource et de les stocker en frozen_ressource dans la sandbox.
+Cette opération se fait par la fonction *post* (dans le fichier /sandbox/api_server/views.py) qui est chargée de réceptionner les données de la ressource et de les stocker en frozen_ressource dans la sandbox.
 
 ### Fonctionnement
 
@@ -16,7 +16,7 @@ Cette opération se fait par la fonction post (/sandbox/api_server/views.py) qui
 
 ## *RECEVOIR LES INFORMATIONS D'UNE FROZEN_RESSOURCE* 
 
-Cette opération se fait par la fonction get (/sandbox/api_server/views.py) qui est chargée de renvoyer les données de la frozen_ressource demandée (identifiée par son id).
+Cette opération se fait par la fonction *get* (dans le fichier /sandbox/api_server/views.py) qui est chargée de renvoyer les données de la frozen_ressource demandée (identifiée par son id).
 
 ### Fonctionnement
 
