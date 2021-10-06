@@ -1,0 +1,2078 @@
+{
+	"info": {
+		"_postman_id": "17302436-86a6-4f11-bd54-c0eebadf734c",
+		"name": "PLaTon",
+		"description": "This documentation aims to describe the different API of the PLaTon projet.\n\n# Responses\n\n## Format\n\nExcept if otherwise specified, if a response body is always in `JSON`.\n\n## Success\n\nOn success, responses will always be sent with a `2xx` HTTP status code. If the code is different from `204`, the body will always contain something.\n\nFor action, the body will contain the result of the action (if applicable).\n\nFor CRUD operation on collection, a successfull response will always be a `json` object containing the field `results` with a list (may be empty) of the results:\n\n```json\n{\n    \"results\": [\n        {...},\n        {...}\n    ]\n}\n```\n\nThe response will always follow this pattern, even in the case only one object is returned (`results` list will just contain one item).\n\n\n## Error\n\nOn error, responses will always be sent with a `4xx` or a `5xx` HTTP status code. For `4xx` error, the responses will always contain a `JSON` body with at least two fields. Other fields can be present according to errnum :\n\n* `errnum` *str*: Unique value corresponding to the error. It can be used to know if other fields are present.\n* `message` *str*: A message describing the error.\n\nFor instance, when trying to create a sandbox, but unique fields already exists :\n\n```\nHTTP/1.1 409 Conflict\nContent-Length: 112\nContent-Type: application/json\n\n{\n    \"errnum\": \"UNIQ\",\n    \"message\": \"Some fields use an already taken value\",\n    \"fields\": [\"name\", \"url\"]\n}\n```\n\nFor the same `errnum`, the message can be different, but not the existing additional fields.\n\n\n# Requests\n\n## URL Pattern\n\nMost of the requests to the API follow the same URL pattern :\n\n* For CRUD on collections : `[server]/api/[module]/[collection]/(id/)(?query)`\n* For actions: `[server]/api/[module](/[collection](/id))/[action]/`\n\nOperation can be done on an entire collection, or a specific item:\n\n* `[server]/api/[module]/[collection]/` for a collection.\n* `[server]/api/[module]/[collection]/[id]/` for a specific item (`id` type can depends on the collection, but is most of the time an integer).\n\n\nAll URL **must** end with a forward slash `/` if there is not query parameters, i.e. : \n\n* `[server]/api/[module]/[collection]/`\n* `[server]/api/[module]/[collection]/?key=value`\n\nBut not\n\n* `[server]/api/[module]/[collection]`\n* `[server]/api/[module]/[collection]/?key=value/`\n\nIf the `/` is missing, requests and parameters may be misinterpreted, leading to undefined behavior on the error response.\n\n## Format\n\nExcept if otherwise specified, if a request body is needed, it must be in `JSON`.\n\n\n## Allowed HTTP method\n\nFor actions, the `POST` method must be used.\n\nFor CRUD operations, the allowed methods are :\n\n| Method | Result | Content |\n|--------|--------|---------|\n|`HEAD`  | Retrieve the headers that are returned if the specified resource would be requested with a GET method.|Do not need a body. If used on a collection, an optional query string  (explained in the section below) can be provided.|\n|`GET`   |Retrieve a resource.|Do not need a body. If used on a collection, an optional query string  (explained in the section below) can be provided.|\n|`POST`  |Create a resource.|Body must contain all the mandatory fields corresponding to the collection.|\n|`PATCH` |Modify a resource.|Body must contain only the fields that will be modified. Only works on a specific item.|\n|`PUT`   |Replace a resource.|Body must contain all the mandatory fields corresponding to the collection. Only works on a specific item.|\n|`DELETE`|Delete a resource.|Do not need a body. Only works on a specific item.|\n\n# Query string\n\n`GET` requests take an additional query string that allows one to specify parameters for a particular query. These take the standard form of \"field=value\". Multiple values may be provided separated by the ampersand (\"&\") character. The \"field\" portion of a query string corresponds to a particular field within a particular object within the collection.\n\nIf the field has a hierarchy, it can be referenced using a dot `.`. For example, considering a sandbox :\n\n```json\n{\n    \"id\": 12,\n    \"name\": \"name\",\n    \"url\": \"http://localhost/\",\n    \"enabled\": true,\n    \"client_id\": \"client_id\",\n    \"client_secret\": \"client_secret\",\n    \"poll_usage_every\": \"PT1M\",\n    \"container_specs\": {\n        \"cpu_count\": 2,\n        \"memory_ram\": 400000000,\n        [...]\n    }\n}\n\n```\n\nIn order to find each enabled sandbox with exactly 200 MB of RAM, one would use the following query string: `?enabled=1&container_specs.memory_ram=200000000`\n\n\n## Search modifier\n\nA modifier may be used in front of the value portion of the query string. Only one modifier may be used, the second modifier character would be considered to be part of the value.\n\n| Modifier |             Example           |      Description      |\n|----------|-------------------------------|-----------------------|\n|`<`       |`?container_specs.cpu_count=<4`|Less than              |\n|`[`       |`?container_specs.cpu_count=[4`|Less than or equal     |\n|`>`       |`?container_specs.cpu_count=>1`|Greater than           |\n|`]`       |`?container_specs.cpu_count=]2`|Greater than or equal  |\n|`]`       |`?container_specs.cpu_count=!2`|Different than         |\n|`^`       |`?name=^python`                |Start with a string    |\n|`*`       |`?name=*python`                |Contain a string       |\n|`~`       |`?name=~java`                  |Do not contain a string|\n\nTo combine search modifier, use the comma `,`. Modifiers are combined with a logical `AND`. For instance to get all sandbox with name containing `python` but not `java`: `?name=*python,~java`\n\n## Value Types\n\nValue can be a different type:\n\n|        Type        |         Example         |                     Description                      |\n|--------------------|-------------------------|------------------------------------------------------|\n| int                |`?field=2`               | Plain integer                                        |\n| float              |`?field=3.14`            | Use dot `.` as decimal separator                     |\n| string             |`?field=string`          | Plain string                                         |\n| boolean            |`?field=1`               | Use integer (`0` is `false`, anything else is `true`)|\n| date / duration    |`?field=2004-12-02T22:00`| An [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) compliant string. For intervals, do not follow 8601, but instead combine search modifer on date : `?date=[2004,]2005`|\n| null               |`?field=`                | Do not put any value                                 |\n\n\n\n## Commands\n\nA command is a particular query string that instructs the API on how to organize the results that are to be returned. These are provided as query string attributes but are namespaced with \"c:\" to distinguish them from a search on a particular field. Depending on the query, not all of these commands may be implemented.\n\n\n| Command  |             Example           |      Description      |\n|----------|-------------------------------|-----------------------|\n|c:show    |`c:show=field,field`           | Only include the provided fields from the object within the result (multiple field names separated by a comma).|\n|c:hide    |`c:hide=field,field`           | Include all field except the provided fields from the object within the result (multiple field names separated by a comma). Will be ignored if `c:show` is present.|\n|c:sort    |`c:sort=field,field:1,field:-1`| Sort the results by the field(s) provided (multiple field names separated by a comma). The value after the `:` is the sort direction.|\n|c:resolve |`c:resolve=field,field`        | Describe below this table|\n|c:case    |`c:case=1`                     | Set whether a search should be case-sensitive, c:case=1 means case-sensitive. true is the default.|\n|c:limit   |`c:limit=20`                   | Limit the results to at most N objects (default to 1).|\n|c:start   |`c:start=10`                   | Start with the Nth object within the results of the query.|\n|c:timing  |`c:timing=1`                   | Shows the time taken by the involved server-side queries and resolves.|\n|c:distinct|`c:distinct=field`             | Get the distinct values of the given field.|\n|c:count   |`c:count=1` / `c:count=2`        | Return the number of found item in the field `count` of the response. `0` to not count (default), `1` to count, `2` to get only the count and not the results (`results` field of the response will be an empty list).|\n\n### `c:resolve`\n\nThe default behaviour of the API is to not resolve foreign key : only ID of the foreign object will be given. For instance, we actually lied about previous requests because `container_specs` is actually a foreign key in a sandbox. So a simple request like `?name=name` on sandbox would give something like :\n\n```json\n{\n    \"id\": 12,\n    \"name\": \"name\",\n    \"url\": \"http://localhost/\",\n    \"enabled\": true,\n    \"client_id\": \"client_id\",\n    \"client_secret\": \"client_secret\",\n    \"poll_usage_every\": \"PT1M\",\n    \"container_specs\": 4,\n    \"server_specs\": 18,\n}\n```\n\nThe `c:resolve` command allow to retrieve the corresponding object in a single query : `?name=name&c:resolve=container_specs`.\n\nTo resolve both `container_specs` and `server_specs` : `?name=name&c:resolve=container_specs,server_specs`",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Sign In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "ypicker",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "teacher1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "loremipsum",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/sign-in/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"sign-in",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Out",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/auth/sign-out/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"sign-out",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "User Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/me",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Collection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "lti",
+			"item": [
+				{
+					"name": "Info",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "context_id",
+									"value": "4242",
+									"type": "text"
+								},
+								{
+									"key": "context_label",
+									"value": "EXTM0001(2018)",
+									"type": "text"
+								},
+								{
+									"key": "context_title",
+									"value": "PLaTOn (EXTM0001)",
+									"type": "text"
+								},
+								{
+									"key": "context_type",
+									"value": "CourseSection",
+									"type": "text"
+								},
+								{
+									"key": "ext_lms",
+									"value": "moodle-2",
+									"type": "text"
+								},
+								{
+									"key": "ext_user_username",
+									"value": "mcisse06",
+									"type": "text"
+								},
+								{
+									"key": "launch_presentation_document_target",
+									"value": "window",
+									"type": "text"
+								},
+								{
+									"key": "launch_presentation_locale",
+									"value": "fr",
+									"type": "text"
+								},
+								{
+									"key": "launch_presentation_return_url",
+									"value": "https://elearning.u-pem.fr/mod/lti/return.php?course:4242&launch_container:4&instanceid:573&sesskey:CclSyjN1ZW",
+									"type": "text"
+								},
+								{
+									"key": "lis_course_section_sourcedid",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "lis_outcome_service_url",
+									"value": "https://elearning.u-pem.fr/mod/lti/service.php",
+									"type": "text"
+								},
+								{
+									"key": "lis_person_contact_email_primary",
+									"value": "mcisse06@etud.u-pem.fr",
+									"type": "text"
+								},
+								{
+									"key": "lis_person_name_family",
+									"value": "CISSE",
+									"type": "text"
+								},
+								{
+									"key": "lis_person_name_full",
+									"value": "CISSE MAMADOU",
+									"type": "text"
+								},
+								{
+									"key": "lis_person_name_given",
+									"value": "MAMADOU",
+									"type": "text"
+								},
+								{
+									"key": "lis_person_sourcedid",
+									"value": "178534",
+									"type": "text"
+								},
+								{
+									"key": "lis_result_sourcedid",
+									"value": "{\"data\":{\"instanceid\":\"573\",\"userid\":\"1519\",\"typeid\":null,\"launchid\":1841292756},\"hash\":\"cc25e53a0dc5c826b28dde862e6b5d8229d9401e79c733ea0263a6ff18d817c5\"}",
+									"type": "text"
+								},
+								{
+									"key": "lti_message_type",
+									"value": "basic-lti-launch-request",
+									"type": "text"
+								},
+								{
+									"key": "lti_version",
+									"value": "LTI-1p0",
+									"type": "text"
+								},
+								{
+									"key": "oauth_callback",
+									"value": "about:blank",
+									"type": "text"
+								},
+								{
+									"key": "oauth_consumer_key",
+									"value": "moodle",
+									"type": "text"
+								},
+								{
+									"key": "oauth_nonce",
+									"value": "298e883655e937585560e49ab51a7457",
+									"type": "text"
+								},
+								{
+									"key": "oauth_signature",
+									"value": "fCDOcVYQm4KBlqjbiZ4MFmHmcyg:",
+									"type": "text"
+								},
+								{
+									"key": "oauth_signature_method",
+									"value": "HMAC-SHA1",
+									"type": "text"
+								},
+								{
+									"key": "oauth_timestamp",
+									"value": "1621335780",
+									"type": "text"
+								},
+								{
+									"key": "oauth_version",
+									"value": "1.0",
+									"type": "text"
+								},
+								{
+									"key": "resource_link_description",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "resource_link_id",
+									"value": "573",
+									"type": "text"
+								},
+								{
+									"key": "resource_link_title",
+									"value": "Test LTI Params",
+									"type": "text"
+								},
+								{
+									"key": "roles",
+									"value": "Instructor",
+									"type": "text"
+								},
+								{
+									"key": "tool_consumer_info_product_family_code",
+									"value": "moodle",
+									"type": "text"
+								},
+								{
+									"key": "tool_consumer_info_version",
+									"value": "2018051703.1",
+									"type": "text"
+								},
+								{
+									"key": "tool_consumer_instance_description",
+									"value": "Elearning, Plateforme pédagogique de l'Université Paris-Est Marne-La-Vallée (UTF-8)",
+									"type": "text"
+								},
+								{
+									"key": "tool_consumer_instance_guid",
+									"value": "elearning.u-pem.fr",
+									"type": "text"
+								},
+								{
+									"key": "tool_consumer_instance_name",
+									"value": "ELEARNING",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1519",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/lti/info/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"lti",
+								"info",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sandbox",
+			"item": [
+				{
+					"name": "/api/sandbox/sandbox/",
+					"request": {
+						"method": "HEAD",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/sandbox/sandbox/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sandbox",
+								"sandbox",
+								""
+							]
+						},
+						"description": "Search sandboxes in the collection."
+					},
+					"response": []
+				},
+				{
+					"name": "/api/sandbox/sandbox/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/sandbox/sandboxes/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sandbox",
+								"sandboxes",
+								""
+							]
+						},
+						"description": "Search sandboxes in the collection."
+					},
+					"response": [
+						{
+							"name": "200 OK (result found)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/api/sandbox/?enabled=1&name=*python&c:case=0&c:count=1",
+									"path": [
+										"api",
+										"sandbox",
+										""
+									],
+									"query": [
+										{
+											"key": "enabled",
+											"value": "1"
+										},
+										{
+											"key": "name",
+											"value": "*python"
+										},
+										{
+											"key": "c:case",
+											"value": "0"
+										},
+										{
+											"key": "c:count",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"results\": [\n        {\n        \t\"id\": 12,\n            \"name\": \"Python\",\n            \"url\": \"http://python-sandbox.com\",\n            \"enabled\": true,\n            \"client_id\": \"client\",\n            \"client_secret\": \"secret\",\n            \"poll_usage_every\": \"PT1M\",\n            \"server_specs\": 2,\n            \"container_specs\": 4\n        },\n        {\n        \t\"id\": 17,\n            \"name\": \"Perl and Python\",\n            \"url\": \"http://perl-sandbox.com\",\n            \"enabled\": true,\n            \"client_id\": \"client\",\n            \"client_secret\": \"secret\",\n            \"poll_usage_every\": \"PT1M\",\n            \"server_specs\": 5,\n            \"container_specs\": 12\n        }\n    ],\n    \"count\": 2\n}"
+						},
+						{
+							"name": "200 OK (result not found)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/api/sandbox/?name=^doNotExists",
+									"path": [
+										"api",
+										"sandbox",
+										""
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "^doNotExists"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"results\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/sandbox/sandbox/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t \"name\": \"[name]\",\n\t \"url\": \"[url]\",\n\t \"enabled\": true,\n\t \"client_id\": \"[client_id]\",\n\t \"client_secret\": \"[client_secret]\",\n\t \"poll_usage_every\": \"[ISO 8601 duration]\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/sandbox/sandbox/",
+							"path": [
+								"api",
+								"sandbox",
+								"sandbox",
+								""
+							]
+						},
+						"description": "Add a new sandbox.\n\n* `name` *str* : Name used to identifie the sandbox on the interface.\n* `url` *str* : Complete URL of the sandbox (`scheme://host[:port]/`).\n* `enabled` *bool* : Whether the sandbox can be used immediatly or must be enable later. Optional, default to `true`.\n* `client_id` *str* : Client ID used for the authentication on the Sandbox. Must be at least 3 characters long.\n* `client_secret` *str* : Secret used for the authentication on the Sandbox.\n* `poll_usage_every` *str* : Interval at which the Sandbox' usage statistics are polled. Must be an [ISO 8601  duration](https://en.wikipedia.org/wiki/ISO_8601#Durations).\n`\n\n`url` and `name` must be unique on the server, a *409 Conflict* response will be sent if the given value already exists."
+					},
+					"response": [
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t \"name\": \"My sandbox\",\n\t \"url\": \"http://mysandbox.com\",\n\t \"enabled\": true,\n\t \"client_id\": \"client\",\n\t \"client_secret\": \"secret\",\n\t \"poll_usage_every\": \"PT1M\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/sandbox/",
+									"path": [
+										"api",
+										"sandbox",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n\t \"id\": 12,\n\t \"name\": \"My sandbox\",\n\t \"url\": \"http://mysandbox.com\",\n\t \"enabled\": true,\n\t \"client_id\": \"client\",\n\t \"client_secret\": \"secret\",\n\t \"poll_usage_every\": \"PT1M\",\n\t \"server_specs\": 2,\n\t \"container_specs\": 4\n}"
+						},
+						{
+							"name": "409 Conflict",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t \"name\": \"My sandbox\",\n\t \"url\": \"http://mysandbox.com\",\n\t \"enabled\": true,\n\t \"client_id\": \"client\",\n\t \"client_secret\": \"secret\",\n\t \"poll_usage_every\": \"PT1M\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/sandbox/",
+									"path": [
+										"api",
+										"sandbox",
+										""
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"errnum\": \"UNIQ\",\n    \"message\": \"Some fields use an already taken value\",\n    \"fields\": [\n        \"name\",\n        \"url\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/sandbox/sandbox/:id/",
+					"request": {
+						"method": "HEAD",
+						"header": [],
+						"url": {
+							"raw": "/api/sandbox/sandbox/:id/",
+							"path": [
+								"api",
+								"sandbox",
+								"sandbox",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "string",
+									"description": "ID of the sandbox."
+								}
+							]
+						},
+						"description": "Retrieve a specific sandbox."
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/api/sandbox/:id/",
+									"path": [
+										"api",
+										"sandbox",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"id\": 12,\n    \"name\": \"Python\",\n    \"url\": \"http://python-sandbox.com\",\n    \"enabled\": true,\n    \"client_id\": \"client\",\n    \"client_secret\": \"secret\",\n    \"poll_usage_every\": \"PT1M\",\n    \"server_specs\": 2,\n    \"container_specs\": 4\n}"
+						},
+						{
+							"name": "/api/sandbox/sandbox/:id/",
+							"originalRequest": {
+								"method": "HEAD",
+								"header": [],
+								"url": {
+									"raw": "/api/sandbox/sandbox/:id/",
+									"path": [
+										"api",
+										"sandbox",
+										"sandbox",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"type": "string",
+											"description": "ID of the sandbox."
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "/api/sandbox/sandbox/:id/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/api/sandbox/sandbox/:id/",
+							"path": [
+								"api",
+								"sandbox",
+								"sandbox",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "string",
+									"description": "ID of the sandbox."
+								}
+							]
+						},
+						"description": "Retrieve a specific sandbox."
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/api/sandbox/:id/",
+									"path": [
+										"api",
+										"sandbox",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"id\": 12,\n    \"name\": \"Python\",\n    \"url\": \"http://python-sandbox.com\",\n    \"enabled\": true,\n    \"client_id\": \"client\",\n    \"client_secret\": \"secret\",\n    \"poll_usage_every\": \"PT1M\",\n    \"server_specs\": 2,\n    \"container_specs\": 4\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/sandbox/sandbox/:id/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "/api/sandbox/sandbox/:id/",
+							"path": [
+								"api",
+								"sandbox",
+								"sandbox",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "string",
+									"description": "ID of the sandbox."
+								}
+							]
+						},
+						"description": "Delete a specific sandbox."
+					},
+					"response": [
+						{
+							"name": "204 No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "/api/sandbox/sandbox/:id/",
+									"path": [
+										"api",
+										"sandbox",
+										"sandbox",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "/api/sandbox/sandbox/:id/",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t \"name\": \"[name]\",\n\t \"url\": \"[url]\",\n\t \"enabled\": true,\n\t \"client_id\": \"[client_id]\",\n\t \"client_secret\": \"[client_secret]\",\n\t \"poll_usage_every\": \"[ISO 8601 duration]\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/sandbox/sandbox/:id/",
+							"path": [
+								"api",
+								"sandbox",
+								"sandbox",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "string",
+									"description": "ID of the sandbox."
+								}
+							]
+						},
+						"description": "Change specific field of a specific sandbox. Only the modified fields are required.\n\nAs for the `POST` and `PUT` requests, `url` and `name` must be unique on the server, a *409 Conflict* response will be sent if the given value already exists."
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t \"name\": \"My new sandbox\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/sandbox/sandbox/:id/",
+									"path": [
+										"api",
+										"sandbox",
+										"sandbox",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"id\": 12,\n    \"name\": \"My new sandbox\",\n    \"url\": \"http://mysandbox.com\",\n    \"enabled\": true,\n    \"client_id\": \"client\",\n    \"client_secret\": \"secret\",\n    \"poll_usage_every\": \"PT1M\",\n    \"server_specs\": 2,\n    \"container_specs\": 4\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/sandbox/sandbox/:id/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t \"name\": \"[name]\",\n\t \"url\": \"[url]\",\n\t \"enabled\": true,\n\t \"client_id\": \"[client_id]\",\n\t \"client_secret\": \"[client_secret]\",\n\t \"poll_usage_every\": \"[ISO 8601 duration]\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/sandbox/sandbox/:id/",
+							"path": [
+								"api",
+								"sandbox",
+								"sandbox",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "string",
+									"description": "ID of the sandbox."
+								}
+							]
+						},
+						"description": "Overwrite a specific sandbox. Every field (as defined in the `POST` method) are required."
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t \"name\": \"My sandbox\",\n\t \"url\": \"http://mysandbox.com\",\n\t \"enabled\": true,\n\t \"client_id\": \"client\",\n\t \"client_secret\": \"secret\",\n\t \"poll_usage_every\": \"PT1M\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "/api/sandbox/sandbox/:id/",
+									"path": [
+										"api",
+										"sandbox",
+										"sandbox",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"id\": 12,\n    \"name\": \"My sandbox\",\n    \"url\": \"http://mysandbox.com\",\n    \"enabled\": true,\n    \"client_id\": \"client\",\n    \"client_secret\": \"secret\",\n    \"poll_usage_every\": \"PT1M\",\n    \"server_specs\": 2,\n    \"container_specs\": 4\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/sandbox/usage/",
+					"request": {
+						"method": "HEAD",
+						"header": [],
+						"url": {
+							"raw": "/api/sandbox/usage/",
+							"path": [
+								"api",
+								"sandbox",
+								"usage",
+								""
+							]
+						},
+						"description": "Search for sandboxes' usage."
+					},
+					"response": []
+				},
+				{
+					"name": "/api/sandbox/usage/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/api/sandbox/usage/",
+							"path": [
+								"api",
+								"sandbox",
+								"usage",
+								""
+							]
+						},
+						"description": "Search for sandboxes' usage."
+					},
+					"response": [
+						{
+							"name": "200 Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/api/sandbox/usage/?sandbox=12&date=[2005-10-01,]2005-10-02&c:sort=date",
+									"path": [
+										"api",
+										"sandbox",
+										"usage",
+										""
+									],
+									"query": [
+										{
+											"key": "sandbox",
+											"value": "12"
+										},
+										{
+											"key": "date",
+											"value": "[2005-10-01,]2005-10-02"
+										},
+										{
+											"key": "c:sort",
+											"value": "date"
+										}
+									]
+								}
+							},
+							"status": "Ok",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"results\": [\n        {\n            \"id\": 4,\n            \"sandbox\": 12,\n            \"cpu\": 12.5,\n            \"ram\": 286278000,\n            \"swap\": 0,\n            \"storage\": 68996743564,\n            \"writing\": 3040,\n            \"reading\": 27295,\n            \"sending\": 3856,\n            \"receiving\": 3957283,\n            \"process\": 26,\n            \"container\": 3,\n            \"date\": \"2005-10-01T07:00:00\"\n        },\n        {\n            \"id\": 5,\n            \"sandbox\": 12,\n            \"cpu\": 52.5,\n            \"ram\": 319573950,\n            \"swap\": 0,\n            \"storage\": 68306783385,\n            \"writing\": 4040,\n            \"reading\": 32775,\n            \"sending\": 5912,\n            \"receiving\": 6594859,\n            \"process\": 29,\n            \"container\": 7,\n            \"date\": \"2005-10-01T014:00:00\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "playexo",
+			"item": [
+				{
+					"name": "/api/playexo/pl/:id/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/playexo/pl/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"playexo",
+								"pl",
+								"1",
+								""
+							]
+						},
+						"description": "Get the pl. If it is not built it will build the PL and then returns these fields: \n\n* `text` *str*\n* `title` *str*\n* `form` *str*\n* `config` *dict*\n* `styles` *str* (optional)\n* `scripts` *str* (optional)\n* `saved` *dict*"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/playexo/evaluate/:id/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "answer",
+									"value": "{\"answer\":5}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/playexo/evaluate/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"playexo",
+								"evaluate",
+								"1",
+								""
+							]
+						},
+						"description": "Evaluate the answer for a PL\n\n* `text` *str*\n* `title` *str*\n* `form` *str*\n* `config` *dict*\n* `styles` *str* (optional)\n* `scripts` *str* (optional)\n* `feedback` *str*\n* `grade` *int*\n* `saved` *dict*"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/playexo/pl/",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "{{csrftoken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "pl_name",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"value": "{\"key\":\"value\"}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/playexo/pl/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"playexo",
+								"pl",
+								""
+							]
+						},
+						"description": "Creates a PL. Returns its id in \"pl_id\" as integer"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/playexo/reroll/:id/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "seed",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/playexo/reroll/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"playexo",
+								"reroll",
+								"1",
+								""
+							]
+						},
+						"description": "Reroll the pl. Build the PL and then returns these fields: \n\n* `text` *str*\n* `title` *str*\n* `form` *str*\n* `config` *dict*\n* `styles` *str* (optional)\n* `scripts` *str* (optional)\n* `saved` *dict*\n\nA `seed` can be specified as *int*"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/playexo/save_answer/:id/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "answer",
+									"value": "{\"answer\":5}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/playexo/save_answer/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"playexo",
+								"save_answer",
+								"1",
+								""
+							]
+						},
+						"description": "Save the data entered by the user. This data will be returned in the `saved` field.\n\n* `text` *str*\n* `title` *str*\n* `form` *str*\n* `config` *dict*\n* `styles` *str* (optional)\n* `scripts` *str* (optional)\n* `saved` *dict*"
+					},
+					"response": []
+				},
+				{
+					"name": "TEST patch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"R1\",\n    \"circle\": 1,\n    \"owner\": \"admin\",\n    \"dependencies\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/play_exo/plexo/1/?action=reroll",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"play_exo",
+								"plexo",
+								"1",
+								""
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "reroll"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "circles",
+			"item": [
+				{
+					"name": "List circles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/circles/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get circle",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"PLaTon\",\n    \"desc\": \"Lorem ipsum is a simple dummy text\",\n    \"topics\": [\"platon\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/circles/7/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								"7",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create circle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Circle 2\",\n    \"desc\": \"Lorem ipsum\",\n    \"topics\": [],\n    \"levels\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/circles/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update circle",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"PLaTon\",\n    \"desc\": \"Lorem ipsum is a simple dummy text\",\n    \"topics\": [\"platon\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/circles/1/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete circle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/circles/7/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								"7",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "resources",
+			"item": [
+				{
+					"name": "List resources",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/resources/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"resources",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create resource",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"R1\",\n    \"circle\": 1,\n    \"owner\": \"admin\",\n    \"dependencies\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/resources/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"resources",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "topics",
+			"item": [
+				{
+					"name": "Topic collection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/topics/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"topics",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "levels",
+			"item": [
+				{
+					"name": "Level collection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/levels/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"levels",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "members",
+			"item": [
+				{
+					"name": "List members",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/circles/1/members/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								"1",
+								"members",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get member",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/circles/1/members/admin",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								"1",
+								"members",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete member",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/circles/1/members/teacher1/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								"1",
+								"members",
+								"teacher1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update member",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "OWNER",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/circles/1/members/admin/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								"1",
+								"members",
+								"admin",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "events",
+			"item": [
+				{
+					"name": "List events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/circles/1/events/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								"1",
+								"events",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Event",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/circles/1/events/2/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								"1",
+								"events",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "invitations",
+			"item": [
+				{
+					"name": "List invitations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/circles/1/invitations/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								"1",
+								"invitations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create invitation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "MEMBER",
+									"type": "text"
+								},
+								{
+									"key": "invitee",
+									"value": "teacher1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/circles/1/invitations/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								"1",
+								"invitations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete invitation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/circles/1/invitations/teacher1/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								"1",
+								"invitations",
+								"teacher1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Invitation",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/circles/1/invitations/teacher1/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								"1",
+								"invitations",
+								"teacher1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "resources",
+			"item": []
+		},
+		{
+			"name": "files",
+			"item": [
+				{
+					"name": "Get file",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/resources/1/files/resource-info.json?version=v1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"resources",
+								"1",
+								"files",
+								"resource-info.json"
+							],
+							"query": [
+								{
+									"key": "version",
+									"value": "v1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "notifications",
+			"item": [
+				{
+					"name": "List notifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/notifications/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"notifications",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "watchers",
+			"item": [
+				{
+					"name": "List watchers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/circles/1/watchers/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								"1",
+								"watchers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get watcher",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/circles/1/watchers/ypicker",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"circles",
+								"1",
+								"watchers",
+								"ypicker"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "courses",
+			"item": [
+				{
+					"name": "Course Collection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/courses/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "API 1",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "MON cours AP1",
+									"type": "text"
+								},
+								{
+									"key": "sandbox_name",
+									"value": "ma sandbox",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/courses/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Course me",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/courses/me",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courses",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Course detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/courses/1/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courses",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "activities",
+			"item": [
+				{
+					"name": "POST Activity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "activity 2",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "my activity",
+									"type": "text"
+								},
+								{
+									"key": "params",
+									"value": "{}",
+									"type": "text"
+								},
+								{
+									"key": "course_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/courses/1/activity/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courses",
+								"1",
+								"activity",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activity detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/course/2/activity/3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"course",
+								"2",
+								"activity",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activity detail next",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/course/2/activity/3/?action=next",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"course",
+								"2",
+								"activity",
+								"3",
+								""
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "next"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "exercices",
+			"item": [
+				{
+					"name": "Exercice evaluate",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/course/2/activity/3/?action=evaluate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"course",
+								"2",
+								"activity",
+								"3",
+								""
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "evaluate"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exercie save answer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/course/2/activity/3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"course",
+								"2",
+								"activity",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Exercice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "activity 2",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "my activity",
+									"type": "text"
+								},
+								{
+									"key": "params",
+									"value": "{}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/course/1/activity/1/exercice/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"course",
+								"1",
+								"activity",
+								"1",
+								"exercice",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{jwt}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// SESSION AUTH",
+					"",
+					"var csrftoken = postman.getResponseCookie(\"csrftoken\");",
+					"if (csrftoken) {",
+					"    postman.setEnvironmentVariable('csrftoken',  csrftoken.value);",
+					"}",
+					"",
+					"// JWT AUTH",
+					"const path = pm.request.url.path.join('/')",
+					"if (path === 'api/v1/auth/sign-in/' && pm.response.status == 'OK') {",
+					"    const res = pm.response.json();",
+					"    postman.setEnvironmentVariable('jwt', res.access);",
+					"}",
+					""
+				]
+			}
+		}
+	]
+}
