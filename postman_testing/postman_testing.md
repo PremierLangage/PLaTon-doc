@@ -9,11 +9,14 @@ Dans cette documentation nous verrons comment mettre en place l'environnement de
 
 ## Fichiers essentiels 
 
-Il faut tout d'abord récupérer trois fichiers JSON correspondant aux tests d'api du back-end, de la sandbox et des variables d'environnements (URL de base et token JWT).
+Il faut tout d'abord récupérer trois fichiers JSON correspondant aux tests d'api du back-end, de la sandbox et des variables d'environnements (URL de base et token JWT)
+* [platon](https://github.com/PremierLangage/PLaTon-doc/blob/master/postman_testing/PLaTon.postman_collection.json)
+* [sandbox](https://github.com/PremierLangage/PLaTon-doc/blob/master/postman_testing/Sandbox.postman_collection.json)
+* [variables d'environnements](https://github.com/PremierLangage/PLaTon-doc/blob/master/postman_testing/platon_variables.postman_environment.json)
 
 ## Import des fichiers
 
-Dans Postman aller sur import -> file -> upload files et sélectionner les trois fichiers que vous venez de télécharger. 
+Pour importer des fichiers : ``import -> file -> upload files `` et sélectionner les trois fichiers JSON que vous venez de télécharger. 
 
 ## Activation des variables d'environnements
 
