@@ -4,7 +4,7 @@
   
   ## Comment créer une activité PlaTon sur Moodle ?
   
-  Notons qu'il faut avoir le statut d'enseignant dans le cours en question pour pouvoir l'éditer et ainsi créer des activi†és dans le cours. 
+  Notons qu'il faut avoir le statut d'enseignant dans le cours en question pour pouvoir l'éditer et ainsi créer des activités dans le cours. 
   
  
  ![Interface cours sur Moodle](images/CoursMoodle.png)
@@ -16,7 +16,7 @@
  ![Interface cours sur Moodle en mode édition](images/edition_mode.png)
  
 
-2. Ajouter une activité en cliquant sur le bouton ajouter une activité ou ressource à droite en bas de la page
+2. Ajouter une activité en cliquant sur le bouton **ajouter une activité ou ressource** à droite en bas de la page
  
 
  ![Interface cours sur Moodle en mode édition](images/add_activity.png)
@@ -36,7 +36,7 @@ Champs à remplir :
  ![Interface cours sur Moodle en mode édition](images/get_activity_link.png)
  
 
-4. Enrégistrer par l'un de ces deux boutons en bas de pages
+4. Enregistrer à l'aide d'un de ces deux boutons en bas de pages
 
 
 ![Interface cours sur Moodle en mode édition](images/save_buttons.png)
