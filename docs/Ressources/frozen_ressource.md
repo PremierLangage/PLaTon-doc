@@ -1,7 +1,7 @@
 # *FROZEN_RESSOURCE*
 
 Les ressources qui sont sur le server sont des données modifiables. Pour garder une version non mutables, on les stocke sous forme de frozen_ressource dans la sandbox.
-On peut ainsi effectuer deux principales opérations : passer de données représentant une ressource donnée à une frozen-ressource.
+On peut ainsi effectuer deux principales opérations : passer de données représentant une ressource donnée à une frozen-ressource et récupérer les informations d'une frozen ressource.
 
 ## *FROM RESSOURCE TO `FROZEN_RESSOURCE`*
 
