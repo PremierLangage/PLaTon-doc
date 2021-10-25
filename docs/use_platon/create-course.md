@@ -11,7 +11,7 @@
  
  
  1. Activer le mode édition par le bouton en haut à droite de la page
- 2. 
+
  
  ![Interface cours sur Moodle en mode édition](images/edition_mode.png)
  
