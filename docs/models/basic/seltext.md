@@ -5,7 +5,7 @@ Le modèle `basic/seltext` permet de fabriquer des exercices où l'élève doit 
 ## Clés du modèle
 
 * `seltext` (chaîne). Texte à sélectionner.
-    * Par défaut les unités sélectionnables du texte sont les mots. Pour définir une unité sélectionnable différente d'un mot, il suffit d'entourer cette unité d'accolades.
+    * Par défaut les unités sélectionnables du texte sont les mots. Pour définir une unité sélectionnable différente d'un mot, il suffit d'entourer cette unité de crochets.
     * Les unités solutions doivent être indiquées entre accolades ({}).
     
 * Pour considérer les accolades et les crochets comme des caractères et non des délimiteurs d'unités (solution ou pas), on met les précède de '\'
