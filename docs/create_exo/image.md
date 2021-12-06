@@ -17,11 +17,11 @@ question ==
 ==
 ```
 
-Si l'on veut paraméter le rendu de l'image (taille, alignement, etc.), il est nécessaire de revenir la balise HTML `<img>`. Pour les paramétrages les plus courants, la plateforme propose plusieurs classes prédéfinies. La classe `img` permet de centrer l'image. Les classes `img-40`, `img-60`, `img-80` ajustent l'image à 40%, 60%, 80% de la largeur (sur tablette et téléphone, ces valeurs sont automatiquement rehaussées).
+Si l'on veut paramétrer le rendu de l'image (taille, alignement, etc.), il est nécessaire d'utiliser une balise HTML `<img>`. Pour les paramétrages les plus courants, la plateforme propose plusieurs classes prédéfinies. La classe `img` permet de centrer l'image. Les classes `w100`, `w90`, `w80`, ..., `w10` ajustent l'image à 100%, 90%, 80%, ..., 10% de la largeur (sur tablette et téléphone, ces valeurs sont automatiquement rehaussées).
 
 ```
 question ==
-<img class="img img-40" src="https://w.wiki/3ZAX">
+<img class="img w40" src="https://w.wiki/3ZAX">
 ==
 
 ```
@@ -48,7 +48,7 @@ flag = flags[indsol]
 
 question ==
 A quel pays appartient ce drapeau ?
-<img class="img img-40" src="{{ flag }}">
+<img class="img w40" src="{{ flag }}">
 ==
 
 items ==
