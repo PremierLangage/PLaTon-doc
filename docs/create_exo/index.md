@@ -51,7 +51,8 @@
 ## Exercices de mathématiques : aspects graphiques
 
 * Générer des graphiques
-     * 
+    * [Avec matplolib](mpl.md)
+
 * Champ de réponse graphique
     * 
 
