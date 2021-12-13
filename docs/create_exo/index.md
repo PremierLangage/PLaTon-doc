@@ -11,7 +11,7 @@
     * [Choix multiple (2)](checkbox.md)
     * [Choix multiple (3)](checkbox_rw.md)
 * [Mise en forme de l'énoncé](question_markdown.md)
-* Aures modèles :
+* Autres modèles :
     * [Réponse textuelle](input.md)
     * [Réponse textuelle avec suggestions](inputselect.md)
     * [Réponse numérique](numeric.md)
