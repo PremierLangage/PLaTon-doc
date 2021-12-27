@@ -54,6 +54,15 @@
     * [Avec matplolib](mpl.md)
 
 * Champ de réponse graphique
-    * 
+
+
+## Exercices composés
+
+* Quiz
+    * [Format AMC](amc.md)
+    * [Format Cloze](cloze.md)
+
+* Séries
+
 
 ## Exercices d'informatique
