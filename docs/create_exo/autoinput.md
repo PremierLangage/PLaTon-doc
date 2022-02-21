@@ -1,6 +1,6 @@
 # Réponse textuelle avec suggestions
 
-Le modèle `basic/inputselect` permet de fabriquer des exercices avec un champ de réponse textuel.
+Le modèle `basic/autoinput` permet de fabriquer des exercices avec un champ de réponse textuel avec autocomplétion parmi une liste de suggestions.
 
 ![](inputselect.png)
 
