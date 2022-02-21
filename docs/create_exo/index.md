@@ -23,13 +23,14 @@
 ## Exercices de base : usage avancé
 
 * Exercices aléatoires :
-    * [Générer aléatoirement des données](before.md)
+    * [Génération aléatoire des données](before.md)
     * [Fonctions aléatoires](random.md)
-    * [Tirer aléatoirement des données dans un fichier](csv.md)
-* [Evaluer la réponse](evaluator.md) 
+    * [Tirage aléatoire des données dans un fichier](csv.md)
+* [Evaluation personnalisée de la réponse](evaluator.md) 
 * Images, sons, vidéos :
     * [Insérer une image](image.md)
     * [Insérer un son](son.md)
+* [Exercices à plusieurs champs de réponse](inputgroup.md)
 
 ## Exercices de mathématiques : expressions symboliques
 
