@@ -13,7 +13,7 @@
 * [Mise en forme de l'énoncé](question_markdown.md)
 * Autres modèles :
     * [Réponse textuelle](input.md)
-    * [Réponse textuelle avec suggestions](inputselect.md)
+    * [Réponse textuelle avec suggestions](autoinput.md)
     * [Réponse numérique](numeric.md)
     * [Correspondances](matchlist.md)
     * [Liste à ordonner](sortlist.md)
