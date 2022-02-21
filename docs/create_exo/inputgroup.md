@@ -1,0 +1,41 @@
+# Exercices à plusieurs champs de réponse
+
+Modèle `basic/inputgroup.pl`.
+
+Il faut créer dans le script `before` une liste `inputs` contenant les champs de réponse de l'exercice. Chaque type de champ de réponse est associée à une classe Python.
+
+```
+extends = /model/basic/inputgroup.pl
+
+question ==
+Quelles sont les capitales des pays suivants ?
+==
+
+before ==
+inputs = [TextInput(), TextInput()]
+inputs[0].sol = "Paris"
+inputs[1].sol = "Rome"
+==
+
+inputblock ==
+<div class="container">
+  <div class="row py-2 align-items-center">
+    <div class="col-md-auto">
+        France :
+    </div>
+    <div class="col">
+      {{ inputs[0]|component }}
+    </div>
+  </div>
+  <div class="row py-2 align-items-center">
+    <div class="col-md-auto">
+      Italie :
+    </div>
+    <div class="col">
+      {{ inputs[1]|component }}
+    </div>
+  </div>
+</div>
+==
+
+```
