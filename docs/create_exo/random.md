@@ -1,6 +1,6 @@
 # Fonction aléatoires
 
-Cette page résume les commandes aléatoires les plus utiles. Elles sont issues du module standard `random` ou du module propre à la plateforme `plrandom`. Pour alléger l'écriture du script `before`, elles sont toutes importées par défaut.
+Cette page décrit les fonctions aléatoires les plus utiles. Elles sont issues du module standard `random` ou du module propre à la plateforme `plrandom`. Pour alléger l'écriture du script `before`, elles sont toutes importées par défaut.
 
 ## Tirer aléatoirement des entiers
 
@@ -43,6 +43,18 @@ La fonction `sampleint` du module `plrandom` permet de tirer aléatoirement plus
 [4, 5, 1]
 >>> sampleint(1, 5, 3)
 [1, 3, 5]
+```
+
+## Tirer aléatoirement dans une liste
+
+La fonction `choice` du module `random` permet de tirer aléatoirement un élement d'une liste.
+
+```python
+>>> from random import choice
+>>> choice(["AA", "AB", "AC", "AD"]
+'AC'
+>>> choice(["AA", "AB", "AC", "AD"]
+'AA'
 ```
 
 Pour tirer plusieurs éléments avec remise, il suffit de créer une liste en compréhension avec la fonction `choice`.
