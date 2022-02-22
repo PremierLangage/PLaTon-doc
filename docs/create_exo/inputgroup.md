@@ -1,8 +1,23 @@
 # Exercices à plusieurs champs de réponse
 
-Modèle `basic/inputgroup.pl`.
+Le modèle qui permet de fabriquer un exercice à plusieurs champs de réponse est le modèle `basic/inputgroup.pl`.
 
-Il faut créer dans le script `before` une liste `inputs` contenant les champs de réponse de l'exercice. Chaque type de champ de réponse est associée à une classe Python.
+Chaque type de champ de réponse est associé à une classe Python :
+- `Radio` : Choix multiple
+- `Checkbox` : Choix multiple
+- `TextInput` : Réponse textuelle
+- etc.
+
+Pour définir les champs de réponse de l'exercice, il faut créer dans le script `before` une liste `inputs` contenant des objets de type champ de réponse. Il faut ensuite configurer ces objets.
+
+Par exemple, le script `before` suivant crée deux champs de réponse textuelle dont les solutions attendues dont `Paris` et `Rome`.
+```
+before ==
+inputs = [TextInput(), TextInput()]
+inputs[0].sol = "Paris"
+inputs[1].sol = "Rome"
+==
+```
 
 ```
 extends = /model/basic/inputgroup.pl
