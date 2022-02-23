@@ -61,9 +61,9 @@
 
 * Quiz
     * [Format AMC](amc.md)
-    * [Format Cloze](cloze.md)
-
-* Séries
+    * Format GIFT
+    * Format Cloze
+* Exercices à étapes
 
 
 ## Exercices d'informatique
