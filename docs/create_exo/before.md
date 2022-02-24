@@ -56,7 +56,7 @@ capitale = choice(["Paris", "Berlin", "Rome"])
 ==
 
 question ==
-Quel pays a pours capitale {{ capitale }} ?
+Quel pays a pour capitale {{ capitale }} ?
 ==
 ```
 
@@ -65,7 +65,7 @@ Quel pays a pours capitale {{ capitale }} ?
 L'exemple que nous allons considérer est un exercice très simple d'addition. On demande de calculer la somme de deux entiers tirés aléatoirement (entre 10 et 49). La réponse doit être rentrée dans un champ de réponse numérique.
 
 ```
-extends = /model/basic/numeric.pl
+extends = /model/basic/numinput.pl
 
 before ==
 from random import randint
