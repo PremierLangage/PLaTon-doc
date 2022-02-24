@@ -12,7 +12,7 @@ Le champ de réponse accepte les nombres entiers ou décimaux. Attention : le s�
 **Exemple 1**
 
 ```
-extends = /model/basic/numeric.pl
+extends = /model/basic/numinput.pl
 
 question ==
 Calculer 15 + 7.
@@ -24,7 +24,7 @@ sol = 22
 **Exemple 2**
 
 ```
-extends = /model/basic/numeric.pl
+extends = /model/basic/numinput.pl
 
 question ==
 Donner l'écriture décimale de la fraction 7/4.
