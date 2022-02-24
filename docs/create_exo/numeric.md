@@ -1,4 +1,4 @@
-# Réponse numérique
+# Réponse numinput
 
 Le modèle `basic/numeric` permet de fabriquer des exercices avec un champ de réponse numérique.
 
