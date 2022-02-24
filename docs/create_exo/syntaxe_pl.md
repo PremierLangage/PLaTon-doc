@@ -64,7 +64,7 @@ mydict.dead = 1885
 ```
 
 !!! warning
-    La syntaxe PL ne permet pas encore l'affectation d'une liste ou d'un dictionnaire sur plusieurs lignes.
+    La syntaxe PL ne permet pas l'affectation d'une liste ou d'un dictionnaire sur plusieurs lignes.
   
 ### Opérateur `==`
 
@@ -86,6 +86,19 @@ for k in range(5):
  lst.append(k**2)
 ==
 ```
+
+Il est possible d'activer une coloration syntaxique dans l'éditeur PLaTon en ajoutant une balise en commentaire après l'opérateur `==`. Dans l'exemple ci-dessous, la balise `py` active la coloration syntaxique Python pour le code contenu dans la clé `myscript`.
+
+```
+myscript == #|py|
+lst = []
+for k in range(5):
+ lst.append(k**2)
+==
+```
+
+Autres balises disponibles : `html`, `js` (JavaScript).
+
 
 ## Charger un fichier dans l'environnement
 
