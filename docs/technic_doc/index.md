@@ -35,8 +35,6 @@ d'autres sont plus spécifiques.
 * [Le grader doctest python](../models/pltest.md) Exercice de programmation en Python avec doctests
 * Le tempate pour les [exercices de programmation standard en C](std_progC.md) (verison 07/2020)
 
-## Coté mathématique
+## Divers
 
-* TODO : Génération de données aléatoires évolués (matrices, tirages, etc...)
-* TODO : Utitiser l'applet javascript JSXGraph dans vos exercices
-* ...
+* [Liste des modules Python disponibles](modules_sandbox.md)
