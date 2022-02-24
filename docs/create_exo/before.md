@@ -28,7 +28,7 @@ lst2 = list(range(8))
 ==
 ```
 
-La version de Python utilisée est la version 3.7. Tous les modules de la [bibliothèque standard](https://docs.python.org/fr/3/library/index.html) peuvent être importés. D'autres [modules usuels](fr/latest/technic_doc/modules_sandbox.md), ainsi que des modules propres à la plateforme, sont également disponibles.
+La version de Python utilisée est la version 3.7. Tous les modules de la [bibliothèque standard](https://docs.python.org/fr/3/library/index.html) peuvent être importés. D'autres [modules usuels](https://documentationpl.readthedocs.io/fr/latest/technic_doc/modules_sandbox.md), ainsi que des modules propres à la plateforme, sont également disponibles.
 
 **Exemple**
 ```
