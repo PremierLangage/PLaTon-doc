@@ -1,6 +1,6 @@
-# Réponse numinput
+# Réponse numérique
 
-Le modèle `basic/numinput` permet de fabriquer des exercices avec un champ de réponse numérique.
+Le modèle `basic/numinput` permet de fabriquer des exercices avec un champ de réponse numérique (entier ou nombre décimal positif).
 
 Les clés de base de ce modèle sont :
 
