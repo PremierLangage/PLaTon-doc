@@ -1,6 +1,6 @@
 # Réponse textuelle
 
-Le modèle `basic/input` permet de fabriquer des exercices avec un champ de réponse textuel.
+Le modèle `basic/textinput` permet de fabriquer des exercices avec un champ de réponse textuel.
 
 ![](input.png)
 
@@ -14,7 +14,7 @@ Par défaut, l'évaluation de la réponse ne tient pas compte des minuscules et 
 **Exemple 1.** Dans cet exemple, les solutions acceptées sont `Victor Hugo`, `Hugo`, mais aussi `victor hugo`, `victor Hugo`, `HUGO`, etc.
 
 ```
-extends = /model/basic/input.pl
+extends = /model/basic/textinput.pl
 
 question ==
 Qui a écrit *Les Misérables* ?
@@ -31,7 +31,7 @@ La clé `tol`, qui prend un entier positif, permet de définir une tolérance po
 **Exemple 2.** Dans cet exemple, les réponses acceptées sont les chaînes égales à `Oxygène` à un ajout/suppression/remplaçement de caractère près : `oxygènes`, `oxgène`, `oxigène`, etc.
 
 ~~~
-extends = /model/basic/input.pl
+extends = /model/basic/textinput.pl
 
 question ==
 Quel élément chimique a pour symbole **O** ?
