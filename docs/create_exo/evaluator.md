@@ -16,7 +16,7 @@ b = a + randint(6, 10)
 ==
 
 question ==
-Donner un entier multiple de {{k}}, compris entre {{ a }} et {{ b }} (inclus).
+Donner un entier multiple de {{ k }}, compris entre {{ a }} et {{ b }}.
 ==
 
 evaluator ==
