@@ -26,11 +26,20 @@
     * [Génération aléatoire des données](before.md)
     * [Fonctions aléatoires](random.md)
     * [Tirage aléatoire des données dans un fichier](csv.md)
-* [Evaluation personnalisée de la réponse](evaluator.md) 
+* [Evaluation personnalisée d'une réponse numérique ou textuelle](evaluator.md) 
 * Images, sons, vidéos :
     * [Insérer une image](image.md)
     * [Insérer un son](son.md)
 * [Exercices à plusieurs champs de réponse](inputgroup.md)
+
+## Exercices composés
+
+* Quiz
+    * [Format AMC](amc.md)
+    * Format GIFT
+    * Format Cloze
+    * Génération par un script
+* Exercices à étapes
 
 ## Exercices de mathématiques : expressions symboliques
 
@@ -52,18 +61,9 @@
 ## Exercices de mathématiques : aspects graphiques
 
 * Générer des graphiques
-    * [Avec matplolib](mpl.md)
+   * [Avec matplolib](mpl.md)
 
 * Champ de réponse graphique
-
-
-## Exercices composés
-
-* Quiz
-    * [Format AMC](amc.md)
-    * Format GIFT
-    * Format Cloze
-* Exercices à étapes
 
 
 ## Exercices d'informatique
