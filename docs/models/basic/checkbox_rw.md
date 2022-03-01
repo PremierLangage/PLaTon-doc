@@ -2,22 +2,63 @@
 
 Le modèle `basic/checkbox_rw` permet de fabriquer des exercices à choix multiples (avec plusieurs réponses possibles). Les données de l'exercices sont fournies sous la forme d'une liste de bonnes réponses et d'une liste de mauvaises réponses.
 
-## Clés du modèle
+## Clés spécifiques du modèle
 
-Les clés `title`, `text` et `before` ont leur signification et leur syntaxe usuelles.
+<table class="table">
+<thead>
+<tr>
+<th scope="col">Clé</th>
+<th scope="col">Description</th>
+<th scope="col">Type</th>
+<th scope="col">Défaut</th>
+</tr>
+</thead>
+<tbody>
 
-* `right` (chaîne ou liste). Liste de bonnes réponses.
-    * Cette clé contient une liste de bonnes réponses sous la forme d'une chaîne multilignes (chaque ligne correspondant à une réponse) ou d'une liste de chaînes.
-* `wrong` (chaîne ou liste). Liste de mauvaises réponses.
-    * Cette clé contient une liste de mauvaises réponses sous la forme d'une chaîne multilignes (chaque ligne correspondant à une réponse) ou d'une liste de chaînes.
-* `nbitems` (entier). Nombre de choix proposés.
-* `maxright` (entier). Nombre maximum de bonnes réponses parmi les choix.
-* `minright` (entier). Nombre minimum de bonnes réponses parmi les choix.
-* `scoring` (chaîne). Barème de l'exercice.
-    * `AllOrNothing` : renvoie un score de 100 si toutes les bonnes réponses sont sélectionnées et aucune mauvaise réponse n'est sélectionnée ; renvoie un score de 0 sinon.
-    * `RightMinusWrong` : renvoie le nombre de bonnes réponses sélectionnés moins le nombre de mauvaises réponses sélectionnées, le tout divisé par le nombre total de bonnes réponses et ramené entre 0 et 100.
-    * Par défaut, le barème est `RightMinusWrong`.
+<tr>
+<th scope="row"> right </th>
+<td> Liste des bonnes réponses. Elle peut être saisie comme une liste ou comme une chaîne multilignes (chaque ligne correspondant à un item). </td>
+<td> (str, list[str]) </td>
+<td> [] </td>
+</tr>
 
+<tr>
+<th scope="row"> wrong </th>
+<td> Liste des mauvaises réponses. Elle peut être saisie comme une liste ou comme une chaîne multilignes (chaque ligne correspondant à un item). </td>
+<td> (str, list[str]) </td>
+<td> [] </td>
+</tr>
+
+<tr>
+<th scope="row"> nbitems </th>
+<td> Nombre d&#39;items à proposer. Si cette clé vaut None, tous les items sont proposés. </td>
+<td> (int, None) </td>
+<td> None </td>
+</tr>
+
+<tr>
+<th scope="row"> maxright </th>
+<td> Nombre minimum de bonnes réponses à proposer. Si cette clé vaut None, toutes les bonnes réponses sont proposées. </td>
+<td> (int, None) </td>
+<td> None </td>
+</tr>
+
+<tr>
+<th scope="row"> minright </th>
+<td> Nombre minimum de bonnes réponses à proposer. </td>
+<td> int </td>
+<td> 0 </td>
+</tr>
+ 
+<tr>
+<th scope="row"> scoring </th>
+<td> Barème de l&#39;exercice. </td>
+<td> (&#39;AllOrNothing&#39;, &#39;RightMinusWrong&#39;, &#39;CorrectItems&#39;) </td>
+<td> &#39;RightMinusWrong&#39; </td>
+</tr>
+
+</tbody>
+</table>
 ## Exemples (avec déclaration explicite des listes de réponses)
 
 ```
@@ -27,9 +68,9 @@ text ==
 Indiquer parmi les noms suivants ceux qui sont des noms valides pour une variable en Python.
 ==
 
-nbitems % 5
-minright % 2
-maxright % 3
+nbitems = 5
+minright = 2
+maxright = 3
 
 right ==
 bonjour
