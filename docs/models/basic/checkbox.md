@@ -2,18 +2,65 @@
 
 Le modèle `basic/checkbox` permet de fabriquer des exercices à choix multiple (avec plusieurs items à sélectionner).
 
-## Clés du modèle
+## Clés spécifiques du modèle
 
-Les clés `title`, `text` et `before` ont leur signification et leur syntaxe usuelles.
+<table class="table">
+<thead>
+<tr>
+<th scope="col">Clé</th>
+<th scope="col">Description</th>
+<th scope="col">Type</th>
+<th scope="col">Défaut</th>
+</tr>
+</thead>
+<tbody>
 
-* `items` (chaîne ou liste). Items de la question
-    * Cette clé contient une liste de choix sous la forme d'une chaîne multilignes (chaque ligne correspondant à un choix) ou d'une liste.
-* `indsol` (liste). Indices des bons items.
-    * Les indices se rapportent à l'ordre des items dans la clé `items`. L'indexation commence à 0. 
-* `shuffled` (booléen). Mélange des choix.
-* `scoring` (chaîne). Barème de l'exercice.
-    * `AllOrNothing` : renvoie un score de 100 si toutes les bonnes réponses sont sélectionnées et aucune mauvaise réponse n'est sélectionnée ; renvoie un score de 0 sinon.
-    * `RightMinusWrong` : renvoie le nombre de bonnes réponses sélectionnés moins le nombre de mauvaises réponses sélectionnées, le tout divisé par le nombre total de bonnes réponses et ramené entre 0 et 100.
-    * Par défaut, le barème est `RightMinusWrong`.
+<tr>
+<th scope="row"> indsol </th>
+<td> Indice des solutions dans la liste des items (la numérotation commence à 0). </td>
+<td> list[int] </td>
+<td> [] </td>
+</tr>
+
+<tr>
+<th scope="row"> items </th>
+<td> Liste des items. Elle peut être saisie comme une liste ou comme une chaîne multilignes (chaque ligne correspondant à un item). </td>
+<td> (str, list[str]) </td>
+<td> [] </td>
+</tr>
+
+<tr>
+<th scope="row"> scoring </th>
+<td> Barème de l&#39;exercice. </td>
+<td> (&#39;AllOrNothing&#39;, &#39;RightMinusWrong&#39;, &#39;CorrectItems&#39;) </td>
+<td> &#39;RightMinusWrong&#39; </td>
+</tr>
+
+<tr>
+<th scope="row"> shuffled </th>
+<td> Valeur indiquant si les items seront mélangés. </td>
+<td> bool </td>
+<td> True </td>
+</tr>
+
+</tbody>
+</table>
 
 ## Exemples (avec déclaration explicite des items)
+
+```
+extends = /model/basic/checkbox.pl
+
+question ==
+Parmi ces villes, lesquelles ne sont pas des capitales ?
+==
+
+items ==
+Barcelone
+Milan
+Paris
+Berlin
+==
+
+indsol = [0, 1]
+```
