@@ -1,30 +1,22 @@
 
 # Modèles d'exercices
 
-
 ## Exercices de base
 
-* [Vrai ou faux?](vraifaux.md)
-* [CheckBox QCM Choix multiples](checkbox.md)
-* [Associations](matchlist.md) / [Matching basic](Matching.md)
-* [Compléter les gab](Gab_completing.md)
+* `basic/radio` : [Choix multiple avec une seule sélection](basic/radio.md)
+* `basic/checkbox` : [Choix multiple avec plusieurs sélections (1)](basic/checkbox.md)
+* `basic/checkbox_rw` : [Choix multiple avec plusieurs sélections (2)](basic/checkbox_rw.md)
 
-* [Réponse textuelle](basic/input.md)
-* [Réponse textuelle avec suggestion](basic/inputselect.md)
-* [Choix multiple avec une seule sélection](basic/radio.md)
-* [Choix multiple avec plusieurs sélections (1)](basic/checkbox.md)
-* [Choix multiple avec plusieurs sélections (2)](basic/checkbox_rw.md)
-* [Correspondances](basic/matchlist.md)
-* [Liste à ordonner](basic/sortlist.md)
+* `basic/textinput` : [Réponse textuelle](basic/input.md)
+* `basic/autoinput` : [Réponse textuelle avec suggestions](basic/inputselect.md)
+* `basic/numinput` : [Réponse numérique](basic/numinput.md)
+
+* `basic/matchlist` : [Correspondances](basic/matchlist.md)
+* `basic/sortlist` : [Liste à ordonner](basic/sortlist.md)
+* `basic/filltext` : [Texte à compléter](basic/filltext.md)
+
 * [Etiquettes à déplacer](basic/dragdrop.md)
-* [Texte à compléter](basic/filltext.md)
 * [Texte à sélectionner](basic/seltext.md)
-
-
-## Avec un fichier CSV
-
-* [CheckBox QCM Choix multiples](checkboxcsv.md)
-* [Matching list](Matching_csv.md)
 
 ## Exercices de base (format GIFT)
 
@@ -95,7 +87,14 @@ Une présentation visible sous platon (format markdown).
 
 * [Test my py](testmypy.md) Tester voter code python directement sous PLATON.
 
+## Divers
 
+* [Vrai ou faux?](vraifaux.md)
+* [CheckBox QCM Choix multiples](checkbox.md)
+* [Associations](matchlist.md) / [Matching basic](Matching.md)
+* [Compléter les gab](Gab_completing.md)
+* [CheckBox QCM Choix multiples](checkboxcsv.md)
+* [Matching list](Matching_csv.md)
 
 
 
