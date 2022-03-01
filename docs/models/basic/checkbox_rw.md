@@ -31,16 +31,16 @@ Le modèle `basic/checkbox_rw` permet de fabriquer des exercices à choix multip
 
 <tr>
 <th scope="row"> nbitems </th>
-<td> Nombre d&#39;items à proposer. Si cette clé vaut None, tous les items sont proposés. </td>
-<td> (int, None) </td>
-<td> None </td>
+<td> Nombre d&#39;items à proposer.</td>
+<td> int </td>
+<td> 0 </td>
 </tr>
 
 <tr>
 <th scope="row"> maxright </th>
-<td> Nombre minimum de bonnes réponses à proposer. Si cette clé vaut None, toutes les bonnes réponses sont proposées. </td>
-<td> (int, None) </td>
-<td> None </td>
+<td> Nombre maximum de bonnes réponses à proposer. </td>
+<td> int </td>
+<td> 0 </td>
 </tr>
 
 <tr>
@@ -59,58 +59,66 @@ Le modèle `basic/checkbox_rw` permet de fabriquer des exercices à choix multip
 
 </tbody>
 </table>
-## Exemples (avec déclaration explicite des listes de réponses)
+
+## Exemples
+
+### Exemple 1
+
+Adresse : `/demo/basic/checkbow_rw/capitales.pl`
 
 ```
-extends = /model/basic/checkbox_rw.pl
+extends = /model/basic/checkbox.pl
 
-text ==
-Indiquer parmi les noms suivants ceux qui sont des noms valides pour une variable en Python.
+question ==
+Parmi ces villes, lesquelles sont des capitales d'états européens ?
 ==
 
-nbitems = 5
-minright = 2
-maxright = 3
-
 right ==
-bonjour
-abc
-oui
-NON
-Ciao
-good_morning
-byeBye7
-\_UGE\_
+Paris
+Rome
+Madrid
+Berlin
+Londres
+Bruxelles
+Berne
 ==
 
 wrong ==
-Hi!
-au revoir
-6hello6
-def
-for
-good-afternoon
-f()
+Lyon
+Milan
+Barcelone
+Munich
+Liverpool
+Anvers
+Genève
 ==
+
+nbitems = 5
+
+minright = 1
+
+maxright = 3
 ```
 
-## Exemples (avec génération des listes de réponses)
+### Exemple 2
+
+Adresse : `/demo/basic/checkbow_rw/multiples_de_3.pl`
 
 ```
 extends = /model/basic/checkbox_rw.pl
-
-title = Multiples de 3
-
-nbitems % 5
-minright % 1
-maxright % 4
 
 before ==
 right = [str(n) for n in range(50, 100) if n % 3 == 0]
 wrong = [str(n) for n in range(50, 100) if n % 3 != 0]
 ==
 
-text ==
+question ==
 Parmi les nombres suivants, lesquels sont des multiples de 3 ?
 ==
+
+nbitems = 4
+
+minright = 2
+
+maxright = 3
 ```
