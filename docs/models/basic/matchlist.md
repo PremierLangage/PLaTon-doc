@@ -64,7 +64,7 @@ TODO : Une option `strip` ou `skipinitialspace` pour éliminer les espaces super
 
 TODO : Revoir les barèmes (Comment compter une source non reliée ? une cible non reliée ? etc.)
 
-## Exemples (avec une liste déclarée explicitement)
+## Exemples
 
 ### Exemple 1 : Capitales
 
@@ -120,7 +120,7 @@ Suisse;Berne
 ==
 ```
 
-## Exemple 3 (avec une liste générée par un script)
+### Exemple 3 (avec une liste générée par un script)
 
 ```
 extends = /model/basic/matchlist.pl
