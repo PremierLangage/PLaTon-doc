@@ -14,9 +14,8 @@
 * `basic/matchlist` : [Correspondances](basic/matchlist.md)
 * `basic/sortlist` : [Liste à ordonner](basic/sortlist.md)
 * `basic/filltext` : [Texte à compléter](basic/filltext.md)
-
-* [Etiquettes à déplacer](basic/dragdrop.md)
-* [Texte à sélectionner](basic/seltext.md)
+* `basic/dropgroup` : [Etiquettes à placer](basic/dropgroup.md)
+* `basic/seltext` : [Texte à sélectionner](basic/seltext.md)
 
 ## Exercices de base (format GIFT)
 
@@ -35,12 +34,12 @@ Le format [GIFT](https://docs.moodle.org/3x/fr/Format_GIFT) est un format dével
 * [Modèle générique](math/input.md)
 
 * Modèles spécifiques
-    * [Expression](math/expr.md)
+    * `math/expr` : [Expression](math/expr.md)
     * [Numérique](math/numeric.md)
     * [Fraction](math/frac.md)
-    * [Nombre complexe](math/complex.md)
-    * [Polynôme](math/poly.md)
-    * [Ensemble fini](math/set.md)
+    * `math/complex` : [Nombre complexe](math/complex.md)
+    * `math/poly` : [Polynôme](math/poly.md)
+    * `math/set` :[Ensemble fini](math/set.md)
     * [Intervalle](math/interval.md)
     * [N-uplet](math/tuple.md)
 
