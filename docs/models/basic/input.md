@@ -2,8 +2,6 @@
 
 Le modèle `basic/textinput` permet de fabriquer des exercices avec un champ de réponse textuel.
 
-[![](input1.png)](https://pl.u-pem.fr/filebrowser/demo/33986/)
-
 ## Clés spécifiques
 
 <table class="table">
@@ -59,11 +57,11 @@ TODO : Un 2e seuil de tolérance qui déclencherait un avertissement ?
 
 ## Exemples
 
-#### Littérature
+### Exemple 1
+
+Adresse : `/demo/basic/textinput/miserables.pl`
 
 Dans cet exemple, les solutions acceptées sont `Victor Hugo`, `Hugo`, mais aussi, puisque par défaut on ne tient pas compte de la casse, `victor hugo`, `victor Hugo`, `HUGO`, etc.
-
-[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/33986/)
 
 ~~~
 extends = /model/basic/textinput.pl
@@ -78,14 +76,14 @@ Hugo
 ==
 ~~~
 
-#### Chimie
+### Exemple 2
+
+Adresse : `/demo/basic/textinput/chimie.pl`
 
 Dans cet exemple, les solutions acceptées sont les chaînes égales à `Oxygène` à un caractère près : `oxigène`, `oxgène`, `oxygèn`, etc.
 
-[Tester l'exercice](https://pl.u-pem.fr/filebrowser/demo/34253/)
-
 ~~~
-extends = /model/basic/input.pl
+extends = /model/basic/textinput.pl
 
 title ==
 Chimie
@@ -99,29 +97,30 @@ sol ==
 Oxygène
 ==
 
-diffmeasure = EditDist
+diffmeasure = "EditDist"
 
 tol = 1
 ~~~
 
-#### Listening
+### Exemple 3
 
-~~~
-extends = /model/basic/input.pl
+Adresse : `/demo/basic/textinput/listening.pl`
 
-title = Listening
+```
+extends = /model/basic/textinput.pl
 
-file =$ english_sentence.mp3
+audiofile =$ /demo/media/english_sentence.mp3
 
-text ==
-{{ audio_button(file) }} Transcrire la phrase.
+question ==
+<audio id="player" src="{{ audiofile }}"></audio> 
+<button onclick="player.play()" class="btn btn-sm btn-info icon-audio"></button> Transcrire la phrase.
 ==
 
 sol ==
 I'm gonna make him an offer he can't refuse
 ==
 
-diffmeasure = EditRatio
+diffmeasure = "EditRatio"
 
-tol =0.1
-~~~
+tol = 0.1
+```
