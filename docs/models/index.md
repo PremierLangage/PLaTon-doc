@@ -3,6 +3,8 @@
 
 ## Exercices de base
 
+[Documentation commune](basic/basic.md)
+
 * `basic/radio` : [Choix multiple avec une seule sélection](basic/radio.md)
 * `basic/checkbox` : [Choix multiple avec plusieurs sélections (1)](basic/checkbox.md)
 * `basic/checkbox_rw` : [Choix multiple avec plusieurs sélections (2)](basic/checkbox_rw.md)
