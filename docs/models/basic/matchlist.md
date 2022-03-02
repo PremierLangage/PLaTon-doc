@@ -2,38 +2,76 @@
 
 Le modèle `basic/matchlist` permet de fabriquer des exercices de correspondances.
 
-## Clés du modèle
+## Clés spécifiques
 
-Les clés `title`, `text` et `before` ont leur signification et leur syntaxe usuelles.
+<table class="table">
+<thead>
+<tr>
+<th scope="col">Clé</th>
+<th scope="col">Description</th>
+<th scope="col">Type</th>
+<th scope="col">Défaut</th>
+</tr>
+</thead>
+<tbody>
 
-* `matches` (chaîne ou liste). Correspondances.
-    * Cette clé contient la liste des correspondances sous la forme d'une chaîne multilignes (chaque ligne correspondant à une correspondance, les deux éléments étant distingués par un séparateur défini dans la clé `separator`) ou d'une liste de listes à deux éléments.
-    *  ligne correspond à une correspondance. Les deux éléments en correspondance sont séparés par un délimiteur.
-* `séparator` (chaîne). Séparateur des éléments d'une correspondance.
-    * Par défaut, le séparateur est la virgule (`,`).
-* `nbmatches` (entier ou null). 
-    * Si la clé `nbmatches` contient un entier, la liste à ordonner par l'élève sera un échantillon aléatoire de `nbmatches` items de `sortedlist`. 
-    * Si la clé `nbmatches` vaut `null`, la liste des correspondances sera égale à `matches`.
-    * Par défaut la clé `nbmatches` vaut `null`.
-* `scoring` (chaîne). Barème de l'exercice. 
-    * `AllOrNothing` : renvoie un score de 100 si toutes les bonnes réponses sont sélectionnées et aucune mauvaise réponse n'est sélectionnée ; renvoie un score de 0 sinon.
-    * `RightMinusWrong` : renvoie le nombre de bonnes réponses sélectionnés moins le nombre de mauvaises réponses sélectionnées, le tout divisé par le nombre total de bonnes réponses et ramené entre 0 et 100.
-    * Par défaut, le barème est `RightMinusWrong`.
+<tr>
+<th scope="row"> matches </th>
+<td> Liste des correspondances (source, cible). Elle peut être saisie comme une liste de couples ou comme une chaîne multilignes (chaque ligne correspondant à une correspondance, les deux éléments étant distingués par un séparateur défini dans la clé `separator`). </td>
+<td> (str, list[tuple[str, str]] </td>
+<td> [] </td>
+</tr>
 
+<tr>
+<th scope="row"> separator </th>
+<td> Séparateur des éléments d&#39;une correspondance (source, cible). </td>
+<td> str </td>
+<td> &#39;,&#39; </td>
+</tr>
+
+<tr>
+<th scope="row"> nbmatches </th>
+<td> Nombre de correspondances à proposer parmi la liste de correspondances. Si cette clé vaut `None`, toutes les correspondances sont proposées. </td>
+<td> (int, None) </td>
+<td> None </td>
+</tr>
+
+<tr>
+<th scope="row"> targets </th>
+<td> Liste de cibles supplémentaires. Elle peut être saisie comme une liste ou comme une chaîne multilignes (chaque ligne correspondant à un item). </td>
+<td> (str, list[str]) </td>
+<td> [] </td>
+</tr>
+
+<tr>
+<th scope="row"> multiple </th>
+<td> Valeur indiquant si une cible peut être reliée à plusieurs sources. </td>
+<td> bool </td>
+<td> True </td>
+</tr>
+
+<tr>
+<th scope="row"> scoring </th>
+<td> Barème de l&#39;exercice. </td>
+<td> (&#39;AllOrNothing&#39;, &#39;RightMinusWrong&#39;, &#39;CorrectItems&#39;) </td>
+<td> &#39;RightMinusWrong&#39; </td>
+</tr>
+
+</tbody>
+</table>
+           
 TODO : Une option `strip` ou `skipinitialspace` pour éliminer les espaces superflus dans `matches`.
 
 TODO : Revoir les barèmes (Comment compter une source non reliée ? une cible non reliée ? etc.)
 
 ## Exemples (avec une liste déclarée explicitement)
 
-#### Capitales
+### Exemple 1 : Capitales
 
 ~~~
 extends = /model/basic/matchlist.pl
 
-title = Capitales
-
-text ==
+question ==
 Relier chaque pays à sa capitale.
 ==
 
@@ -45,16 +83,18 @@ Espagne,Madrid
 ==
 ~~~
 
+### Exemple 2 : Capitales
+
 ```
 extends = /model/basic/matchlist.pl
 
-text ==
+question ==
 Relier chaque pays à sa capitale.
 ==
 
-separator % ";"
+separator = ";"
 
-nbmatches % 4
+nbmatches = 4
 
 matches ==
 Allemagne;Berlin
@@ -80,14 +120,12 @@ Suisse;Berne
 ==
 ```
 
-## Exemples (avec une liste générée par un script)
+## Exemple 3 (avec une liste générée par un script)
 
 ```
 extends = /model/basic/matchlist.pl
 
-title = Décomposition de nombres
-
-text ==
+question ==
 Relier chaque nombre à la décomposition qui lui est égale.
 ==
 
