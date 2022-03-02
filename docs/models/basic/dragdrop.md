@@ -1,55 +1,79 @@
-# Modèle `basic/dragdrop`
+# Modèle `basic/dropgroup`
 
-Le modèle `basic/dragdrop.pl` permet de fabriquer des exercices avec des étiquettes à placer.
+Le modèle `basic/dropgroup.pl` permet de fabriquer des exercices avec des étiquettes à placer. Le placement des étiquettes et des zones de dépôt dans l'énoncé se fait par un système de balises.
 
-Le placement des étiquettes et des zones de dépôt dans l'énoncé se fait par un système de balises.
+## Clés spécifiques
 
-## Clés du modèle
+<table class="table">
+<thead>
+<tr>
+<th scope="col">Clé</th>
+<th scope="col">Description</th>
+<th scope="col">Type</th>
+<th scope="col">Défaut</th>
+</tr>
+</thead>
+<tbody>
 
-* `sol` (chaîne multilignes). Valeurs attendues dans les zones de dépôt.
-    * Cette clé contient les valeurs des solutions attendues dans les zones de dépôt (chaque ligne correspondant à une valeur).
-    * Pour chacune de ces valeurs, une zone de dépôt est créée. Ces zones sont numérotées en partant de zéro.
-* `labval` (chaîne multilignes). Valeur des étiquettes.
-    * Cette clé contient les valeurs des étiquettes (chaque ligne correspondant à une valeur).
-    * Pour chacune de ces valeurs, une étiquette est créée. Ces étiquettes sont numérotées en partant de zéro.
-    * Pour chaque valeur de `sol` non contenue dans `labval`, une étiquette est également créée (en poursuivant la numérotation).
-* `text` (chaîne). Enoncé de l'exercice.
-* `form` (chaîne). Zone de réponse de l'exercice.
-    * Les codes HTML correspondant aux zones de dépôt et aux étiquettes se trouvent respectivement dans les listes `drops` et `labels`.
-    * Pour insérer la i-ème zone de dépôt, il suffit donc d'utiliser la balise `{{ drops[i] }}`.
-    * Il est également possible d'utiliser des boucles.
-* `shuffled` (booléen). 
-    * Si `shuffled` vaut `true`, la liste des étiquettes est mélangée. Sinon, elle est laissée dans l'ordre entré dans la clé `labval` (et la clé `sol`).
-    * Par défaut, `shuffled` vaut `false`.
+<tr>
+<th scope="row"> nbdrops </th>
+<td> Nombre de zones de dépôt créées. Si cette clé vaut None, le nombre de zones créées est le nombre d&#39;items de la clé `sol` </td>
+<td> (int, None) </td>
+<td> None </td>
+</tr>
+
+<tr>
+<th scope="row"> sol </th>
+<td> Liste des valeurs attendues dans les zones de dépôt. Elle peut être saisie comme une liste ou comme une chaîne multilignes (chaque ligne correspondant à un item). </td>
+<td> (str, list[str]) </td>
+<td> [] </td>
+</tr>
+
+<tr>
+<th scope="row"> labels </th>
+<td> Liste d&#39;étiquettes supplémentaires. Elle peut être saisie comme une liste ou comme une chaîne multilignes (chaque ligne correspondant à un item). </td>
+<td> (str, list[str]) </td>
+<td> [] </td>
+</tr>
+
+<tr>
+<th scope="row"> shuffled </th>
+<td> Valeur indiquant si les étiquettes seront mélangées. </td>
+<td> bool </td>
+<td> True </td>
+</tr>
+
+<tr>
+<th scope="row"> scoring </th>
+<td> Barème de l&#39;exercice. </td>
+<td> (&#39;AllOrNothing&#39;, &#39;RightMinusWrong&#39;, &#39;CorrectItems&#39;) </td>
+<td> &#39;RightMinusWrong&#39; </td>
+</tr>
+
+</tbody>
+</table>
+
 
 ## Exemples
 
 ```
-extends = /model/basic/dragdrop.pl
+extends = /model/basic/dropgroup.pl
 
-title = Génétique
-
-text ==
-Compléter le texte suivante avec les bonnes étiquettes.
-==
-
-form ==
-<p> 
-L’ensemble des gènes caractéristiques de l’espèce à laquelle appartient un organisme, constitue son {{ drops[0] }}. 
-Chez les individus d’une même espèce, un gène peut cependant exister sous différentes formes présentant de légères modifications de séquence : les allèles. 
-L’ensemble des allèles d’un individu définit son {{ drops[1] }}. Lorsqu’ils s’expriment, lors de la synthèse des protéines, les gènes participent à la construction de l’individu et à la mise en place de son {{ drops[2] }}. 
-</p>
-
-{% for label in labels %} {{ label }} {% endfor %}
+question ==
+Compléter les phrases suivantes avec les étiquettes proposées.
 ==
 
 sol ==
-génome
-génotype
-phénotype
+ces
+c'est
+ces
 ==
 
-labval ==
-caryotype
+inputblock == #|html|
+* Je voudrais {{ input.drops[0]|component }} chausures pour mon anniversaire.
+* Tu est toujours en retard, {{ input.drops[1]|component }} agaçant !
+* Je n'aime pas {{ input.drops[2]|component }} méthodes.
+
+{% for label in input.labels %} {{ label|component }} {% endfor %}
 ==
 ```
