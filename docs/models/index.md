@@ -23,16 +23,16 @@
 
 ### Champ de réponse mathématique
 
-* [Documentation commune](math/input.md)
+[Documentation commune](math/input.md)
 
- * `math/expr` : [Expression](math/expr.md)
- * [Numérique](math/numeric.md)
- * [Fraction](math/frac.md)
- * `math/complex` : [Nombre complexe](math/complex.md)
- * `math/poly` : [Polynôme](math/poly.md)
- * `math/set` :[Ensemble fini](math/set.md)
- * [Intervalle](math/interval.md)
- * [N-uplet](math/tuple.md)
+* `math/expr` : [Expression](math/expr.md)
+* [Numérique](math/numeric.md)
+* [Fraction](math/frac.md)
+* `math/complex` : [Nombre complexe](math/complex.md)
+* `math/poly` : [Polynôme](math/poly.md)
+* `math/set` :[Ensemble fini](math/set.md)
+* [Intervalle](math/interval.md)
+* [N-uplet](math/tuple.md)
 
 ### Matrice
 
