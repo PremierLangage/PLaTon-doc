@@ -19,31 +19,20 @@
 * `basic/dropgroup` : [Etiquettes à placer](basic/dropgroup.md)
 * `basic/seltext` : [Texte à sélectionner](basic/seltext.md)
 
-## Exercices de base (format GIFT)
-
-Le format [GIFT](https://docs.moodle.org/3x/fr/Format_GIFT) est un format développé initialement dans la communuaté Moodle. 
-
-* [Choix multiple](Select_set.md)
-* [Choix multiple avec plusieurs bonnes réponses](Multiple_choice.md)
-* [Vrai-faux](TrueOrFalse.md)
-* [Questions à réponse numérique](Numeric_set.md)
-* [Composition](Saving_entries.md) / [Question ouverte](questionouverte.md)
-
 ## Mathématiques
 
 ### Champ de réponse mathématique
 
-* [Modèle générique](math/input.md)
+* [Documentation commune](math/input.md)
 
-* Modèles spécifiques
-    * `math/expr` : [Expression](math/expr.md)
-    * [Numérique](math/numeric.md)
-    * [Fraction](math/frac.md)
-    * `math/complex` : [Nombre complexe](math/complex.md)
-    * `math/poly` : [Polynôme](math/poly.md)
-    * `math/set` :[Ensemble fini](math/set.md)
-    * [Intervalle](math/interval.md)
-    * [N-uplet](math/tuple.md)
+ * `math/expr` : [Expression](math/expr.md)
+ * [Numérique](math/numeric.md)
+ * [Fraction](math/frac.md)
+ * `math/complex` : [Nombre complexe](math/complex.md)
+ * `math/poly` : [Polynôme](math/poly.md)
+ * `math/set` :[Ensemble fini](math/set.md)
+ * [Intervalle](math/interval.md)
+ * [N-uplet](math/tuple.md)
 
 ### Matrice
 
@@ -97,5 +86,11 @@ Une présentation visible sous platon (format markdown).
 * [CheckBox QCM Choix multiples](checkboxcsv.md)
 * [Matching list](Matching_csv.md)
 
+Le format [GIFT](https://docs.moodle.org/3x/fr/Format_GIFT) est un format développé initialement dans la communuaté Moodle. 
 
+* [Choix multiple](Select_set.md)
+* [Choix multiple avec plusieurs bonnes réponses](Multiple_choice.md)
+* [Vrai-faux](TrueOrFalse.md)
+* [Questions à réponse numérique](Numeric_set.md)
+* [Composition](Saving_entries.md) / [Question ouverte](questionouverte.md)
 
