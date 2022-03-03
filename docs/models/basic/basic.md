@@ -55,6 +55,39 @@
 <td>  </td>
 </tr>
 
-
 </tbody>
 </table>
+
+## Détails
+
+### `before`
+
+La clé `before` peut recevoir un script Python. Celui-ci est exécuté après le chargement des clés du fichier PL et avant la construction de la page de l'exercice. Toutes les clés du fichier PL sont utilisables et modifiables dans le script (une clé correspond simplement à la variable de même nom dans le script). Toute variable créée dans le script est ensuite convertie en clé de l'exercice (avec le même nom).
+
+La version de Python utilisée est la version 3.7. Tous les modules de la [bibliothèque standard](https://docs.python.org/fr/3/library/index.html) peuvent être importés. D'autres [modules usuels](https://documentationpl.readthedocs.io/fr/latest/technic_doc/modules_sandbox.md), ainsi que des modules propres à la plateforme, sont également disponibles.
+
+Pour alléger l'écriture du script `before`, un certain nombre de fonctions sont importées automatiquement avant l'exécution du script `before`.
+
+```
+from random import choice, choices, sample, shuffle
+from plrandom import randint, sampleint
+from plcsv import csv_choice, csv_sample, csv_col
+```
+
+### `question`
+
+
+Pour insérer dynamiquement les données générées par le script `before` dans l'énoncé de l'exercice, la clé `question` admet un système de **template**. Le contenu d'une clé `key`, définie explicitement ou dynamiquement dans le script `before`, peut être inséré dans la clé `question` en utilisant l'expression `{{ key }}`.
+
+
+**Exemple**
+
+```
+before ==
+capitale = choice(["Paris", "Berlin", "Rome"])
+==
+
+question ==
+Quel pays a pour capitale {{ capitale }} ?
+==
+```
