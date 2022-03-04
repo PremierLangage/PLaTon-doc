@@ -2,39 +2,67 @@
 
 Le modèle `math/matrix` permet de créer des exercices dont la réponse est une matrice.
 
-* Le champ de réponse permet de saisir facilement une matrice. 
+## Clés spécifiques
 
-## Clés du modèle
+<table class="table">
+<thead>
+<tr>
+<th scope="col">Clé</th>
+<th scope="col">Description</th>
+<th scope="col">Type</th>
+<th scope="col">Défaut</th>
+</tr>
+</thead>
+<tbody>
 
-* `before` (script Python). Script de génération des données et de la solution.
-    * Le script doit définir une variable `sol` contenant la solution. Cette solution doit être un objet SymPy de type `Matrix`.
-* `resizable` (booléen). Redimensionnement du champ de réponse matrice.
-* `initsize` (liste de deux entiers). Dimention initiale du champ de réponse matrice.
-    * Cette clé n'est utile que si le champ de réponse matrix peut-être redimensionné (`resizable % true`). Autrement, la dimension du champ de réponse matrice est automatiquement égale à la dimension de `sol`. 
+<tr>
+<th scope="row"> sol </th>
+<td> Bonne réponse. Elle doit être définie dans le script `before` comme un objet SymPy de type Matrix. </td>
+<td> Matrix </td>
+<td>  </td>
+</tr>
+
+<tr>
+<th scope="row"> resizable </th>
+<td> Valeur indiquant si le champ de réponse est redimensionnable. </td>
+<td> bool </td>
+<td> 'False </td>
+</tr>
+
+<tr>
+<th scope="row"> initsize </th>
+<td> Dimention initiale du champ de réponse. Cette clé n'est utile que si le champ de réponse est redimensionnable. Autrement, la dimension du champ de réponse matrice est automatiquement égale à la dimension de sol. </td>
+<td> lst[int, int] </td>
+<td> [2, 2] </td>
+</tr>
+
+</tbody>
+</table>
 
 ## Exemples
 
-####
+### Exemple 1 : Multiplication de deux matrices
+
+Adresse : `/demo/math/matrix/multiplication.pl`
 
 ```
 extends = /model/math/matrix.pl
 
-title = Multiplier des matrices $! 2 \times 2 !$
 
 before ==
-from randsympy import rand_int_matrix
+from randsympy import randint_matrix
 n = 2
 coeffbound = 3
-A = rand_int_matrix(n, n, coeffbound)
-B = rand_int_matrix(n, n, coeffbound)
+A = randint_matrix(n, n, coeffbound)
+B = randint_matrix(n, n, coeffbound)
 sol = A*B
 ==
 
-text ==
+question ==
 Soit les matrices
-$$ A = \left( {{ A|latex }} \right) \text{ et } B = \left( {{ B|latex }} \right) $$ 
+$$ A = {{ A|latex }} \text{ et } B = {{ B|latex }} $$ 
 Calculer $! A B !$.
 ==
 
-resizable % false
+resizable = False
 ```
