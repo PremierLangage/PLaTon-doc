@@ -2,43 +2,95 @@
 
 Le modèle `math/poly` est un modèle dérivé du modèle `math/input`. Le script d'évaluation `evaluator` y est prédéfini. Il compare la réponse de l'élève à une solution attendue de type polynôme.
 
-## Clés du modèle
+## Clés spécifiques
 
-Les clés `title`, `text`, `input_prefix`, `solution`, `hint`, `latexsettings` ont la même signification et la même syntaxe que dans le modèle `math/input`.
+<table class="table">
+<thead>
+<tr>
+<th scope="col">Clé</th>
+<th scope="col">Description</th>
+<th scope="col">Type</th>
+<th scope="col">Défaut</th>
+</tr>
+</thead>
+<tbody>
 
-* `before` (script Python). Script de génération des données et de la solution. 
-    * Le script doit définir une variable `sol` contenant la solution. Cette solution doit être un objet SymPy de type `Poly` ou un objet SymPy de type `Expr` convertible en polynôme.
-* `poly_var` (chaîne). Variable du polynôme
-    * Par défaut, la valeur de cette clé est `x`.
-* `poly_form` (chaîne). Forme attendue de la réponse de l'élève.
-    * Les 3 valeurs possibles sont : chaîne vide (pas de forme particulière), `expanded` (forme développée) et `factorized` (forme factorisée).
-    * Par défaut, la valeur de cette clé est une chaîne vide.
-* `poly_domain` (chaîne). Domaine du polynôme.
-    * Cette clé est utilisée lorsque la forme attendue est une forme factorisée. Les valeurs possibles sont `R` (domaine réel) et `C` (domaine complexe).
-    * Par défaut, la valeur de cette clé est `R`.
+<tr>
+<th scope="row"> sol </th>
+<td> Bonne réponse. Elle doit être définie dans le script `before` comme un objet SymPy de type Expr ou Poly. </td>
+<td> (Expr, Poly) </td>
+<td>  </td>
+</tr>
+
+<tr>
+<th scope="row"> poly_form </th>
+<td> Forme attendue de la réponse : pas de forme particulière (''), forme développée ('Expanded'), forme factorisée ('Factorized'). </td>
+<td> ('', 'Expanded', 'Factorized') </td>
+<td> '' </td>
+</tr>
+
+<tr>
+<th scope="row"> poly_domain </th>
+<td> Domaine du polynôme : réels ('R'), complexes ('C'). </td>
+<td> ('R', 'C') </td>
+<td> 'R' </td>
+</tr>
+
+<tr>
+<th scope="row"> poly_var </th>
+<td> Variable du polynôme. Si cette clé vaut None, la variable est détectée automatiquement. </td>
+<td> (str, None) </td>
+<td> None </td>
+</tr>
+
+</tbody>
+</table>
+            
 
 ## Exemples
 
-#### Développer une expression polynomiale
+### Exemple 1 : Développer une expression polynomiale
+
+Adresse : `/demo/math/poly/expansion.pl`
 
 ~~~
 extends = /model/math/poly.pl
 
-title = Développer une expression polynomiale
-
 before ==
-from randsympy import randint_poly
-P = randint_poly(1, 2, 2)
-Q = randint_poly(1, 2, 2)
+x = Symbol('x')
+P = randint(-3, 3, [0])*x + randint(-3, 3, [0])
+Q = randint(-3, 3, [0])*x + randint(-3, 3, [0])
 expr = P * Q
 sol = expr.expand()
 ==
 
-text ==
+question ==
 Développer l'expression suivante :
-
 $$ {{ expr|latex }}. $$
 ==
 
-poly_form = expanded
+poly_form = "Expanded"
 ~~~
+
+### Exemple 2 : Factoriser une expression polynomiale
+
+Adresse : `/demo/math/poly/factorization.pl`
+
+```
+extends = /model/math/poly.pl
+
+before ==
+x = Symbol('x')
+P = x + randint(-2, 2)
+Q = x + randint(-2, 2)
+sol = P * Q
+expr = sol.expand()
+==
+
+question ==
+Factoriser l'expression suivante :
+$$ {{ expr|latex }}. $$
+==
+
+poly_form = "factorized"
+```
