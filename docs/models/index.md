@@ -10,7 +10,7 @@
 * `basic/checkbox_rw` : [Choix multiple avec plusieurs sélections (2)](basic/checkbox_rw.md)
 
 * `basic/textinput` : [Réponse textuelle](basic/input.md)
-* `basic/autoinput` : [Réponse textuelle avec suggestions](basic/inputselect.md)
+* `basic/autoinput` : [Réponse textuelle avec suggestions](basic/autoinput.md)
 * `basic/numinput` : [Réponse numérique](basic/numinput.md)
 
 * `basic/matchlist` : [Correspondances](basic/matchlist.md)
@@ -19,6 +19,10 @@
 * `basic/dropgroup` : [Etiquettes à placer](basic/dropgroup.md)
 * `basic/seltext` : [Texte à sélectionner](basic/seltext.md)
 
+## Exercices composés
+
+* `quiz/AMC_TXT` : [Quiz au format AMC-TXT](quiz/AMC_TXT.md)
+
 ## Mathématiques
 
 ### Champ de réponse mathématique
@@ -26,13 +30,13 @@
 [Documentation commune](math/input.md)
 
 * `math/expr` : [Expression](math/expr.md)
-* [Numérique](math/numeric.md)
-* [Fraction](math/frac.md)
+* `math/numeric` : [Numérique](math/numeric.md)
+* `math/frac` : [Fraction](math/frac.md)
 * `math/complex` : [Nombre complexe](math/complex.md)
 * `math/poly` : [Polynôme](math/poly.md)
-* `math/set` :[Ensemble fini](math/set.md)
-* [Intervalle](math/interval.md)
-* [N-uplet](math/tuple.md)
+* `math/set` : [Ensemble fini](math/set.md)
+* `math/interval` : [Intervalle](math/interval.md)
+* `math/tuple` : [N-uplet](math/tuple.md)
 
 ### Matrice
 
