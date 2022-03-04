@@ -92,5 +92,5 @@ Factoriser l'expression suivante :
 $$ {{ expr|latex }}. $$
 ==
 
-poly_form = "factorized"
+poly_form = "Factorized"
 ```
