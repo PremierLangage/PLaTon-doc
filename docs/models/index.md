@@ -40,7 +40,7 @@
 
 ### Matrice
 
-* [Matrice](math/matrix.md)
+* `math/matrix` : [Matrice](math/matrix.md)
 
 ### Panneau graphique interactif (JSXGraph)
 
