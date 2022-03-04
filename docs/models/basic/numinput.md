@@ -1,6 +1,6 @@
 # Modèle `basic/numinput`
 
-Le modèle `basic/numinput` permet de fabriquer des exercices à réponse numérique.
+Le modèle `basic/numinput` permet de fabriquer des exercices à réponse numérique (entier ou nombre décimal positif).
 
 ## Clés spécifiques
 
