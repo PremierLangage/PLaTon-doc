@@ -27,8 +27,9 @@
 
 ### Champ de réponse mathématique
 
-[Documentation commune](math/input.md)
+[Documentation commune](math/commondoc.md)
 
+* `math/input` : [Champ libre](math/input.md)
 * `math/expr` : [Expression](math/expr.md)
 * `math/numeric` : [Numérique](math/numeric.md)
 * `math/frac` : [Fraction](math/frac.md)
