@@ -1,4 +1,3 @@
-
 # Modèles d'exercices
 
 ## Exercices de base
