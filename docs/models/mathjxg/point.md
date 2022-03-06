@@ -101,6 +101,8 @@ var psol = board.create('point', [0, 0], {size: 2, name: 'M', color: 'blue'});
 
 ### Exemple 2 : Angle
 
+Adresse : `/demo/jxg/point/angle.pl`
+
 ```
 extends = /model/jxg/point.pl
 
