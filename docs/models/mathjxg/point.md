@@ -60,11 +60,17 @@ Le modèle `jxg/point` permet de fabriquer des exercices où il faut placer un p
 </tbody>
 </table>
 
+## Détails
+
+### `jxgscript`
+
+Ce script permet de créer les objets graphiques du panneau JSXGraph. Ce panneau est déjà créé et porte le nom `board`. Le point à placer doit être créé sous la forme d'une variable `psol`.
+
 ## Exemples
 
 ### Exemple 1 : Nombre complexe
 
-Adresse : ``
+Adresse : `/demo/jxg/point/complex.pl`
 
 ```
 extends = /model/jxg/point.pl
@@ -81,10 +87,44 @@ Placer le point $! M !$ d'affixe $! {{ z|latex }} !$ dans le plan ci-dessous.
 
 attributes = {"showNavigation": False, "boundingbox":[-6, 6, 6, -6]}
 
+tol = 0.2
+
+pointname = "M"
+
 jxgscript == #|js|
 board.create('grid', [], {gridX: 1, gridY: 1});
 board.create('axis', [[0, 0], [1, 0]], {name: 'Re', withLabel: true, label: {position:'urt', offset: [-5, 10]}, ticks:{visible: false}});
 board.create('axis', [[0, 0], [0, 1]], {name: 'Im', withLabel: true, label: {position: 'urt', offset: [10, 0]}, ticks:{visible: false}});
 var psol = board.create('point', [0, 0], {size: 2, name: 'M', color: 'blue'});
+==
+```
+
+### Exemple 2 : Angle
+
+```
+extends = /model/jxg/point.pl
+
+before ==
+angle = choice([pi/4, pi/2, 3*pi/4, pi, 3*pi/2])
+xsol = cos(angle).evalf()
+ysol = sin(angle).evalf()
+==
+
+question ==
+Placer le point M de sorte que l'angle $! (\overrightarrow{OA},\overrightarrow{OM}) !$ ait une mesure égale à $! \displaystyle {{ angle|latex }} !$. 
+==
+
+attributes = {"showNavigation": False, "boundingbox":[-1.25, 1.25, 1.25, -1.25]}
+
+tol = 0.05
+
+pointname = "M"
+
+jxgscript == #|js|
+var circle = board.create('circle', [[0, 0], [0, 1]], {strokeColor: 'blue', fixed: true});
+var O = board.create('point', [0, 0], {size: 1, name: 'O', color: 'black', fixed: true});
+var A = board.create('point', [1, 0], {size: 1, name: 'A', color: 'black', fixed: true});
+var psol = board.create('glider', [1, 0.5, circle], {size: 2, name: 'M', color: 'blue', fixed: false});
+var secOAM = board.create('sector', [O, A, psol], {color: 'orange'});
 ==
 ```
