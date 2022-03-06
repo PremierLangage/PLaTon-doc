@@ -44,10 +44,7 @@
 
 ### Panneau graphique interactif (JSXGraph)
 
-* [Modèle générique](mathjxg/free.md)
-
-* Modèles spécifiques
-    * [Point](mathjxg/point.md)
+* `jxg/point` : [Point](mathjxg/point.md)
 
 ## Chimie
 
@@ -65,21 +62,6 @@ Deux grandes stratégies de création d'exercice demandant la création de code:
     * **std_progC** pour les [exercices de programmation standard en C](../technic_doc/std_progC.md) (verison 07/2020)
     * plsoluce
 
-## Langues 
-
-* [Trouve faute d'orthographe](Trouve_faute.md)
-* [Irregular verbs](Irregular_verbs_csv.md)
-
-
-## Présentation 
-
-Une présentation visible sous platon (format markdown).
-
-[Présentation](slides.md) 
-
-## Outils 
-
-* [Test my py](testmypy.md) Tester voter code python directement sous PLATON.
 
 ## Divers
 
@@ -97,4 +79,16 @@ Le format [GIFT](https://docs.moodle.org/3x/fr/Format_GIFT) est un format dével
 * [Vrai-faux](TrueOrFalse.md)
 * [Questions à réponse numérique](Numeric_set.md)
 * [Composition](Saving_entries.md) / [Question ouverte](questionouverte.md)
+
+Langues 
+
+* [Trouve faute d'orthographe](Trouve_faute.md)
+* [Irregular verbs](Irregular_verbs_csv.md)
+* 
+Une présentation visible sous platon (format markdown).
+
+* [Présentation](slides.md) 
+
+* [Test my py](testmypy.md) Tester voter code python directement sous PLATON.
+
 
