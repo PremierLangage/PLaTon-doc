@@ -1,3 +1,10 @@
+## Détails
+
+### `evaluator`
+
+Ce script est exécuté après la validation de l'exercice et permet d'évaluer la réponse saisie. Le script doit définir un score dans une variable `score`. Le score est une valeur entière comprise entre -1 et 100. La valeur -1 indique une erreur de syntaxe dans la saisie. Le script peut également définir un message d'avertissement ou d'erreur dans une variable `feedback`. 
+
+
 ## Exemples
 
 ```
