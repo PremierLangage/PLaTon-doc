@@ -1,9 +1,6 @@
-# Modèle `math/input`
+# Documentation commune
 
-Le modèle `math/input` permet de créer des exercices dont la réponse est une expression mathématique.
-
-* Le champ de réponse permet de saisir facilement une expression mathématique avec un rendu de type TeX. 
-* La génération des données de l'exercice et l'évaluation de la réponse de l'élève est effectuée par des scripts Python.
+Tous ces modèles permettent de créer des exercices dont la réponse est une expression mathématique. Le champ de réponse permet de saisir facilement une expression mathématique avec un rendu de type TeX. Chaque modèlede l'exercice et l'évaluation de la réponse de l'élève est effectuée par des scripts Python.
 
 ## Clés du modèle
 
@@ -45,52 +42,10 @@ Le modèle `math/input` permet de créer des exercices dont la réponse est une 
 * `hint` (chaîne). Message(s) d'indication.
     * Cette clé offre les mêmes possibilités de mise en forme que la clé `text`.
 
-## Exemples
+## Détailes
 
-```
-extends = /model/math/input.pl
+### `before`
 
-title = Transformer une somme de logarithmes en un logarithme
-
-before ==
-p = randint(2, 5)
-q = randint(2, 5)
-expr = f"\ln({p}) + \ln({q})"
-sol = ln(p*q)
-==
-
-text ==
-Ecrire $! {{ expr }} !$ sous la forme  $! \ln(a) !$, où $! a !$ est un nombre.
-==
-
-evaluator ==
-from latex2sympy import latex2sympy
-from evalsympy import equal
-from sympy import log
-
-def eval_ans(strans, sol):
-    try:
-        ans = latex2sympy(strans)
-    except:
-        return (-1, "NotExpr")
-    if ans.func != log:
-        return (-1, "WrongForm")
-    if not equal(ans, sol):
-        return (0, "NotEqual")
-    return (100, "Success")
-
-score, error = eval_ans(answers['math'], sol)
-feedback = message[error]
-==
-
-solution ==
-La solution est $! {{ sol|latex}} !$.
-==
-```
-
-## Annexes
-
-### Importations automatiques du `before`
 
 ```
 from sympy import E, I, pi, oo
@@ -103,6 +58,14 @@ from plrandom import randint
 from sympy2latex import latex
 from latex2sympy import latex2sympy
 ```
+
+### `question`
+
+
+
+
+## Annexes
+
 
 ## Description
 
