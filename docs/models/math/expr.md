@@ -39,6 +39,7 @@ Le modèle `math/expr` permet de fabriquer des exercices aléatoires où la rép
 </tbody>
 </table>
 
+
 ## Exemples
 
 #### Calculer la distance entre deux points du plan
