@@ -1,51 +1,124 @@
 # Documentation commune
 
-Tous ces modèles permettent de créer des exercices dont la réponse est une expression mathématique. Le champ de réponse permet de saisir facilement une expression mathématique avec un rendu de type TeX. Chaque modèlede l'exercice et l'évaluation de la réponse de l'élève est effectuée par des scripts Python.
+Tous ces modèles permettent de créer des exercices dont la réponse est une expression mathématique. Le champ de réponse permet de saisir facilement une expression mathématique avec un rendu de type TeX. Chaque modèle propose une évaluation spécifique de la réponse : expression, nombres complexes, polynômes, etc.
 
-## Clés du modèle
+## Clés spécifiques
 
-#### Clés de base
-* `title` (chaîne). Titre de l'exercice.
-    * Le titre doit décrire la tâche à effectuer dans l'exercice. Il est destiné au référencement de l'exercice.
-* `before` (script Python). Script de génération des données et de la solution.
-    * Ce script est exécuté au lancement de l'exercice et permet de générer les données de l'exercice.
-    * Pour faciliter cette tâche, en plus de la [bibliothèque Python standard](https://docs.python.org/fr/3/library/index.html), un certain nombre de paquets et de modules sont disponibles. En particulier :
-        * `sympy` : calcul symbolique (https://docs.sympy.org)
-        * `plrandom` : fonctions aléatoires (bibliothèque locale)
-        * `randsympy` : génération aléatoire d'objets SymPy (bibliothèque locale)
-        * `sympy2latex` : conversion d'objets SymPy en LateX (bibliothèque locale)
-        * `latex2sympy` : conversion d'expressions LateX en objets SymPy (bibliothèque locale)
-        * `mplsympy` : génération d'objets graphiques à partir d'objets SymPy (bibliothèque locale)
-    * Pour alléger l'écriture du script, les fonctions les plus courantes de ces bibliothèques sont automatiquement importées (voir annexe ci-après).
-* `text` (chaîne). Enoncé de l'exercice. 
-    * L'insertion de formules mathématiques s'effectue avec du code LaTeX dans les balises `$!...!$` (mode en ligne) ou `$$...$$` (mode équation).
-    * L'insertion dynamique de données produites par le script `before` s'effectue à l'aide des balises `{{...}}`. Par exemple, si la variable `var` a été définie dans le script `before`, la commande `{{ var }}` permet d'insérer sa représentation textuelle dans l'énoncé.
-    * Par ailleurs, un filtre `latex` permet d'insérer la représentation LaTeX d'un objet SymPy. Par exemple, si l'objet SymPy `obj` a été défini dans le script `before`, la commande `{{ obj|latex }}` permet d'insérer sa représentation LaTeX dans l'énoncé.
-    * La mise en forme avancée du texte s'effectue avec des balises Markdown ou HTML.
-* `evaluator` (script Python). Script d'évaluation de la réponse.
-    * Ce script est exécuté après la validation de l'exercice et permet d'évaluer la réponse de l'élève.
-    * La réponse de l'élève est contenue dans la variable `answers['math']` sous forme d'une chaîne LaTeX.
-    * Le script doit définir un score dans une variable `score`. Le score est une valeur entière comprise entre -1 et 100. La valeur -1 indique à l'activité qui exécute l'exercice que cette tentative ne doit pas être prise en compte (dans le cas, par exemple, d'une erreur de syntaxe dans la saisie).
-    * Le script peut également définir un message d'avertissement ou d'erreur dans une variable `feedback`. 
+          
+<table class="table">
+<thead>
+<tr>
+<th scope="col">Clé</th>
+<th scope="col">Description</th>
+<th scope="col">Type</th>
+<th scope="col">Défaut</th>
+</tr>
+</thead>
+<tbody>
 
-#### Interface de réponse
-* `input_prefix` (chaîne). Chaîne placée avant le champ de réponse. 
-    * Par défaut, cette clé contient la chaîne `Réponse :`. 
-    * Elle offre les mêmes possibilités de mise en forme que la clé `text`.
-* `keypad` (liste de dictionnaires). Clavier virtuel. 
-    * Par défaut, cette clé contient une lsite vide. 
-    * Les éléments de la liste sont des dictionnaires représentant les boutons du clavier. Les clés de ces dictionnaires sont `label`, `action` et `value`. 
+<tr>
+<th scope="row"> before </th>
+<td> Script Python permettant de générer les clés de l'exercice. </td>
+<td> str </td>
+<td>  </td>
+</tr>
 
-#### Messages
-* `solution` (chaîne). Message de correction de l'exercice.
-    * Cette clé offre les mêmes possibilités de mise en forme que la clé `text`.
-* `hint` (chaîne). Message(s) d'indication.
-    * Cette clé offre les mêmes possibilités de mise en forme que la clé `text`.
+<tr>
+<th scope="row"> title </th>
+<td> Titre de l'exercice. </td>
+<td> str </td>
+<td>  </td>
+</tr>
 
-## Détailes
+<tr>
+<th scope="row"> question </th>
+<td> Template HTML contenant l'énoncé de l'exercice. </td>
+<td> str </td>
+<td>  </td>
+</tr>
+
+<tr>
+<th scope="row"> inputblock </th>
+<td> Template HTML contenant l'énoncé de l'exercice. </td>
+<td> str </td>
+<td>  </td>
+</tr>
+
+<tr>
+<th scope="row"> solution </th>
+<td> Template HTML contenant la correction de l'exercice. </td>
+<td> str </td>
+<td>  </td>
+</tr>
+
+<tr>
+<th scope="row"> evaluator </th>
+<td> Script Python permettant d'évaluer la réponse de l'exercice. </td>
+<td> str </td>
+<td>  </td>
+</tr>
+
+<tr>
+<th scope="row"> keypad </th>
+<td> Liste des boutons du clavier virtuel attaché au champ de réponse. </td>
+<td> list </td>
+<td> [] </td>
+</tr>
+
+<tr>
+<th scope="row"> embed </th>
+<td> Formule dans laquelle est insérée le champ de réponse. </td>
+<td> str </td>
+<td> '' </td>
+</tr>
+
+<tr>
+<th scope="row"> checkratsimp </th>
+<td> Valeur indiquant si l'évaluation vérifie que les valeurs rationnelles sont simplifiées dans la réponse saisie. </td>
+<td> bool </td>
+<td> True </td>
+</tr>
+
+<tr>
+<th scope="row"> symbol_dict </th>
+<td> Dictionnaire des symboles utilisés pour convertir la réponse saisie en expression SymPy. </td>
+<td> dict </td>
+<td> {'e': E} </td>
+</tr>
+
+<tr>
+<th scope="row"> unauthorized_func </th>
+<td> Liste des fonctions non autorisées. </td>
+<td> list[str] </td>
+<td> [] </td>
+</tr>
+
+<tr>
+<th scope="row"> latexsettings </th>
+<td> Dictionnaire des paramètres de conversion SymPy vers LaTeX. </td>
+<td> dict </td>
+<td> {} </td>
+</tr>
+
+</tbody>
+</table>
+
+## Détails
 
 ### `before`
 
+La clé `before` peut recevoir un script Python. Celui-ci est exécuté après le chargement des clés du fichier PL et avant la construction de la page de l'exercice. Toutes les clés du fichier PL sont utilisables et modifiables dans le script (une clé correspond simplement à la variable de même nom dans le script). Toute variable créée dans le script est ensuite convertie en clé de l'exercice (avec le même nom).
+
+La version de Python utilisée est la version 3.7. Tous les modules de la [bibliothèque standard](https://docs.python.org/fr/3/library/index.html) peuvent être importés. D'autres [modules usuels](https://documentationpl.readthedocs.io/fr/latest/technic_doc/modules_sandbox.md), ainsi que des modules propres à la plateforme, sont également disponibles.
+
+En particulier les modules suivants sont disponibles :
+  * `sympy` : calcul symbolique (https://docs.sympy.org)
+  * `plrandom` : fonctions aléatoires (bibliothèque locale)
+  * `randsympy` : génération aléatoire d'objets SymPy (bibliothèque locale)
+  * `sympy2latex` : conversion d'objets SymPy en LateX (bibliothèque locale)
+  * `latex2sympy` : conversion d'expressions LateX en objets SymPy (bibliothèque locale)
+
+Pour alléger l'écriture du script `before`, un certain nombre de fonctions sont importées automatiquement avant l'exécution du script `before`.
 
 ```
 from sympy import E, I, pi, oo
@@ -61,54 +134,18 @@ from latex2sympy import latex2sympy
 
 ### `question`
 
+L'insertion de formules mathématiques s'effectue avec du code LaTeX dans les balises `$!...!$` (mode en ligne) ou `$$...$$` (mode équation).
 
+Pour insérer les données générées par le script `before` dans l'énoncé de l'exercice, la clé `question` utilise le moteur de **template** Jinja. En particulier, le contenu d'une variable `var` créée dans le script `before` peut être inséré en utilisant la syntaxe `{{ var }}`.
 
+Par ailleurs, un filtre `latex` permet d'insérer la représentation LaTeX d'un objet SymPy. Par exemple, si l'objet SymPy `obj` a été défini dans le script `before`, la commande `{{ obj|latex }}` permet d'insérer sa représentation LaTeX dans l'énoncé.
 
-## Annexes
+La mise en forme avancée de l'énoncé s'effectue avec des balises HTML.
 
+### `keypad`
 
-## Description
+Les clés de ces dictionnaires sont `label`, `action` et `value`.
 
-Les données et la solution de l'exercice doivent être générées par un script Python contenu dans la clé `before`. Pour définir et manipuler des expressions mathématiques, on utilise la [bibliothèque SymPy](https://www.sympy.org/en/index.html). En particulier, la solution doit être définie comme un objet SymPy de type `Expr`.
+### `checkratsimp`
 
-L'énoncé de l'exercice doit être saisi dans la clé `question`.
-
-    * L'insertion de formules mathématiques s'effectue avec du code LaTeX dans les balises `$!...!$` (mode en ligne) ou `$$...$$` (mode équation).
-    * L'insertion dynamique de données produites par le script `before` s'effectue à l'aide des balises `{{...}}`. Par exemple, si la variable `var` a été définie dans le script `before`, la commande `{{ var }}` permet d'insérer sa représentation textuelle dans l'énoncé.
-    * Par ailleurs, un filtre `latex` permet d'insérer la représentation LaTeX d'un objet SymPy. Par exemple, si l'objet SymPy `obj` a été défini dans le script `before`, la commande `{{ obj|latex }}` permet d'insérer sa représentation LaTeX dans l'énoncé.
-    * La mise en forme avancée du texte s'effectue avec des balises HTML.
-
-L'évaluation de la réponse de l'élève est automatique.
-
-
-#### Interface de réponse
-* `input_prefix` (chaîne). Chaîne placée avant le champ de réponse. 
-    * Par défaut, cette clé contient la chaîne `Réponse :`. 
-    * Elle offre les mêmes possibilités de mise en forme que la clé `text`.
-* `input_keypad` (liste de dictionnaires). Clavier virtuel. 
-    * Par défaut, cette clé contient une lsite vide. 
-    * Les éléments de la liste sont des dictionnaires représentant les boutons du clavier. Les clés de ces dictionnaires sont `label`, `action` et `value`.
-* `input_embed` (chaîne). Formule dans laquelle est insérée le champ de réponse. 
-
-#### Evluation de réponse
-* `checkratsimp` (booléen Python). 
-    * Si cette clé vaut `True`, l'exercice vérifie que les valeurs rationnelles sont simplifiées dans la réponse de l'élève. Des réponses du type $4+3$, $1+\fra{1}{2}$, $\sqrt{4+3}$, $\sqrt{4}$, etc. déclencheront un message d'avertissement.
-    * Valeur par défaut : `True`.
-* `unauthorized_func` (liste de chaînes Python). 
-    * Cette clé contient les noms des fonctions non autorisées.
-    * Valeur par défaut : `[]`.
-* `symbol_dict` (dictionnaire Sympy). 
-    * Cette clé contient le dictionnaire des symboles utilisé pour convertir la réponse de l'élève en expression SymPy.
-    * Valeur par défaut : `{'e': E}`. Le symbole `e` est alors interprété comme le nombre d'Euler (objet SymPy `E`).
-    * 
-#### Messages
-* `solution` (chaîne). Message de correction de l'exercice.
-    * Cette clé offre les mêmes possibilités de mise en forme que la clé `text`.
-* `hint` (chaîne). Message(s) d'indication.
-    * Cette clé offre les mêmes possibilités de mise en forme que la clé `text`.
-* `message.NotExpr` (chaîne). Message d'avertissement quand la réponse n'est pas un expression mathématique.
-   * `La réponse doit être une expression mathématique.`
-* `message.NotRatSimp` (chaîne). Message d'avertissement quand la réponse n'est pas simplifiée.
-   * `L'expression peut encore être simplifiée.`
-* `message.NotEqual` (chaîne). Message d'erreur.
-   * `La réponse n'est pas égale à la solution.`
+Si cette clé vaut `True`, l'exercice vérifie que les valeurs rationnelles sont simplifiées dans la réponse de l'élève. Des réponses du type $4+3$, $1+\fra{1}{2}$, $\sqrt{4+3}$, $\sqrt{4}$, etc. déclencheront un message d'avertissement.
