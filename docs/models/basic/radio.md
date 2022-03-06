@@ -2,7 +2,7 @@
 
 Le modèle `basic/radio` permet de fabriquer des exercices à choix multiple (avec un seul item à sélectionner).
 
-## Clés du modèle
+## Clés spécifiques
 
 <table class="table">
   <thead>
