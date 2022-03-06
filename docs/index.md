@@ -1,11 +1,11 @@
-# Documentation de PLaTon côté enseignant
+# Documentation PLaTon pour les enseignants
 
 <p align="center">
 <img alt="Logo de PLaTon" src="images/logo_color.svg" width="20%">
 </p>
 
 Bienvenue sur la documentation de PLaTon côté enseignant. **PLaTon** est un **jeune projet**
-en dévellopement continu. La plupart des documentations autour de PLaTon sont en 
+en développement. La plupart des documentations autour de PLaTon sont en 
 devenir et donc très largement imparfaites, merci de votre compréhension. Les utilisateurs 
 sont toutefois souvent encore mieux placés que les concepteurs pour produire de la 
 documentation car ces derniers sont ceux qui mettent à l'épreuve la plateforme lors de 
