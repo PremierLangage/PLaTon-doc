@@ -146,6 +146,17 @@ La mise en forme avancée de l'énoncé s'effectue avec des balises HTML.
 
 Les clés de ces dictionnaires sont `label`, `action` et `value`.
 
+### `embed`
+
+Cette clé permet de définir une expression mathématique dans laquelle sera insérée le champ de réponse. Cette expression doit être écrite en LaTeX et la position du champ de réponse doit être indiquée par un croisillon (`#`) au sein de cette expression.
+
+**Exemple.**
+```
+embed ==
+\sqrt{ # }
+==
+```
+
 ### `checkratsimp`
 
 Si cette clé vaut `True`, l'exercice vérifie que les valeurs rationnelles sont simplifiées dans la réponse de l'élève. Des réponses du type $4+3$, $1+\fra{1}{2}$, $\sqrt{4+3}$, $\sqrt{4}$, etc. déclencheront un message d'avertissement.
