@@ -46,3 +46,7 @@ Soit la fonction $! f : \mathbb{R} \rightarrow \mathbb{R} !$ telle que
 $$ f(x) = {{ expr|latex }} . $$
 ==
 ```
+
+## Paramètres du convertisseur LaTeX
+
+TODO
