@@ -2,8 +2,6 @@
 
 Le modèle `basic/textinput` permet de fabriquer des exercices avec un champ de réponse textuel.
 
-![](input.png)
-
 Les clés de base de ce modèle sont :
 
   * `question` : l'énoncé de l'exercice ;
