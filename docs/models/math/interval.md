@@ -29,18 +29,23 @@ Attention : Les intervalles doivent, pour l'instant, être saisis en utilisant l
 
 ## Exemples
 
+### Exemple 1
+
 ```
 extends = /model/math/interval.pl
 
+keypad = ["-infty", "+infty"]
+
 before ==
-a = randint(1, 3)
-b = randint(-3, 3)
-sol = Interval(-oo, b - a)
+a = choice([0, 1, -oo])
+b = choice([3, 5, oo])
+left_open = choice([True, False])
+right_open = choice([True, False])
+sol = Interval(a, b, left_open, right_open)
 ==
 
 question ==
-Ecrire sous forme d'intervalle l'ensemble des réels $! x  + {{ a }} \le {{ b }}  !$.
+Entrer l'intervalle $! {{ sol|latex }} !$.
 ==
-
-keypad = ["-infty", "+infty"]
 ```
+
