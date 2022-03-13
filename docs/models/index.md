@@ -37,6 +37,7 @@
 * `math/set` : [Ensemble fini](math/set.md)
 * `math/interval` : [Intervalle](math/interval.md)
 * `math/tuple` : [N-uplet](math/tuple.md)
+* `math/chainineq` : [Encadrement](math/chainineq.md)
 
 ### Matrice
 
@@ -65,26 +66,19 @@ Deux grandes stratégies de création d'exercice demandant la création de code:
 
 ## Divers
 
-* [Vrai ou faux?](vraifaux.md)
-* [CheckBox QCM Choix multiples](checkbox.md)
-* [Associations](matchlist.md) / [Matching basic](Matching.md)
-* [Compléter les gab](Gab_completing.md)
-* [CheckBox QCM Choix multiples](checkboxcsv.md)
-* [Matching list](Matching_csv.md)
+* [Vrai ou faux?](vraifaux.md) [CheckBox QCM Choix multiples](checkbox.md) [Associations](matchlist.md) / [Matching basic](Matching.md)
+* [Compléter les gab](Gab_completing.md) [CheckBox QCM Choix multiples](checkboxcsv.md) [Matching list](Matching_csv.md)
 
 Le format [GIFT](https://docs.moodle.org/3x/fr/Format_GIFT) est un format développé initialement dans la communuaté Moodle. 
 
-* [Choix multiple](Select_set.md)
-* [Choix multiple avec plusieurs bonnes réponses](Multiple_choice.md)
-* [Vrai-faux](TrueOrFalse.md)
-* [Questions à réponse numérique](Numeric_set.md)
-* [Composition](Saving_entries.md) / [Question ouverte](questionouverte.md)
+* [Choix multiple](Select_set.md) [Choix multiple avec plusieurs bonnes réponses](Multiple_choice.md) [Vrai-faux](TrueOrFalse.md)
+* [Questions à réponse numérique](Numeric_set.md) [Composition](Saving_entries.md) / [Question ouverte](questionouverte.md)
 
 Langues 
 
 * [Trouve faute d'orthographe](Trouve_faute.md)
 * [Irregular verbs](Irregular_verbs_csv.md)
-* 
+
 Une présentation visible sous platon (format markdown).
 
 * [Présentation](slides.md) 
