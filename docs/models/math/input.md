@@ -1,3 +1,5 @@
+# Modèle `math/input`
+
 ## Détails
 
 ### `evaluator`
@@ -7,43 +9,40 @@ Ce script est exécuté après la validation de l'exercice et permet d'évaluer 
 
 ## Exemples
 
+### Exemple 1
+
 ```
 extends = /model/math/input.pl
 
-title = Transformer une somme de logarithmes en un logarithme
-
 before ==
-p = randint(2, 5)
-q = randint(2, 5)
-expr = f"\ln({p}) + \ln({q})"
-sol = ln(p*q)
+a = randint(1, 30)
+b = a + 10
 ==
 
-text ==
-Ecrire $! {{ expr }} !$ sous la forme  $! \ln(a) !$, où $! a !$ est un nombre.
+question ==
+Trouver un nombe premier compris entre {{ a }} et {{ b }} (au sens large).
 ==
 
 evaluator ==
 from latex2sympy import latex2sympy
-from evalsympy import equal
-from sympy import log
+from sympy import isprime
 
-def eval_ans(strans, sol):
-    try:
-        ans = latex2sympy(strans)
-    except:
-        return (-1, "NotExpr")
-    if ans.func != log:
-        return (-1, "WrongForm")
-    if not equal(ans, sol):
-        return (0, "NotEqual")
-    return (100, "Success")
-
-score, error = eval_ans(answers['math'], sol)
-feedback = message[error]
-==
-
-solution ==
-La solution est $! {{ sol|latex}} !$.
+try:
+    ans = latex2sympy(input.value)
+except:
+    score = -1
+    feedback = "La réponse doit être un entier."
+else:
+    if not ans.is_Integer:
+        score = -1
+        feedback = "La réponse doit être un entier."
+    elif not (a <= ans <= b):
+        score = 0
+        feedback = f"La réponse doit être comprise entre {a} et {b}."
+    elif not isprime(ans):
+        score = 0
+        feedback = "La réponse doit être un nombre premier."
+    else:
+        score = 100
 ==
 ```
