@@ -2,11 +2,50 @@
 
 Le modèle `math/input_eval` permet de fabriquer un exercice avec un champ de réponse mathématique et une évaluation personnalisée de la réponse. Cette évaluation personnalisée doit être définie par un script Python.
 
+## Clés spécifiques
+
+<table class="table">
+<thead>
+<tr>
+<th scope="col">Clé</th>
+<th scope="col">Description</th>
+<th scope="col">Type</th>
+<th scope="col">Défaut</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<th scope="row"> evaluator </th>
+<td> Script Python permettant d'évaluer la réponse de l'exercice. </td>
+<td> str </td>
+<td>  </td>
+</tr>
+
+<tr>
+<th scope="row"> score </th>
+<td> Score de l'exercice. Il doit être produit par le script evaluator. </td>
+<td> int </td>
+<td>  </td>
+</tr>
+
+<tr>
+<th scope="row"> feedback </th>
+<td> Message d'avertissement ou d'erreur. Il doit être produit par le script evaluator. </td>
+<td> str </td>
+<td>  </td>
+</tr>
+
+</tbody>
+</table>
+
 ## Détails
 
 ### `evaluator`
 
 Ce script est exécuté après la validation de l'exercice et permet d'évaluer la réponse saisie. Le script doit définir un score dans une variable `score`. Le score est une valeur entière comprise entre -1 et 100. La valeur -1 indique une erreur de syntaxe dans la saisie. Le script doit également définir un message d'avertissement ou d'erreur dans une variable `feedback`.
+
+Toutes les clés définies dans le fichier `pl` et toutes les variables sérialisables créées dans le script `before` sont accessibles dans le script `evaluator`. Les variables sérialisables sont les variables de type `int`, `float`, `bool`, `str`, `list`, `dict` et les variables de type SymPy `Basic` ou `Matrix`.
 
 La réponse saisie est récupérable par la méthode `get_value` du champ de réponse (nommé `input` dans le modèle).
 
