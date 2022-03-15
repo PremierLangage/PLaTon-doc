@@ -163,4 +163,4 @@ Si cette clé vaut `True`, l'exercice vérifie que les valeurs rationnelles sont
 
 ### `latexsettings`
 
-https://docs.sympy.org/latest/modules/printing.html?highlight=latex#module-sympy.printing.latex
+https://docs.sympy.org/latest/modules/printing.html?#module-sympy.printing.latex
