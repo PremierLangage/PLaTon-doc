@@ -28,7 +28,6 @@
 
 [Documentation commune](math/commondoc.md)
 
-* `math/input` : [Champ libre](math/input.md)
 * `math/expr` : [Expression](math/expr.md)
 * `math/numeric` : [Numérique](math/numeric.md)
 * `math/frac` : [Fraction](math/frac.md)
@@ -38,6 +37,8 @@
 * `math/interval` : [Intervalle](math/interval.md)
 * `math/tuple` : [N-uplet](math/tuple.md)
 * `math/chainineq` : [Encadrement](math/chainineq.md)
+
+* `math/input_eval` : [Evaluation personnalisée](math/input_eval.md)
 
 ### Matrice
 
