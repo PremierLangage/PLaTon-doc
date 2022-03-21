@@ -47,6 +47,8 @@ Ce script est exécuté après la validation de l'exercice et permet d'évaluer 
 
 Toutes les clés définies dans le fichier `pl` et toutes les variables sérialisables créées dans le script `before` sont accessibles dans le script `evaluator`. Les variables sérialisables sont les variables de type `int`, `float`, `bool`, `str`, `list`, `dict` et les variables de type SymPy `Basic` ou `Matrix`.
 
+Un certain nombre de fonctions utiles sont importées automatiquement.
+
 La réponse saisie est récupérable par la méthode `get_value` du champ de réponse (nommé `input` dans le modèle).
 
 ```
@@ -57,8 +59,6 @@ Cette réponse est une chaîne LaTeX. Il est donc en général nécessaire de la
 
 ```
 evaluator ==
-from latex2sympy import latex2sympy
-
 try:
     ans = latex2sympy(input.get_value())
 except:
