@@ -16,16 +16,9 @@ Le modèle `jxg/point` permet de fabriquer des exercices où il faut placer un p
 <tbody>
 
 <tr>
-<th scope="row"> xsol </th>
-<td> Abscisse du point solution. </td>
-<td> float </td>
-<td>  </td>
-</tr>
-
-<tr>
-<th scope="row"> ysol </th>
-<td> Ordonnée du point solution. </td>
-<td> float </td>
+<th scope="row"> sol </th>
+<td> Coordonnées point solution. </td>
+<td> lst[float, float] </td>
 <td>  </td>
 </tr>
 
@@ -64,7 +57,7 @@ Le modèle `jxg/point` permet de fabriquer des exercices où il faut placer un p
 
 ### `jxgscript`
 
-Ce script permet de créer les objets graphiques du panneau JSXGraph. Ce panneau est déjà créé et porte le nom `board`. Le point à placer doit être créé sous la forme d'une variable `psol`.
+Ce script permet de créer les objets graphiques du panneau JSXGraph. Ce panneau est déjà créé et porte le nom `board`. Le point à placer doit être créé sous la forme d'une variable `pt`.
 
 ## Exemples
 
