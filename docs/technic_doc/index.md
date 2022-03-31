@@ -35,6 +35,21 @@ d'autres sont plus spécifiques.
 * [Le grader doctest python](../models/pltest.md) Exercice de programmation en Python avec doctests
 * Le tempate pour les [exercices de programmation standard en C](std_progC.md) (verison 07/2020)
 
-## Divers
 
-* [Liste des modules Python disponibles](modules_sandbox.md)
+## Python
+
+[Documentation Bibliothèque Standard](https://docs.python.org/3/library/)
+[Liste des modules Python disponibles](modules_sandbox.md)
+
+### SymPy
+
+[Documentation SymPy](https://docs.sympy.org/latest/index.html)
+
+## Jinja
+
+[Documentation Jinja](https://jinja.palletsprojects.com/)
+
+## JSXGraph
+
+[Documentation JSXGraph](https://jsxgraph.uni-bayreuth.de/wp/docs/index.html)
+
