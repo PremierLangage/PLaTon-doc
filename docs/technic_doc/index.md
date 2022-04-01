@@ -53,4 +53,3 @@ d'autres sont plus spécifiques.
 
 [Documentation JSXGraph](https://jsxgraph.uni-bayreuth.de/wp/docs/index.html)
 
-
