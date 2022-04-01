@@ -22,4 +22,4 @@ markdown_extensions:
       base_url: 'https://documentationpl.readthedocs.io/fr/latest/lexique/#'
       end_url: ''
 
-copyright: '&copy; Copyright 2016-2022 The PLaTon devs and users community'
+copyright: '&copy; Copyright 2016-2020 The PLaTon devs and users community'
