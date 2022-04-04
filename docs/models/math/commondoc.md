@@ -159,7 +159,7 @@ embed ==
 
 ### `checkratsimp`
 
-Si cette clé vaut `True`, l'exercice vérifie que les valeurs rationnelles sont simplifiées dans la réponse de l'élève. Des réponses du type $4+3$, \( 1+\fra{1}{2} \), \\( \sqrt{4+3} \\), \sqrt{4}, etc. déclencheront un message d'avertissement.
+Si cette clé vaut `True`, l'exercice vérifie que les valeurs rationnelles sont simplifiées dans la réponse de l'élève. Des réponses du type $4+3$, $ 1+\fra{1}{2} $, $ \sqrt{4+3} $, $\sqrt{4}$, etc. déclencheront un message d'avertissement.
 
 ### `latexsettings`
 
