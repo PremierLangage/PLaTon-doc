@@ -1,16 +1,29 @@
-# Outils
-
 ## Python
 
+### Bibliothèque standard
+
 [Documentation Bibliothèque Standard](https://docs.python.org/3/library/)
+
+### Bibliothèques externes
+
+* Mathématiques
+  * `sympy` [Documentation SymPy](https://docs.sympy.org/latest/index.html)
+  * `scipy`
+* Automates
+  * `automata-lib`
+  * `fado`
+  * `tr-greenery`
+* Graphique
+  * `matplotlib`
+  * `mpld3`
+  * `graphviz`
+  * `networkx`
+  * `prettytable`
+
 
 ### Bibliothèque PL
 
 [plcsv](plcsv.md)
-
-### SymPy
-
-[Documentation SymPy](https://docs.sympy.org/latest/index.html)
 
 ## Jinja
 
