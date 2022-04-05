@@ -20,6 +20,8 @@
 
 ## Exercices composés
 
+* `basic/multinput` : [Plusieurs champs de réponse](basic/multinput.md)
+
 * `quiz/AMC_TXT` : [Quiz au format AMC-TXT](quiz/AMC_TXT.md)
 
 ## Mathématiques
