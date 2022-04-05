@@ -29,7 +29,7 @@ Le moteur d'exercice de PLaTon repose sur l'exécution de codes Python pour prod
 
 ## Champs de réponse
 
-* `Radio` : ([documentation](/inputfields/radio.md))
+* `Radio` : ([documentation](inputfields/radio.md))
 * `Checkbox` : ([documentation](/inputfields/checkbox.md))
 
 ## Jinja
