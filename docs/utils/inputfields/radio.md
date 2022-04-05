@@ -1,5 +1,7 @@
-<div class="section" id="radio">
-<h1>radio<a class="headerlink" href="#radio" title="Lien permanent vers ce titre">¶</a></h1>
+# Radio
+
+## Syntaxe
+
 <dl class="py class">
 <dt id="radio.Radio">
 <em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">Radio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#radio.Radio" title="Lien permanent vers cette définition">¶</a></dt>
@@ -22,8 +24,6 @@
 </dd></dl>
 
 </dd></dl>
-
-</div>
 
 ## Exemples
 
