@@ -25,6 +25,11 @@
 
 [plcsv](plcsv.md)
 
+## Champs de réponse
+
+[Radio](/inputfields/radio.md)
+[Checkbox](/inputfields/checkbox.md)
+
 ## Jinja
 
 [Documentation Jinja](https://jinja.palletsprojects.com/)
