@@ -25,6 +25,8 @@
 
 </div>
 
+## Exemples
+
 ```py
 >>> input = Radio()
 >>> input.set_items(["Paris", "Rome", "Berlin"])
