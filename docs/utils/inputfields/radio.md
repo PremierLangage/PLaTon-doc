@@ -24,3 +24,10 @@
 </dd></dl>
 
 </div>
+
+```py
+>>> input = Radio()
+>>> input.set_items(["Paris", "Rome", "Berlin"])
+>>> input.set_sol(0)
+>>> input.shuffle()
+```
