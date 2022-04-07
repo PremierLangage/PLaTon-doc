@@ -48,12 +48,13 @@
 
 ### Panneau graphique interactif (JSXGraph)
 
-* `jxg/point` : [Point](mathjxg/point.md)
+* `jxg/point` : [Point](jxg/point.md)
+* `jxg/vector` : [Vecteur](jxg/vector.md)
+* `jxg/line` : [Droite](jxg/line.md)
 
 ## Chimie
 
 * [Structure d'une molécule](chem/molstruct.md) (expérimental)
-
 
 ## Informatique
 
