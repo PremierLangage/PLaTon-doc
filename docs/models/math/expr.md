@@ -44,7 +44,7 @@ Le modèle `math/expr` permet de fabriquer des exercices aléatoires où la rép
 
 #### Calculer la distance entre deux points du plan
 
-```
+```vs
 extends = /model/math/expr.pl
 
 title = Calculer la distance entre deux points du plan
