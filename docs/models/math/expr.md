@@ -67,7 +67,7 @@ Quelle est la distance entre ces deux points ?
 
 #### Exprimer une inconnue en fonction d'une autre
 
-```
+```py
 extends = /model/math/expr.pl
 
 title = Exprimer une inconnue en fonction d'une autre
