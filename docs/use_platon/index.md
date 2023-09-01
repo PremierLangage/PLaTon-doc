@@ -27,6 +27,25 @@ informaticiens avancés.
 
 * [Installer un serveur PLaTon](install_platon.md) pour votre institution.
 
+# Connecter votre LMS à Platon 
+
+Pour connecter votre LMS à au serveur platon Eiffel il faut demander une paire clef,password à dominique.revuz (at) univ (-) eiffel.fr.
+Titre du message CLEF-PLATON. 
+Sinon il faut définir dans l'interface administrateur de votre installation platon vos propre identifiants. 
+
+## Le cas moodle
+
+Dans un cours ou vous souhaiter ajouter des feuilles d'exercices platon. 
+En mode Edition ajouter un "outil externe". 
+Précisez l'URL de votre serveur Platon. 
+Précisez le couple d'identifiants. 
+Et voila !
+à la Première connection le cours platon sera créer.
+
+
+
+
+
 
 # Création et édition de ressources 
 
